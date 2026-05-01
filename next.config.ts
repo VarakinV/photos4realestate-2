@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "photos4realestate.ca" },
       { protocol: "https", hostname: "cdn.photos4realestate.ca" },
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
     ],
   },
   async redirects() {

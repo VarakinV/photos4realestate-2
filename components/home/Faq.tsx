@@ -1,8 +1,12 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { homeFaqs, type Faq as SharedFaqItem } from "@/lib/faqs";
+import { siteConfig } from "@/lib/site";
 
-export type FaqItem = { q: string; a: string };
+export type FaqItem = SharedFaqItem;
 
 type FaqProps = {
   heading?: ReactNode;
@@ -11,33 +15,6 @@ type FaqProps = {
   allFaqsLabelSuffix?: string;
 };
 
-export const homeFaqs: FaqItem[] = [
-  {
-    q: "How long does a real estate photo shoot take?",
-    a: "Most Calgary real estate photo shoots take 45 to 90 minutes depending on property size. Larger homes, acreages, and packages that include video, drone or iGUIDE 3D tours typically run 1.5 to 3 hours.",
-  },
-  {
-    q: "How soon will I receive my photos?",
-    a: "Every standard photo package is delivered by the end of the next business day. Rush same-day delivery is available on request for an additional fee, subject to scheduling.",
-  },
-  {
-    q: "Do you serve areas outside of Calgary?",
-    a: "Yes. We regularly shoot in Airdrie, Okotoks, Cochrane, Chestermere, High River, Springbank, Bearspaw, Rocky View County and Banff. Travel fees are waived on most packages within 30 km of Calgary.",
-  },
-  {
-    q: "Are your RMS measurements and floor plans RECA-compliant?",
-    a: "Yes. Every floor plan we produce follows Alberta's Residential Measurement Standard (RMS) under RECA, so you can list the square footage with confidence.",
-  },
-  {
-    q: "Do I need to be at the property during the shoot?",
-    a: "Not usually. Most agents use a lockbox and let us shoot while they handle other business. We simply confirm the address, access details and any special instructions beforehand.",
-  },
-  {
-    q: "Can I use the photos on social media and print materials?",
-    a: "Yes — you receive a full marketing license to use the images on MLS, your website, social media, brochures and print materials for the duration of the listing.",
-  },
-];
-
 export function Faq({
   heading,
   intro,
@@ -45,9 +22,10 @@ export function Faq({
   allFaqsLabelSuffix,
 }: FaqProps = {}) {
   const items = faqs ?? homeFaqs;
-  const askLabel = allFaqsLabelSuffix
-    ? `Ask a question about ${allFaqsLabelSuffix}`
-    : "Ask a question";
+  const [openIndex, setOpenIndex] = useState(0);
+  const allFaqsLabelSuffixText =
+    allFaqsLabelSuffix ?? "Calgary real estate photography services and booking";
+  const allFaqsLabel = `View all FAQs about ${allFaqsLabelSuffixText}`;
 
   return (
     <section className="faq-section" aria-labelledby="faq-heading">
@@ -61,31 +39,55 @@ export function Faq({
             <p>
               {intro ?? (
                 <>
-                  Still not sure? Reach out and we&rsquo;ll walk you through the
-                  right package for your listing.
+                  Everything you need to know before booking. Have a question not
+                  covered here? Call or text us at{" "}
+                  <a
+                    href={siteConfig.phoneHref}
+                    className="faq-phone-link"
+                    aria-label={`Call or text Photos 4 Real Estate at ${siteConfig.phone}`}
+                  >
+                    {siteConfig.phone}
+                  </a>
+                  .
                 </>
               )}
             </p>
             <Link
-              href="/contact-us/"
+              href="/faq"
               className="btn btn-outline-dark"
-              aria-label={askLabel}
+              aria-label={allFaqsLabel}
             >
-              Ask a question
+              All FAQs
+              <span className="sr-only"> about {allFaqsLabelSuffixText}</span>
             </Link>
           </div>
 
           <div className="faq-items speakable-faq">
             {items.map((faq, i) => (
-              <details className="faq-item" key={faq.q} open={i === 0}>
-                <summary className="faq-q">
-                  {faq.q}
+              <div className={`faq-item ${openIndex === i ? "is-open" : ""}`} key={faq.q}>
+                <button
+                  type="button"
+                  className="faq-q"
+                  aria-expanded={openIndex === i}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-trigger-${i}`}
+                  onClick={() => setOpenIndex(i)}
+                >
+                  <span>{faq.q}</span>
                   <span className="faq-chevron" aria-hidden="true">
                     <ChevronDown size={14} strokeWidth={2.5} />
                   </span>
-                </summary>
-                <div className="faq-a">{faq.a}</div>
-              </details>
+                </button>
+
+                <div
+                  id={`faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-trigger-${i}`}
+                  className={`faq-panel ${openIndex === i ? "is-open" : ""}`}
+                >
+                  <div className="faq-a">{faq.a}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>

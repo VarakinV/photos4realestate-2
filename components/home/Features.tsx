@@ -20,7 +20,7 @@ export function VirtualStagingFeature() {
               We also offer virtual decluttering, seasonal grass greening and renovation
               previews to help buyers see the home&rsquo;s true potential.
             </p>
-            <Link href="/services/virtual-staging/" className="btn btn-primary">
+            <Link href="/services/virtual-staging" className="btn btn-primary">
               Explore Virtual Staging
             </Link>
           </div>
@@ -50,16 +50,17 @@ export function DroneFeature() {
             <span className="section-label">Aerial Drone</span>
             <h2 id="drone-heading">See the whole property — and the neighbourhood.</h2>
             <p>
-              Our aerial drone photography and video captures lot lines, rooftops,
-              acreage context and nearby amenities that ground-level photos simply
-              can&rsquo;t show.
+              Drone photography gives Calgary listings a perspective that no
+              ground-level camera can match. Aerial shots showcase lot size,
+              proximity to parks and amenities, neighbourhood context, and
+              architectural scale.
             </p>
             <p>
-              Flown in compliance with Canadian airspace rules and included in most
-              rural and acreage packages.
+              Our licensed drone operators capture stunning still and video aerial
+              footage in compliance with Transport Canada regulations.
             </p>
             <Link
-              href="/services/real-estate-aerial-drone-photography-in-calgary/"
+              href="/services/real-estate-aerial-drone-photography-in-calgary"
               className="btn btn-primary"
             >
               Explore Drone Services
@@ -99,7 +100,7 @@ export function TwilightFeature() {
               fake skies.
             </p>
             <Link
-              href="/services/twilight-photography-for-real-estate-in-calgary/"
+              href="/services/twilight-photography-for-real-estate-in-calgary"
               className="btn btn-primary"
             >
               Explore Twilight Photography

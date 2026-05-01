@@ -36,7 +36,7 @@ export function Differentiator() {
             <span className="section-label">What Sets Us Apart</span>
             <h2 id="diff-heading">More Than Photography — A Complete Marketing System</h2>
             <p className="lead">
-              At Photos4RealEstate, every package includes far more than just photos. We
+              At Photos 4 Real Estate, every package includes far more than just photos. We
               give Calgary realtors a complete set of marketing tools at no extra cost —
               because your listing deserves to stand out everywhere, not just on MLS.
             </p>
@@ -65,14 +65,16 @@ export function Differentiator() {
             </div>
 
             <div className="diff-actions">
-              <Link href="/prices/" className="btn btn-primary">
+              <Link href="/prices" className="btn btn-primary">
                 See All Packages
+                <span className="sr-only"> for Calgary real estate photography and media services</span>
               </Link>
               <Link
-                href="/real-estate-photography-comparison-calgary/"
+                href="/real-estate-photography-comparison-calgary"
                 className="btn btn-outline-dark"
               >
                 Compare vs Competitors
+                <span className="sr-only"> for Calgary real estate photography services</span>
               </Link>
             </div>
           </div>

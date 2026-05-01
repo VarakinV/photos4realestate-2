@@ -1,10 +1,10 @@
 import {
-  Zap,
+  Clock3,
   Receipt,
   BadgeCheck,
-  Plane,
-  MapPin,
   Tag,
+  MapPin,
+  Settings2,
   type LucideIcon,
 } from "lucide-react";
 
@@ -16,34 +16,40 @@ type Reason = {
 
 const reasons: Reason[] = [
   {
-    title: "Next-business-day delivery",
-    copy: "Shoot today, list tomorrow. Every package ships by end of the next business day.",
-    Icon: Zap,
+    title: "Next-Day Delivery",
+    copy:
+      "We understand the urgency of active listings. All photos, floor plans, and media are delivered within 24 hours of your shoot — ready for MLS upload the next morning.",
+    Icon: Clock3,
   },
   {
-    title: "One team, one invoice",
-    copy: "Photo, video, drone, iGUIDE, RMS — all booked together, accounted for in one place.",
+    title: "8 Services, One Visit",
+    copy:
+      "Photos, video, drone, 3D tour, RMS measurements, virtual staging, and twilight — all from one team in one booking. No coordination headaches.",
     Icon: Receipt,
   },
   {
     title: "RECA-compliant RMS",
-    copy: "Every floor plan follows Alberta’s Residential Measurement Standard — no surprises at closing.",
+    copy:
+      "Every floor plan follows Alberta’s Residential Measurement Standard — no surprises at closing. We measure carefully, format consistently, and deliver files that are ready to share with clients and broker review.",
     Icon: BadgeCheck,
   },
   {
-    title: "Aerial drone specialist",
-    copy: "Professional aerial photo and video for acreages, rural listings and urban rooftop context.",
-    Icon: Plane,
+    title: "Transparent Pricing",
+    copy:
+      "Clear, upfront package pricing with no hidden fees. Compare our rates against any Calgary competitor — we're confident you'll see the value.",
+    Icon: Tag,
   },
   {
     title: "Built for Calgary",
-    copy: "Local-owned and operated. We know Calgary, Airdrie, Okotoks and every neighbourhood in between.",
+    copy:
+      "Local-owned and operated. We know Calgary, Airdrie, Okotoks and every neighbourhood in between. From downtown infills to suburban family homes, we know how to highlight the context buyers care about most.",
     Icon: MapPin,
   },
   {
-    title: "Fair, published pricing",
-    copy: "See every package and add-on on our pricing page. No guessing, no upsells on site.",
-    Icon: Tag,
+    title: "Customization & Flexibility",
+    copy:
+      "Special requests, unique properties, branding requirements — we work closely with each client to tailor deliverables to your exact needs.",
+    Icon: Settings2,
   },
 ];
 
@@ -53,16 +59,16 @@ export function WhyUs() {
       <div className="container">
         <div className="section-header">
           <span className="section-label">Why Choose Us</span>
-          <h2 id="why-heading">Calgary Realtors keep coming back for a reason.</h2>
+          <h2 id="why-heading">Why Calgary Realtors Choose Us</h2>
           <p>
-            Six things we get right on every shoot, every time — so your marketing goes
-            out on time and looks its best.
+            We built a photography service around the real needs of working realtors
+            — speed, quality, and tools that make your job easier.
           </p>
         </div>
 
         <div className="why-grid">
-          {reasons.map(({ title, copy, Icon }) => (
-            <div className="why-card" key={title}>
+          {reasons.map(({ title, copy, Icon }, index) => (
+            <div className="why-card" key={`${title}-${index}`}>
               <div className="why-icon">
                 <Icon aria-hidden="true" strokeWidth={2} />
               </div>

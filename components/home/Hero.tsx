@@ -41,10 +41,13 @@ export function Hero() {
           </p>
           <div className="hero-actions">
             <Link href="/book-online" className="btn btn-primary">
-              Book Your Shoot <ArrowRight size={16} aria-hidden="true" />
+              Book Your Shoot
+              <span className="sr-only"> for Calgary real estate photography and media services</span>
+              <ArrowRight size={16} aria-hidden="true" />
             </Link>
-            <Link href="/prices/" className="btn btn-outline">
+            <Link href="/prices" className="btn btn-outline">
               View Pricing
+              <span className="sr-only"> for Calgary real estate photography packages</span>
             </Link>
           </div>
           <div className="hero-badges">

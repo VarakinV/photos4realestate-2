@@ -11,24 +11,32 @@ import {
 } from "@/components/home/Features";
 import { WhyUs } from "@/components/home/WhyUs";
 import { Reviews } from "@/components/home/Reviews";
-import { Faq, homeFaqs } from "@/components/home/Faq";
+import { Faq } from "@/components/home/Faq";
 import { Cta } from "@/components/home/Cta";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { homeFaqs } from "@/lib/faqs";
+import {
+  AVERAGE_RATING,
+  REVIEW_COUNT,
+  reviews as reviewItems,
+  toIsoDate,
+} from "@/lib/reviews";
 import { siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const homeTitle = `Real Estate Photography Calgary | ${siteConfig.shortName}`;
+const businessId = `${siteConfig.url}/#business`;
+const homeTitle = `Real Estate Photography Calgary | ${siteConfig.name}`;
 const homeDescription = siteConfig.description;
 
 export const metadata: Metadata = {
-  title: homeTitle,
+  title: { absolute: homeTitle },
   description: homeDescription,
-  alternates: { canonical: "/" },
+  alternates: { canonical: siteConfig.url },
   openGraph: {
     type: "website",
     url: siteConfig.url,
-    siteName: siteConfig.shortName,
+    siteName: siteConfig.name,
     title: homeTitle,
     description: homeDescription,
     locale: "en_CA",
@@ -59,6 +67,43 @@ const faqSchema = {
   })),
 };
 
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": businessId,
+  name: siteConfig.name,
+  url: siteConfig.url,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: AVERAGE_RATING,
+    reviewCount: REVIEW_COUNT,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  review: reviewItems.map((review) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    itemReviewed: {
+      "@id": businessId,
+    },
+    reviewBody: review.text,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    datePublished: toIsoDate(review.date),
+    publisher: {
+      "@type": "Organization",
+      name: "Google",
+    },
+  })),
+};
+
 const speakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -84,6 +129,7 @@ export default function HomePage() {
       <Reviews />
       <Faq />
       <Cta />
+      <JsonLd id="ld-reviews-home" data={reviewSchema} />
       <JsonLd id="ld-faq-home" data={faqSchema} />
       <JsonLd id="ld-speakable-home" data={speakableSchema} />
     </>

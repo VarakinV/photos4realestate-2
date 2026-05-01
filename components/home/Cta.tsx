@@ -20,14 +20,15 @@ export function Cta({
   secondaryLabel,
   secondarySrSuffix,
 }: CtaProps = {}) {
-  const secondHref = secondaryHref ?? "/contact-us/";
-  const secondLabel = secondaryLabel ?? "Contact Us";
+  const secondHref = secondaryHref ?? "/prices";
+  const secondLabel = secondaryLabel ?? "View Pricing & Packages";
+  const secondSrText = secondarySrSuffix ?? " for Calgary real estate photography packages";
   return (
     <section className="cta-section" aria-labelledby="cta-heading">
       <div className="container">
         <span className="section-label">{eyebrow ?? "Ready to list?"}</span>
         <h2 id="cta-heading">
-          {title ?? "Book your next Calgary shoot in under a minute."}
+          {title ?? "Book Your Next Calgary Shoot in Under a Minute."}
         </h2>
         <p>
           {description ?? (
@@ -40,24 +41,36 @@ export function Cta({
         </p>
         <div className="cta-actions">
           <Link href="/book-online" className="btn btn-primary">
-            Book Online <ArrowRight size={16} aria-hidden="true" />
+            Book Online
+            <span className="sr-only"> for Calgary real estate photography and media services</span>
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
           <Link href={secondHref} className="btn btn-outline">
             {secondLabel}
-            {secondarySrSuffix ? (
-              <span className="sr-only">{secondarySrSuffix}</span>
-            ) : null}
+            <span className="sr-only">{secondSrText}</span>
           </Link>
         </div>
         <div className="cta-contact">
           <span className="cta-contact-item">
-            Call <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
+            Call{" "}
+            <a
+              href={siteConfig.phoneHref}
+              aria-label={`Call Photos 4 Real Estate at ${siteConfig.phone}`}
+            >
+              {siteConfig.phone}
+            </a>
           </span>
           <span className="cta-contact-item">
-            Email <a href={siteConfig.emailHref}>{siteConfig.email}</a>
+            Email{" "}
+            <a
+              href={siteConfig.emailHref}
+              aria-label={`Email Photos 4 Real Estate at ${siteConfig.email}`}
+            >
+              {siteConfig.email}
+            </a>
           </span>
           <span className="cta-contact-item">
-            Serving Calgary &amp; surrounding areas
+            <Link href="/service-areas">Serving Calgary &amp; surrounding areas</Link>
           </span>
         </div>
       </div>

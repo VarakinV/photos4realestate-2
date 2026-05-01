@@ -93,8 +93,10 @@ export function Services() {
               </div>
               <h3>{title}</h3>
               <p>{copy}</p>
-              <Link className="service-link" href={`/services/${slug}/`}>
-                Learn more <ArrowRight size={14} aria-hidden="true" />
+              <Link className="service-link" href={`/services/${slug}`}>
+                Learn more
+                <span className="sr-only"> about {title} in Calgary</span>
+                <ArrowRight size={14} aria-hidden="true" />
               </Link>
             </article>
           ))}

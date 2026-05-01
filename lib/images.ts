@@ -19,8 +19,10 @@ export const homeImages = {
   vsBefore: "https://cdn.photos4realestate.ca/p4re-static-media/before-after/Virtual-Staging-Living-Room-Before-02.webp",
   vsAfter: "https://cdn.photos4realestate.ca/p4re-static-media/before-after/Virtual-Staging-Living-Room-After-02.webp",
 
-  drone: `${u}/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=80`,
-  twilight: `${u}/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80`,
+  drone:
+    "https://cdn.photos4realestate.ca/p4re-static-media/home-page-images/Drone-view-to-Downtown-Calgary-Photos-4-Real-Estate-1024x768.webp",
+  twilight:
+    "https://cdn.photos4realestate.ca/p4re-static-media/home-page-images/Twilight-photo-of-a-home-in-Calgary.jpg",
 } as const;
 
 

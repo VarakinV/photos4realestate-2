@@ -38,7 +38,7 @@ export function Industries() {
         <div className="industries-grid">
           {cards.map((card) => (
             <Link
-              href="/contact-us/"
+              href="/contact-us"
               key={card.title}
               className="industry-card"
               aria-label={`${card.title} — ${card.copy}`}
