@@ -1,0 +1,74 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# sitemap generated
+/public/sitemap*.xml
+/public/robots.txt
+
+# debug / temporary output files created during development
+/.augment-*
+/*.txt
+/*.log
+*.log
+shadcn.log
+build.log
+build2.log
+lint.txt
+lint2.txt
+lint3.txt
+lint4.txt
+tsc_output.txt
+git-status.txt
+tracked-files.txt
+grep.log
+install-out.txt
+npm-uninstall.log
+ping.log
+proc.log
+result.txt
+dir_check.txt
+vs_temp.txt
+
+# reference / source material (not part of the codebase)
+/examples/
+
+# Augment AI skill files (internal, not for public repo)
+/.augment/
