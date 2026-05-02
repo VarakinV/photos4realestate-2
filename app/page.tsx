@@ -15,6 +15,7 @@ import { Faq } from "@/components/home/Faq";
 import { Cta } from "@/components/home/Cta";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { homeFaqs } from "@/lib/faqs";
+import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import {
   AVERAGE_RATING,
   REVIEW_COUNT,
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     images: [
       {
-        url: "/og/homepage.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} — Real Estate Photography in Calgary`,
@@ -53,18 +54,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: homeTitle,
     description: homeDescription,
-    images: ["/og/homepage.jpg"],
+    images: ["/opengraph-image"],
   },
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: homeFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+  mainEntity: faqItemsToSchemaMainEntity(homeFaqs),
 };
 
 const reviewSchema = {

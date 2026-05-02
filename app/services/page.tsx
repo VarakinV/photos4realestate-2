@@ -8,6 +8,7 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { Faq } from "@/components/home/Faq";
 import { Cta } from "@/components/home/Cta";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import { siteConfig, services, serviceAreas } from "@/lib/site";
 import { servicesFaqs } from "@/lib/faqs";
 
@@ -111,11 +112,7 @@ const collectionPageSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: servicesFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+  mainEntity: faqItemsToSchemaMainEntity(servicesFaqs),
 };
 
 const speakableSchema = {

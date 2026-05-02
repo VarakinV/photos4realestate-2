@@ -19,6 +19,7 @@ import { Faq } from "@/components/home/Faq";
 import { Cta } from "@/components/home/Cta";
 import { Reviews } from "@/components/home/Reviews";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import { siteConfig, serviceAreas } from "@/lib/site";
 import { servicesContent } from "@/lib/services-content";
 import { rmsImages } from "@/lib/images";
@@ -75,11 +76,7 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: content.faqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+  mainEntity: faqItemsToSchemaMainEntity(content.faqs),
 };
 
 const speakableSchema = {

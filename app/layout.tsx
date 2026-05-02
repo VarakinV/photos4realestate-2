@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/og/homepage.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} — Real Estate Photography Calgary`,
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Real Estate Photography Calgary | ${siteConfig.shortName}`,
     description: siteConfig.description,
-    images: ["/og/homepage.jpg"],
+    images: ["/opengraph-image"],
   },
   icons: {
     icon: [{ url: "/logos/map-pin-logo.svg", type: "image/svg+xml" }],

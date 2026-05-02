@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
 
@@ -41,9 +42,12 @@ export function Breadcrumbs({ items, jsonLdId }: BreadcrumbsProps) {
                     <Link href={c.href}>{c.label}</Link>
                   )}
                   {!isLast && (
-                    <span className="breadcrumbs-sep" aria-hidden="true">
-                      ›
-                    </span>
+                    <ChevronRight
+                      className="breadcrumbs-sep"
+                      aria-hidden="true"
+                      size={14}
+                      strokeWidth={1.75}
+                    />
                   )}
                 </li>
               );

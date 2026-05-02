@@ -25,6 +25,7 @@ import { Cta } from "@/components/home/Cta";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PricingPackages } from "@/components/prices/PricingPackages";
 import { PromoCode } from "@/components/prices/PromoCode";
+import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import { siteConfig } from "@/lib/site";
 import { pricingFaqs } from "@/lib/faqs";
 import { pricingTiers } from "@/lib/pricing";
@@ -90,11 +91,7 @@ const productSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: pricingFaqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+  mainEntity: faqItemsToSchemaMainEntity(pricingFaqs),
 };
 
 const speakableSchema = {

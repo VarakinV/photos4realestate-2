@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { homeFaqs, type Faq as SharedFaqItem } from "@/lib/faqs";
+import { faqAnswerToHtml } from "@/lib/faq-utils";
 import { siteConfig } from "@/lib/site";
 
 export type FaqItem = SharedFaqItem;
@@ -85,7 +86,11 @@ export function Faq({
                   aria-labelledby={`faq-trigger-${i}`}
                   className={`faq-panel ${openIndex === i ? "is-open" : ""}`}
                 >
-                  <div className="faq-a">{faq.a}</div>
+                  <div
+                    className="faq-a"
+                    // biome-ignore lint/security/noDangerouslySetInnerHtml: FAQ answers are trusted local content and must render crawlable links/entities.
+                    dangerouslySetInnerHTML={faqAnswerToHtml(faq.a)}
+                  />
                 </div>
               </div>
             ))}
