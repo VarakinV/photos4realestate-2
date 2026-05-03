@@ -253,7 +253,7 @@ function PageBody() {
               <div className="photo-intro-img-secondary rms-intro-img-secondary">
                 <Image
                   src={rmsImages.rmsMeasurements}
-                  alt="Real estate photographer explaining how to use an iGUIDE scanning device"
+                  alt="RMS measurements report for a Calgary real estate listing"
                   width={900}
                   height={675}
                   sizes="(max-width: 1024px) 55vw, 28vw"
@@ -691,7 +691,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={rmsImages.areaBathroom}
-                  alt="Kitchen photographed by Photos 4 Real Estate for a Calgary real estate listing"
+                  alt="Real estate photographer explaining how to use and operate an iGUIDE scanning device"
                   width={1024}
                   height={768}
                   sizes="(max-width: 1024px) 100vw, 50vw"

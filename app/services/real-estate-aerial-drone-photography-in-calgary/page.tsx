@@ -494,7 +494,10 @@ function PageBody() {
               </p>
 
               <div className="drone-tc-licence-card" aria-label="Transport Canada compliance details">
-                <h3><div className="drone-tc-green-dot"></div>Our Drone Compliance Checklist</h3>
+                <h3>
+                  <span className="drone-tc-green-dot" aria-hidden="true"></span>
+                  Our Drone Compliance Checklist
+                </h3>
                 <div className="drone-tc-licence-items">
                   <div className="drone-tc-item"><div className="drone-tc-check"><Check size={12} strokeWidth={3} /></div>Transport Canada Advanced Operations Certificate</div>
                   <div className="drone-tc-item"><div className="drone-tc-check"><Check size={12} strokeWidth={3} /></div>Full liability insurance for RPAS operations</div>
@@ -770,7 +773,7 @@ function PageBody() {
                 small travel fee may apply. Call{" "}
                 <a
                   href={siteConfig.phoneHref}
-                  aria-label={`Call ${siteConfig.name} at ${siteConfig.phone} to confirm Calgary photography travel fees`}
+                  aria-label={`Call ${siteConfig.name} at ${siteConfig.phone} to confirm Calgary drone photography travel fees`}
                 >
                   {siteConfig.phone}
                 </a>{" "}

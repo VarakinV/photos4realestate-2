@@ -44,19 +44,32 @@ export const iguideTourImages = {
 
 // Photography service page
 export const photographyImages = {
-  introMain: `${cdn}/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp`,
-  introSecondary: `${cdn}/2025/05/Living-Room-with-a-Fireplace-Photos-4-Real-Estate.webp`,
-  interior: `${cdn}/2025/05/Modern-Kitchen-Photos-4-Real-Estate.webp`,
-  exterior: `${cdn}/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp`,
-  skyBefore: `${cdn}/2023/07/pool-before-850.webp`,
-  skyAfter: `${cdn}/2023/07/pool-after-850.webp`,
-  twilight: `${cdn}/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp`,
-  prepLiving: `${cdn}/2025/05/Living-Room-with-a-Fireplace-Photos-4-Real-Estate.webp`,
-  prepKitchen: `${cdn}/2025/05/Modern-Kitchen-Photos-4-Real-Estate.webp`,
-  prepBedroom: `${cdn}/2025/05/Bedroom-Photos-4-Real-Estate.webp`,
-  areaCalgary: `${cdn}/2025/08/Drone-view-to-Downtown-Calgary-Photos-4-Real-Estate-1024x768.webp`,
-  areaMahogany: `${cdn}/2025/05/Drone-Photo-Mahogany-Photos-4-Real-Estate-1024x576.webp`,
-  areaAcreage: `${cdn}/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp`,
+  introMain:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Exterior-photo-of-a-house-in-calgary-Photos-4-Real-Estate.webp",
+  introSecondary:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Living-Room-photo-example-Calgary-Photos-4-Real-Estate.webp",
+  interior:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Kitchen-photo-example-Calgary-Photos-4-Real-Estate.webp",
+  exterior:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Exterior-photo-of-a-house-in-Calgary-example-Photos-4-Real-Estate.webp",
+  skyBefore:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/pool-before-850.webp",
+  skyAfter:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/pool-after-850.webp",
+  twilight:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/twilight-photo-of-a-house-near-Calgary-Photos-4-Real-Estate.jpg",
+  prepLiving:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Dining-area-photo-Photos-4-Real-Estate.webp",
+  prepKitchen:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Living-Room-with-fireplace-Photos-4-Real-Estate.webp",
+  prepBedroom:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Living-Room-stairs-Photos-4-Real-Estate.webp",
+  areaCalgary:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Bedroom-example-photo-Photos-4-Real-Estate-03.webp",
+  areaMahogany:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Drone-photo-Downtown-Calgary-Photos-4-Real-Estate-03.jpg",
+  areaAcreage:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Drone-Mahogany-Lake-03.webp",
 } as const;
 
 // Drone service page
@@ -102,7 +115,7 @@ export const rmsImages = {
   standardPlanIntro:
     "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/iGUIDE-Standard-Floor-Plan.webp",
   rmsMeasurements:
-    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Real%20Estate%20Photographer%20explains%20how%20to%20use%20and%20operate%20iGUIDE%20scanning%20device.webp",
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/RMS-Measurements.webp",
   standardPlanCard:
     "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Standard%20iGUIDE%20Floor%20Plan.webp",
   premiumPlanCard:
@@ -110,7 +123,7 @@ export const rmsImages = {
   iguideScanning:
     "https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/Real-estate-floor-plan-generated-from-iGUIDE-property-scan.webp",
   areaBathroom:
-    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Photo-of-a-Kitchen-Photos-4-Real-Estate-06.webp",
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Real%20Estate%20Photographer%20explains%20how%20to%20use%20and%20operate%20iGUIDE%20scanning%20device.webp",
   areaBedroom:
     "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Photo-of-a-Bedroom-Photos-4-Real-Estate-02.webp",
   areaKitchen:

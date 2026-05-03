@@ -28,6 +28,12 @@ import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import { siteConfig, serviceAreas } from "@/lib/site";
 import { servicesContent } from "@/lib/services-content";
 import { photographyImages } from "@/lib/images";
+import {
+  AVERAGE_RATING,
+  REVIEW_COUNT,
+  reviews as reviewItems,
+  toIsoDate,
+} from "@/lib/reviews";
 
 export const dynamic = "force-static";
 
@@ -36,29 +42,32 @@ const content = servicesContent[slug];
 const pageUrl = `${siteConfig.url}/services/${slug}`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
 
-export const metadata: Metadata = {
-  title: content.seoTitle,
-  description: content.seoDescription,
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    type: "website",
-    title: content.seoTitle,
+export function generateMetadata(): Metadata {
+  return {
+    title: { absolute: content.seoTitle },
     description: content.seoDescription,
-    url: pageUrl,
-    siteName: siteConfig.shortName,
-    locale: "en_CA",
-    images: [
-      { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: content.seoTitle,
-    description: content.seoDescription,
-    images: [ogImageUrl],
-  },
-};
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      type: "website",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      url: pageUrl,
+      siteName: siteConfig.name,
+      locale: "en_CA",
+      images: [
+        { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      images: [ogImageUrl],
+    },
+  };
+}
 
+const businessId = `${siteConfig.url}/#business`;
 const businessRef = { "@id": `${siteConfig.url}/#business` };
 
 const serviceSchema = {
@@ -84,6 +93,43 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: faqItemsToSchemaMainEntity(content.faqs),
+};
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": businessId,
+  name: siteConfig.name,
+  url: siteConfig.url,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: AVERAGE_RATING,
+    reviewCount: REVIEW_COUNT,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  review: reviewItems.map((review) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    itemReviewed: {
+      "@id": businessId,
+    },
+    reviewBody: review.text,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    datePublished: toIsoDate(review.date),
+    publisher: {
+      "@type": "Organization",
+      name: "Google",
+    },
+  })),
 };
 
 const speakableSchema = {
@@ -257,6 +303,7 @@ export default function RealEstatePhotographyCalgaryPage() {
 
       <JsonLd id={`ld-service-${slug}`} data={serviceSchema} />
       <JsonLd id={`ld-faq-${slug}`} data={faqSchema} />
+      <JsonLd id={`ld-reviews-${slug}`} data={reviewSchema} />
       <JsonLd id={`ld-speakable-${slug}`} data={speakableSchema} />
     </>
   );
@@ -355,12 +402,13 @@ function PageBody() {
             </div>
             <div className="photo-intro-visual">
               <div className="photo-intro-pill">
+                <div className="photo-intro-pill-dot" aria-hidden="true"></div>
                 Calgary&rsquo;s top-rated photography team
               </div>
               <div className="photo-intro-img">
                 <Image
                   src={photographyImages.introMain}
-                  alt="Exterior real estate photography of a Calgary house by Photos 4 Real Estate"
+                  alt="Exterior photo of a house in Calgary by Photos 4 Real Estate"
                   width={1200}
                   height={1500}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -371,7 +419,7 @@ function PageBody() {
               <div className="photo-intro-img-secondary">
                 <Image
                   src={photographyImages.introSecondary}
-                  alt="Living room real estate photography example in Calgary by Photos 4 Real Estate"
+                  alt="Living room photo example in Calgary by Photos 4 Real Estate"
                   width={900}
                   height={675}
                   sizes="(max-width: 1024px) 55vw, 28vw"
@@ -385,7 +433,7 @@ function PageBody() {
 
       {/* WHAT YOU RECEIVE — deliverables */}
       <section
-        className="deliverables-section"
+        className="deliverables-section photo-deliverables-section"
         aria-labelledby="photo-deliv-heading"
       >
         <div className="container">
@@ -416,7 +464,7 @@ function PageBody() {
 
       {/* SHOT TYPES */}
       <section
-        className="shot-types-section"
+        className="shot-types-section photo-shot-types-section"
         aria-labelledby="photo-shots-heading"
       >
         <div className="container">
@@ -462,7 +510,7 @@ function PageBody() {
             <div className="shot-img">
               <Image
                 src={photographyImages.interior}
-                alt="Interior real estate photography — Calgary kitchen by Photos 4 Real Estate"
+                alt="Kitchen photo example in Calgary by Photos 4 Real Estate"
                 width={1200}
                 height={900}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -505,7 +553,7 @@ function PageBody() {
             <div className="shot-img">
               <Image
                 src={photographyImages.exterior}
-                alt="Exterior real estate photography of a house in Calgary by Photos 4 Real Estate"
+                alt="Exterior photo of a Calgary house by Photos 4 Real Estate"
                 width={1200}
                 height={900}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -545,8 +593,8 @@ function PageBody() {
               <BeforeAfter
                 beforeSrc={photographyImages.skyBefore}
                 afterSrc={photographyImages.skyAfter}
-                beforeAlt="Calgary exterior photo before blue-sky replacement"
-                afterAlt="Calgary exterior photo after blue-sky replacement"
+                beforeAlt="Pool exterior photo before editing with a grey sky and empty pool by Photos 4 Real Estate"
+                afterAlt="Pool exterior photo after sky and water replacement by Photos 4 Real Estate"
               />
             </div>
           </div>
@@ -589,7 +637,7 @@ function PageBody() {
             <div className="shot-img">
               <Image
                 src={photographyImages.twilight}
-                alt="Twilight real estate photography of a house near Calgary by Photos 4 Real Estate"
+                alt="Twilight photo of a house near Calgary by Photos 4 Real Estate"
                 width={1200}
                 height={900}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -602,7 +650,7 @@ function PageBody() {
 
       {/* HOW IT WORKS / PROCESS */}
       <section
-        className="process-section"
+        className="process-section photo-process-section"
         aria-labelledby="photo-process-heading"
       >
         <div className="container">
@@ -678,7 +726,7 @@ function PageBody() {
       </section>
 
       {/* PREP CHECKLIST */}
-      <section className="prep-section" aria-labelledby="photo-prep-heading">
+      <section className="prep-section photo-prep-section" aria-labelledby="photo-prep-heading">
         <div className="container">
           <div className="prep-grid">
             <div className="prep-content">
@@ -716,7 +764,7 @@ function PageBody() {
               <div className="prep-img">
                 <Image
                   src={photographyImages.prepLiving}
-                  alt="Dining area prepped for real estate photography in Calgary"
+                  alt="Dining area photo for a Calgary listing by Photos 4 Real Estate"
                   width={1200}
                   height={675}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -727,7 +775,7 @@ function PageBody() {
                 <div>
                   <Image
                     src={photographyImages.prepKitchen}
-                    alt="Living room with fireplace ready for Calgary real estate photo shoot"
+                    alt="Living room with fireplace photo for a Calgary listing by Photos 4 Real Estate"
                     width={800}
                     height={600}
                     sizes="(max-width: 1024px) 50vw, 25vw"
@@ -737,7 +785,7 @@ function PageBody() {
                 <div>
                   <Image
                     src={photographyImages.prepBedroom}
-                    alt="Living room with stairs prepared for real estate photography in Calgary"
+                    alt="Living room with stairs photo for real estate photography in Calgary by Photos 4 Real Estate"
                     width={800}
                     height={600}
                     sizes="(max-width: 1024px) 50vw, 25vw"
@@ -751,7 +799,7 @@ function PageBody() {
       </section>
 
       {/* PRICING CALLOUT */}
-      <section className="pricing-section" aria-labelledby="pricing-heading">
+      <section className="pricing-section photo-pricing-section" aria-labelledby="pricing-heading">
         <div className="container">
           <div className="pricing-callout">
             <div className="pc-left">
@@ -844,7 +892,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={photographyImages.areaCalgary}
-                  alt="Aerial view of downtown Calgary by Photos 4 Real Estate"
+                  alt="Bedroom example photo in Calgary by Photos 4 Real Estate"
                   width={1600}
                   height={700}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -854,7 +902,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={photographyImages.areaMahogany}
-                  alt="Drone photography of Mahogany Lake, Calgary"
+                  alt="Drone photo of downtown Calgary by Photos 4 Real Estate"
                   width={800}
                   height={600}
                   sizes="(max-width: 1024px) 50vw, 25vw"
@@ -864,7 +912,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={photographyImages.areaAcreage}
-                  alt="Acreage photography near Calgary by Photos 4 Real Estate"
+                  alt="Drone photo of Mahogany Lake in Calgary by Photos 4 Real Estate"
                   width={800}
                   height={600}
                   sizes="(max-width: 1024px) 50vw, 25vw"
@@ -926,8 +974,8 @@ function PageBody() {
 
       {/* CTA — services-page style with photography copy */}
       <Cta
-        eyebrow="Ready to list?"
-        title="Book Calgary real estate photography in under a minute."
+        eyebrow="Ready To List?"
+        title="Book Calgary Real Estate Photography In Under A Minute."
         description={
           <>
             Pick your date, choose your package, and we&rsquo;ll handle the

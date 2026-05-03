@@ -625,11 +625,14 @@ function PageBody() {
             </p>
           </div>
           <div className="ig-compare-wrap">
-            <table className="ig-compare-table">
+            <table className="ig-compare-table" aria-describedby="ig-compare-caption">
+              <caption id="ig-compare-caption" className="sr-only">
+                Comparison of iGUIDE and Matterport for Calgary real estate listings, including RMS measurements, floor plans, virtual tour features, and practical differences for realtors.
+              </caption>
               <thead>
                 <tr>
                   <th>Feature</th>
-                  <th className="hl">iGUIDE <Check size={16} style={{ display: "inline-block", verticalAlign: "middle" }} /></th>
+                  <th className="hl">iGUIDE <Check size={16} aria-hidden="true" style={{ display: "inline-block", verticalAlign: "middle" }} /></th>
                   <th>Matterport</th>
                 </tr>
               </thead>
@@ -675,37 +678,45 @@ function PageBody() {
                 <tr>
                   <td>Interactive 3D walkthrough</td>
                   <td className="hl">
-                    <span className="ig-c-yes"><Check size={18} /></span>
+                    <span className="ig-c-yes"><Check size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">Yes</span>
                   </td>
                   <td>
-                    <span className="ig-c-yes"><Check size={18} /></span>
+                    <span className="ig-c-yes"><Check size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">Yes</span>
                   </td>
                 </tr>
                 <tr>
                   <td>Floor plan embedded in tour</td>
                   <td className="hl">
-                    <span className="ig-c-yes"><Check size={18} /></span>
+                    <span className="ig-c-yes"><Check size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">Yes</span>
                   </td>
                   <td>
-                    <span className="ig-c-yes"><Check size={18} /></span>
+                    <span className="ig-c-yes"><Check size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">Yes</span>
                   </td>
                 </tr>
                 <tr>
                   <td>Room dimensions shown in tour</td>
                   <td className="hl">
-                    <span className="ig-c-yes"><Check size={18} /></span>
+                    <span className="ig-c-yes"><Check size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">Yes</span>
                   </td>
                   <td>
-                    <span className="ig-c-no"><Minus size={18} /></span>
+                    <span className="ig-c-no"><Minus size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">No</span>
                   </td>
                 </tr>
                 <tr>
                   <td>Shareable URL (no app required)</td>
                   <td className="hl">
-                    <span className="ig-c-yes"><Check size={18} /></span>
+                    <span className="ig-c-yes"><Check size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">Yes</span>
                   </td>
                   <td>
-                    <span className="ig-c-yes"><Check size={18} /></span>
+                    <span className="ig-c-yes"><Check size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">Yes</span>
                   </td>
                 </tr>
                 <tr className="ig-section-row-teal">
@@ -733,7 +744,8 @@ function PageBody() {
                 <tr>
                   <td>MLS-compatible floor plan format</td>
                   <td className="hl">
-                    <span className="ig-c-yes"><Check size={18} /></span>
+                    <span className="ig-c-yes"><Check size={18} aria-hidden="true" /></span>
+                    <span className="sr-only">Yes</span>
                   </td>
                   <td>
                     <span className="ig-c-partial">Varies</span>
