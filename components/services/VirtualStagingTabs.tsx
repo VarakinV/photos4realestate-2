@@ -28,8 +28,11 @@ export function VirtualStagingTabs({ tabs }: Props) {
             key={tab.id}
             className={`room-tab ${activeTab === tab.id ? "active" : ""}`}
             onClick={() => setActiveTab(tab.id)}
+            id={`vs-tab-${tab.id}`}
             role="tab"
             aria-selected={activeTab === tab.id}
+            aria-controls={`vs-panel-${tab.id}`}
+            tabIndex={activeTab === tab.id ? 0 : -1}
           >
             {tab.label}
           </button>
@@ -41,8 +44,11 @@ export function VirtualStagingTabs({ tabs }: Props) {
           <div
             key={tab.id}
             className={`room-panel ${activeTab === tab.id ? "active" : ""}`}
+            id={`vs-panel-${tab.id}`}
             role="tabpanel"
+            aria-labelledby={`vs-tab-${tab.id}`}
             aria-label={tab.ariaLabel}
+            hidden={activeTab !== tab.id}
             style={{ display: activeTab === tab.id ? "block" : "none" }}
           >
             <div className="ba-slider-wrap" style={{ maxWidth: "860px", margin: "0 auto", position: "relative" }}>

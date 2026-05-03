@@ -4,10 +4,13 @@ import Link from "next/link";
 import {
   Armchair,
   ArrowRight,
+  BedDouble,
   Camera,
   Check,
   Clock,
   CloudSun,
+  Gem,
+  Home,
   Images,
   MapPin,
   Sparkles,
@@ -25,6 +28,12 @@ import { servicesContent } from "@/lib/services-content";
 import { virtualStagingImages } from "@/lib/images";
 import { VirtualStagingTabs } from "@/components/services/VirtualStagingTabs";
 import { BeforeAfter } from "@/components/bits/BeforeAfter";
+import {
+  AVERAGE_RATING,
+  REVIEW_COUNT,
+  reviews as reviewItems,
+  toIsoDate,
+} from "@/lib/reviews";
 
 export const dynamic = "force-static";
 
@@ -32,31 +41,34 @@ const slug = "virtual-staging";
 const content = servicesContent[slug];
 const pageUrl = `${siteConfig.url}/services/${slug}`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
+const businessId = `${siteConfig.url}/#business`;
 
-export const metadata: Metadata = {
-  title: content.seoTitle,
-  description: content.seoDescription,
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    type: "website",
-    title: content.seoTitle,
+export function generateMetadata(): Metadata {
+  return {
+    title: { absolute: content.seoTitle },
     description: content.seoDescription,
-    url: pageUrl,
-    siteName: siteConfig.shortName,
-    locale: "en_CA",
-    images: [
-      { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: content.seoTitle,
-    description: content.seoDescription,
-    images: [ogImageUrl],
-  },
-};
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      type: "website",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      url: pageUrl,
+      siteName: siteConfig.name,
+      locale: "en_CA",
+      images: [
+        { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      images: [ogImageUrl],
+    },
+  };
+}
 
-const businessRef = { "@id": `${siteConfig.url}/#business` };
+const businessRef = { "@id": businessId };
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -83,6 +95,43 @@ const faqSchema = {
   mainEntity: faqItemsToSchemaMainEntity(content.faqs),
 };
 
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": businessId,
+  name: siteConfig.name,
+  url: siteConfig.url,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: AVERAGE_RATING,
+    reviewCount: REVIEW_COUNT,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  review: reviewItems.map((review) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    itemReviewed: {
+      "@id": businessId,
+    },
+    reviewBody: review.text,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    datePublished: toIsoDate(review.date),
+    publisher: {
+      "@type": "Organization",
+      name: "Google",
+    },
+  })),
+};
+
 const speakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -101,26 +150,26 @@ const tabData = [
     label: "Living Room",
     beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Living-Room-Before-02%20(1).webp",
     afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Living-Room-After-02%20(1).webp",
-    beforeAlt: "Empty living room before virtual staging Calgary",
-    afterAlt: "Living room after virtual staging with modern furniture",
+    beforeAlt: "Empty living room before virtual staging by Photos 4 Real Estate",
+    afterAlt: "Virtually staged living room with modern furniture by Photos 4 Real Estate",
     ariaLabel: "Living room virtual staging before and after comparison"
   },
   {
     id: "kitchen",
-    label: "Kitchen",
+    label: "Dining Room",
     beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Dinning-Room-Before-01.webp",
     afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Dinning-Room-After-01.webp",
-    beforeAlt: "Empty kitchen before virtual staging",
-    afterAlt: "Virtually staged kitchen Calgary",
-    ariaLabel: "Kitchen virtual staging before and after comparison"
+    beforeAlt: "Empty dining room before virtual staging by Photos 4 Real Estate",
+    afterAlt: "Virtually staged dining room by Photos 4 Real Estate",
+    ariaLabel: "Dining room virtual staging before and after comparison"
   },
   {
     id: "bedroom",
     label: "Bedroom",
     beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Bedroom-Before-03.webp",
     afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Bedroom-After-03.webp",
-    beforeAlt: "Empty bedroom before virtual staging",
-    afterAlt: "Virtually staged bedroom with furniture",
+    beforeAlt: "Empty bedroom before virtual staging by Photos 4 Real Estate",
+    afterAlt: "Virtually staged bedroom with furniture by Photos 4 Real Estate",
     ariaLabel: "Bedroom virtual staging before and after comparison"
   },
   {
@@ -128,8 +177,8 @@ const tabData = [
     label: "Pool / Exterior",
     beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/pool-before-850.webp",
     afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/pool-after-850.webp",
-    beforeAlt: "Pool and exterior before virtual staging",
-    afterAlt: "Pool and exterior after virtual enhancement",
+    beforeAlt: "Backyard pool and exterior before virtual enhancement by Photos 4 Real Estate",
+    afterAlt: "Backyard pool and exterior after virtual enhancement by Photos 4 Real Estate",
     ariaLabel: "Pool and exterior virtual staging before and after comparison"
   }
 ];
@@ -216,6 +265,7 @@ export default function VirtualStagingPage() {
 
       <JsonLd id={`ld-service-${slug}`} data={serviceSchema} />
       <JsonLd id={`ld-faq-${slug}`} data={faqSchema} />
+      <JsonLd id={`ld-reviews-${slug}`} data={reviewSchema} />
       <JsonLd id={`ld-speakable-${slug}`} data={speakableSchema} />
     </>
   );
@@ -237,7 +287,7 @@ function PageBody() {
                 For Calgary realtors and homeowners, virtual staging solves one of the most common listing challenges: vacant properties are harder to sell because buyers struggle to connect emotionally with empty rooms. A virtually staged photo instantly shows buyers how a space could look and feel when lived in &mdash; without renting furniture, hiring stagers, or coordinating delivery schedules.
               </p>
               <p>
-                At Photos 4 Real Estate, you can submit existing photos or have us photograph the property first. We stage your selected rooms in the style of your choice and deliver both the staged and original versions within 24&ndash;48 hours &mdash; ready for MLS, property websites, and social media.
+                At Photos 4 Real Estate, virtual staging is typically added to the listing photos we capture for you. After the shoot, we stage your selected rooms in the style of your choice and deliver both the staged and original versions within 24&ndash;48 hours &mdash; ready for MLS, property websites, and social media.
               </p>
 
               <div className="vs-cost-compare" aria-label="Virtual vs physical staging cost comparison">
@@ -269,22 +319,22 @@ function PageBody() {
               </ul>
             </div>
             <div className="photo-intro-visual vs-intro-visual">
-              <div style={{ borderRadius: "var(--radius)", overflow: "hidden", position: "relative", aspectRatio: "4/3" }}>
+              <div className="vs-intro-compare" style={{ borderRadius: "var(--radius)", overflow: "hidden", position: "relative", aspectRatio: "4/3" }}>
                 <BeforeAfter
                   beforeSrc="https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Living-Room-Before-01.webp"
                   afterSrc="https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Living-Room-After-01.webp"
-                  beforeAlt="Empty living room before virtual staging Calgary"
-                  afterAlt="Living room after virtual staging with modern furniture"
+                  beforeAlt="Empty living room before virtual staging by Photos 4 Real Estate"
+                  afterAlt="Virtually staged living room with modern furniture by Photos 4 Real Estate"
                   beforeLabel="Before"
                   afterLabel="After"
                 />
               </div>
-              <div style={{ borderRadius: "var(--radius)", overflow: "hidden", position: "relative", aspectRatio: "4/3", marginTop: "12px" }}>
+              <div className="vs-intro-compare" style={{ borderRadius: "var(--radius)", overflow: "hidden", position: "relative", aspectRatio: "4/3", marginTop: "12px" }}>
                 <BeforeAfter
                   beforeSrc="https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Dinning-Room-Before-01.webp"
                   afterSrc="https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Dinning-Room-After-01.webp"
-                  beforeAlt="Empty dining room before virtual staging Calgary"
-                  afterAlt="Dining room after virtual staging with furniture and decor"
+                  beforeAlt="Empty dining room before virtual staging by Photos 4 Real Estate"
+                  afterAlt="Virtually staged dining room with furniture and decor by Photos 4 Real Estate"
                   beforeLabel="Before"
                   afterLabel="After"
                 />
@@ -317,7 +367,7 @@ function PageBody() {
           <div className="vs-styles-grid">
             <div className="vs-style-card">
               <div className="vs-style-img">
-                <Image src={virtualStagingImages.livingAfter} alt="Modern virtual staging style Calgary" width={400} height={300} style={{ width: "100%", height: "auto" }} />
+                <Image src={virtualStagingImages.styleModern} alt="Modern style virtual staging living room by Photos 4 Real Estate" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="vs-style-body">
                 <div className="vs-style-name">Modern</div>
@@ -331,7 +381,7 @@ function PageBody() {
 
             <div className="vs-style-card">
               <div className="vs-style-img">
-                <Image src={virtualStagingImages.bedroomAfter} alt="Scandinavian virtual staging style Calgary" width={400} height={300} style={{ width: "100%", height: "auto" }} />
+                <Image src={virtualStagingImages.styleScandinavian} alt="Scandinavian style office virtual staging by Photos 4 Real Estate" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="vs-style-body">
                 <div className="vs-style-name">Scandinavian</div>
@@ -345,7 +395,7 @@ function PageBody() {
 
             <div className="vs-style-card">
               <div className="vs-style-img">
-                <Image src={virtualStagingImages.livingAfterAlt} alt="Transitional virtual staging style Calgary" width={400} height={300} style={{ width: "100%", height: "auto" }} />
+                <Image src={virtualStagingImages.styleTransitional} alt="Transitional style virtual staging bedroom by Photos 4 Real Estate" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="vs-style-body">
                 <div className="vs-style-name">Transitional</div>
@@ -359,7 +409,7 @@ function PageBody() {
 
             <div className="vs-style-card">
               <div className="vs-style-img">
-                <Image src={virtualStagingImages.kitchenAfter} alt="Luxury virtual staging style Calgary" width={400} height={300} style={{ width: "100%", height: "auto" }} />
+                <Image src={virtualStagingImages.styleLuxury} alt="Luxury style virtually staged living room by Photos 4 Real Estate" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="vs-style-body">
                 <div className="vs-style-name">Luxury</div>
@@ -373,7 +423,7 @@ function PageBody() {
 
             <div className="vs-style-card">
               <div className="vs-style-img">
-                <Image src={virtualStagingImages.livingAfter} alt="Traditional virtual staging style Calgary" width={400} height={300} style={{ width: "100%", height: "auto" }} />
+                <Image src={virtualStagingImages.styleTraditional} alt="Traditional style virtual staging room by Photos 4 Real Estate" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="vs-style-body">
                 <div className="vs-style-name">Traditional</div>
@@ -387,7 +437,7 @@ function PageBody() {
 
             <div className="vs-style-card">
               <div className="vs-style-img">
-                <Image src={virtualStagingImages.bedroomAfter} alt="Farmhouse virtual staging style Calgary" width={400} height={300} style={{ width: "100%", height: "auto" }} />
+                <Image src={virtualStagingImages.styleFarmhouse} alt="Farmhouse style virtual staging after image by Photos 4 Real Estate" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="vs-style-body">
                 <div className="vs-style-name">Farmhouse</div>
@@ -403,24 +453,24 @@ function PageBody() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="process-section" aria-labelledby="process-heading">
+      <section className="process-section vs-process-section" aria-labelledby="process-heading">
         <div className="container">
           <div className="process-header">
             <span className="section-label">How It Works</span>
             <h2 id="process-heading">From Empty Room to Staged Photo &mdash; 4 Steps</h2>
-            <p>Simple to order, fast to deliver. You can submit existing photos or have us photograph the property first.</p>
+            <p>Simple to add on, fast to deliver. We photograph the property first, then stage the selected images.</p>
           </div>
           <div className="process-steps">
             <div className="process-step">
               <div className="step-num">01</div>
-              <h3>Submit Photos</h3>
-              <p>Send us your high-resolution JPEG photos via Google Drive, Dropbox, or WeTransfer. Include your preferred design style.</p>
+              <h3>Book Photography</h3>
+              <p>Book any Photos 4 Real Estate photography package and let us know you&apos;d like virtual staging added to selected rooms.</p>
               <div className="step-arrow"><ArrowRight size={14} /></div>
             </div>
             <div className="process-step">
               <div className="step-num">02</div>
               <h3>Choose Your Style</h3>
-              <p>Select from Modern, Scandinavian, Transitional, Luxury, Traditional, or Farmhouse &mdash; or let our designers choose the best fit.</p>
+              <p>After the shoot, select the rooms to stage and choose from Modern, Scandinavian, Transitional, Luxury, Traditional, or Farmhouse.</p>
               <div className="step-arrow"><ArrowRight size={14} /></div>
             </div>
             <div className="process-step">
@@ -468,11 +518,11 @@ function PageBody() {
       {/* ── BENEFITS ── */}
       <section className="vs-benefits-section" aria-labelledby="benefits-heading">
         <div className="container">
-          <div className="vs-benefits-grid">
-            <div>
+            <div className="vs-benefits-grid">
+            <div className="vs-benefits-content">
               <span className="section-label">Why Virtual Staging Works</span>
               <h2 id="benefits-heading">Why Calgary Realtors Use Virtual Staging</h2>
-              <p className="vs-benefits-content">Virtual staging is not just a cost-saving alternative to physical staging &mdash; it&apos;s often a better marketing tool. Staged photos consistently outperform empty room photos in every measurable metric.</p>
+              <p className="vs-benefits-lead">Virtual staging is not just a cost-saving alternative to physical staging &mdash; it&apos;s often a better marketing tool. Staged photos consistently outperform empty room photos in every measurable metric.</p>
               <div className="vs-benefits-list">
                 <div className="vs-benefit-item">
                   <div className="vs-benefit-icon"><MonitorPlay size={20} color="var(--brick)" /></div>
@@ -492,21 +542,21 @@ function PageBody() {
                   <div className="vs-benefit-icon"><Clock size={20} color="var(--brick)" /></div>
                   <div>
                     <h3>No Logistics, No Wait</h3>
-                    <p>No furniture rentals, no delivery trucks, no stager scheduling, no removal at the end of the listing period. Submit photos today, receive staged images tomorrow.</p>
+                    <p>No furniture rentals, no delivery trucks, no stager scheduling, and no removal at the end of the listing period. Photograph the property first, then receive staged images within 24&ndash;48 hours.</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="vs-benefits-visual">
               <div className="vs-benefits-img">
-                <Image src={virtualStagingImages.livingAfterAlt} alt="Photorealistic virtual staging result" width={600} height={450} sizes="(max-width: 1024px) 100vw, 50vw" />
+                <Image src={virtualStagingImages.benefitsMain} alt="Virtually staged living room interior by Photos 4 Real Estate" width={600} height={450} sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
               <div className="vs-benefits-img-pair">
                 <div>
-                  <Image src={virtualStagingImages.kitchenAfter} alt="Virtually staged kitchen" width={300} height={225} />
+                  <Image src={virtualStagingImages.benefitsBedroom} alt="Virtually staged bedroom interior by Photos 4 Real Estate" width={300} height={225} />
                 </div>
                 <div>
-                  <Image src={virtualStagingImages.bedroomAfter} alt="Virtually staged bedroom" width={300} height={225} />
+                  <Image src={virtualStagingImages.benefitsDiningLiving} alt="Virtually staged dining and living room by Photos 4 Real Estate" width={300} height={225} />
                 </div>
               </div>
             </div>
@@ -537,6 +587,21 @@ function PageBody() {
               <div className="vs-when-icon"><Clock size={28} color="var(--white)" /></div>
               <h3>Stale Listings</h3>
               <p>If a listing has been sitting on MLS without showings, new virtually staged photos in a different design style can relaunch the listing.</p>
+            </div>
+            <div className="vs-when-card">
+              <div className="vs-when-icon"><Home size={28} color="var(--white)" /></div>
+              <h3>Tenant-Occupied Properties</h3>
+              <p>When a property is occupied by tenants whose furniture doesn&apos;t photograph well, virtual staging can replace photos of poorly furnished rooms with aspirational staged versions.</p>
+            </div>
+            <div className="vs-when-card">
+              <div className="vs-when-icon"><BedDouble size={28} color="var(--white)" /></div>
+              <h3>Airbnb &amp; Short-Term Rentals</h3>
+              <p>Create multiple listing photos showing different furniture configurations and styles without changing anything physically &mdash; test what performs best before committing to a furniture purchase.</p>
+            </div>
+            <div className="vs-when-card">
+              <div className="vs-when-icon"><Gem size={28} color="var(--white)" /></div>
+              <h3>Luxury Listings</h3>
+              <p>Premium homes deserve premium presentation. When physical staging isn&apos;t possible or the existing furniture doesn&apos;t match the home&apos;s price point, luxury virtual staging elevates the perceived value of every room.</p>
             </div>
           </div>
           <div className="vs-when-not">
@@ -631,6 +696,23 @@ function PageBody() {
                     <span className="vs-pkg-per-photo">$33/photo</span>
                   </div>
                 </div>
+
+                <div className="vs-pkg-card">
+                  <div className="vs-pkg-card-photos">
+                    <div className="vs-pkg-photos-num">10</div>
+                    <div className="vs-pkg-photos-label">photos</div>
+                  </div>
+                  <div className="vs-pkg-divider"></div>
+                  <div className="vs-pkg-card-details">
+                    <div className="vs-pkg-card-name">10-Photo Package</div>
+                    <div className="vs-pkg-card-desc">Complete staging for larger homes, new builds, or luxury listings requiring maximum coverage across all rooms.</div>
+                  </div>
+                  <div className="vs-pkg-card-price">
+                    <div className="vs-pkg-price-num">$300</div>
+                    <span className="vs-pkg-price-gst">+ GST</span>
+                    <span className="vs-pkg-per-photo">$30/photo</span>
+                  </div>
+                </div>
               </div>
               <p className="vs-pricing-note">
                 All packages include both staged and original (unstaged) files. &nbsp;&middot;&nbsp;
@@ -640,10 +722,6 @@ function PageBody() {
 
             <div className="vs-pricing-addons" aria-label="Virtual staging add-ons and extras">
               <h3>Add-Ons &amp; Extras</h3>
-              <div className="vs-addon-item">
-                <span className="vs-addon-name">Rush delivery (12 hrs)</span>
-                <span className="vs-addon-price">+$15/photo</span>
-              </div>
               <div className="vs-addon-item">
                 <span className="vs-addon-name">Revision / re-style request</span>
                 <span className="vs-addon-price">$25 each</span>
@@ -666,7 +744,7 @@ function PageBody() {
               </div>
 
               <div style={{ marginTop: "20px", paddingTop: "16px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.45)", lineHeight: 1.7, marginBottom: "14px" }}>Virtual staging can be ordered with any photography package, or as a standalone service using photos you already have. <strong style={{ color: "rgba(255,255,255,0.7)" }}>No photography visit required</strong> if you supply your own images.</p>
+                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.45)", lineHeight: 1.7, marginBottom: "14px" }}>Virtual staging can be ordered with any photography package.</p>
                 <Link href="/book-online" className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>Order Virtual Staging</Link>
               </div>
             </div>
@@ -674,7 +752,74 @@ function PageBody() {
         </div>
       </section>
 
-      <Reviews />
+      <section
+        id="service-areas"
+        className="areas-section vs-areas-section"
+        aria-labelledby="vs-areas-heading"
+      >
+        <div className="container">
+          <div className="areas-inner">
+            <div className="areas-content">
+              <span className="section-label">Service Area</span>
+              <h2 id="vs-areas-heading">Virtual Staging for Calgary &amp; Surrounding Communities</h2>
+              <p>Virtual staging is offered as an add-on to our photography packages, so it&apos;s available anywhere Photos 4 Real Estate photographs listings in Calgary and surrounding communities. After the shoot, we can stage your selected images in the style of your choice.</p>
+              <ul className="areas-chips" aria-label="Virtual staging service areas">
+                {serviceAreas.map((area) => (
+                  <li key={area}>
+                    <Link
+                      href="/service-areas"
+                      className="area-chip"
+                      aria-label={`Virtual staging for properties in ${area}`}
+                    >
+                      <MapPin size={12} aria-hidden="true" />
+                      {area}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <p className="areas-travel-note">
+                <strong>Photography add-on:</strong> Virtual staging is typically ordered with a Photos 4 Real Estate photo shoot. If you&apos;re unsure which rooms to stage, we can recommend the strongest images after the session.
+              </p>
+            </div>
+
+            <div className="areas-visual">
+              <div className="areas-visual-item">
+                <Image
+                  src={virtualStagingImages.areaMain}
+                  alt="Virtually staged bedroom by Photos 4 Real Estate"
+                  width={850}
+                  height={372}
+                  sizes="(max-width: 960px) 100vw, 50vw"
+                />
+              </div>
+              <div className="areas-visual-item">
+                <Image
+                  src={virtualStagingImages.areaBedroom}
+                  alt="Virtually staged bedroom interior by Photos 4 Real Estate"
+                  width={400}
+                  height={300}
+                  sizes="(max-width: 960px) 100vw, 25vw"
+                />
+              </div>
+              <div className="areas-visual-item">
+                <Image
+                  src={virtualStagingImages.areaLiving}
+                  alt="Virtual staging living room after image by Photos 4 Real Estate"
+                  width={400}
+                  height={300}
+                  sizes="(max-width: 960px) 100vw, 25vw"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Reviews
+        variant="dark"
+        eyebrow="Client Reviews"
+        heading={<>What Calgary Realtors Say</>}
+      />
       <Faq faqs={content.faqs} />
 
       {/* ── RELATED ── */}

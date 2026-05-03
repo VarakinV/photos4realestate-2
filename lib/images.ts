@@ -135,10 +135,30 @@ export const rmsImages = {
 
 // Virtual staging service page
 export const virtualStagingImages = {
-  livingAfter: `${cdn}/2024/05/virtually-stageg-living-room-1-850.webp`,
-  livingAfterAlt: `${cdn}/2023/07/virtual-staging-after-image-850.webp`,
-  bedroomAfter: `${cdn}/2024/05/virtually-stageg-bedroom-1-850.webp`,
-  kitchenAfter: `${cdn}/2024/05/virtually-stageg-kitchen-1-850.webp`,
+  styleModern:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Modern-Style-Virtual-Staging-by-Photos-4-Real-Estate-2.jpg",
+  styleScandinavian:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Scandinavian-Style-Office-Furniture-Photos-4-Real-Estate.jpg",
+  styleTransitional:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Bedroom-Transitional-%20Style-Photos-4-Real-Estate.webp",
+  styleLuxury:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/virtually-stageg-living-room-Luxury-Photos-4-Real-Estate.webp",
+  styleTraditional:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Traditional-Style-Virtual-Staging-Photos-4-Real-Estate.jpg",
+  styleFarmhouse:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/virtual-staging-after-image-farmhouse-style-Photos-4-Real-Estate.webp",
+  benefitsMain:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtually-Staged-Living-Room-by-Photos-4-Real-Estate.jpg",
+  benefitsBedroom:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtually-Staged-Bedroom-by-Photos-4-Real-Estate.jpg",
+  benefitsDiningLiving:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Dinnnig-and-Living-Room-by-Photos-4-Real-Estate.webp",
+  areaMain:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtually-Staged-Bedroom-by-Photos-4-Real-Estate-02.jpg",
+  areaBedroom:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/virtually-stageg-bedroom-1-850.webp",
+  areaLiving:
+    "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Living-Room-After-02%20(1).webp",
 } as const;
 
 // Services index page (cards on /services and the per-slug content)

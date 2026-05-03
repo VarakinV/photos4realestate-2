@@ -418,11 +418,15 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "How much does virtual staging cost in Calgary?",
-        a: "Virtual staging in Calgary starts at $35 per photo. Package pricing is available: 3 photos for $100, 6 photos for $200, and 10 photos for $300 &mdash; all before GST. Rush delivery within 12 hours is available for an additional $15 per photo.",
+        a: "Virtual staging in Calgary starts at $35 per photo. Package pricing is available: 3 photos for $100, 6 photos for $200, and 10 photos for $300 &mdash; all before GST.",
       },
       {
         q: "How long does virtual staging take?",
-        a: "Standard virtual staging is delivered within 24 to 48 hours of submitting your photos and style preferences. Rush delivery (within 12 hours) is available for an additional $15 per photo.",
+        a: "Standard virtual staging is delivered within 24 to 48 hours after your photos are captured and your room/style selections are confirmed.",
+      },
+      {
+        q: "Can I request changes after the staging is delivered?",
+        a: "Yes. Revisions and re-style requests are available for $25 per photo. We recommend reviewing the staged photos carefully before requesting changes &mdash; providing a clear brief and reference images upfront minimizes the need for revisions. Revisions are typically delivered within 24 hours of your request.",
       },
       {
         q: "Do I need to disclose virtual staging to buyers?",
@@ -430,11 +434,15 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "What design styles are available for virtual staging?",
-        a: "We offer multiple design styles including Modern, Scandinavian, Traditional, Transitional, Farmhouse, and Luxury. You can specify your preferred style when submitting your photos, or leave it to our designers to select the best fit for the property and target buyer.",
+        a: "We offer multiple design styles including Modern, Scandinavian, Traditional, Transitional, Farmhouse, and Luxury. You can specify your preferred style when selecting the rooms to stage, or leave it to our designers to choose the best fit for the property and target buyer.",
       },
       {
-        q: "Can virtual staging be done on photos I already have?",
-        a: "Yes. You can submit existing high-resolution property photos for virtual staging &mdash; they do not need to be taken by Photos 4 Real Estate. Photos should be high-resolution JPEG files (minimum 2000px wide) shot with a wide-angle lens and good natural lighting for best results.",
+        q: "Which rooms should be virtually staged?",
+        a: "For most listings, the best rooms to stage are the living room, primary bedroom, and kitchen or dining area &mdash; the spaces that most strongly influence a buyer's first impression. If you're unsure, we can recommend the best images to stage after the photo shoot.",
+      },
+      {
+        q: "Do you deliver both the staged and original photos?",
+        a: "Yes. Every virtual staging order includes both the virtually staged images and the original unstaged versions. This helps with RECA-compliant disclosure and gives you flexibility in how you market the property.",
       },
     ],
     relatedSlugs: [
