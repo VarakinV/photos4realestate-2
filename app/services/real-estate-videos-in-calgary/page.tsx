@@ -25,6 +25,12 @@ import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import { siteConfig, serviceAreas } from "@/lib/site";
 import { servicesContent } from "@/lib/services-content";
 import { videographyImages, photographyImages } from "@/lib/images";
+import {
+  AVERAGE_RATING,
+  REVIEW_COUNT,
+  reviews as reviewItems,
+  toIsoDate,
+} from "@/lib/reviews";
 
 export const dynamic = "force-static";
 
@@ -32,31 +38,34 @@ const slug = "real-estate-videos-in-calgary";
 const content = servicesContent[slug];
 const pageUrl = `${siteConfig.url}/services/${slug}`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
+const businessId = `${siteConfig.url}/#business`;
 
-export const metadata: Metadata = {
-  title: content.seoTitle,
-  description: content.seoDescription,
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    type: "website",
-    title: content.seoTitle,
+export function generateMetadata(): Metadata {
+  return {
+    title: { absolute: content.seoTitle },
     description: content.seoDescription,
-    url: pageUrl,
-    siteName: siteConfig.shortName,
-    locale: "en_CA",
-    images: [
-      { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: content.seoTitle,
-    description: content.seoDescription,
-    images: [ogImageUrl],
-  },
-};
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      type: "website",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      url: pageUrl,
+      siteName: siteConfig.name,
+      locale: "en_CA",
+      images: [
+        { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      images: [ogImageUrl],
+    },
+  };
+}
 
-const businessRef = { "@id": `${siteConfig.url}/#business` };
+const businessRef = { "@id": businessId };
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -81,6 +90,43 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: faqItemsToSchemaMainEntity(content.faqs),
+};
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": businessId,
+  name: siteConfig.name,
+  url: siteConfig.url,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: AVERAGE_RATING,
+    reviewCount: REVIEW_COUNT,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  review: reviewItems.map((review) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    itemReviewed: {
+      "@id": businessId,
+    },
+    reviewBody: review.text,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    datePublished: toIsoDate(review.date),
+    publisher: {
+      "@type": "Organization",
+      name: "Google",
+    },
+  })),
 };
 
 const speakableSchema = {
@@ -247,6 +293,7 @@ export default function RealEstateVideographyCalgaryPage() {
 
       <JsonLd id={`ld-service-${slug}`} data={serviceSchema} />
       <JsonLd id={`ld-faq-${slug}`} data={faqSchema} />
+      <JsonLd id={`ld-reviews-${slug}`} data={reviewSchema} />
       <JsonLd id={`ld-speakable-${slug}`} data={speakableSchema} />
     </>
   );
@@ -339,7 +386,7 @@ function PageBody() {
                   src={`${videographyImages.heroVideo}#t=1`}
                   controls
                   style={{ width: "100%", height: "auto", display: "block" }}
-                  aria-label="Vertical real estate property video walkthrough in Calgary"
+                  aria-label="Vertical property video walkthrough for 306 Cranbrook Walk SE in Calgary"
                 />
               </div>
             </div>
@@ -349,18 +396,18 @@ function PageBody() {
 
       {/* WHAT YOU RECEIVE — deliverables */}
       <section
-        className="deliverables-section"
+        className="deliverables-section photo-deliverables-section"
         aria-labelledby="photo-deliv-heading"
       >
         <div className="container">
           <div className="deliverables-header">
             <span className="section-label">What You Receive</span>
             <h2 id="photo-deliv-heading">
-              Everything Included in Every Photo Shoot
+              Everything Included in Every Video Shoot
             </h2>
             <p>
-              Every booking — regardless of package — includes this complete
-              set of deliverables. No extras required for MLS upload.
+              Every videography booking includes a polished final deliverable set
+              ready for MLS, YouTube, Instagram Reels, Facebook and TikTok.
             </p>
           </div>
           <div className="deliverables-grid">
@@ -417,7 +464,7 @@ function PageBody() {
                   src={`${videographyImages.reelsVideo}#t=6`}
                   controls
                   style={{ width: "100%", height: "auto", display: "block" }}
-                  aria-label="Example of a social media property reel for a Calgary listing"
+                  aria-label="Social media property video for 9759 Sanderling Way NW in Calgary"
                 />
               </div>
             </div>
@@ -427,7 +474,7 @@ function PageBody() {
 
       {/* HOW IT WORKS / PROCESS */}
       <section
-        className="process-section"
+        className="process-section photo-process-section"
         aria-labelledby="video-process-heading"
       >
         <div className="container">
@@ -507,7 +554,7 @@ function PageBody() {
       </section>
 
       {/* PREP CHECKLIST */}
-      <section className="prep-section" aria-labelledby="video-prep-heading">
+      <section className="prep-section photo-prep-section" aria-labelledby="video-prep-heading">
         <div className="container">
           <div className="prep-grid">
             <div className="prep-content">
@@ -539,7 +586,7 @@ function PageBody() {
                   src={`${videographyImages.prepVideo}#t=1`}
                   controls
                   style={{ width: "100%", height: "auto", display: "block" }}
-                  aria-label="Real estate video walkthrough preparation example"
+                  aria-label="Real estate video walkthrough example for 244094 Partridge Place"
                 />
               </div>
             </div>
@@ -548,7 +595,10 @@ function PageBody() {
       </section>
 
       {/* PRICING CALLOUT */}
-      <section className="pricing-section" aria-labelledby="pricing-heading">
+      <section
+        className="pricing-section photo-pricing-section"
+        aria-labelledby="pricing-heading"
+      >
         <div className="container">
           <div className="pricing-callout">
             <div className="pc-left">
@@ -594,7 +644,7 @@ function PageBody() {
       <section
         id="service-areas"
         className="areas-section"
-        aria-labelledby="photo-areas-heading"
+        aria-labelledby="video-areas-heading"
       >
         <div className="container">
           <div className="areas-inner">
@@ -640,7 +690,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={photographyImages.areaCalgary}
-                  alt="Aerial view of downtown Calgary by Photos 4 Real Estate"
+                  alt="Bedroom example photo in Calgary by Photos 4 Real Estate"
                   width={1600}
                   height={700}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -650,7 +700,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={photographyImages.areaMahogany}
-                  alt="Drone photography of Mahogany Lake, Calgary"
+                  alt="Drone photo of downtown Calgary by Photos 4 Real Estate"
                   width={800}
                   height={600}
                   sizes="(max-width: 1024px) 50vw, 25vw"
@@ -660,7 +710,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={photographyImages.areaAcreage}
-                  alt="Acreage photography near Calgary by Photos 4 Real Estate"
+                  alt="Drone photo of Mahogany Lake in Calgary by Photos 4 Real Estate"
                   width={800}
                   height={600}
                   sizes="(max-width: 1024px) 50vw, 25vw"

@@ -129,6 +129,7 @@ export function Header() {
 
           <Link href="/book-online" className="btn btn-primary nav-cta nav-cta-mobile" onClick={closeMenus}>
             Book Now
+            <span className="sr-only"> for Calgary real estate photography and media services</span>
           </Link>
 
           <div className="nav-menu-contact">
@@ -166,6 +167,7 @@ export function Header() {
 
         <Link href="/book-online" className="btn btn-primary nav-cta nav-cta-desktop">
           Book Now
+          <span className="sr-only"> for Calgary real estate photography and media services</span>
         </Link>
 
         <button

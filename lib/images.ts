@@ -94,9 +94,12 @@ export const droneImages = {
 
 // Videography service page
 export const videographyImages = {
-  heroVideo: `${cdn}/2025/05/Calgary-Real-Estate-Video-Walkthrough.mp4`,
-  reelsVideo: `${cdn}/2025/05/Calgary-Real-Estate-Social-Reel.mp4`,
-  prepVideo: `${cdn}/2025/05/Calgary-Real-Estate-Prep-Video.mp4`,
+  heroVideo:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-videography-service-page/306%20Cranbrook%20Walk%20Se%20-%20Vertical%20Property%20Video%2C%20Calgary.mp4",
+  reelsVideo:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-videography-service-page/V2%209759%20Sanderling%20Way%20Nw%20Calgary%20-%20Videos.mp4",
+  prepVideo:
+    "https://cdn.photos4realestate.ca/p4re-static-media/re-videography-service-page/244094%20Partridge%20Place.mp4",
 } as const;
 
 // Twilight service page
