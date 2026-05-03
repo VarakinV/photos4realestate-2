@@ -83,7 +83,7 @@ export function Differentiator() {
             <div className="diff-img-main">
               <Image
                 src={homeImages.diffLiving}
-                alt="Bright Calgary living room photographed in HDR for a real estate listing"
+                alt="Bright Calgary living room photographed in HDR by Photos 4 Real Estate"
                 fill
                 sizes="(max-width: 900px) 100vw, 45vw"
                 style={{ objectFit: "cover" }}

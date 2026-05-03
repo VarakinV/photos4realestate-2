@@ -35,30 +35,32 @@ export const dynamic = "force-static";
 const slug = "iguide-virtual-tours-in-calgary";
 const content = servicesContent[slug];
 const pageUrl = `${siteConfig.url}/services/${slug}`;
-const ogImageUrl = `${pageUrl}/opengraph-image`;
+const ogImageUrl = iguideTourImages.areasVirtualTour;
 
-export const metadata: Metadata = {
-  title: content.seoTitle,
-  description: content.seoDescription,
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    type: "website",
-    title: content.seoTitle,
+export function generateMetadata(): Metadata {
+  return {
+    title: { absolute: content.seoTitle },
     description: content.seoDescription,
-    url: pageUrl,
-    siteName: siteConfig.shortName,
-    locale: "en_CA",
-    images: [
-      { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: content.seoTitle,
-    description: content.seoDescription,
-    images: [ogImageUrl],
-  },
-};
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      type: "website",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      url: pageUrl,
+      siteName: siteConfig.name,
+      locale: "en_CA",
+      images: [
+        { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      images: [ogImageUrl],
+    },
+  };
+}
 
 const businessRef = { "@id": `${siteConfig.url}/#business` };
 
@@ -66,8 +68,8 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${pageUrl}#service`,
-  name: "iGUIDE 3D Virtual Tours",
-  serviceType: "3D Virtual Tours",
+  name: "iGUIDE 3D Virtual Tours Calgary",
+  serviceType: "iGUIDE 3D Virtual Tours",
   description: content.seoDescription,
   url: pageUrl,
   provider: businessRef,
@@ -306,26 +308,29 @@ function PageBody() {
                 </div>
                 <Image
                   src={iguideTourImages.onlineViewing}
-                  alt="iGUIDE 3D virtual tour interface for Calgary real estate listing"
+                  alt="Real estate floor plan generated from iGUIDE property scan"
                   width={800}
                   height={600}
+                  sizes="(max-width: 900px) 100vw, 38vw"
                 />
               </div>
               <div className="ig-tour-img-pair">
                 <div>
                   <Image
                     src={iguideTourImages.standardFloorPlan}
-                    alt="iGUIDE standard floor plan with room dimensions Calgary"
+                    alt="Standard iGUIDE floor plan with room dimensions for a Calgary listing"
                     width={400}
                     height={300}
+                    sizes="(max-width: 900px) 50vw, 19vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={iguideTourImages.rmsMeasurements}
-                    alt="RMS measurement report from iGUIDE scan Calgary"
+                    alt="RMS measurement report generated from an iGUIDE scan"
                     width={400}
                     height={300}
+                    sizes="(max-width: 900px) 50vw, 19vw"
                   />
                 </div>
               </div>
@@ -543,8 +548,8 @@ function PageBody() {
                 <BeforeAfter
                   beforeSrc="https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/Standard%20iGUIDE%20Floor%20Plan.webp"
                   afterSrc="https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/Premium%20iGUIDE%20Floor%20Plan.webp"
-                  beforeAlt="Standard iGUIDE Floor Plan"
-                  afterAlt="Premium iGUIDE Floor Plan"
+                  beforeAlt="Standard iGUIDE floor plan example"
+                  afterAlt="Premium iGUIDE floor plan example"
                   beforeLabel="Standard"
                   afterLabel="Premium"
                 />
@@ -588,9 +593,10 @@ function PageBody() {
               <div className="ig-feature-visual" style={{ backgroundColor: "var(--white)", paddingBottom: "12px" }}>
                 <Image
                   src="https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/iGUIDE-Analytics-Report-Example.jpg"
-                  alt="Sample iGUIDE Analytics Report"
+                  alt="Sample iGUIDE analytics report showing buyer engagement data"
                   width={800}
                   height={600}
+                  sizes="(max-width: 900px) 100vw, 42vw"
                   style={{ borderRadius: "var(--radius-sm)", border: "1px solid var(--border)", objectFit: "contain" }}
                 />
                 <p style={{ textAlign: "center", fontSize: "14px", color: "var(--text-muted)", marginTop: "12px", fontStyle: "italic" }}>
@@ -877,9 +883,10 @@ function PageBody() {
               <div className="ig-embed-img">
                 <Image
                   src="https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/how-to-use-iGUIDE.webp"
-                  alt="How to use iGUIDE 3D virtual tour Calgary"
+                  alt="Guide showing how to open and navigate an iGUIDE virtual tour"
                   width={800}
                   height={450}
+                  sizes="(max-width: 900px) 100vw, 42vw"
                   style={{ borderRadius: "var(--radius-sm)", border: "1px solid var(--border)" }}
                 />
               </div>
@@ -1016,7 +1023,7 @@ function PageBody() {
               <div className="areas-visual-item" style={{ gridColumn: "1 / -1" }}>
                 <Image
                   src={iguideTourImages.areasSpecialist}
-                  alt="iGUIDE Specialist from Photos 4 Real Estate Taking Measurements of a Living Room"
+                  alt="iGUIDE specialist taking measurements in a living room"
                   width={1600}
                   height={700}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -1036,7 +1043,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={iguideTourImages.areasVirtualTour}
-                  alt="Real estate virtual tour example iGUIDE"
+                  alt="Example iGUIDE virtual tour interface for a real estate listing"
                   width={800}
                   height={600}
                   sizes="(max-width: 1024px) 50vw, 25vw"

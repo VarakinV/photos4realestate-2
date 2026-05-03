@@ -29,13 +29,17 @@ export const homeImages = {
 const cdnIguideServicePage = `${cdn}/2024/06`;
 
 export const iguideTourImages = {
-  onlineViewing: `${cdnIguideServicePage}/iGUIDE-Online-Viewing.webp`,
+  onlineViewing:
+    "https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/Real-estate-floor-plan-generated-from-iGUIDE-property-scan.webp",
   standardFloorPlan: `${cdnIguideServicePage}/iGUIDE-Standard-Floor-Plan.webp`,
   premiumPlan: `${cdnIguideServicePage}/Floor-Plan.webp`,
   rmsMeasurements: `${cdnIguideServicePage}/RMS-Measurements.webp`,
-  areasSpecialist: `${cdn}/2025/08/Drone-view-to-Downtown-Calgary-Photos-4-Real-Estate-1024x768.webp`,
-  areasFloorPlan: `${cdnIguideServicePage}/iGUIDE-Standard-Floor-Plan.webp`,
-  areasVirtualTour: `${cdnIguideServicePage}/iGUIDE-Online-Viewing.webp`,
+  areasSpecialist:
+    "https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/iGUIDE-Specialist-from-Photos-4-Real-Estate-Taking-Measurements-of-a-Living-Room.webp",
+  areasFloorPlan:
+    "https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/Real-estate-floor-plan-generated-from-iGUIDE-property-scan.webp",
+  areasVirtualTour:
+    "https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/real-estate-virtual-tour-example-iguide.webp",
 } as const;
 
 // Photography service page
@@ -95,14 +99,22 @@ export const twilightImages = {
 
 // RMS measurements service page
 export const rmsImages = {
-  standardPlanIntro: `${cdnIguideServicePage}/iGUIDE-Standard-Floor-Plan.webp`,
-  rmsMeasurements: `${cdnIguideServicePage}/RMS-Measurements.webp`,
-  standardPlanCard: `${cdnIguideServicePage}/iGUIDE-Standard-Floor-Plan.webp`,
-  premiumPlanCard: `${cdnIguideServicePage}/Floor-Plan.webp`,
-  iguideScanning: `${cdn}/2025/08/Drone-view-to-Downtown-Calgary-Photos-4-Real-Estate-1024x768.webp`,
-  areaBathroom: `${cdn}/2025/05/Bedroom-Photos-4-Real-Estate.webp`,
-  areaBedroom: `${cdn}/2025/05/Bedroom-Photos-4-Real-Estate.webp`,
-  areaKitchen: `${cdn}/2025/05/Modern-Kitchen-Photos-4-Real-Estate.webp`,
+  standardPlanIntro:
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/iGUIDE-Standard-Floor-Plan.webp",
+  rmsMeasurements:
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Real%20Estate%20Photographer%20explains%20how%20to%20use%20and%20operate%20iGUIDE%20scanning%20device.webp",
+  standardPlanCard:
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Standard%20iGUIDE%20Floor%20Plan.webp",
+  premiumPlanCard:
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Premium%20iGUIDE%20Floor%20Plan.webp",
+  iguideScanning:
+    "https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/Real-estate-floor-plan-generated-from-iGUIDE-property-scan.webp",
+  areaBathroom:
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Photo-of-a-Kitchen-Photos-4-Real-Estate-06.webp",
+  areaBedroom:
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Photo-of-a-Bedroom-Photos-4-Real-Estate-02.webp",
+  areaKitchen:
+    "https://cdn.photos4realestate.ca/p4re-static-media/rms-and-floor-plans-service-page/Photo-of-a-Bathroom-Photos-4-Real-Estate-06.webp",
 } as const;
 
 // Virtual staging service page

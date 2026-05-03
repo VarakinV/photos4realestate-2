@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 
-export const alt = `${siteConfig.name} — Real Estate Photography in Calgary`;
+export const alt = "RMS Measurements & Floor Plans Calgary | Photos 4 Real Estate";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const runtime = "nodejs";
@@ -42,17 +42,8 @@ export default async function OgImage() {
             height="64"
             style={{ width: 64, height: 64 }}
           />
-          <span
-            style={{
-              color: "#fff",
-              fontSize: 34,
-              fontWeight: 600,
-              letterSpacing: "-0.01em",
-            }}
-          >
-            Photos{" "}
-            <span style={{ color: "#cb4154", fontWeight: 700 }}>4</span> Real
-            Estate
+          <span style={{ color: "#fff", fontSize: 34, fontWeight: 600 }}>
+            {siteConfig.name}
           </span>
         </div>
 
@@ -67,20 +58,20 @@ export default async function OgImage() {
               fontWeight: 500,
             }}
           >
-            Calgary&rsquo;s Real Estate Media Specialists
+            RECA-Compliant Calgary Service
           </span>
           <h1
             style={{
               color: "#fff",
-              fontSize: 82,
+              fontSize: 70,
               lineHeight: 1.05,
               fontWeight: 700,
               letterSpacing: "-0.02em",
               margin: 0,
-              maxWidth: 960,
+              maxWidth: 1000,
             }}
           >
-            Real Estate Photography &amp; Videography in Calgary.
+            RMS Measurements &amp; Floor Plans in Calgary
           </h1>
         </div>
 
@@ -89,15 +80,15 @@ export default async function OgImage() {
             display: "flex",
             gap: 28,
             fontSize: 24,
-            color: "rgba(255,255,255,0.78)",
+            color: "rgba(255,255,255,0.82)",
             alignItems: "center",
           }}
         >
+          <span>±1% Accuracy</span>
+          <span style={{ color: "#cb4154" }}>•</span>
           <span>Next-Day Delivery</span>
           <span style={{ color: "#cb4154" }}>•</span>
-          <span>MLS-Ready Exports</span>
-          <span style={{ color: "#cb4154" }}>•</span>
-          <span>5.0 / 5 on Google</span>
+          <span>From $150 + GST</span>
         </div>
       </div>
     ),

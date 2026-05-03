@@ -262,7 +262,7 @@ function PageBody() {
                 </div>
                 <Image
                   src={droneIntroImages.main}
-                  alt="Aerial drone view of Calgary real estate"
+                  alt="Aerial drone view toward Downtown Calgary and surrounding neighbourhoods"
                   width={1024} height={768}
                   sizes={introMainSizes}
                   style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }}
@@ -320,7 +320,7 @@ function PageBody() {
               <div className="drone-shot-visual">
                 <Image
                   src={droneCaptureImages.topDown}
-                  alt="Top-down aerial drone view of property in Calgary"
+                    alt="Straight-down drone view of a Calgary property with lot boundaries"
                   width={1024} height={768}
                   sizes={halfSectionSizes}
                   style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }}
@@ -344,7 +344,7 @@ function PageBody() {
               <div className="drone-shot-visual">
                 <Image
                   src={droneCaptureImages.oblique}
-                  alt="Angled aerial drone shot showing Calgary property with neighbourhood context"
+                    alt="Angled drone view of a house in Cranbrook View SE Calgary"
                   width={1024} height={768}
                   sizes={halfSectionSizes}
                   style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }}
@@ -368,7 +368,7 @@ function PageBody() {
               <div className="drone-shot-visual">
                 <Image
                   src={droneCaptureImages.context}
-                  alt="Neighbourhood aerial context shot showing Mahogany lake Calgary"
+                    alt="Aerial drone view of northwest Calgary neighbourhood context"
                   width={1024} height={576}
                   sizes={halfSectionSizes}
                   style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }}
@@ -392,7 +392,7 @@ function PageBody() {
               <div className="drone-shot-visual">
                 <Image
                   src={droneCaptureImages.video}
-                  alt="Aerial video footage drone videography for Calgary real estate"
+                    alt="Drone photo of a house near Downtown Calgary"
                   width={1024} height={768}
                   sizes={halfSectionSizes}
                   style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }}
@@ -414,7 +414,7 @@ function PageBody() {
           <div className="drone-types-grid">
             <div className="drone-type-card">
               <div className="drone-type-img">
-                <Image src={dronePropertyTypeImages.lakefront} alt="Lakefront properties in Calgary benefit from drone photography" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
+                <Image src={dronePropertyTypeImages.lakefront} alt="Drone photo showing Mahogany Lake and nearby homes in Calgary" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
                 <div className="drone-type-img-overlay"></div>
               </div>
               <div className="drone-type-body">
@@ -424,7 +424,7 @@ function PageBody() {
             </div>
             <div className="drone-type-card">
               <div className="drone-type-img">
-                <Image src={dronePropertyTypeImages.largeLot} alt="Acreage and large lot properties Calgary aerial photography" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
+                <Image src={dronePropertyTypeImages.largeLot} alt="Drone photo showing a large lot in Calgary" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
                 <div className="drone-type-img-overlay"></div>
               </div>
               <div className="drone-type-body">
@@ -434,7 +434,7 @@ function PageBody() {
             </div>
             <div className="drone-type-card">
               <div className="drone-type-img">
-                <Image src={dronePropertyTypeImages.premiumNeighbourhood} alt="Luxury and premium neighbourhood properties Calgary drone photography" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
+                <Image src={dronePropertyTypeImages.premiumNeighbourhood} alt="Drone photo of a home in Bridgeland Calgary" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
                 <div className="drone-type-img-overlay"></div>
               </div>
               <div className="drone-type-body">
@@ -444,7 +444,7 @@ function PageBody() {
             </div>
             <div className="drone-type-card">
               <div className="drone-type-img">
-                <Image src={dronePropertyTypeImages.cornerLot} alt="Corner lots and infill properties in Calgary aerial photography" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
+                <Image src={dronePropertyTypeImages.cornerLot} alt="Aerial photo of a house on a corner lot in Calgary" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
                 <div className="drone-type-img-overlay"></div>
               </div>
               <div className="drone-type-body">
@@ -454,7 +454,7 @@ function PageBody() {
             </div>
             <div className="drone-type-card">
               <div className="drone-type-img">
-                <Image src={dronePropertyTypeImages.developments} alt="New developments and construction sites drone photography Calgary" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
+                <Image src={dronePropertyTypeImages.developments} alt="Drone photo showing acreages near Calgary" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
                 <div className="drone-type-img-overlay"></div>
               </div>
               <div className="drone-type-body">
@@ -464,7 +464,7 @@ function PageBody() {
             </div>
             <div className="drone-type-card">
               <div className="drone-type-img">
-                <Image src={dronePropertyTypeImages.commercial} alt="Commercial real estate drone photography Calgary" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
+                <Image src={dronePropertyTypeImages.commercial} alt="Drone photo of the YMCA in Downtown Calgary" width={800} height={600} sizes={propertyCardSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
                 <div className="drone-type-img-overlay"></div>
               </div>
               <div className="drone-type-body">
@@ -636,14 +636,14 @@ function PageBody() {
             </div>
             <div className="drone-best-visual">
               <div className="drone-best-img">
-                <Image src={droneWhyImages.main} alt="Aerial drone photo of acreages near Calgary" width={1024} height={768} sizes={whyMainSizes} style={{ width: "100%", height: "auto", aspectRatio: "16/9", objectFit: "cover" }} />
+                <Image src={droneWhyImages.main} alt="Drone photo of acreages near Calgary" width={1024} height={768} sizes={whyMainSizes} style={{ width: "100%", height: "auto", aspectRatio: "16/9", objectFit: "cover" }} />
               </div>
               <div className="drone-best-img-pair">
                 <div>
                   <Image src={droneWhyImages.secondary} alt="Drone photo showing Mahogany Lake in Calgary" width={800} height={600} sizes={whyThumbSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
                 </div>
                 <div>
-                  <Image src={droneWhyImages.tertiary} alt="Drone photo of downtown Calgary context" width={800} height={600} sizes={whyThumbSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
+                  <Image src={droneWhyImages.tertiary} alt="Drone photo showing Downtown Calgary skyline" width={800} height={600} sizes={whyThumbSizes} style={{ width: "100%", height: "auto", aspectRatio: "4/3", objectFit: "cover" }} />
                 </div>
               </div>
             </div>
@@ -781,7 +781,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src="https://cdn.photos4realestate.ca/p4re-static-media/drone-service-page/Drone-Mahogany-Lake-Photos-4-Real-Estate02.webp"
-                  alt="Drone photography of Mahogany Lake in Calgary"
+                  alt="Drone photo showing Mahogany Lake and nearby homes in Calgary"
                   width={1600}
                   height={700}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -801,7 +801,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src="https://cdn.photos4realestate.ca/p4re-static-media/drone-service-page/Drone-view-to-Downtown-Calgary-Photos-4-Real-Estate-1024x768.webp"
-                  alt="Drone view toward Downtown Calgary"
+                  alt="Drone view toward Downtown Calgary skyline"
                   width={800}
                   height={600}
                   sizes="(max-width: 1024px) 50vw, 25vw"

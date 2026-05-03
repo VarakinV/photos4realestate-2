@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 import { pricingTiers } from "@/lib/pricing";
@@ -5,11 +7,22 @@ import { pricingTiers } from "@/lib/pricing";
 export const alt = `${siteConfig.shortName} — Real Estate Photography Prices in Calgary`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const runtime = "nodejs";
 
-export default function OgImage() {
+async function getLogoDataUrl() {
+  const logoSvg = await readFile(
+    join(process.cwd(), "public", "logos", "map-pin-logo.svg"),
+    "utf8"
+  );
+
+  return `data:image/svg+xml;base64,${Buffer.from(logoSvg).toString("base64")}`;
+}
+
+export default async function OgImage() {
   const startEssential = pricingTiers[0].essential;
   const startSkyline = pricingTiers[0].skyline;
   const startSocial = pricingTiers[0].social;
+  const logoSrc = await getLogoDataUrl();
 
   return new ImageResponse(
     (
@@ -26,19 +39,13 @@ export default function OgImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <svg
+          <img
+            src={logoSrc}
+            alt=""
             width="64"
             height="64"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#cb4154"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M20 10c0 6-8 13-8 13s-8-7-8-13a8 8 0 0 1 16 0z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
+            style={{ width: 64, height: 64 }}
+          />
           <span
             style={{
               color: "#fff",

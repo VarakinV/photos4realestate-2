@@ -5,19 +5,19 @@ import { homeImages } from "@/lib/images";
 const cards = [
   {
     img: homeImages.industryAgents,
-    alt: "Real estate agent in Calgary presenting a listing photographed by Photos 4 Real Estate",
+    alt: "Modern kitchen photographed for a Calgary real estate listing by Photos 4 Real Estate",
     title: "Real Estate Agents",
     copy: "Win more listings with consistent, on-brand visuals, and marketing-ready media that helps impress sellers and attract more qualified buyers in Calgary.",
   },
   {
     img: homeImages.industryHomeowners,
-    alt: "AirBnB bedroom and home rental photographed by Photos 4 Real Estate",
+    alt: "Bedroom photographed for an Airbnb or rental listing by Photos 4 Real Estate",
     title: "AirBnB & Home Owhers",
     copy: "Showcase your rental in its best light and increase bookings with professional photography that stands out on listing platforms.",
   },
   {
     img: homeImages.industryStagers,
-    alt: "Commercial office space photographed for architecture and development marketing",
+    alt: "Commercial office space photographed for Calgary development marketing by Photos 4 Real Estate",
     title: "Commercial & Development",
     copy: "Architecture, hospitality, retail, and construction — we understand the visual requirements of every sector.",
   },

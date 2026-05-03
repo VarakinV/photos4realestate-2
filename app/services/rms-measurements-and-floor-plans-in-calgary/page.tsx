@@ -31,26 +31,30 @@ const content = servicesContent[slug];
 const pageUrl = `${siteConfig.url}/services/${slug}`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
 
-export const metadata: Metadata = {
-  title: content.seoTitle,
-  description: content.seoDescription,
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    type: "website",
-    title: content.seoTitle,
+export function generateMetadata(): Metadata {
+  return {
+    title: { absolute: content.seoTitle },
     description: content.seoDescription,
-    url: pageUrl,
-    siteName: siteConfig.shortName,
-    locale: "en_CA",
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: content.seoTitle,
-    description: content.seoDescription,
-    images: [ogImageUrl],
-  },
-};
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      type: "website",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      url: pageUrl,
+      siteName: siteConfig.name,
+      locale: "en_CA",
+      images: [
+        { url: ogImageUrl, width: 1200, height: 630, alt: content.ogAlt },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.seoTitle,
+      description: content.seoDescription,
+      images: [ogImageUrl],
+    },
+  };
+}
 
 const businessRef = { "@id": `${siteConfig.url}/#business` };
 
@@ -161,12 +165,12 @@ function PageBody() {
 
       {/* WHAT WE DO */}
       <section
-        className="photo-intro-section"
+        className="photo-intro-section rms-intro-section"
         aria-labelledby="rms-intro-heading"
       >
         <div className="container">
-          <div className="photo-intro-grid">
-            <div className="photo-intro-content">
+          <div className="photo-intro-grid rms-intro-grid">
+            <div className="photo-intro-content rms-intro-content">
               <span className="section-label">What We Do</span>
               <h2 id="rms-intro-heading">
                 Professional RMS Measurements &amp; Floor Plans in Calgary
@@ -213,32 +217,32 @@ function PageBody() {
               </div>
 
               <ul
-                className="photo-stat-row"
+                className="photo-stat-row rms-stat-row"
                 aria-label="RMS Measurement accuracy and delivery stats"
-                style={{ marginTop: "32px" }}
               >
-                <li className="photo-stat-cell">
+                <li className="photo-stat-cell rms-stat-cell">
                   <span className="num">&plusmn;1%</span>
                   <span className="lbl">measurement accuracy</span>
                 </li>
-                <li className="photo-stat-cell">
+                <li className="photo-stat-cell rms-stat-cell">
                   <span className="num">100%</span>
                   <span className="lbl">RECA RMS compliant</span>
                 </li>
-                <li className="photo-stat-cell">
+                <li className="photo-stat-cell rms-stat-cell">
                   <span className="num">24h</span>
                   <span className="lbl">delivery guaranteed</span>
                 </li>
               </ul>
             </div>
-            <div className="photo-intro-visual">
-              <div className="photo-intro-pill">
-                iGUIDE-powered &middot; RECA-compliant
-              </div>
-              <div className="photo-intro-img">
+            <div className="photo-intro-visual rms-intro-visual">
+              <div className="photo-intro-img rms-intro-img">
+                <div className="photo-intro-pill rms-intro-pill">
+                  <span className="rms-intro-pill-dot" aria-hidden="true" />
+                  iGUIDE-powered &middot; RECA-compliant
+                </div>
                 <Image
                   src={rmsImages.standardPlanIntro}
-                  alt="iGUIDE standard floor plan for Calgary MLS listing — RMS compliant"
+                  alt="Standard iGUIDE floor plan for a Calgary real estate listing"
                   width={1200}
                   height={1500}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -246,10 +250,10 @@ function PageBody() {
                   priority
                 />
               </div>
-              <div className="photo-intro-img-secondary">
+              <div className="photo-intro-img-secondary rms-intro-img-secondary">
                 <Image
                   src={rmsImages.rmsMeasurements}
-                  alt="2D floor plan with RMS measurements for Calgary real estate"
+                  alt="Real estate photographer explaining how to use an iGUIDE scanning device"
                   width={900}
                   height={675}
                   sizes="(max-width: 1024px) 55vw, 28vw"
@@ -262,10 +266,10 @@ function PageBody() {
       </section>
 
       {/* UNDERSTANDING RMS */}
-      <section className="what-section" aria-labelledby="what-heading">
+      <section className="what-section rms-what-section" aria-labelledby="what-heading">
         <div className="container">
           <div className="what-header">
-            <span className="section-label" style={{ color: "rgba(255,255,255,0.4)" }}>Understanding RMS</span>
+            <span className="section-label">Understanding RMS</span>
             <h2 id="what-heading">What Is RMS Measurement &mdash; and Why Does It Matter?</h2>
             <p>RMS stands for Residential Measurement Standard. It is the legal measurement framework mandated by RECA for all residential property listings in Alberta.</p>
           </div>
@@ -314,7 +318,7 @@ function PageBody() {
       </section>
 
       {/* FLOOR PLAN TYPES */}
-      <section className="plans-section" aria-labelledby="plans-heading">
+      <section className="plans-section rms-plans-section" aria-labelledby="plans-heading">
         <div className="container">
           <div className="plans-header">
             <span className="section-label">Floor Plan Options</span>
@@ -325,7 +329,7 @@ function PageBody() {
           <div className="plans-grid">
             <div className="plan-card">
               <div className="plan-img">
-                <Image src={rmsImages.standardPlanCard} alt="iGUIDE standard floor plan sample — Calgary MLS listing" width={600} height={450} sizes="(max-width: 960px) 100vw, 50vw" />
+                <Image src={rmsImages.standardPlanCard} alt="Standard iGUIDE floor plan" width={600} height={450} sizes="(max-width: 960px) 100vw, 50vw" />
                 <div className="plan-img-badge popular">Included in every package</div>
               </div>
               <div className="plan-body">
@@ -363,7 +367,7 @@ function PageBody() {
 
             <div className="plan-card featured">
               <div className="plan-img">
-                <Image src={rmsImages.premiumPlanCard} alt="iGUIDE premium floor plan with enhanced detail — Calgary real estate" width={600} height={450} sizes="(max-width: 960px) 100vw, 50vw" />
+                <Image src={rmsImages.premiumPlanCard} alt="Premium iGUIDE floor plan with enhanced detail" width={600} height={450} sizes="(max-width: 960px) 100vw, 50vw" />
                 <div className="plan-img-badge">Premium upgrade</div>
               </div>
               <div className="plan-body">
@@ -402,7 +406,7 @@ function PageBody() {
         </div>
       </section>
       {/* THE TECHNOLOGY */}
-      <section className="iguide-section" aria-labelledby="iguide-heading">
+      <section className="iguide-section rms-tech-section" aria-labelledby="iguide-heading">
         <div className="container">
           <div className="iguide-grid">
             <div className="iguide-content">
@@ -440,7 +444,7 @@ function PageBody() {
               <div className="iguide-img-main">
                 <Image
                   src={rmsImages.iguideScanning}
-                  alt="iGUIDE LiDAR camera scanning Calgary property for RMS measurements"
+                  alt="Real estate floor plan generated from an iGUIDE property scan"
                   width={600}
                   height={600}
                   sizes="(max-width: 960px) 100vw, 50vw"
@@ -456,7 +460,7 @@ function PageBody() {
       </section>
 
       {/* BILLABLE AREA */}
-      <section className="rms-billable-section" id="billable-area" aria-labelledby="billable-heading" style={{ background: "var(--white)" }}>
+      <section className="rms-billable-section" id="billable-area" aria-labelledby="billable-heading">
         <div className="container">
           <div className="rms-billable-header">
             <span className="section-label">Billable Area Explained</span>
@@ -467,6 +471,7 @@ function PageBody() {
           <div className="rms-billable-grid">
             <div className="rms-billable-col">
               <div className="rms-billable-col-header yes">
+                <CircleCheck size={20} aria-hidden="true" />
                 <h3>Included in Billable Area</h3>
               </div>
               <ul className="rms-billable-list">
@@ -480,6 +485,7 @@ function PageBody() {
             </div>
             <div className="rms-billable-col">
               <div className="rms-billable-col-header no">
+                <CircleX size={20} aria-hidden="true" />
                 <h3>Not Included in Billable Area</h3>
               </div>
               <ul className="rms-billable-list">
@@ -498,7 +504,7 @@ function PageBody() {
       </section>
 
       {/* PROCESS */}
-      <section className="process-section" aria-labelledby="process-heading">
+      <section className="process-section rms-process-section" aria-labelledby="process-heading">
         <div className="container">
           <div className="process-header">
             <span className="section-label">How It Works</span>
@@ -534,7 +540,7 @@ function PageBody() {
       </section>
 
       {/* DELIVERABLES */}
-      <section className="deliverables-section" aria-labelledby="deliv-heading">
+      <section className="deliverables-section rms-deliverables-section" aria-labelledby="deliv-heading">
         <div className="container">
           <div className="deliverables-header">
             <span className="section-label">What You Receive</span>
@@ -600,7 +606,7 @@ function PageBody() {
       </section>
 
       {/* PRICING CALLOUT */}
-      <section className="pricing-section" aria-labelledby="pricing-heading">
+      <section className="pricing-section rms-pricing-section" aria-labelledby="pricing-heading">
         <div className="container">
           <div className="pricing-callout">
             <div className="pc-left">
@@ -685,7 +691,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={rmsImages.areaBathroom}
-                  alt="Calgary bathroom RMS measurement and floor plans"
+                  alt="Kitchen photographed by Photos 4 Real Estate for a Calgary real estate listing"
                   width={1024}
                   height={768}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -695,7 +701,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={rmsImages.areaBedroom}
-                  alt="Calgary bedroom RMS measurement and floor plans"
+                  alt="Bedroom photographed by Photos 4 Real Estate for a Calgary real estate listing"
                   width={1024}
                   height={576}
                   sizes="(max-width: 1024px) 50vw, 25vw"
@@ -705,7 +711,7 @@ function PageBody() {
               <div className="areas-visual-item">
                 <Image
                   src={rmsImages.areaKitchen}
-                  alt="Calgary kitchen RMS measurement and floor plans"
+                  alt="Bathroom photographed by Photos 4 Real Estate for a Calgary real estate listing"
                   width={1024}
                   height={682}
                   sizes="(max-width: 1024px) 50vw, 25vw"

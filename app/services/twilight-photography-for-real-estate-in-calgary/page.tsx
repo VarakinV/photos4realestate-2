@@ -224,12 +224,12 @@ function PageBody() {
   return (
     <>
       <section
-        className="photo-intro-section"
+        className="photo-intro-section twilight-intro-section"
         aria-labelledby="photo-intro-heading"
       >
         <div className="container">
-          <div className="photo-intro-grid">
-            <div className="photo-intro-content">
+          <div className="photo-intro-grid twilight-intro-grid">
+            <div className="photo-intro-content twilight-intro-content">
               <span className="section-label">What We Do</span>
               <h2 id="photo-intro-heading">
                 Dramatic Twilight Photography in Calgary
@@ -247,24 +247,24 @@ function PageBody() {
                 daytime photography simply cannot match.
               </p>
               <ul
-                className="photo-stat-row"
+                className="photo-stat-row twilight-stat-row"
                 aria-label="Why twilight photography matters"
               >
-                <li className="photo-stat-cell">
+                <li className="photo-stat-cell twilight-stat-cell">
                   <span className="num">3x</span>
                   <span className="lbl">More online views</span>
                 </li>
-                <li className="photo-stat-cell">
+                <li className="photo-stat-cell twilight-stat-cell">
                   <span className="num">100%</span>
                   <span className="lbl">Guaranteed wow factor</span>
                 </li>
               </ul>
             </div>
-            <div className="photo-intro-visual">
-              <div className="photo-intro-pill">
+            <div className="photo-intro-visual twilight-intro-visual">
+              <div className="photo-intro-pill twilight-intro-pill">
                 The ultimate MLS hero shot
               </div>
-              <div className="photo-intro-img">
+              <div className="photo-intro-img twilight-intro-img">
                 <Image
                   src={twilightImages.real5}
                   alt="Dramatic twilight exterior of a Calgary home by Photos 4 Real Estate"
@@ -275,7 +275,7 @@ function PageBody() {
                   priority
                 />
               </div>
-              <div className="photo-intro-img-secondary">
+              <div className="photo-intro-img-secondary twilight-intro-img-secondary">
                 <Image
                   src={twilightImages.real6}
                   alt="Luxury home in Calgary captured at twilight"
@@ -291,11 +291,11 @@ function PageBody() {
       </section>
 
       <section
-        className="deliverables-section"
+        className="deliverables-section twilight-deliverables-section"
         aria-labelledby="photo-deliv-heading"
       >
         <div className="container">
-          <div className="deliverables-header">
+          <div className="deliverables-header twilight-deliverables-header">
             <span className="section-label">What You Receive</span>
             <h2 id="photo-deliv-heading">
               Everything Included in a Twilight Shoot
@@ -305,15 +305,15 @@ function PageBody() {
               listing&apos;s marketing presence overnight.
             </p>
           </div>
-          <div className="deliverables-grid">
+          <div className="deliverables-grid twilight-deliverables-grid">
             {deliverables.map((d) => (
-              <article key={d.title} className="deliv-card">
-                <div className="deliv-icon" aria-hidden="true">
+              <article key={d.title} className="deliv-card twilight-deliv-card">
+                <div className="deliv-icon twilight-deliv-icon" aria-hidden="true">
                   {d.icon}
                 </div>
                 <h3>{d.title}</h3>
                 <p>{d.desc}</p>
-                <span className="deliv-tag">{d.tag}</span>
+                <span className="deliv-tag twilight-deliv-tag">{d.tag}</span>
               </article>
             ))}
           </div>
@@ -321,11 +321,11 @@ function PageBody() {
       </section>
 
       <section
-        className="shot-types-section"
+        className="shot-types-section twilight-options-section"
         aria-labelledby="twilight-types-heading"
       >
         <div className="container">
-          <div className="shot-types-header">
+          <div className="shot-types-header twilight-options-header">
             <span className="section-label">Options</span>
             <h2 id="twilight-types-heading">Real vs. Virtual Twilight</h2>
             <p>
@@ -334,14 +334,14 @@ function PageBody() {
             </p>
           </div>
 
-          <div className="shot-block">
-            <div className="shot-content">
-              <div className="shot-num" aria-hidden="true">01</div>
+          <div className="shot-block twilight-shot-block">
+            <div className="shot-content twilight-shot-content">
+              <div className="shot-num twilight-shot-num" aria-hidden="true">01</div>
               <h3>Real Twilight Photography</h3>
               <p>
                 Our premium service. We return to the property specifically at sunset to capture authentic evening light, glowing windows, and the natural twilight sky.
               </p>
-              <ul className="shot-bullets">
+              <ul className="shot-bullets twilight-shot-bullets">
                 <li>
                   <Check size={14} aria-hidden="true" />
                   Most authentic, luxurious feel
@@ -360,7 +360,7 @@ function PageBody() {
                 </li>
               </ul>
             </div>
-            <div className="shot-img">
+            <div className="shot-img twilight-shot-img">
               <Image
                 src={twilightImages.real1}
                 alt="Real twilight real estate photography in Calgary"
@@ -372,14 +372,14 @@ function PageBody() {
             </div>
           </div>
 
-          <div className="shot-block reverse">
-            <div className="shot-content">
-              <div className="shot-num" aria-hidden="true">02</div>
+          <div className="shot-block reverse twilight-shot-block">
+            <div className="shot-content twilight-shot-content">
+              <div className="shot-num twilight-shot-num" aria-hidden="true">02</div>
               <h3>Virtual Twilight Photography</h3>
               <p>
                 A cost-effective and schedule-friendly alternative. We take a daytime photo from your regular shoot and digitally transform it into a stunning dusk scene.
               </p>
-              <ul className="shot-bullets">
+              <ul className="shot-bullets twilight-shot-bullets">
                 <li>
                   <Check size={14} aria-hidden="true" />
                   No second appointment needed
@@ -398,7 +398,7 @@ function PageBody() {
                 </li>
               </ul>
             </div>
-            <div className="shot-img">
+            <div className="shot-img twilight-shot-img">
               <Image
                 src={twilightImages.virtual1}
                 alt="Virtual twilight photography conversion example"
@@ -481,10 +481,10 @@ function PageBody() {
       </section>
 
       {/* PREP CHECKLIST */}
-      <section className="prep-section" aria-labelledby="twilight-prep-heading">
+      <section className="prep-section twilight-prep-section" aria-labelledby="twilight-prep-heading">
         <div className="container">
-          <div className="prep-grid">
-            <div className="prep-content">
+          <div className="prep-grid twilight-prep-grid">
+            <div className="prep-content twilight-prep-content">
               <span className="section-label">Get Ready</span>
               <h2 id="twilight-prep-heading">
                 How to Prepare for a Twilight Shoot
@@ -492,17 +492,17 @@ function PageBody() {
               <p>
                 The secret to an amazing twilight photo is light. Every window should glow, and the exterior must be pristine.
               </p>
-              <ul className="checklist" aria-label="Twilight prep checklist">
+              <ul className="checklist twilight-checklist" aria-label="Twilight prep checklist">
                 {checklist.map((item) => (
-                  <li key={item} className="checklist-item">
+                  <li key={item} className="checklist-item twilight-checklist-item">
                     <Check size={14} aria-hidden="true" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="prep-visual">
-              <div className="prep-img">
+            <div className="prep-visual twilight-prep-visual">
+              <div className="prep-img twilight-prep-img">
                 <Image
                   src={twilightImages.real4}
                   alt="Beautiful twilight real estate exterior"
@@ -512,7 +512,7 @@ function PageBody() {
                   style={{ width: "100%", height: "auto" }}
                 />
               </div>
-              <div className="prep-img-row">
+              <div className="prep-img-row twilight-prep-img-row">
                 <div>
                   <Image
                     src={twilightImages.real3}
@@ -540,10 +540,10 @@ function PageBody() {
       </section>
 
       {/* PRICING CALLOUT */}
-      <section className="pricing-section" aria-labelledby="pricing-heading">
+      <section className="pricing-section twilight-pricing-section" aria-labelledby="pricing-heading">
         <div className="container">
-          <div className="pricing-callout">
-            <div className="pc-left">
+          <div className="pricing-callout twilight-pricing-callout">
+            <div className="pc-left twilight-pc-left">
               <span className="pc-label">Pricing</span>
               <h2 id="pricing-heading" className="pc-heading">
                 Premium Impact.<br /><em>Affordable Add-on.</em>
@@ -567,7 +567,7 @@ function PageBody() {
                   See Full Pricing
                   <span className="sr-only"> for Calgary twilight photography</span>
                 </Link>
-                <Link href="/book-online" className="btn btn-outline">
+                <Link href="/book-online" className="btn btn-outline-gold">
                   Book Online
                   <span className="sr-only"> &mdash; Calgary twilight photography</span>
                 </Link>

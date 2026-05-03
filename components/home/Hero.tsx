@@ -83,7 +83,7 @@ export function Hero() {
           <div className="hero-img-item">
             <Image
               src={homeImages.heroTopLeft}
-              alt="Calgary home exterior real estate photograph"
+              alt="Exterior photo of a Calgary home for a real estate listing by Photos 4 Real Estate"
               fill
               sizes="(max-width: 900px) 100vw, 25vw"
               style={{ objectFit: "cover" }}
@@ -92,7 +92,7 @@ export function Hero() {
           <div className="hero-img-item">
             <Image
               src={homeImages.heroBottomLeft}
-              alt="Kitchen interior photographed for MLS listing in Calgary"
+              alt="Kitchen interior photographed for a Calgary MLS listing by Photos 4 Real Estate"
               fill
               sizes="(max-width: 900px) 100vw, 25vw"
               style={{ objectFit: "cover" }}
