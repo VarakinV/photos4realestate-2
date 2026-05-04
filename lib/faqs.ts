@@ -98,4 +98,20 @@ export const pricingFaqs: Faq[] = [
     q: "Do you offer any discounts for repeat clients?",
     a: "Yes — our rewards points program lets you earn points on every completed booking and redeem them for discounts on future orders. The more you book, the more you save. First-time realtor clients also get 25% off their first booking with code 25%OFF.",
   },
+  {
+    q: "What is included in every package?",
+    a: "Every pricing package includes professional real estate photography, an iGUIDE 3D virtual tour, RMS floor plans, blue-sky replacement when needed, and a free marketing kit. The marketing kit includes 3 property websites, 3 property flyers, 9 teaser social media reels, 2 slideshows, and rewards points.",
+  },
+  {
+    q: "How fast will I receive my photos and media?",
+    a: "All three packages include next-day delivery. In most cases, your photos, iGUIDE tour, and floor plans are delivered the next business day so your listing can go live quickly.",
+  },
+  {
+    q: "Do you charge travel fees outside Calgary?",
+    a: "Travel within 35 km of Calgary City Centre is free. A $30 flat fee applies to select nearby communities such as Chestermere, Airdrie, Okotoks, High River, Cochrane, and Langdon. For properties farther out, distance-based travel pricing applies, and we're happy to confirm the fee before you book.",
+  },
+  {
+    q: "What spaces are not included in the iGUIDE billable area?",
+    a: "The billable area does not include attached garages in the main building, cold rooms, areas open to below, balconies, decks, patios, or other outdoor spaces. If you're unsure how a unique area will be counted, we can confirm it after the on-site iGUIDE measurement.",
+  },
 ];

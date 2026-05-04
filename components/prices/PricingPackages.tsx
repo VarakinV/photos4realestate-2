@@ -70,7 +70,11 @@ type PriceKey = "essential" | "skyline" | "social";
 export function PricingPackages() {
   const [tierIdx, setTierIdx] = useState(0);
   const [changing, setChanging] = useState(false);
+  const [isCompact, setIsCompact] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const tabsRef = useRef<HTMLDivElement | null>(null);
 
   const tier = pricingTiers[tierIdx];
 
@@ -93,9 +97,74 @@ export function PricingPackages() {
         setTierIdx(idx - 1);
         tabRefs.current[idx - 1]?.focus();
       }
+      if (e.key === "Home") {
+        e.preventDefault();
+        setTierIdx(0);
+        tabRefs.current[0]?.focus();
+      }
+      if (e.key === "End") {
+        e.preventDefault();
+        const lastIdx = pricingTiers.length - 1;
+        setTierIdx(lastIdx);
+        tabRefs.current[lastIdx]?.focus();
+      }
     },
     []
   );
+
+  const updateTabScrollState = useCallback(() => {
+    const tabs = tabsRef.current;
+    if (!tabs) return;
+
+    setCanScrollLeft(tabs.scrollLeft > 4);
+    setCanScrollRight(tabs.scrollLeft + tabs.clientWidth < tabs.scrollWidth - 4);
+  }, []);
+
+  useEffect(() => {
+    const tabs = tabsRef.current;
+    if (!tabs) return;
+
+    updateTabScrollState();
+
+    const onResize = () => updateTabScrollState();
+    tabs.addEventListener("scroll", updateTabScrollState, { passive: true });
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      tabs.removeEventListener("scroll", updateTabScrollState);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [updateTabScrollState]);
+
+  useEffect(() => {
+    const activeTab = tabRefs.current[tierIdx];
+    if (activeTab && window.matchMedia("(max-width: 768px)").matches) {
+      activeTab.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+
+      window.setTimeout(() => updateTabScrollState(), 220);
+    }
+  }, [tierIdx, updateTabScrollState]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 768px)");
+
+    const updateCompactState = () => {
+      setIsCompact(media.matches && window.scrollY > 180);
+    };
+
+    updateCompactState();
+    window.addEventListener("scroll", updateCompactState, { passive: true });
+    media.addEventListener?.("change", updateCompactState);
+
+    return () => {
+      window.removeEventListener("scroll", updateCompactState);
+      media.removeEventListener?.("change", updateCompactState);
+    };
+  }, []);
 
   const featureSets: Record<PriceKey, { included: string[]; addons: string[]; kit: string[] | null }> = {
     essential: { included: essentialIncluded, addons: essentialAddons, kit: essentialKit },
@@ -106,37 +175,48 @@ export function PricingPackages() {
   return (
     <>
       <div
-        className="sqft-section"
+        className={`sqft-section${isCompact ? " compact" : ""}`}
         id="sqft-selector"
         role="region"
         aria-label="Select property size"
       >
         <div className="container">
           <div className="sqft-inner">
-            <div className="sqft-label">
-              Property size: <span>{tier.label}</span>
+            <div className="sqft-meta">
+              <span className="sqft-eyebrow">Select Property Size</span>
+              <div className="sqft-label" aria-live="polite">
+                Showing prices for <span>{tier.label}</span>
+              </div>
             </div>
             <div
-              className="sqft-tabs"
-              role="tablist"
-              aria-label="Square footage ranges"
+              className={`sqft-tabs-shell${canScrollLeft ? " can-scroll-left" : ""}${canScrollRight ? " can-scroll-right" : ""}`}
             >
-              {pricingTiers.map((t, i) => (
-                <button
-                  key={t.short}
-                  ref={(el) => {
-                    tabRefs.current[i] = el;
-                  }}
-                  type="button"
-                  role="tab"
-                  aria-selected={i === tierIdx}
-                  className={`sqft-tab${i === tierIdx ? " active" : ""}`}
-                  onClick={() => setTierIdx(i)}
-                  onKeyDown={(e) => onKey(e, i)}
-                >
-                  {t.short}
-                </button>
-              ))}
+              <div
+                ref={tabsRef}
+                className="sqft-tabs"
+                role="tablist"
+                aria-label="Square footage ranges"
+              >
+                {pricingTiers.map((t, i) => (
+                  <button
+                    key={t.short}
+                    id={`sqft-tab-${i}`}
+                    ref={(el) => {
+                      tabRefs.current[i] = el;
+                    }}
+                    type="button"
+                    role="tab"
+                    aria-controls="packages"
+                    aria-selected={i === tierIdx}
+                    tabIndex={i === tierIdx ? 0 : -1}
+                    className={`sqft-tab${i === tierIdx ? " active" : ""}`}
+                    onClick={() => setTierIdx(i)}
+                    onKeyDown={(e) => onKey(e, i)}
+                  >
+                    {t.short}
+                  </button>
+                ))}
+              </div>
             </div>
             <div className="sqft-hint">
               <Ruler size={14} aria-hidden="true" />
@@ -152,20 +232,11 @@ export function PricingPackages() {
       <section
         className="packages-section"
         id="packages"
-        aria-labelledby="packages-heading"
+        aria-label="Pricing package cards"
+        role="tabpanel"
+        aria-labelledby={`sqft-tab-${tierIdx}`}
       >
         <div className="container">
-          <div className="packages-header">
-            <span className="section-label">Choose Your Package</span>
-            <h2 id="packages-heading">
-              Three Packages, Every Essential Included
-            </h2>
-            <p>
-              All packages include the same core deliverables — the difference
-              is how much aerial &amp; video content you need.
-            </p>
-          </div>
-
           <div className="packages-grid">
             {pricingPackages.map((pkg) => {
               const price = tier[pkg.id as PriceKey];

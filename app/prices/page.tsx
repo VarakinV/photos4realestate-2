@@ -14,18 +14,27 @@ import {
   Image as ImageIcon,
   LayoutDashboard,
   MapPin,
+  Megaphone,
   Drone,
   Sofa,
   Sparkles,
   Sunset,
+  X,
 } from "lucide-react";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { Faq } from "@/components/home/Faq";
 import { Cta } from "@/components/home/Cta";
+import { Reviews } from "@/components/home/Reviews";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PricingPackages } from "@/components/prices/PricingPackages";
 import { PromoCode } from "@/components/prices/PromoCode";
 import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
+import {
+  AVERAGE_RATING,
+  REVIEW_COUNT,
+  reviews as reviewItems,
+  toIsoDate,
+} from "@/lib/reviews";
 import { siteConfig } from "@/lib/site";
 import { pricingFaqs } from "@/lib/faqs";
 import { pricingTiers } from "@/lib/pricing";
@@ -41,7 +50,7 @@ const description =
   "Calgary real estate photography pricing: Essential $245, Skyline $345, Social Boost $485. iGUIDE 3D tour, RMS floor plans & next-day delivery. Book online today.";
 
 export const metadata: Metadata = {
-  title: "Real Estate Photography Prices Calgary",
+  title: { absolute: title },
   description,
   alternates: { canonical: pageUrl },
   openGraph: {
@@ -68,7 +77,8 @@ export const metadata: Metadata = {
   },
 };
 
-const businessRef = { "@id": `${siteConfig.url}/#business` };
+const businessId = `${siteConfig.url}/#business`;
+const businessRef = { "@id": businessId };
 
 const productSchema = {
   "@context": "https://schema.org",
@@ -77,6 +87,8 @@ const productSchema = {
   name: "Real Estate Photography Packages in Calgary",
   description,
   brand: businessRef,
+  provider: businessRef,
+  areaServed: "Calgary and surrounding areas",
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "CAD",
@@ -94,10 +106,49 @@ const faqSchema = {
   mainEntity: faqItemsToSchemaMainEntity(pricingFaqs),
 };
 
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": businessId,
+  name: siteConfig.name,
+  url: siteConfig.url,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: AVERAGE_RATING,
+    reviewCount: REVIEW_COUNT,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  review: reviewItems.map((review) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    itemReviewed: {
+      "@id": businessId,
+    },
+    reviewBody: review.text,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    datePublished: toIsoDate(review.date),
+    publisher: {
+      "@type": "Organization",
+      name: "Google",
+    },
+  })),
+};
+
 const speakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
   url: pageUrl,
+  primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrl },
   speakable: {
     "@type": "SpeakableSpecification",
     cssSelector: [".speakable-intro", ".speakable-faq"],
@@ -359,10 +410,10 @@ export default function PricesPage() {
           <div className="prices-page-hero-inner">
             <div>
               <span className="prices-page-hero-eyebrow">Transparent Pricing</span>
-              <h1 id="prices-hero-heading" className="speakable-intro">
+              <h1 id="prices-hero-heading">
                 Calgary Real Estate Photography <em>Prices</em>
               </h1>
-              <p className="prices-page-hero-sub">
+              <p className="prices-page-hero-sub speakable-intro">
                 <strong>Photos 4 Real Estate</strong> offers three Calgary
                 packages with one all-inclusive price per square footage tier.
                 Every package includes <strong>iGUIDE 3D tour</strong>,{" "}
@@ -391,32 +442,85 @@ export default function PricesPage() {
         </div>
       </section>
 
+      <section className="packages-intro" aria-labelledby="packages-heading">
+        <div className="container">
+          <div className="packages-header">
+            <span className="section-label">Choose Your Package</span>
+            <h2 id="packages-heading">
+              Three Packages, Every Essential Included
+            </h2>
+            <p>
+              All packages include the same core deliverables — the difference
+              is how much aerial &amp; video content you need.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <PricingPackages />
 
-      <section className="always-included" aria-labelledby="included-heading">
+      <section
+        className="pricing-summary"
+        aria-labelledby="pricing-summary-heading"
+      >
         <div className="container">
-          <div className="ai-inner">
-            <div className="ai-content">
-              <span className="section-label ai-eyebrow">In Every Package</span>
-              <h2 id="included-heading">Your Free Marketing Kit</h2>
-              <p>
-                Every package &mdash; regardless of size or price &mdash;
-                includes this complete marketing toolkit at no extra cost. No
-                other Calgary photographer includes all of this as standard.
-              </p>
+          <div className="pricing-summary-header">
+            <span className="section-label">All Pricing Tiers</span>
+            <h2 id="pricing-summary-heading">
+              How Much Does Calgary Real Estate Photography Cost?
+            </h2>
+            <p>
+              Calgary real estate photography with Photos 4 Real Estate starts
+              at $245 + GST for homes up to 1,000 sq ft. Pricing increases by
+              iGUIDE billable-area tier, and every tier offers Essential,
+              Skyline, and Social Boost package options.
+            </p>
+            <p>
+              The interactive selector above helps you preview the right tier,
+              while the static table below gives search engines, AI tools, and
+              clients a simple reference for every property-size range.
+            </p>
+          </div>
+          <div className="pricing-summary-highlights" aria-label="Pricing summary highlights">
+            <div className="pricing-summary-stat">
+              <div className="pricing-summary-stat-value">$245+</div>
+              <div className="pricing-summary-stat-label">starting package price</div>
             </div>
-            <div className="ai-grid">
-              {marketingKitItems.map(({ icon: Icon, name, desc }) => (
-                <div className="ai-item" key={name}>
-                  <div className="ai-item-icon" aria-hidden="true">
-                    <Icon size={20} />
-                  </div>
-                  <div className="ai-item-name">{name}</div>
-                  <div className="ai-item-desc">{desc}</div>
-                </div>
-              ))}
+            <div className="pricing-summary-stat">
+              <div className="pricing-summary-stat-value">3</div>
+              <div className="pricing-summary-stat-label">package options</div>
+            </div>
+            <div className="pricing-summary-stat">
+              <div className="pricing-summary-stat-value">6</div>
+              <div className="pricing-summary-stat-label">published size tiers</div>
             </div>
           </div>
+          <div className="pricing-summary-table-wrap">
+            <table className="pricing-summary-table">
+              <thead>
+                <tr>
+                  <th scope="col">Property size</th>
+                  <th scope="col">Essential</th>
+                  <th scope="col">Skyline</th>
+                  <th scope="col">Social Boost</th>
+                </tr>
+              </thead>
+              <tbody>
+                {pricingTiers.map((tier) => (
+                  <tr key={tier.label}>
+                    <th scope="row">{tier.label}</th>
+                    <td>${tier.essential.toLocaleString("en-CA")}</td>
+                    <td>${tier.skyline.toLocaleString("en-CA")}</td>
+                    <td>${tier.social.toLocaleString("en-CA")}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="pricing-summary-note">
+            For properties over 6,000 sq ft, add $100 per 1,000 sq ft for each
+            package. <Link href="#billable-area">See what counts as billable area</Link>.
+          </p>
         </div>
       </section>
 
@@ -474,6 +578,33 @@ export default function PricesPage() {
                 )}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="always-included" aria-labelledby="included-heading">
+        <div className="container">
+          <div className="ai-inner">
+            <div className="ai-content">
+              <span className="section-label ai-eyebrow">In Every Package</span>
+              <h2 id="included-heading">Your Free Marketing Kit</h2>
+              <p>
+                Every package &mdash; regardless of size or price &mdash;
+                includes this complete marketing toolkit at no extra cost. No
+                other Calgary photographer includes all of this as standard.
+              </p>
+            </div>
+            <div className="ai-grid">
+              {marketingKitItems.map(({ icon: Icon, name, desc }) => (
+                <div className="ai-item" key={name}>
+                  <div className="ai-item-icon" aria-hidden="true">
+                    <Icon size={20} />
+                  </div>
+                  <div className="ai-item-name">{name}</div>
+                  <div className="ai-item-desc">{desc}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -538,7 +669,7 @@ export default function PricesPage() {
 
             <article className="alacarte-card alacarte-card-wide">
               <div className="alacarte-icon" aria-hidden="true">
-                <Award size={24} strokeWidth={1.6} />
+                <Megaphone size={24} strokeWidth={1.6} />
               </div>
               <h3 className="alacarte-name">Marketing Kit</h3>
               <div className="alacarte-price alacarte-price-free">Free</div>
@@ -567,6 +698,7 @@ export default function PricesPage() {
             <h2 id="billable-heading">What Is the iGUIDE Billable Area?</h2>
             <div className="billable-col">
               <h3 className="billable-yes">
+                <Check size={18} strokeWidth={2.4} aria-hidden="true" />
                 Included in billable area
               </h3>
               <ul className="billable-list billable-yes-list">
@@ -577,6 +709,7 @@ export default function PricesPage() {
             </div>
             <div className="billable-col">
               <h3 className="billable-no">
+                <X size={18} strokeWidth={2.4} aria-hidden="true" />
                 Not included
               </h3>
               <ul className="billable-list billable-no-list">
@@ -630,6 +763,17 @@ export default function PricesPage() {
         </div>
       </section>
 
+      <Reviews
+        variant="dark"
+        eyebrow="Google Reviews"
+        heading={
+          <>
+            Calgary agents trust <em>Photos 4 Real Estate</em> for pricing that
+            stays clear, fast and dependable.
+          </>
+        }
+      />
+
 
       <Faq
         heading="Pricing Questions"
@@ -652,8 +796,8 @@ export default function PricesPage() {
       />
 
       <Cta
-        eyebrow="Ready to book?"
-        title="Lock in your Calgary shoot at the rate that fits."
+        eyebrow="Ready to Book?"
+        title="Lock In Your Calgary Shoot at the Rate That Fits."
         description={
           <>
             Pick your package, choose your date, and we&rsquo;ll handle the
@@ -668,6 +812,7 @@ export default function PricesPage() {
 
       <JsonLd id="ld-prices-product" data={productSchema} />
       <JsonLd id="ld-prices-faq" data={faqSchema} />
+      <JsonLd id="ld-prices-reviews" data={reviewSchema} />
       <JsonLd id="ld-prices-speakable" data={speakableSchema} />
     </>
   );
