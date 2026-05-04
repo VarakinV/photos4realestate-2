@@ -9,6 +9,7 @@ type Props = {
   afterAlt?: string;
   beforeLabel?: string;
   afterLabel?: string;
+  aspectRatio?: "taller" | "wider";
 };
 
 export function BeforeAfter({
@@ -18,6 +19,7 @@ export function BeforeAfter({
   afterAlt,
   beforeLabel = "Before",
   afterLabel = "After",
+  aspectRatio,
 }: Props) {
   return (
     <div className="before-after-slider">
@@ -31,7 +33,7 @@ export function BeforeAfter({
         sliderLineColor="#ffffff"
         sliderLineWidth={2}
         handleSize={44}
-        aspectRatio="wider"
+        aspectRatio={aspectRatio}
       />
     </div>
   );

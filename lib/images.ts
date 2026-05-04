@@ -104,12 +104,40 @@ export const videographyImages = {
 
 // Twilight service page
 export const twilightImages = {
-  real1: `${cdn}/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp`,
+  real1:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Real-Twilight-Photo-of-a-house-with-two-garages-Photos-4-Real-Estate.webp",
   real3: `${cdn}/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp`,
   real4: `${cdn}/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp`,
   real5: `${cdn}/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp`,
   real6: `${cdn}/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp`,
-  virtual1: `${cdn}/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp`,
+  calgaryHero:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-photo-of-a-home-in-Calgary.jpg",
+  compareCalgaryDay:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/A-house-in-Calgary-day-photo-Photos-4-Real-Estate.jpg",
+  compareCalgaryTwilight:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/A-house-in-Calgary-twilight-photo-Photos-4-Real-Estate.jpg",
+  compareCanyonDay:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Luxury-house-in-Canyon-Meadows-Calgary-Day-photo-Photos-4-Real-Estate.jpg",
+  compareCanyonTwilight:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Luxury-house-in-Canyon-Meadows-Calgary-twilight-photo-Photos-4-Real-Estate.jpg",
+  harmonyHero:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-photo-of-a-house-in-Harmony-01.jpg",
+  frontGarage:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Real-Twilight-photo-of-a-front-garage-house-Photos-4-Real-Estate.webp",
+  prepMain:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-photo-of-a-house-in-Harmony-01.jpg",
+  prepSecondaryLeft:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Real-twilight-photo-of-an-bungalo-house-Photos-4-Real-Estate.webp",
+  prepSecondaryRight:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-photo-of-a-house-in-Calgary-02.jpg",
+  areaSplitLevel:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Real-twilight-photo-of-a-split-level-house-Photos-4-Real-Estate.webp",
+  areaNorthwest:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-photo-of-a-house-in-NW-Calgary-Photos-4-Real-Estate.webp",
+  areaAuburnBayVirtual:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Virtual-twilight-photo-of-a-house-in-Auburn-Bay-Calgary-Photos-4-Real-Estate.jpg",
+  virtual1:
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/twilight-photo-of-a-house-near-Calgary-Photos-4-Real-Estate.jpg",
   virtual2: `${cdn}/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp`,
 } as const;
 

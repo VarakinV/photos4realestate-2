@@ -487,24 +487,32 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       "Calgary listing agents launching higher-end or design-forward properties, sellers in well-landscaped neighbourhoods, and any listing where the exterior, lighting design or view deserves to lead the marketing.",
     faqs: [
       {
-        q: "What time of day is twilight photography shot?",
-        a: "Twilight is shot in the brief window straddling sunset &mdash; typically starting 15 to 20 minutes before sunset and continuing for about 30 minutes after. Exact timing depends on the season and the orientation of the home.",
+        q: "What is twilight photography in real estate?",
+        a: "Twilight photography is a specialty real estate exterior photography style captured during the blue hour &mdash; the 15&ndash;30 minute window just after sunset when the sky takes on deep blue tones and interior lights begin to glow warmly through windows. The contrast between warm interior light and the cool evening sky creates dramatic images that standard daytime photography cannot replicate. It is widely considered the most visually compelling category of real estate exterior photography.",
       },
       {
-        q: "How is twilight photography different from regular exterior photography?",
-        a: "A daytime exterior shows the property in even, neutral light. A twilight exterior adds saturated sky colour, warm interior glow and outdoor lighting accents &mdash; producing a dramatic hero image with significantly higher MLS engagement.",
+        q: "How much does twilight photography cost in Calgary?",
+        a: "Twilight photography is available as a $125 + GST add-on to any photography package. It must be added to a same-visit photography booking &mdash; our photographer completes all interior and daylight exterior photography first, then stays on-site through sunset. <a href=\"/prices\">See full pricing &rarr;</a>",
       },
       {
-        q: "What is Virtual Twilight photography?",
-        a: "Virtual Twilight is a cost-effective alternative where we take a high-quality daytime exterior photo and digitally transform it into a stunning dusk scene. It requires no second appointment and is completely weather-independent.",
+        q: "Does twilight photography have to be done at the same time as regular photography?",
+        a: "Yes. Twilight photography must be part of the same property visit as your ground photography booking. Our photographer schedules the appointment to arrive in the afternoon, complete all interior and daylight exterior photography, and then wait on-site through sunset to capture the twilight shots. Twilight cannot be booked as a standalone visit without photography, as it requires our team to be present from the afternoon through dusk.",
       },
       {
-        q: "How many twilight images do I receive?",
-        a: "A real twilight shoot delivers 3 to 6 final composited exteriors covering the front, the most photogenic side angle and a back-yard or patio angle. Virtual twilight provides 1 or 2 digitally converted images.",
+        q: "What time of year is best for twilight photography in Calgary?",
+        a: "Twilight photography can be done year-round in Calgary, with great results in every season. In summer, the blue hour falls between 9&ndash;10 PM, so bookings are scheduled accordingly. In winter, sunset is between 4:30&ndash;5:30 PM, making twilight shoots easy to complete within regular business hours. Fall and spring often produce the most atmospheric sky colour, but winter can be spectacular with snow providing reflective foreground light.",
       },
       {
-        q: "Do you reschedule twilight shoots if the weather is bad?",
-        a: "Yes. Heavy overcast, rain or smoke wipes out the sky colour that makes a real twilight image work, so we monitor the forecast and proactively reschedule when conditions won't deliver. There is no rescheduling fee.",
+        q: "What should I do to prepare for a twilight shoot?",
+        a: "Turn on every interior light in the house &mdash; every room, every closet. Turn on all exterior lights including landscape lighting, pathway lights, and pot lights. Remove all vehicles from the driveway. Open all front-facing blinds and curtains. Replace any burnt-out bulbs before the shoot. If the property has a fireplace visible from outside, light it &mdash; it adds extraordinary warmth to the shot. See our full preparation checklist above for the complete list.",
+      },
+      {
+        q: "Can I get a virtual twilight instead of real twilight photography?",
+        a: "Yes. If a real twilight shoot isn't practical for your timeline, we offer a virtual twilight option as part of our virtual staging service &mdash; a daytime exterior photo is digitally transformed to simulate a blue-hour sky and warm window glow. However, genuine twilight photography consistently produces more realistic and impactful results than digital simulation, and is always the preferred option when scheduling permits.",
+      },
+      {
+        q: "Which Calgary properties benefit most from twilight photography?",
+        a: "Twilight photography delivers the highest impact on luxury homes, properties with strong architectural features, homes with significant exterior lighting, lakefront or backing-green-space properties, and any listing where curb appeal and visual differentiation are key selling points. It's also exceptionally effective as a social media hero image &mdash; twilight shots generate 2&ndash;3&times; more engagement than standard exterior photos on Instagram and Facebook.",
       },
     ],
     relatedSlugs: [
