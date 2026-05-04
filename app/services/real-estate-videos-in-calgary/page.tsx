@@ -773,7 +773,7 @@ function PageBody() {
       {/* CTA — services-page style with videography copy */}
       <Cta
         eyebrow="Ready to list?"
-        title="Book Calgary real estate videography in under a minute."
+        title="Book Calgary Real Estate Videography in Under a Minute."
         description={
           <>
             Pick your date, choose your package, and we&rsquo;ll handle the

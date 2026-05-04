@@ -163,16 +163,25 @@ export const virtualStagingImages = {
 
 // Services index page (cards on /services and the per-slug content)
 export const servicesImages = {
-  photography: `${cdn}/2025/05/Living-Room-with-a-Fireplace-Photos-4-Real-Estate.webp`,
-  videographyVideo: `${cdn}/2025/05/Calgary-Real-Estate-Video-Walkthrough.mp4`,
-  rms: `${cdnIguideServicePage}/iGUIDE-Standard-Floor-Plan.webp`,
+  photography:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Photo-of-a-bathroom-in-a-Calgary-house.webp",
+  videographyVideo: videographyImages.heroVideo,
+  rms:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/iGUIDE-Standard-Floor-Plan.webp",
   iguideEmbedSrc:
     "https://youriguide.com/embed/20729_main_st_se_calgary_ab?unbranded=1&bgcolor=FFFFFF",
-  droneMain: `${cdn}/2025/08/Drone-view-to-Downtown-Calgary-Photos-4-Real-Estate-1024x768.webp`,
-  droneSecondary: `${cdn}/2025/05/Drone-Photo-Mahogany-Photos-4-Real-Estate-1024x576.webp`,
-  droneTertiary: `${cdn}/2025/08/Drone-Photo-property-close-to-Sundance-Lake-Calgary-1024x768.webp`,
-  stagingBefore: `${cdn}/2023/07/virtual-staging-before-image-850.webp`,
-  stagingAfter: `${cdn}/2023/07/virtual-staging-after-image-850.webp`,
-  twilight: `${cdn}/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp`,
-  marketingKit: `${cdn}/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp`,
+  droneMain:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Drone-view-to-Downtown-Calgary-Photos-4-Real-Estate-1024x768.webp",
+  droneSecondary:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Drone-Mahogany-Lake-01.webp",
+  droneTertiary:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Drone-Photo-Acreges-Near-Calgary.webp",
+  stagingBefore:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Virtual-Staging-Bedroom-Before-01.webp",
+  stagingAfter:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Virtual-Staging-Bedroom-After-01.webp",
+  twilight:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Twilight-photo-of-a-house-in-Harmony-01.jpg",
+  marketingKit:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Marketing%20Kit%20from%20Photos%204%20Real%20Estate.webp",
 } as const;

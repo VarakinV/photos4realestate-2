@@ -5,6 +5,8 @@ type ServiceImageProps = {
   src: string;
   alt: string;
   priority?: boolean;
+  objectFit?: "cover" | "contain";
+  aspectRatio?: string;
   badge?: {
     icon: ReactNode;
     label: string;
@@ -12,17 +14,27 @@ type ServiceImageProps = {
   };
 };
 
-export function ServiceImage({ src, alt, priority, badge }: ServiceImageProps) {
+export function ServiceImage({
+  src,
+  alt,
+  priority,
+  objectFit = "cover",
+  aspectRatio,
+  badge,
+}: ServiceImageProps) {
   return (
     <>
-      <div className="service-img-main">
+      <div
+        className="service-img-main"
+        style={{ position: "relative", ...(aspectRatio ? { aspectRatio } : {}) }}
+      >
         <Image
           src={src}
           alt={alt}
           fill
           sizes="(max-width: 900px) 100vw, 50vw"
           priority={priority}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit }}
         />
       </div>
       {badge ? (
@@ -52,20 +64,35 @@ type ServiceVideoProps = {
   src: string;
   title: string;
   poster?: string;
+  aspectRatio?: string;
+  maxWidth?: string;
+  startAtSeconds?: number;
 };
 
-export function ServiceVideo({ src, title, poster }: ServiceVideoProps) {
+export function ServiceVideo({
+  src,
+  title,
+  poster,
+  aspectRatio = "4 / 3",
+  maxWidth,
+  startAtSeconds = 0.5,
+}: ServiceVideoProps) {
   return (
-    <div className="service-video-main">
-      <video
-        className="service-video-el"
-        src={poster ? src : `${src}#t=0.5`}
-        poster={poster}
-        controls
-        preload="metadata"
-        playsInline
-        aria-label={title}
-      />
+    <div
+      className="service-video-shell"
+      style={maxWidth ? { maxWidth, margin: "0 auto" } : undefined}
+    >
+      <div className="service-video-main" style={{ aspectRatio }}>
+        <video
+          className="service-video-el"
+          src={poster ? src : `${src}#t=${startAtSeconds}`}
+          poster={poster}
+          controls
+          preload="metadata"
+          playsInline
+          aria-label={title}
+        />
+      </div>
     </div>
   );
 }
@@ -73,16 +100,22 @@ export function ServiceVideo({ src, title, poster }: ServiceVideoProps) {
 type ServiceEmbedProps = {
   src: string;
   title: string;
+  paddingBottom?: string;
 };
 
-export function ServiceEmbed({ src, title }: ServiceEmbedProps) {
+export function ServiceEmbed({
+  src,
+  title,
+  paddingBottom = "57%",
+}: ServiceEmbedProps) {
   return (
-    <div className="service-embed">
+    <div className="service-embed" style={{ paddingBottom }}>
       <iframe
         src={src}
         title={title}
         className="service-embed-iframe"
         scrolling="no"
+        frameBorder="0"
         allowFullScreen
       />
     </div>
@@ -107,7 +140,11 @@ export function ServiceCollage({
   return (
     <div className="service-collage">
       {cells.map((cell) => (
-        <div className="service-collage-cell" key={cell.src}>
+        <div
+          className="service-collage-cell"
+          key={cell.src}
+          style={{ position: "relative" }}
+        >
           <Image
             src={cell.src}
             alt={cell.alt}
@@ -128,7 +165,7 @@ export function ServiceGallery({
 }: ServiceGalleryProps) {
   return (
     <div className="service-gallery">
-      <div className="service-gallery-main">
+      <div className="service-gallery-main" style={{ position: "relative" }}>
         <Image
           src={main.src}
           alt={main.alt}
@@ -137,7 +174,7 @@ export function ServiceGallery({
           style={{ objectFit: "cover" }}
         />
       </div>
-      <div className="service-gallery-cell">
+      <div className="service-gallery-cell" style={{ position: "relative" }}>
         <Image
           src={secondary.src}
           alt={secondary.alt}
@@ -146,7 +183,7 @@ export function ServiceGallery({
           style={{ objectFit: "cover" }}
         />
       </div>
-      <div className="service-gallery-cell">
+      <div className="service-gallery-cell" style={{ position: "relative" }}>
         <Image
           src={tertiary.src}
           alt={tertiary.alt}

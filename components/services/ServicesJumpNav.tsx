@@ -53,20 +53,21 @@ export function ServicesJumpNav({ items }: ServicesJumpNavProps) {
   };
 
   return (
-    <nav className="services-jump-nav" aria-label="Jump to service">
+    <nav className="services-nav" aria-label="Jump to service">
       <div className="container">
-        <div className="services-jump-nav-inner">
+        <div className="services-nav-inner">
           {items.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`services-jump-nav-link${
-                activeId === item.id ? " is-active" : ""
+              className={`services-nav-link${
+                activeId === item.id ? " active" : ""
               }`}
               onClick={(e) => handleClick(e, item.id)}
-              aria-current={activeId === item.id ? "true" : undefined}
+              aria-current={activeId === item.id ? "location" : undefined}
+              aria-label={`Jump to ${item.label}`}
             >
-              <span className="services-jump-nav-icon" aria-hidden="true">
+              <span className="services-nav-icon" aria-hidden="true">
                 {item.icon}
               </span>
               <span>{item.label}</span>

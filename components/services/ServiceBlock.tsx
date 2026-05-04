@@ -28,8 +28,10 @@ export function ServiceBlock({
   reverse = false,
   visual,
 }: ServiceBlockProps) {
+  const headingId = `${id}-heading`;
+
   return (
-    <div className="service-block" id={id}>
+    <section className="service-block" id={id} aria-labelledby={headingId}>
       <div className="container">
         <div
           className={`service-block-inner${reverse ? " reverse" : ""}`}
@@ -48,7 +50,7 @@ export function ServiceBlock({
                 </span>
               </div>
             </div>
-            <h2>{title}</h2>
+            <h2 id={headingId}>{title}</h2>
             <p className="lead">{lead}</p>
             <ul className="service-features">
               {features.map((feature) => (
@@ -69,6 +71,6 @@ export function ServiceBlock({
           <div className="service-visual">{visual}</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

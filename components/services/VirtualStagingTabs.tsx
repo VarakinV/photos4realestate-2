@@ -56,7 +56,7 @@ export function VirtualStagingTabs({ tabs }: Props) {
                 className="ba-slider"
                 role="img"
                 aria-label={tab.ariaLabel}
-                style={{ borderRadius: "var(--radius)", overflow: "hidden", position: "relative", aspectRatio: "4/3" }}
+                style={{ borderRadius: "var(--radius)", overflow: "hidden", position: "relative" }}
               >
                 <BeforeAfter
                   beforeSrc={tab.beforeSrc}

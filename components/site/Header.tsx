@@ -3,32 +3,11 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
+import { Camera, ChevronDown, Mail, Menu, Phone, ThumbsUp, X } from "lucide-react";
 import { Logo } from "@/components/site/Logo";
 import { ServicesNavParentLink } from "@/components/site/ServicesNavParentLink";
 import { ServicesSubmenuLink } from "@/components/site/ServicesSubmenuLink";
 import { primaryNav, services, siteConfig } from "@/lib/site";
-
-function FacebookIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3.2l.8-4H13V9c0-.7.3-1 1-1Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
-function InstagramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
-      <circle cx="12" cy="12" r="3.75" fill="none" stroke="currentColor" strokeWidth="1.8" />
-      <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" />
-    </svg>
-  );
-}
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,7 +46,7 @@ export function Header() {
   return (
     <header className="site-nav">
       <div className="container nav-inner">
-        <Logo priority />
+        <Logo />
 
         <nav
           id="primary-nav"
@@ -150,7 +129,7 @@ export function Header() {
                 rel="noreferrer"
                 aria-label="Follow Photos 4 Real Estate on Facebook"
               >
-                <FacebookIcon />
+                <ThumbsUp size={18} aria-hidden="true" strokeWidth={2} />
               </a>
               <a
                 href={siteConfig.social.instagram}
@@ -159,7 +138,7 @@ export function Header() {
                 rel="noreferrer"
                 aria-label="Follow Photos 4 Real Estate on Instagram"
               >
-                <InstagramIcon />
+                <Camera size={18} aria-hidden="true" strokeWidth={2} />
               </a>
             </div>
           </div>

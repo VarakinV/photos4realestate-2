@@ -24,7 +24,7 @@ const iconProps = { size: 20, strokeWidth: 2, "aria-hidden": true } as const;
 
 export function ServiceBlocks() {
   return (
-    <>
+    <section className="services-section" aria-label="Real estate media services">
       <ServiceBlock
         id="photography"
         number="01"
@@ -45,7 +45,7 @@ export function ServiceBlocks() {
         visual={
           <ServiceImage
             src={servicesImages.photography}
-            alt="Bathroom in a Calgary house photographed by Photos 4 Real Estate"
+            alt="Real estate photography of a bathroom in a Calgary home"
             priority
             badge={{
               icon: <Clock size={16} strokeWidth={2} aria-hidden="true" />,
@@ -78,6 +78,9 @@ export function ServiceBlocks() {
           <ServiceVideo
             src={servicesImages.videographyVideo}
             title="Vertical property video of 306 Cranbrook Walk SE, Calgary by Photos 4 Real Estate"
+            aspectRatio="9 / 16"
+            maxWidth="340px"
+            startAtSeconds={1}
           />
         }
       />
@@ -102,7 +105,7 @@ export function ServiceBlocks() {
         visual={
           <ServiceImage
             src={servicesImages.rms}
-            alt="Example of an iGUIDE standard 2D floor plan for a Calgary home"
+            alt="iGUIDE standard floor plan graphic for a Calgary home"
             badge={{
               icon: <Award size={16} strokeWidth={2} aria-hidden="true" />,
               label: "Standard",
@@ -159,11 +162,11 @@ export function ServiceBlocks() {
           <ServiceGallery
             main={{
               src: servicesImages.droneMain,
-              alt: "Aerial drone view of downtown Calgary by Photos 4 Real Estate",
+              alt: "Drone view of the downtown Calgary skyline and surrounding neighbourhoods",
             }}
             secondary={{
               src: servicesImages.droneSecondary,
-              alt: "Drone photograph of Mahogany Lake, Calgary",
+              alt: "Drone photograph of Mahogany Lake and nearby homes in Calgary",
             }}
             tertiary={{
               src: servicesImages.droneTertiary,
@@ -195,8 +198,8 @@ export function ServiceBlocks() {
           <ServiceBeforeAfter
             beforeSrc={servicesImages.stagingBefore}
             afterSrc={servicesImages.stagingAfter}
-            beforeAlt="Empty Calgary bedroom before virtual staging"
-            afterAlt="Calgary bedroom after virtual staging by Photos 4 Real Estate"
+            beforeAlt="Empty bedroom before virtual staging in a Calgary property"
+            afterAlt="Virtually staged bedroom after enhancement in a Calgary property"
           />
         }
       />
@@ -221,7 +224,7 @@ export function ServiceBlocks() {
         visual={
           <ServiceImage
             src={servicesImages.twilight}
-            alt="Calgary home photographed at twilight with warm interior lights"
+            alt="Twilight photo of a house in Harmony with illuminated windows"
           />
         }
       />
@@ -247,10 +250,12 @@ export function ServiceBlocks() {
         visual={
           <ServiceImage
             src={servicesImages.marketingKit}
-            alt="Preview of a complete marketing kit for Calgary realtors including social reels, websites, slideshows, and flyers"
+            alt="Marketing kit graphic from Photos 4 Real Estate showing flyer, website, and social media assets"
+            objectFit="contain"
+            aspectRatio="3 / 4"
           />
         }
       />
-    </>
+    </section>
   );
 }

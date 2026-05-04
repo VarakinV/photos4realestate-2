@@ -3,6 +3,7 @@ import { ServicesHero } from "@/components/services/ServicesHero";
 import { ServicesJumpNav } from "@/components/services/ServicesJumpNav";
 import { ServicesIntro } from "@/components/services/ServicesIntro";
 import { ServiceBlocks } from "@/components/services/ServiceBlocks";
+import { ServicesAddons } from "@/components/services/ServicesAddons";
 import { servicesJumpNavItems } from "@/components/services/jumpNavItems";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { Faq } from "@/components/home/Faq";
@@ -11,6 +12,12 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import { siteConfig, services, serviceAreas } from "@/lib/site";
 import { servicesFaqs } from "@/lib/faqs";
+import {
+  AVERAGE_RATING,
+  REVIEW_COUNT,
+  reviews as reviewItems,
+  toIsoDate,
+} from "@/lib/reviews";
 
 export const dynamic = "force-static";
 
@@ -26,29 +33,31 @@ const ogImage = {
   url: ogImageUrl,
   width: 1200,
   height: 630,
-  alt: "Real Estate Photography Services in Calgary — Photos 4 Real Estate",
+  alt: "Real estate media services in Calgary — Photos 4 Real Estate",
 };
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    type: "website",
-    title,
+export function generateMetadata(): Metadata {
+  return {
+    title: { absolute: title },
     description,
-    url: pageUrl,
-    siteName: siteConfig.shortName,
-    locale: "en_CA",
-    images: [ogImage],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [ogImageUrl],
-  },
-};
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url: pageUrl,
+      siteName: siteConfig.name,
+      locale: "en_CA",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImageUrl],
+    },
+  };
+}
 
 const serviceDescriptions: Record<(typeof services)[number]["slug"], string> = {
   "real-estate-photography-in-calgary":
@@ -69,7 +78,8 @@ const serviceDescriptions: Record<(typeof services)[number]["slug"], string> = {
     "Free marketing kit for Calgary realtors — 9 social reels, 2 slideshows, 3 property flyers and 3 branded single-property websites with every shoot.",
 };
 
-const businessRef = { "@id": `${siteConfig.url}/#business` };
+const businessId = `${siteConfig.url}/#business`;
+const businessRef = { "@id": businessId };
 
 const itemListSchema = {
   "@context": "https://schema.org",
@@ -115,10 +125,49 @@ const faqSchema = {
   mainEntity: faqItemsToSchemaMainEntity(servicesFaqs),
 };
 
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": businessId,
+  name: siteConfig.name,
+  url: siteConfig.url,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: AVERAGE_RATING,
+    reviewCount: REVIEW_COUNT,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  review: reviewItems.map((review) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.name,
+    },
+    itemReviewed: {
+      "@id": businessId,
+    },
+    reviewBody: review.text,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    datePublished: toIsoDate(review.date),
+    publisher: {
+      "@type": "Organization",
+      name: "Google",
+    },
+  })),
+};
+
 const speakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
+  "@id": `${pageUrl}#webpage`,
   url: pageUrl,
+  primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrl },
   speakable: {
     "@type": "SpeakableSpecification",
     cssSelector: [".speakable-intro", ".speakable-faq"],
@@ -139,14 +188,15 @@ export default function ServicesPage() {
       <ServicesJumpNav items={servicesJumpNavItems} />
       <ServicesIntro />
       <ServiceBlocks />
+      <ServicesAddons />
       <Faq
         heading="Services FAQ"
         faqs={servicesFaqs}
         allFaqsLabelSuffix="all Calgary real estate media services"
       />
       <Cta
-        eyebrow="One team, one visit"
-        title="Book every service you need in a single shoot."
+        eyebrow="One Team, One Visit"
+        title="Book Every Service You Need in a Single Shoot."
         description={
           <>
             Photography, video, drone, 3D tour and floor plans &mdash; all
@@ -158,6 +208,7 @@ export default function ServicesPage() {
       <JsonLd id="ld-collection-services" data={collectionPageSchema} />
       <JsonLd id="ld-itemlist-services" data={itemListSchema} />
       <JsonLd id="ld-faq-services" data={faqSchema} />
+      <JsonLd id="ld-reviews-services" data={reviewSchema} />
       <JsonLd id="ld-speakable-services" data={speakableSchema} />
     </>
   );
