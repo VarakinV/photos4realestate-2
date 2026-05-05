@@ -141,6 +141,20 @@ export const twilightImages = {
   virtual2: `${cdn}/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp`,
 } as const;
 
+// Marketing kit service page
+export const marketingKitImages = {
+  introMain:
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/Marketing%20Kit%20from%20Photos%204%20Real%20Estate.webp",
+  introSecondary:
+    "https://photos4realestate.ca/wp-content/uploads/2025/05/Modern-Kitchen-Photos-4-Real-Estate.webp",
+  introTertiary:
+    "https://photos4realestate.ca/wp-content/uploads/2025/05/Bedroom-Photos-4-Real-Estate.webp",
+  websiteHero:
+    "https://photos4realestate.ca/wp-content/uploads/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp",
+  slideshowHero:
+    "https://photos4realestate.ca/wp-content/uploads/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp",
+} as const;
+
 // RMS measurements service page
 export const rmsImages = {
   standardPlanIntro:

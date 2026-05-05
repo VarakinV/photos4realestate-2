@@ -544,10 +544,10 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     includedHeading: "What you receive with every shoot",
     features: [
       "9 social media reels",
-      "2 slideshow videos",
-      "3 property flyers (PDF)",
       "3 branded property websites",
-      "Single-property websites",
+      "3 print-ready property flyers",
+      "2 animated photo slideshows",
+      "Branded with your contact info",
       "Free with every package",
     ],
     whoForHeading: "Who is this for?",
@@ -555,20 +555,28 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       "Calgary listing agents who want to market every listing across MLS, social and print without juggling extra vendors or design subscriptions, and brokerages that want a consistent agent-branded marketing standard on every property.",
     faqs: [
       {
-        q: "What is included in the Marketing Kit?",
-        a: "Every shoot includes 9 short-form social media reels, 2 slideshow videos, 3 property flyers (PDF) and 3 branded single-property websites — all generated from your shoot's media and pre-branded with your contact info.",
+        q: "What is included in the Photos 4 Real Estate marketing kit?",
+        a: "Every Photos 4 Real Estate package includes a free marketing kit consisting of 9 social media video reels, 3 branded property websites, 3 print-ready PDF property flyers, and 2 professional slideshows. All marketing kit items are delivered the next morning alongside your listing photos.",
       },
       {
-        q: "Are the marketing assets really free with every shoot?",
-        a: "Yes. The Marketing Kit is included at no extra cost on every photography or video package. There is no upgrade fee, no per-asset charge and no monthly subscription.",
+        q: "Is the marketing kit really free with every package?",
+        a: "Yes. The complete marketing kit — 9 reels, 3 property websites, 3 flyers, and 2 slideshows — is included at no extra cost with every Essential, Skyline, and Social Boost photography package. There is no upgrade required and no additional fee.",
       },
       {
-        q: "Can I customize the branded single-property websites?",
-        a: "Yes. The websites are branded with your photo, contact details and brokerage colours by default. You can request edits to the listing description, room labels and call-to-action copy at any time.",
+        q: "What are the 9 social media reels?",
+        a: "The 9 social media reels are short-form vertical video clips (9:16 format) automatically generated from your listing photos, ready to post directly on Instagram Reels, Facebook Reels, and TikTok. Each reel is a different cut or style, giving you variety for your social media posting schedule. These are separate from the full 45–60 second social media reel available in the Social Boost package.",
       },
       {
-        q: "What formats are flyers, reels and slideshows delivered in?",
-        a: "Flyers are delivered as print-ready PDF and high-resolution PNG. Reels and slideshows are delivered as MP4 in vertical (9:16) format for Instagram, TikTok and Facebook. Property websites are delivered as live URLs you can share immediately.",
+        q: "How do I access my property websites?",
+        a: "Your three property website links are included in your delivery email the morning after your shoot. Each link opens a mobile-responsive property website showcasing your listing photos and details. You can share these links directly — no login or account required for buyers to view them.",
+      },
+      {
+        q: "Can I customize the flyers and websites?",
+        a: "Yes. Our free online tools — reel generator, slideshow generator, flyer generator, and property website generator — allow you to customize and regenerate your marketing materials using your listing photos at any time. <a href=\"/free-tools\">Open the free tools<span class=\"sr-only\"> for marketing kit customization</span> &rarr;</a>",
+      },
+      {
+        q: "When is the marketing kit delivered?",
+        a: "The marketing kit is generated automatically overnight from your listing photos and delivered with your complete order the next morning. You receive a single download link and access to your property portal containing your photos, floor plans, tour link, and all marketing kit items in one place.",
       },
     ],
     relatedSlugs: [
