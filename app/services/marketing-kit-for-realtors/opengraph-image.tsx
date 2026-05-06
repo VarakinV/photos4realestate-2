@@ -8,7 +8,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const runtime = "nodejs";
 
-async function getLogoDataUrl() {
+async function getLogoSvgDataUrl() {
   const logoSvg = await readFile(
     join(process.cwd(), "public", "logos", "map-pin-logo.svg"),
     "utf8"
@@ -18,7 +18,7 @@ async function getLogoDataUrl() {
 }
 
 export default async function OgImage() {
-  const logoSrc = await getLogoDataUrl();
+  const logoSrc = await getLogoSvgDataUrl();
 
   return new ImageResponse(
     (
@@ -35,8 +35,8 @@ export default async function OgImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <img src={logoSrc} alt="" width="64" height="64" style={{ width: 64, height: 64 }} />
-          <span style={{ color: "#fff", fontSize: 34, fontWeight: 600 }}>
+          <img src={logoSrc} alt="" width="72" height="72" style={{ width: 72, height: 72 }} />
+          <span style={{ color: "#fff", fontSize: 34, fontWeight: 600, letterSpacing: "-0.01em" }}>
             {siteConfig.name}
           </span>
         </div>
@@ -52,12 +52,12 @@ export default async function OgImage() {
               fontWeight: 500,
             }}
           >
-            Calgary Realtor Marketing Kit
+            Marketing Kit for Calgary Realtors
           </span>
           <h1
             style={{
               color: "#fff",
-              fontSize: 72,
+              fontSize: 70,
               lineHeight: 1.05,
               fontWeight: 700,
               letterSpacing: "-0.02em",
@@ -65,7 +65,7 @@ export default async function OgImage() {
               maxWidth: 980,
             }}
           >
-            9 Reels, 3 Websites, 3 Flyers — Included Free With Every Package
+            17 Marketing Assets Included Free With Every Package
           </h1>
         </div>
 
@@ -78,7 +78,7 @@ export default async function OgImage() {
             alignItems: "center",
           }}
         >
-          <span>Next-Morning Delivery</span>
+          <span>Listing Info Required</span>
           <span style={{ color: "#cb4154" }}>•</span>
           <span>Agent-Branded Assets</span>
           <span style={{ color: "#cb4154" }}>•</span>

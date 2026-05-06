@@ -149,10 +149,22 @@ export const marketingKitImages = {
     "https://photos4realestate.ca/wp-content/uploads/2025/05/Modern-Kitchen-Photos-4-Real-Estate.webp",
   introTertiary:
     "https://photos4realestate.ca/wp-content/uploads/2025/05/Bedroom-Photos-4-Real-Estate.webp",
+  reel1Video:
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/reel-v1-9x16.mp4",
+  reel2Video:
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/reel-v3-9x16.mp4",
   websiteHero:
-    "https://photos4realestate.ca/wp-content/uploads/2025/05/House-Exterior-Photo-by-Photos-4-Real-Estate-1024x682.webp",
-  slideshowHero:
-    "https://photos4realestate.ca/wp-content/uploads/2025/05/Twilight-Photo-Home-in-Auburn-Bay-Photos-4-Real-Estate.webp",
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/Responsive%20Preview.webp",
+  flyersPreview:
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/PDFs.webp",
+  slideshowVideo:
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/Real-Estate-Property-Slideshow.mp4",
+  areasPrimary:
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/Drone-photo-of-a-house-in-NW-Calgary-Photos-4-Real-Estate-02.jpg",
+  areasSecondary:
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/Drone-Downtown-Bow-River-Photos-4-Real-Estate.webp",
+  areasTertiary:
+    "https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/Virtual-Staging-Dinnnig-and-Living-Room-by-Photos-4-Real-Estate.webp",
 } as const;
 
 // RMS measurements service page

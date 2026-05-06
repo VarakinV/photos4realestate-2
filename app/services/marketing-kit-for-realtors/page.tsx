@@ -3,11 +3,11 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  Award,
   Box,
   Check,
-  Clock,
   FileText,
-  Images,
+  MapPin,
   MonitorPlay,
   Sparkles,
   Smartphone,
@@ -18,7 +18,7 @@ import { Cta } from "@/components/home/Cta";
 import { Reviews } from "@/components/home/Reviews";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, serviceAreas } from "@/lib/site";
 import { servicesContent } from "@/lib/services-content";
 import { marketingKitImages } from "@/lib/images";
 import {
@@ -68,7 +68,7 @@ const serviceSchema = {
   description: content.seoDescription,
   url: pageUrl,
   provider: { "@id": businessId },
-  areaServed: "Calgary and surrounding areas",
+  areaServed: [...serviceAreas],
   offers: {
     "@type": "Offer",
     priceCurrency: "CAD",
@@ -92,6 +92,17 @@ const reviewSchema = {
   "@id": businessId,
   name: siteConfig.name,
   url: siteConfig.url,
+  telephone: siteConfig.phoneE164,
+  email: siteConfig.email,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: siteConfig.address.locality,
+    addressRegion: siteConfig.address.region,
+    addressCountry: siteConfig.address.country,
+  },
+  areaServed: [...serviceAreas],
+  sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
+  priceRange: "$$",
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: AVERAGE_RATING,
@@ -128,7 +139,7 @@ const speakableSchema = {
 };
 
 const whyIncluded = [
-  "9 social media video reels — automatically generated from your listing photos",
+  "9 social media video reels — generated from your listing photos and listing information",
   "3 branded property websites — shareable links, no setup required",
   "3 print-ready PDF flyers — professionally designed with your photos",
   "2 animated slideshows — ready for email campaigns and social media",
@@ -162,11 +173,11 @@ const toolSections: readonly ToolSection[] = [
       "9:16 vertical format — optimized for Instagram, Facebook, TikTok",
       "9 different cuts per listing — post one daily for over a week",
       "Licensed background music included",
-      "Delivered as MP4 files — no editing required",
+      "Provided as MP4 files — no editing required",
       "Separate from the full 45–60 second Social Boost reel",
     ],
     note: (
-      <p className="marketing-tool-note">
+      <p className="marketing-tool-note marketing-tool-note--card">
         <strong>Note:</strong> These 9 teaser reels are different from the full
         cinematic social media reel available in the{" "}
         <Link href="/services/real-estate-videos-in-calgary" className="body-link">
@@ -184,7 +195,7 @@ const toolSections: readonly ToolSection[] = [
     title: "3 Branded Property Websites — Share a Link, Impress Every Buyer",
     icon: <Box size={22} aria-hidden="true" />,
     paragraphs: [
-      "Every listing gets three dedicated single-property websites — professional, mobile-responsive pages that showcase the listing photos, property details, and your contact information with a single shareable link. No web design skills required. No hosting setup. Just a clean, professional URL you can paste anywhere.",
+      "Once we have the listing information, every property gets three dedicated single-property websites — professional, mobile-responsive pages that showcase the listing photos, property details, and your contact information with a single shareable link. No web design skills required. No hosting setup. Just a clean, professional URL you can paste anywhere.",
       "Each of the three websites uses a different layout or design template, giving you options for different marketing contexts. Share in your email campaigns, paste in the MLS listing notes, include in your social media bio, or send directly to interested buyers via text or WhatsApp.",
     ],
     bullets: [
@@ -203,7 +214,7 @@ const toolSections: readonly ToolSection[] = [
     title: "3 Print-Ready PDF Property Flyers — For Open Houses & Email",
     icon: <FileText size={22} aria-hidden="true" />,
     paragraphs: [
-      "Every listing generates three professionally designed PDF property flyers featuring your listing photos and property details. These are not generic templates — they are properly designed marketing documents that look polished when printed for open houses or attached to email campaigns.",
+      "Once we have the listing information, every property generates three professionally designed PDF property flyers featuring your listing photos and property details. These are not generic templates — they are properly designed marketing documents that look polished when printed for open houses or attached to email campaigns.",
       "Each of the three flyers uses a different layout — a feature sheet, a comparative layout, and a social-style design — giving you options for different marketing contexts. Print them for open houses, email them to buyer prospects, or attach them to your digital listing presentation.",
     ],
     bullets: [
@@ -211,12 +222,11 @@ const toolSections: readonly ToolSection[] = [
       "Print-ready PDF — 300dpi, suitable for professional printing",
       "Your branding, contact info, and listing details",
       "Ideal for open houses, email, and digital listing presentations",
-      "Customize any time via the free flyer generator tool",
     ],
     note: (
       <p className="marketing-tool-note">
-        Need to refresh copy or layout later? Use our{" "}
-        <Link href="/free-tools" className="body-link">
+        Try our{" "}
+        <Link href="/free-tools/flyer-generator" className="body-link">
           free flyer generator
         </Link>
         .
@@ -236,14 +246,13 @@ const toolSections: readonly ToolSection[] = [
     bullets: [
       "Two different slideshow styles per listing",
       "Animated transitions between all listing photos",
-      "Delivered as MP4 — works in email, social, and presentations",
+      "Provided as MP4 — works in email, social, and presentations",
       "Horizontal 16:9 format — ideal for desktop and email viewing",
-      "Customize and regenerate via the free slideshow generator",
     ],
     note: (
       <p className="marketing-tool-note">
-        Want a fresh version later? Open the{" "}
-        <Link href="/free-tools" className="body-link">
+        Try our{" "}
+        <Link href="/free-tools/slideshow-generator" className="body-link">
           free slideshow generator
         </Link>
         .
@@ -295,13 +304,13 @@ const processSteps = [
   },
   {
     num: "03",
-    title: "Kit Generates Automatically",
-    desc: "Your marketing kit is generated overnight from your listing photos — reels, websites, flyers, and slideshows all formatted and ready to use.",
+    title: "Send Listing Information",
+    desc: "To generate the marketing kit, we need the required listing information — typically the RMS size, asking price, year built, property description, and key property details.",
   },
   {
     num: "04",
-    title: "Download & Share Next Morning",
-    desc: "You receive one delivery link with your photos, floor plans, tour link, and your complete marketing kit by the next morning.",
+    title: "Download & Share",
+    desc: "Once we have the required listing information, we generate the complete marketing kit and send it to you. In most cases, it is delivered the next day.",
   },
 ] as const;
 
@@ -309,27 +318,39 @@ function renderToolVisual(kind: ToolVisualKind) {
   switch (kind) {
     case "reels":
       return (
-        <div className="marketing-reel-row" aria-label="Social media reel previews">
-          <div className="marketing-reel-phone">
-            <Image
-              src={marketingKitImages.introMain}
-              alt="Vertical reel preview generated from a Calgary living room listing photo"
-              width={900}
-              height={1600}
-              sizes="(max-width: 1024px) 45vw, 220px"
-              style={{ width: "100%", height: "auto" }}
-            />
+        <div
+          className="marketing-reel-row"
+          role="group"
+          aria-label="Social media reel previews from the marketing kit"
+        >
+          <div className="marketing-reel-item">
+            <div className="marketing-reel-phone">
+              <video
+                className="marketing-reel-video"
+                controls
+                muted
+                playsInline
+                preload="metadata"
+                aria-label="Vertical social media reel preview one for the marketing kit"
+              >
+                <source src={`${marketingKitImages.reel1Video}#t=0.1`} type="video/mp4" />
+              </video>
+            </div>
             <div className="marketing-reel-tag">Reel 1 of 9</div>
           </div>
-          <div className="marketing-reel-phone is-secondary">
-            <Image
-              src={marketingKitImages.introSecondary}
-              alt="Second vertical reel preview created from a Calgary kitchen listing photo"
-              width={900}
-              height={1600}
-              sizes="(max-width: 1024px) 45vw, 220px"
-              style={{ width: "100%", height: "auto" }}
-            />
+          <div className="marketing-reel-item">
+            <div className="marketing-reel-phone is-secondary">
+              <video
+                className="marketing-reel-video"
+                controls
+                muted
+                playsInline
+                preload="metadata"
+                aria-label="Vertical social media reel preview two for the marketing kit"
+              >
+                <source src={`${marketingKitImages.reel2Video}#t=0.1`} type="video/mp4" />
+              </video>
+            </div>
             <div className="marketing-reel-tag">Reel 2 of 9</div>
           </div>
         </div>
@@ -337,17 +358,17 @@ function renderToolVisual(kind: ToolVisualKind) {
     case "websites":
       return (
         <div className="marketing-website-mock">
-          <div className="marketing-browser-bar">
-            <span className="marketing-browser-dot is-red" />
-            <span className="marketing-browser-dot is-amber" />
-            <span className="marketing-browser-dot is-green" />
-            <div className="marketing-website-url">
+          <div className="marketing-browser-bar" aria-hidden="true">
+            <span className="marketing-browser-dot is-red" aria-hidden="true" />
+            <span className="marketing-browser-dot is-amber" aria-hidden="true" />
+            <span className="marketing-browser-dot is-green" aria-hidden="true" />
+            <div className="marketing-website-url" aria-hidden="true">
               listing.photos4realestate.ca/123-main-st
             </div>
           </div>
           <Image
             src={marketingKitImages.websiteHero}
-            alt="Example branded single-property website hero image for a Calgary listing"
+            alt="Responsive preview of a branded single-property website by Photos 4 Real Estate for a Calgary listing"
             width={1400}
             height={900}
             sizes="(max-width: 1024px) 100vw, 42vw"
@@ -357,58 +378,38 @@ function renderToolVisual(kind: ToolVisualKind) {
       );
     case "flyers":
       return (
-        <div className="marketing-flyer-row" aria-label="Property flyer previews">
-          <div className="marketing-flyer-item">
-            <Image
-              src={marketingKitImages.introMain}
-              alt="Property flyer preview featuring a Calgary living room listing photo"
-              width={900}
-              height={1200}
-              sizes="(max-width: 1024px) 32vw, 180px"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="marketing-flyer-item">
-            <Image
-              src={marketingKitImages.introSecondary}
-              alt="Property flyer preview featuring a Calgary kitchen listing photo"
-              width={900}
-              height={1200}
-              sizes="(max-width: 1024px) 32vw, 180px"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
-          <div className="marketing-flyer-item">
-            <Image
-              src={marketingKitImages.introTertiary}
-              alt="Property flyer preview featuring a Calgary bedroom listing photo"
-              width={900}
-              height={1200}
-              sizes="(max-width: 1024px) 32vw, 180px"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
+        <div className="marketing-flyer-single">
+          <Image
+            src={marketingKitImages.flyersPreview}
+            alt="Preview of branded PDF property flyers by Photos 4 Real Estate for a Calgary listing"
+            width={1400}
+            height={1050}
+            sizes="(max-width: 1024px) 100vw, 42vw"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
       );
     case "slideshows":
       return (
         <div className="marketing-slideshow-mock">
-          <div className="marketing-browser-bar is-compact">
-            <span className="marketing-browser-dot is-red" />
-            <span className="marketing-browser-dot is-amber" />
-            <span className="marketing-browser-dot is-green" />
-            <span className="marketing-slideshow-label">
+          <div className="marketing-browser-bar is-compact" aria-hidden="true">
+            <span className="marketing-browser-dot is-red" aria-hidden="true" />
+            <span className="marketing-browser-dot is-amber" aria-hidden="true" />
+            <span className="marketing-browser-dot is-green" aria-hidden="true" />
+            <span className="marketing-slideshow-label" aria-hidden="true">
               Listing Slideshow — 123 Main St Calgary
             </span>
           </div>
-          <Image
-            src={marketingKitImages.slideshowHero}
-            alt="Twilight listing image displayed inside a Calgary real estate slideshow preview"
-            width={1600}
-            height={900}
-            sizes="(max-width: 1024px) 100vw, 42vw"
-            style={{ width: "100%", height: "auto" }}
-          />
+          <video
+            className="marketing-slideshow-video"
+            controls
+            muted
+            playsInline
+            preload="metadata"
+            aria-label="Real estate property slideshow video example"
+          >
+            <source src={`${marketingKitImages.slideshowVideo}#t=0.1`} type="video/mp4" />
+          </video>
         </div>
       );
   }
@@ -442,7 +443,7 @@ export default function MarketingKitPage() {
                 <strong>Every Photos 4 Real Estate package includes a complete
                 marketing kit</strong> at no extra cost — 9 social media reels,
                 3 property websites, 3 property flyers, and 2 slideshows,
-                delivered alongside your listing photos.
+                generated once your listing information is ready.
               </p>
             </div>
 
@@ -459,8 +460,8 @@ export default function MarketingKitPage() {
                 <span className="lbl">Free</span>
               </li>
               <li className="services-page-hero-stat">
-                <span className="num">24h</span>
-                <span className="lbl">Delivery</span>
+                <span className="num">Info</span>
+                <span className="lbl">required</span>
               </li>
             </ul>
           </div>
@@ -494,15 +495,23 @@ function PageBody() {
               <p className="lead speakable-intro">
                 Most real estate photography companies deliver photos. Photos 4
                 Real Estate delivers a complete marketing kit. Every booking
-                automatically generates a full set of marketing assets Calgary
-                realtors can use across social media, email, print, and the web
-                the very next morning.
+                can include a full set of marketing assets Calgary realtors can
+                use across social media, email, print, and the web — once we
+                have the required listing information.
               </p>
               <p>
                 The marketing kit is not an upgrade or an add-on. It is
                 included as standard with every Essential, Skyline, and Social
                 Boost package at no additional cost — because a great photo
                 deserves great marketing tools to match.
+              </p>
+              <p>
+                Because the kit is built from the actual listing details, we
+                need the core property information before we can generate the
+                assets — typically the RMS size, asking price, year built,
+                property description, and any key features you want included.
+                In most cases, once that information is available, the marketing
+                kit is delivered the next day.
               </p>
               <p>
                 Beyond the delivered kit, we also provide{" "}
@@ -531,18 +540,19 @@ function PageBody() {
             </div>
 
             <div className="marketing-intro-visual">
-              <div className="marketing-intro-pill">
+              <div className="marketing-intro-pill" aria-hidden="true">
                 <div className="marketing-intro-pill-dot" aria-hidden="true"></div>
                 Included Free
               </div>
               <div className="marketing-intro-visual-item is-single">
                 <Image
                   src={marketingKitImages.introMain}
-                  alt="Marketing Kit from Photos 4 Real Estate showing branded reels, flyers, websites, and listing marketing assets"
+                  alt="Marketing kit preview from Photos 4 Real Estate with reels, websites, flyers, and slideshows for a Calgary listing"
                   width={1600}
                   height={900}
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   style={{ width: "100%", height: "auto" }}
+                  priority
                 />
               </div>
             </div>
@@ -587,7 +597,13 @@ function PageBody() {
                   </ul>
                   {section.note}
                 </div>
-                <div className="marketing-tool-visual">{renderToolVisual(section.id)}</div>
+                <div
+                  className="marketing-tool-visual"
+                  role="group"
+                  aria-labelledby={`marketing-tool-${section.id}`}
+                >
+                  {renderToolVisual(section.id)}
+                </div>
               </div>
             </div>
           </div>
@@ -602,8 +618,8 @@ function PageBody() {
           </h2>
           <p>
             The complete marketing kit is part of every Essential, Skyline, and
-            Social Boost package — automatically, with zero additional steps
-            required from you.
+            Social Boost package — included at no extra cost and generated once
+            the required listing information has been provided.
           </p>
           <div className="marketing-count-grid" role="list">
             {kitTotals.map((item) => (
@@ -641,13 +657,14 @@ function PageBody() {
               </p>
               <Link href="/book-online" className="btn btn-primary">
                 Claim 25% Discount
+                <span className="sr-only"> for Calgary real estate media booking</span>
               </Link>
             </article>
 
             <article className="marketing-promo-card is-light">
               <span className="marketing-promo-tag is-brick">Loyalty Program</span>
               <div className="marketing-loyalty-icon" aria-hidden="true">
-                <Clock size={24} />
+                <Award size={22} />
               </div>
               <h3>Earn Points on Every Booking</h3>
               <p>
@@ -667,6 +684,7 @@ function PageBody() {
               </ul>
               <Link href="/book-online" className="btn btn-outline-dark">
                 Start Earning Points
+                <span className="sr-only"> with Calgary real estate media bookings</span>
               </Link>
             </article>
           </div>
@@ -679,8 +697,8 @@ function PageBody() {
             <span className="section-label">How It Works</span>
             <h2 id="marketing-process-heading">How You Receive Your Marketing Kit</h2>
             <p>
-              Zero extra steps on your end. Book once, receive everything the
-              next morning.
+              Book once, send the listing details, and in most cases receive the
+              completed marketing kit the next day.
             </p>
           </div>
           <div className="marketing-process-grid">
@@ -695,14 +713,94 @@ function PageBody() {
         </div>
       </section>
 
+      <section
+        id="service-areas"
+        className="areas-section marketing-areas-section"
+        aria-labelledby="marketing-areas-heading"
+      >
+        <div className="container">
+          <div className="areas-inner">
+            <div className="areas-content">
+              <span className="section-label">Service Areas</span>
+              <h2 id="marketing-areas-heading">
+                Marketing Kit for Calgary &amp; Surrounding Areas
+              </h2>
+              <p>
+                Photos 4 Real Estate includes the marketing kit with listings
+                photographed across Calgary and the surrounding communities in
+                our standard service radius. Once we have the required listing
+                information, we generate the branded assets for your property.
+              </p>
+              <ul className="areas-chips" aria-label="Marketing kit service areas">
+                {serviceAreas.map((area) => (
+                  <li key={area}>
+                    <Link
+                      href="/service-areas"
+                      className="area-chip"
+                      aria-label={`Marketing kit service availability in ${area}`}
+                    >
+                      <MapPin size={12} aria-hidden="true" />
+                      {area}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <p className="areas-travel-note">
+                <strong>Outside our standard radius?</strong> Call{" "}
+                <a
+                  href={siteConfig.phoneHref}
+                  aria-label={`Call ${siteConfig.name} at ${siteConfig.phone} to confirm marketing kit travel coverage`}
+                >
+                  {siteConfig.phone}
+                </a>{" "}
+                to confirm travel options and turnaround for your listing.
+              </p>
+            </div>
+
+            <div className="areas-visual">
+              <div className="areas-visual-item">
+                <Image
+                  src={marketingKitImages.areasPrimary}
+                  alt="Drone photo of a house in NW Calgary by Photos 4 Real Estate"
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              <div className="areas-visual-item">
+                <Image
+                  src={marketingKitImages.areasSecondary}
+                  alt="Drone photo of downtown Calgary and the Bow River by Photos 4 Real Estate"
+                  width={1400}
+                  height={900}
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              <div className="areas-visual-item">
+                <Image
+                  src={marketingKitImages.areasTertiary}
+                  alt="Virtual staging of a dining and living room by Photos 4 Real Estate for a Calgary listing"
+                  width={1400}
+                  height={1050}
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Reviews variant="dark" eyebrow="Client Reviews" heading={<>What Calgary Realtors Say</>} />
 
       <Faq
         heading="Marketing Kit — Frequently Asked Questions"
         intro={
           <>
-            Common questions about the marketing kit, delivery, and
-            customization. More questions? Call{" "}
+            Common questions about the marketing kit, required listing
+            information, delivery, and customization. More questions? Call{" "}
             <a
               href={siteConfig.phoneHref}
               className="faq-phone-link"
@@ -719,12 +817,12 @@ function PageBody() {
 
       <Cta
         eyebrow="Ready to get your kit?"
-        title="Book once. Get photos, floor plans, tour & complete marketing kit."
+        title="Book Once. Get Photos, Floor Plans, Tour & Complete Marketing Kit."
         description={
           <>
-            Every package. Every listing. Next morning. No extra steps, no extra
-            cost — just everything you need to market your listing across every
-            channel.
+            Every package. Every listing. Once we have the required listing
+            information, the marketing kit is usually delivered the next day —
+            at no extra cost.
           </>
         }
         secondaryHref="/prices"

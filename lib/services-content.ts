@@ -531,15 +531,15 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     slug: "marketing-kit-for-realtors",
     seoTitle: "Marketing Kit for Calgary Realtors | Photos 4 Real Estate",
     seoDescription:
-      "Free marketing kit for Calgary realtors with every shoot — 9 social reels, 2 slideshow videos, 3 property flyers and 3 branded single-property websites.",
+      "Free marketing kit for Calgary realtors with every shoot — 9 reels, 2 slideshows, 3 flyers, and 3 branded property websites. Book your listing shoot today.",
     ogAlt: "Marketing Kit for Calgary Realtors by Photos 4 Real Estate",
     eyebrow: "Marketing Kit",
     h1: "Marketing Kit for Calgary Realtors",
-    lead: "Every Photos 4 Real Estate booking includes a complete marketing kit no other Calgary provider offers as standard — 9 social reels, 2 slideshow videos, 3 property flyers and 3 branded single-property websites, ready to publish the day after your shoot.",
+    lead: "Every Photos 4 Real Estate booking includes a complete marketing kit no other Calgary provider offers as standard — 9 social reels, 2 slideshow videos, 3 property flyers and 3 branded single-property websites. The kit is generated once we have the required listing information, and in most cases it is delivered the next day.",
     overviewHeading: "What is included in the Marketing Kit?",
     overviewParagraphs: [
-      "The Marketing Kit is a bundle of done-for-you marketing assets we generate from every photography or video booking — at no extra cost. The intent is simple: by the day after your shoot, you should have everything you need to market the listing across MLS, social, email and print without opening a design tool.",
-      "Every kit is automatically branded with your photo, brokerage colours and contact details so the assets are ready to publish, share or hand to a printer immediately.",
+      "The Marketing Kit is a bundle of done-for-you marketing assets we generate from every photography or video booking — at no extra cost. Once we have the required listing information, we prepare everything you need to market the listing across MLS, social, email and print without opening a design tool.",
+      "Because the kit is built from the actual listing details, we need the property information first — typically the RMS size, asking price, year built, property description and other key remarks. In most cases, once that information is available, the kit is delivered the next day.",
     ],
     includedHeading: "What you receive with every shoot",
     features: [
@@ -556,7 +556,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     faqs: [
       {
         q: "What is included in the Photos 4 Real Estate marketing kit?",
-        a: "Every Photos 4 Real Estate package includes a free marketing kit consisting of 9 social media video reels, 3 branded property websites, 3 print-ready PDF property flyers, and 2 professional slideshows. All marketing kit items are delivered the next morning alongside your listing photos.",
+        a: "Every Photos 4 Real Estate package includes a free marketing kit consisting of 9 social media video reels, 3 branded property websites, 3 print-ready PDF property flyers, and 2 professional slideshows. The kit is generated once we have the required listing information for the property, and in most cases it is delivered the next day.",
       },
       {
         q: "Is the marketing kit really free with every package?",
@@ -568,7 +568,11 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "How do I access my property websites?",
-        a: "Your three property website links are included in your delivery email the morning after your shoot. Each link opens a mobile-responsive property website showcasing your listing photos and details. You can share these links directly — no login or account required for buyers to view them.",
+        a: "Your three property website links are included when the marketing kit is delivered. Each link opens a mobile-responsive property website showcasing your listing photos and listing details. You can share these links directly — no login or account required for buyers to view them.",
+      },
+      {
+        q: "What listing information do you need before the marketing kit can be generated?",
+        a: "We need the core listing information before we can generate the marketing kit assets. In most cases that includes the property RMS size, asking price, year built, property description, key features, and any other details you want displayed on the flyers or property websites. Once we have that information, we can generate the full kit.",
       },
       {
         q: "Can I customize the flyers and websites?",
@@ -576,7 +580,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "When is the marketing kit delivered?",
-        a: "The marketing kit is generated automatically overnight from your listing photos and delivered with your complete order the next morning. You receive a single download link and access to your property portal containing your photos, floor plans, tour link, and all marketing kit items in one place.",
+        a: "In most cases, the marketing kit is delivered the next day once we have all required listing information for the property. If the listing details are still being finalized after the shoot, the marketing kit will follow as soon as that information is provided. You receive a single download link and access to your property portal containing your photos, floor plans, tour link, and all available marketing kit items in one place.",
       },
     ],
     relatedSlugs: [

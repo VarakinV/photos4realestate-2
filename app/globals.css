@@ -5538,6 +5538,8 @@ h4 {
 .twilight-pricing-section .pc-price sup { color: var(--gold); }
 .areas-section.twilight-areas-section { background: #f9f8f6; }
 .twilight-areas-section .area-chip { background: var(--white); }
+.areas-section.marketing-areas-section { background: #f9f8f6; }
+.marketing-areas-section .area-chip { background: var(--white); }
 
 @media (max-width: 960px) {
   .twilight-intro-grid, .twilight-prep-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -5694,7 +5696,7 @@ h4 {
   object-fit: contain;
 }
 .marketing-tools-section {
-  padding: 0 0 88px;
+  padding: 0;
 }
 .marketing-tool-block {
   padding: 80px 0;
@@ -5793,13 +5795,30 @@ h4 {
   margin-bottom: 0;
   font-size: 13px !important;
 }
+.marketing-tool-note--card {
+  background: #f9f8f6;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  color: var(--text);
+  line-height: 1.7;
+}
+.marketing-tool-note--card strong {
+  color: var(--navy);
+}
 .marketing-reel-row {
   display: flex;
   gap: 12px;
   justify-content: center;
 }
+.marketing-reel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 .marketing-reel-phone {
-  width: 180px;
+  width: 240px;
   border-radius: 24px;
   background: var(--navy);
   border: 3px solid rgba(255,255,255,0.15);
@@ -5808,19 +5827,17 @@ h4 {
   position: relative;
   flex-shrink: 0;
 }
-.marketing-reel-phone img {
+.marketing-reel-video {
   width: 100%;
   aspect-ratio: 9 / 16;
   object-fit: cover;
+  display: block;
+  background: #000;
 }
 .marketing-reel-phone.is-secondary {
-  transform: scale(0.88) translateY(20px);
+  transform: scale(0.92) translateY(16px);
 }
 .marketing-reel-tag {
-  position: absolute;
-  left: 8px;
-  right: 8px;
-  bottom: 10px;
   background: rgba(203,65,84,0.92);
   color: var(--white);
   border-radius: 4px;
@@ -5830,6 +5847,7 @@ h4 {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  min-width: 96px;
 }
 .marketing-website-mock,
 .marketing-slideshow-mock {
@@ -5874,25 +5892,23 @@ h4 {
   color: var(--text-muted);
 }
 .marketing-website-mock img,
-.marketing-slideshow-mock img {
+.marketing-slideshow-mock img,
+.marketing-slideshow-video {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
-.marketing-flyer-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-}
-.marketing-flyer-item {
-  border-radius: var(--radius-sm);
+.marketing-flyer-single {
+  border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(19,29,59,0.08);
+  border: 3px solid var(--border);
+  background: var(--white);
+  box-shadow: 0 12px 48px rgba(19,29,59,0.13);
 }
-.marketing-flyer-item img {
+.marketing-flyer-single img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
 }
 .marketing-count-section {
   background: var(--navy);
@@ -6002,11 +6018,33 @@ h4 {
 }
 .marketing-promo-icon,
 .marketing-loyalty-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 14px;
-  color: var(--brick-light);
+}
+.marketing-promo-icon {
+  background: rgba(203,65,84,0.15);
+  color: var(--brick);
 }
 .marketing-loyalty-icon {
+  background: var(--brick-light);
   color: var(--brick);
+}
+.marketing-promo-icon svg,
+.marketing-loyalty-icon svg {
+  width: 22px;
+  height: 22px;
+  color: currentColor;
+  stroke: currentColor;
+  fill: none;
+}
+.marketing-promo-card .btn {
+  justify-content: center;
+  text-align: center;
 }
 .marketing-promo-pct {
   font-family: var(--font-display), system-ui, sans-serif;
@@ -6163,13 +6201,19 @@ h4 {
 }
 
 @media (max-width: 600px) {
+  .marketing-reel-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
   .marketing-flyer-row,
   .marketing-count-grid,
   .marketing-process-grid {
     grid-template-columns: 1fr;
   }
   .marketing-reel-phone.is-secondary {
-    display: none;
+    display: block;
+    transform: none;
   }
 }
 
