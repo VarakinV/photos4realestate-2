@@ -6422,6 +6422,23 @@ h4 {
 .areas-visual-item:first-child { grid-column: 1 / -1; }
 .areas-visual-item:first-child img { aspect-ratio: 16/7; }
 
+/* ── LEGAL / POLICY PAGES ── */
+.legal-policy-hero { background: var(--navy); padding: 100px 0; }
+.legal-policy-hero-inner { display: flex; justify-content: center; align-items: center; text-align: center; }
+.legal-policy-hero-title { width: 100%; margin: 0; color: var(--white); text-align: center; }
+.legal-page-section { background: var(--off-white); padding: 72px 0; }
+.legal-page-card { max-width: 860px; margin: 0 auto; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 40px 44px; box-shadow: 0 12px 40px rgba(19,29,59,0.06); }
+.legal-page-meta { margin: 0 0 24px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.legal-page-content section + section { margin-top: 32px; }
+.legal-page-content h2 { font-size: clamp(24px, 2.6vw, 32px); color: var(--navy); margin: 0 0 12px; }
+.legal-page-content h3 { font-size: 20px; color: var(--navy); margin: 24px 0 10px; }
+.legal-page-content p, .legal-page-content li { font-size: 16px; line-height: 1.85; color: var(--text); }
+.legal-page-content p { margin: 0 0 16px; }
+.legal-page-content ul { margin: 0 0 16px; padding-left: 22px; }
+.legal-page-content li + li { margin-top: 8px; }
+.legal-page-content a { color: var(--brick); text-decoration: underline; text-decoration-color: rgba(203,65,84,0.35); text-underline-offset: 3px; font-weight: 500; }
+.legal-page-content strong { color: var(--navy); }
+
 /* ── RELATED / ALSO AVAILABLE ── */
 .related-section { padding: 72px 0; border-top: 1px solid var(--border); background: var(--white); }
 .related-header { margin-bottom: 36px; }
@@ -6448,6 +6465,8 @@ h4 {
   .drone-pc-right { text-align: left; padding: 28px 24px; min-width: 0; }
   .drone-pc-actions { flex-direction: row; flex-wrap: wrap; }
   .related-grid { grid-template-columns: 1fr; }
+  .legal-policy-hero { padding: 88px 0; }
+  .legal-page-card { padding: 32px 28px 36px; }
 }
 @media (max-width: 600px) {
   .drone-types-grid, .drone-process-steps { grid-template-columns: 1fr; }
@@ -6455,6 +6474,9 @@ h4 {
   .drone-best-img-pair { grid-template-columns: 1fr; }
   .areas-visual { grid-template-columns: 1fr; }
   .areas-visual-item:first-child { grid-column: auto; }
+  .legal-policy-hero { padding: 72px 0; }
+  .legal-page-section { padding: 56px 0; }
+  .legal-page-card { padding: 28px 20px 32px; }
 }
 @layer base {
   * {
