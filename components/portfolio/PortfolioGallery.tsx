@@ -20,6 +20,7 @@ export function PortfolioGallery({ categories }: PortfolioGalleryProps) {
   );
   const activeImages = activeCategory?.images ?? [];
   const activeImage = lightboxIndex === null ? null : activeImages[lightboxIndex];
+  const activeCtaIsExternal = activeCategory?.ctaHref.startsWith("http") ?? false;
 
   useEffect(() => {
     setLightboxIndex(null);
@@ -124,10 +125,17 @@ export function PortfolioGallery({ categories }: PortfolioGalleryProps) {
                 <h2 id="portfolio-gallery-heading">{activeCategory.heading}</h2>
                 <p>{activeCategory.description}</p>
               </div>
-              <Link href={activeCategory.ctaHref} className="btn btn-outline-dark portfolio-category-cta">
-                {activeCategory.ctaLabel}
-                <span className="sr-only"> for Calgary real estate photography portfolio examples</span>
-              </Link>
+              {activeCtaIsExternal ? (
+                <a href={activeCategory.ctaHref} className="btn btn-outline-dark portfolio-category-cta">
+                  {activeCategory.ctaLabel}
+                  <span className="sr-only"> for Calgary real estate photography portfolio examples</span>
+                </a>
+              ) : (
+                <Link href={activeCategory.ctaHref} className="btn btn-outline-dark portfolio-category-cta">
+                  {activeCategory.ctaLabel}
+                  <span className="sr-only"> for Calgary real estate photography portfolio examples</span>
+                </Link>
+              )}
             </div>
 
             <div className="portfolio-photo-grid">

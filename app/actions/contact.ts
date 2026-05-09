@@ -3,12 +3,12 @@
 import { siteConfig } from "@/lib/site";
 
 type ContactInput = {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone?: string;
-  service?: string;
   message: string;
-  consent: boolean;
+  recaptchaToken?: string;
 };
 
 export type ContactResult =
@@ -16,20 +16,47 @@ export type ContactResult =
   | { ok: false; message: string; fieldErrors?: Partial<Record<keyof ContactInput, string>> };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const SMTP2GO_ENDPOINT = "https://api.smtp2go.com/v3/email/send";
+const RECAPTCHA_ENDPOINT = "https://www.google.com/recaptcha/api/siteverify";
+
+type PreparedContact = {
+  firstName: string;
+  lastName: string;
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
+type Smtp2GoResponse = {
+  data?: {
+    succeeded?: number;
+    failed?: number;
+    failures?: unknown[];
+  };
+  error?: string;
+};
+
+type RecaptchaResponse = {
+  success?: boolean;
+  hostname?: string;
+  "error-codes"?: string[];
+};
 
 export async function submitContact(input: ContactInput): Promise<ContactResult> {
   const fieldErrors: Partial<Record<keyof ContactInput, string>> = {};
 
-  const name = (input.name ?? "").trim();
+  const firstName = (input.firstName ?? "").trim();
+  const lastName = (input.lastName ?? "").trim();
   const email = (input.email ?? "").trim();
   const phone = (input.phone ?? "").trim();
-  const service = (input.service ?? "").trim();
   const message = (input.message ?? "").trim();
+  const recaptchaToken = (input.recaptchaToken ?? "").trim();
 
-  if (name.length < 2) fieldErrors.name = "Please enter your full name.";
+  if (firstName.length < 2) fieldErrors.firstName = "Please enter your first name.";
+  if (lastName.length < 2) fieldErrors.lastName = "Please enter your last name.";
   if (!EMAIL_RE.test(email)) fieldErrors.email = "Please enter a valid email address.";
   if (message.length < 10) fieldErrors.message = "Please include a short message (10+ characters).";
-  if (!input.consent) fieldErrors.consent = "Please agree to be contacted.";
 
   if (Object.keys(fieldErrors).length > 0) {
     return {
@@ -39,18 +66,155 @@ export async function submitContact(input: ContactInput): Promise<ContactResult>
     };
   }
 
-  // TODO: wire up transactional email provider (Resend/SendGrid) or persist to DB.
-  // For now, log on the server so submissions are captured in dev.
-  console.log("[contact]", {
-    to: siteConfig.email,
-    from: { name, email, phone: phone || null },
-    service: service || null,
+  const recaptchaResult = await verifyRecaptcha(recaptchaToken);
+  if (!recaptchaResult.ok) {
+    console.error("[contact] reCAPTCHA verification failed", recaptchaResult.error);
+    return {
+      ok: false,
+      message: "Please complete the reCAPTCHA check and try again.",
+      fieldErrors: { recaptchaToken: "Please complete the reCAPTCHA check." },
+    };
+  }
+
+  const preparedContact = {
+    firstName,
+    lastName,
+    name: `${firstName} ${lastName}`.trim(),
+    email,
+    phone,
     message,
-    receivedAt: new Date().toISOString(),
-  });
+  };
+
+  const emailResult = await sendContactEmail(preparedContact);
+  if (!emailResult.ok) {
+    console.error("[contact] SMTP2GO send failed", emailResult.error);
+    return {
+      ok: false,
+      message: "Sorry, we couldn’t send your message. Please call or email us directly.",
+    };
+  }
 
   return {
     ok: true,
     message: "Thanks! We received your message and will be in touch shortly.",
   };
+}
+
+async function verifyRecaptcha(token: string) {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+
+  if (!secretKey) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn("[contact] RECAPTCHA_SECRET_KEY is not configured. Skipping reCAPTCHA verification in development.");
+      return { ok: true } as const;
+    }
+
+    return { ok: false, error: "RECAPTCHA_SECRET_KEY is not configured." } as const;
+  }
+
+  if (!token) return { ok: false, error: "Missing reCAPTCHA token." } as const;
+
+  const body = new URLSearchParams({ secret: secretKey, response: token });
+  const response = await fetch(RECAPTCHA_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body,
+    cache: "no-store",
+  });
+
+  const data = (await response.json().catch(() => null)) as RecaptchaResponse | null;
+
+  if (!response.ok || !data?.success) {
+    return { ok: false, error: data?.["error-codes"]?.join(", ") ?? response.statusText } as const;
+  }
+
+  return { ok: true } as const;
+}
+
+async function sendContactEmail(contact: PreparedContact) {
+  const apiKey = process.env.SMTP2GO_API_KEY;
+
+  if (!apiKey) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn("[contact] SMTP2GO_API_KEY is not configured. Logging submission only.");
+      console.log("[contact]", { to: siteConfig.email, from: contact, receivedAt: new Date().toISOString() });
+      return { ok: true } as const;
+    }
+
+    return { ok: false, error: "SMTP2GO_API_KEY is not configured." } as const;
+  }
+
+  const response = await fetch(SMTP2GO_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Smtp2go-Api-Key": apiKey,
+      accept: "application/json",
+    },
+    body: JSON.stringify({
+      sender: siteConfig.email,
+      to: [siteConfig.email],
+      subject: `New contact form enquiry from ${contact.name}`,
+      text_body: buildTextEmail(contact),
+      html_body: buildHtmlEmail(contact),
+      custom_headers: [{ header: "Reply-To", value: formatEmailAddress(contact.name, contact.email) }],
+    }),
+    cache: "no-store",
+  });
+
+  const data = (await response.json().catch(() => null)) as Smtp2GoResponse | null;
+  const failed = data?.data?.failed ?? 0;
+  const succeeded = data?.data?.succeeded;
+
+  if (!response.ok || failed > 0 || succeeded === 0) {
+    return { ok: false, error: data?.error ?? JSON.stringify(data) ?? response.statusText } as const;
+  }
+
+  return { ok: true } as const;
+}
+
+function buildTextEmail(contact: PreparedContact) {
+  return [
+    "New contact form enquiry",
+    "",
+    `Name: ${contact.name}`,
+    `Email: ${contact.email}`,
+    `Phone: ${contact.phone || "Not provided"}`,
+    "",
+    "Message:",
+    contact.message,
+  ].join("\n");
+}
+
+function buildHtmlEmail(contact: PreparedContact) {
+  return `
+    <h2>New contact form enquiry</h2>
+    <p><strong>Name:</strong> ${escapeHtml(contact.name)}</p>
+    <p><strong>Email:</strong> ${escapeHtml(contact.email)}</p>
+    <p><strong>Phone:</strong> ${escapeHtml(contact.phone || "Not provided")}</p>
+    <p><strong>Message:</strong></p>
+    <p>${escapeHtml(contact.message).replace(/\n/g, "<br />")}</p>
+  `;
+}
+
+function formatEmailAddress(name: string, email: string) {
+  return `"${stripHeaderValue(name).replace(/"/g, "'")}" <${stripHeaderValue(email)}>`;
+}
+
+function stripHeaderValue(value: string) {
+  return value.replace(/[\r\n]+/g, " ").trim();
+}
+
+function escapeHtml(value: string) {
+  return value.replace(/[&<>"']/g, (char) => {
+    const entities: Record<string, string> = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+
+    return entities[char];
+  });
 }

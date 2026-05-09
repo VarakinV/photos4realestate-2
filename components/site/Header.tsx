@@ -136,10 +136,10 @@ export function Header() {
             })}
           </ul>
 
-          <Link href="/book-online" className="btn btn-primary nav-cta nav-cta-mobile" onClick={closeMenus}>
+          <a href={siteConfig.bookingUrl} className="btn btn-primary nav-cta nav-cta-mobile" onClick={closeMenus}>
             Book Now
             <span className="sr-only"> for Calgary real estate photography and media services</span>
-          </Link>
+          </a>
 
           <div className="nav-menu-contact">
             <a href={siteConfig.phoneHref} className="nav-contact-item">
@@ -174,10 +174,10 @@ export function Header() {
           </div>
         </nav>
 
-        <Link href="/book-online" className="btn btn-primary nav-cta nav-cta-desktop">
+        <a href={siteConfig.bookingUrl} className="btn btn-primary nav-cta nav-cta-desktop">
           Book Now
           <span className="sr-only"> for Calgary real estate photography and media services</span>
-        </Link>
+        </a>
 
         <button
           type="button"

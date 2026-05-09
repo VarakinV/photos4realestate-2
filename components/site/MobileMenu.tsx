@@ -129,15 +129,15 @@ export function MobileMenu() {
             })}
           </ul>
         </nav>
-        <Link
-          href="/book-online"
+        <a
+          href={siteConfig.bookingUrl}
           onClick={close}
           className="btn btn-primary w-full inline-flex items-center justify-center gap-2"
         >
           Book Now
           <span className="sr-only"> &mdash; Calgary real estate photography</span>
           <ArrowRight size={18} strokeWidth={2} aria-hidden="true" />
-        </Link>
+        </a>
         <div className="mobile-contact">
           <ul className="mobile-contact-list">
             <li>

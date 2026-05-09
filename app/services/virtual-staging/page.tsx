@@ -745,7 +745,7 @@ function PageBody() {
 
               <div style={{ marginTop: "20px", paddingTop: "16px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                 <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.45)", lineHeight: 1.7, marginBottom: "14px" }}>Virtual staging can be ordered with any photography package.</p>
-                <Link href="/book-online" className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>Order Virtual Staging</Link>
+                <a href={siteConfig.bookingUrl} className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>Order Virtual Staging</a>
               </div>
             </div>
           </div>

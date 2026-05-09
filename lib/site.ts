@@ -15,7 +15,7 @@ export const siteConfig = {
     region: "AB",
     country: "CA",
   },
-  bookingUrl: "/book-online",
+  bookingUrl: "https://app.photos4realestate.ca/book/cmfwsiyl30000jo04z3lcndl3",
   social: {
     instagram: "https://www.instagram.com/photos4re/",
     facebook: "https://www.facebook.com/photos4re",

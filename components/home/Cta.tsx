@@ -40,11 +40,11 @@ export function Cta({
           )}
         </p>
         <div className="cta-actions">
-          <Link href="/book-online" className="btn btn-primary">
+          <a href={siteConfig.bookingUrl} className="btn btn-primary">
             Book Online
             <span className="sr-only"> for Calgary real estate photography and media services</span>
             <ArrowRight size={16} aria-hidden="true" />
-          </Link>
+          </a>
           <Link href={secondHref} className="btn btn-outline">
             {secondLabel}
             <span className="sr-only">{secondSrText}</span>

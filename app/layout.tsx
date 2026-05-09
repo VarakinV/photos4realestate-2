@@ -29,8 +29,8 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    template: `%s | ${siteConfig.shortName}`,
-    default: `Real Estate Photography Calgary | ${siteConfig.shortName}`,
+    template: `%s | ${siteConfig.name}`,
+    default: `Real Estate Photography Calgary | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     url: siteConfig.url,
-    siteName: siteConfig.shortName,
-    title: `Real Estate Photography Calgary | ${siteConfig.shortName}`,
+    siteName: siteConfig.name,
+    title: `Real Estate Photography Calgary | ${siteConfig.name}`,
     description: siteConfig.description,
     images: [
       {
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `Real Estate Photography Calgary | ${siteConfig.shortName}`,
+    title: `Real Estate Photography Calgary | ${siteConfig.name}`,
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },

@@ -42,9 +42,9 @@ export default function FreeToolsPage() {
           <Link href="/contact-us" className="btn btn-primary">
             Request a Resource
           </Link>
-          <Link href="/book-online" className="btn btn-outline">
+          <a href={siteConfig.bookingUrl} className="btn btn-outline">
             Book a Shoot
-          </Link>
+          </a>
         </div>
       </PageHero>
 

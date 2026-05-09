@@ -1,5 +1,6 @@
 import { createHash, createHmac } from "node:crypto";
 import type { Faq } from "@/lib/faqs";
+import { siteConfig } from "@/lib/site";
 
 export type PortfolioImage = {
   id: string;
@@ -33,7 +34,7 @@ export const portfolioCategoryDefinitions: CategoryDefinition[] = [
     label: "All Work",
     heading: "All Real Estate Photography",
     description: "Our full Calgary portfolio — select a category above to browse by room type or service.",
-    ctaHref: "/book-online",
+    ctaHref: siteConfig.bookingUrl,
     ctaLabel: "Book a Shoot",
   },
   {

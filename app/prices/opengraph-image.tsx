@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 import { pricingTiers } from "@/lib/pricing";
 
-export const alt = `${siteConfig.shortName} — Real Estate Photography Prices in Calgary`;
+export const alt = `${siteConfig.name} — Real Estate Photography Prices in Calgary`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const runtime = "nodejs";

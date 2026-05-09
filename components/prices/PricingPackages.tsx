@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Check, Plus, Ruler } from "lucide-react";
 import { pricingPackages, pricingTiers } from "@/lib/pricing";
+import { siteConfig } from "@/lib/site";
 
 const essentialIncluded = [
   "Professional interior & exterior photography",
@@ -314,8 +315,8 @@ export function PricingPackages() {
                     </ul>
 
                     <div className="pkg-cta">
-                      <Link
-                        href="/book-online"
+                      <a
+                        href={siteConfig.bookingUrl}
                         className={`btn ${
                           pkg.ctaVariant === "primary"
                             ? "btn-primary"
@@ -327,7 +328,7 @@ export function PricingPackages() {
                           {" "}
                           &mdash; Calgary real estate photography {pkg.name} package
                         </span>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>

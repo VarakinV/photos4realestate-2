@@ -29,7 +29,7 @@ export function generateMetadata(): Metadata {
       title: content.seoTitle,
       description: content.seoDescription,
       url: pageUrl,
-      siteName: siteConfig.shortName,
+      siteName: siteConfig.name,
       locale: "en_CA",
       images: [
         { url: ogImageUrl, width: 1024, height: 768, alt: content.ogAlt },
@@ -716,7 +716,7 @@ function PageBody() {
               <span className="drone-pc-gst">+ GST &nbsp;&middot;&nbsp; drone photos</span>
               <div className="drone-pc-actions">
                 <Link href="/prices" className="btn btn-primary sr-only-link-context">See Full Pricing<span className="sr-only"> for all real estate photography and drone services in Calgary</span></Link>
-                <Link href="/book-online" className="btn btn-outline sr-only-link-context">Book Online<span className="sr-only"> drone photography services</span></Link>
+                <a href={siteConfig.bookingUrl} className="btn btn-outline sr-only-link-context">Book Online<span className="sr-only"> drone photography services</span></a>
               </div>
               <p className="drone-pc-sqft-note">
                 Drone video +$125 additional.<br />

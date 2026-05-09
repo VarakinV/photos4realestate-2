@@ -7,16 +7,15 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { Reviews } from "@/components/home/Reviews";
 import { Cta } from "@/components/home/Cta";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { localBusinessSchema } from "@/components/seo/schemas";
-import { AVERAGE_RATING, REVIEW_COUNT, reviews as reviewItems, toIsoDate } from "@/lib/reviews";
 import { siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
 
 const pageUrl = `${siteConfig.url}/about`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
-const title = "About Photos4RealEstate | Calgary Real Estate Team";
-const description = "Meet Iryna and Vlad — Calgary's real estate photography team. RECA-certified, Transport Canada licensed, 5-star rated. Book listing media online.";
+const metadataTitle = "Calgary Real Estate Media Team";
+const fullTitle = `${metadataTitle} | ${siteConfig.name}`;
+const description = "Meet Iryna and Vlad, Calgary's RECA-certified real estate media team for photos, iGUIDE tours, RMS measurements, drone and next-day delivery. Book online.";
 const businessId = `${siteConfig.url}/#business`;
 
 const images = {
@@ -27,13 +26,15 @@ const images = {
   vlad: "https://cdn.photos4realestate.ca/p4re-static-media/about-page/Vlad-Varakin-with-camera.webp",
 } as const;
 
-export const metadata: Metadata = {
-  title: { absolute: title },
-  description,
-  alternates: { canonical: pageUrl },
-  openGraph: { title, description, url: pageUrl, siteName: siteConfig.name, images: [{ url: ogImageUrl, width: 1200, height: 630, alt: title }], locale: "en_CA", type: "website" },
-  twitter: { card: "summary_large_image", title, description, images: [ogImageUrl] },
-};
+export function generateMetadata(): Metadata {
+  return {
+    title: { absolute: fullTitle },
+    description,
+    alternates: { canonical: pageUrl },
+    openGraph: { title: fullTitle, description, url: pageUrl, siteName: siteConfig.name, images: [{ url: ogImageUrl, width: 1200, height: 630, alt: fullTitle }], locale: "en_CA", type: "website" },
+    twitter: { card: "summary_large_image", title: fullTitle, description, images: [ogImageUrl] },
+  };
+}
 
 const values = [
   { icon: Target, title: "Precision Over Volume", copy: "We're a specialist two-person team, not a high-volume agency with rotating contractors. Every booking is personally managed by Iryna and Vlad — which means consistent quality, communication, and delivery timing." },
@@ -91,24 +92,7 @@ const team = [
   },
 ];
 
-const aboutBusinessSchema = {
-  ...localBusinessSchema,
-  alternateName: siteConfig.shortName,
-  image: images.iryna,
-  aggregateRating: { "@type": "AggregateRating", ratingValue: AVERAGE_RATING, reviewCount: REVIEW_COUNT, bestRating: 5, worstRating: 1 },
-  employee: team.map((member) => ({ "@type": "Person", name: member.name, jobTitle: member.role, image: member.image, worksFor: { "@id": businessId } })),
-  review: reviewItems.slice(0, 5).map((review) => ({
-    "@type": "Review",
-    itemReviewed: { "@id": businessId },
-    author: { "@type": "Person", name: review.name },
-    datePublished: toIsoDate(review.date),
-    reviewBody: review.text,
-    reviewRating: { "@type": "Rating", ratingValue: review.rating, bestRating: 5, worstRating: 1 },
-    publisher: { "@type": "Organization", name: "Google" },
-  })),
-};
-
-const aboutPageSchema = { "@context": "https://schema.org", "@type": "AboutPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: title, description, primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrl }, about: { "@id": businessId }, speakable: { "@type": "SpeakableSpecification", cssSelector: [".speakable-intro"] } };
+const aboutPageSchema = { "@context": "https://schema.org", "@type": "AboutPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: fullTitle, description, primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrl }, about: { "@id": businessId }, speakable: { "@type": "SpeakableSpecification", cssSelector: [".speakable-intro"] } };
 
 export default function AboutPage() {
   return (
@@ -124,7 +108,6 @@ export default function AboutPage() {
       <CredentialsSection />
       <Reviews variant="light" eyebrow="Client Reviews" heading="What Calgary Realtors Say About Working With Us" />
       <Cta eyebrow="Ready to work together?" title="Book Your Next Calgary Listing Shoot Online." description="Choose your package, pick your time, and our two-person Calgary team will handle photos, iGUIDE, RMS, drone, and marketing assets with next-day delivery." />
-      <JsonLd id="ld-about-business" data={aboutBusinessSchema} />
       <JsonLd id="ld-about-page" data={aboutPageSchema} />
     </>
   );

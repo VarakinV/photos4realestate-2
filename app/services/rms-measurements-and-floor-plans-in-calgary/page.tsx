@@ -634,10 +634,10 @@ function PageBody() {
                   See Full Pricing
                   <span className="sr-only"> for Calgary RMS Measurements</span>
                 </Link>
-                <Link href="/book-online" className="btn btn-outline">
+                <a href={siteConfig.bookingUrl} className="btn btn-outline">
                   Book Online
                   <span className="sr-only"> for Calgary RMS Measurements</span>
-                </Link>
+                </a>
               </div>
               <p className="pc-sqft-note">
                 Included in Essential, Skyline &amp; Social Boost<br />

@@ -655,10 +655,10 @@ function PageBody() {
                 photography package — including the full marketing kit. Applies
                 to all packages.
               </p>
-              <Link href="/book-online" className="btn btn-primary">
+              <a href={siteConfig.bookingUrl} className="btn btn-primary">
                 Claim 25% Discount
                 <span className="sr-only"> for Calgary real estate media booking</span>
-              </Link>
+              </a>
             </article>
 
             <article className="marketing-promo-card is-light">
@@ -682,10 +682,10 @@ function PageBody() {
                   </li>
                 ))}
               </ul>
-              <Link href="/book-online" className="btn btn-outline-dark">
+              <a href={siteConfig.bookingUrl} className="btn btn-outline-dark">
                 Start Earning Points
                 <span className="sr-only"> with Calgary real estate media bookings</span>
-              </Link>
+              </a>
             </article>
           </div>
         </div>

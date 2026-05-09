@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Clock, FileOutput, Info, Ruler, Star } from "lucide-react";
 import LiquidEther from "@/components/bits/LiquidEther";
 import { homeImages } from "@/lib/images";
+import { siteConfig } from "@/lib/site";
 
 function GoogleMark() {
   return (
@@ -40,11 +41,11 @@ export function Hero() {
             and homeowners — shot, edited and delivered by the next business day.
           </p>
           <div className="hero-actions">
-            <Link href="/book-online" className="btn btn-primary">
+            <a href={siteConfig.bookingUrl} className="btn btn-primary">
               Book Your Shoot
               <span className="sr-only"> for Calgary real estate photography and media services</span>
               <ArrowRight size={16} aria-hidden="true" />
-            </Link>
+            </a>
             <Link href="/prices" className="btn btn-outline">
               View Pricing
               <span className="sr-only"> for Calgary real estate photography packages</span>

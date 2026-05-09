@@ -966,10 +966,10 @@ function PageBody() {
               </span>
               <span className="pc-gst">+ GST</span>
               <div className="pc-actions">
-                <Link href="/book-online" className="btn btn-primary">
+                <a href={siteConfig.bookingUrl} className="btn btn-primary">
                   Book iGUIDE Scan
                   <span className="sr-only"> for your Calgary listing</span>
-                </Link>
+                </a>
                 <Link href="/prices" className="btn btn-outline">
                   See Full Pricing Table
                   <span className="sr-only"> for iGUIDE services</span>

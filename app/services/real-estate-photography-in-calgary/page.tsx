@@ -828,10 +828,10 @@ function PageBody() {
                   See Full Pricing
                   <span className="sr-only"> for Calgary real estate photography</span>
                 </Link>
-                <Link href="/book-online" className="btn btn-outline">
+                <a href={siteConfig.bookingUrl} className="btn btn-outline">
                   Book Online
                   <span className="sr-only"> &mdash; Calgary real estate photography</span>
-                </Link>
+                </a>
               </div>
               <p className="pc-sqft-note">
                 Prices vary by square footage.<br />

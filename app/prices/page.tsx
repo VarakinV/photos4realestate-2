@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: pageUrl,
-    siteName: siteConfig.shortName,
+    siteName: siteConfig.name,
     locale: "en_CA",
     images: [
       {

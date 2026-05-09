@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 const CODE = "25%OFF";
 
@@ -23,13 +23,13 @@ export function PromoCode() {
   if (copied) {
     return (
       <>
-        <Link href="/book-online" className="promo-book">
+        <a href={siteConfig.bookingUrl} className="promo-book">
           Book Now
           <ArrowRight size={14} aria-hidden="true" />
           <span className="sr-only">
             {" "}&mdash; Calgary real estate photography with promo {CODE}
           </span>
-        </Link>
+        </a>
         <div
           className="promo-note promo-note-copied"
           role="status"

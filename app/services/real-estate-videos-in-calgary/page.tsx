@@ -452,10 +452,10 @@ function PageBody() {
                 ))}
               </ul>
               <div>
-                <Link href="/book-online" className="btn btn-primary" style={{ marginTop: "8px" }}>
+                <a href={siteConfig.bookingUrl} className="btn btn-primary" style={{ marginTop: "8px" }}>
                   Book Now
                   <span className="sr-only"> &mdash; Calgary real estate videography</span>
-                </Link>
+                </a>
               </div>
             </div>
             <div className="photo-intro-visual" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -627,10 +627,10 @@ function PageBody() {
                   See Full Pricing
                   <span className="sr-only"> for Calgary real estate videography</span>
                 </Link>
-                <Link href="/book-online" className="btn btn-outline">
+                <a href={siteConfig.bookingUrl} className="btn btn-outline">
                   Book Online
                   <span className="sr-only"> &mdash; Calgary real estate videography</span>
-                </Link>
+                </a>
               </div>
               <p className="pc-sqft-note">
                 Prices vary by square footage.

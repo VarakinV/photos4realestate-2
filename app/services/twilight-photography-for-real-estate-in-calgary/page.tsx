@@ -996,10 +996,10 @@ function PageBody() {
                   See Full Pricing
                   <span className="sr-only"> for Calgary twilight photography</span>
                 </Link>
-                <Link href="/book-online" className="btn btn-outline-gold">
+                <a href={siteConfig.bookingUrl} className="btn btn-outline-gold">
                   Book Online
                   <span className="sr-only"> &mdash; Calgary twilight photography</span>
-                </Link>
+                </a>
               </div>
               <p className="pc-sqft-note">
                 Must be added to a photography booking.<br />
