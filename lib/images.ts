@@ -215,6 +215,28 @@ export const virtualStagingImages = {
     "https://cdn.photos4realestate.ca/p4re-static-media/virtual-staging-service-page/Virtual-Staging-Living-Room-After-02%20(1).webp",
 } as const;
 
+// Free tools page
+export const freeToolsImages = {
+  introMain:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/Free-Tools-Kit.webp",
+  reelVideo1:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/reel-v1-9x16.mp4",
+  reelVideo2:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/reel-v3-9x16.mp4",
+  slideshowVideo:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/Real-Estate-Property-Slideshow.mp4",
+  flyerPreview:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/PDFs.webp",
+  qrProfessional:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/qr-professional.png",
+  qrSocial:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/qr-social.png",
+  qrModern:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/qr-modern-1-1018x1024.webp",
+  qrBranded:
+    "https://cdn.photos4realestate.ca/p4re-static-media/free-tools/qr-professional-1-1020x1024.webp",
+} as const;
+
 // Services index page (cards on /services and the per-slug content)
 export const servicesImages = {
   photography:

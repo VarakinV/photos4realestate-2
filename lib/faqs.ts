@@ -73,6 +73,41 @@ export const servicesFaqs: Faq[] = [
   },
 ];
 
+export const freeToolsFaqs: Faq[] = [
+  {
+    q: "Are the tools really free — no catch?",
+    a: 'Yes. All four tools are completely free to use. There are no subscriptions, no free trials with paywalls, no watermarked outputs, and no hidden fees. No account is required. You can generate marketing assets for any listing, as many times as you need, without any cost.',
+  },
+  {
+    q: "Do I need to be a Photos 4 Real Estate client to use the free tools?",
+    a: "No. The free tools are available to all Calgary realtors — and realtors anywhere — whether or not you have ever booked photography with us. Simply open the tool, upload your listing photos, and generate your marketing assets. No booking, no account, no prerequisites.",
+  },
+  {
+    q: "What types of files do the tools produce?",
+    a: "The reel generator produces MP4 video files in 9:16 vertical format (for Instagram, Facebook &amp; TikTok). The slideshow generator produces MP4 video files in 16:9 horizontal format (for email and desktop). The flyer generator produces print-ready PDF files at 300dpi. The QR code generator produces high-resolution PNG image files suitable for print and digital use.",
+  },
+  {
+    q: "What is the difference between the free tools and the marketing kit included with photography packages?",
+    a: 'The free tools let any realtor generate marketing assets from their own photos at any time. The marketing kit — 9 reels, 3 property websites, 3 flyers, and 2 slideshows — is automatically generated from your professional listing photos and delivered the next day with every Photos 4 Real Estate photography package once property information is provided, with zero extra steps required from you. <a href="/services/marketing-kit-for-realtors">Learn more about the marketing kit &rarr;</a>',
+  },
+  {
+    q: "Can I use the generated content for paid social media ads?",
+    a: "Yes. All generated reels, slideshows, flyers, and QR codes can be used for both organic social media posts and paid advertising campaigns on Instagram, Facebook, TikTok, and other platforms. There are no licensing restrictions on your use of the generated outputs.",
+  },
+  {
+    q: "Do the tools work on mobile phones and tablets?",
+    a: "Yes. All four tools are fully web-based and accessible from desktop computers, tablets, and mobile phones. No app download or installation is required — open the tool in any modern browser and it works.",
+  },
+  {
+    q: "Are there limits on how many times I can use the tools?",
+    a: "There are currently no strict usage limits. You can generate content for as many listings and as many times as you need. We reserve the right to introduce fair-use limits in future if needed to maintain performance, but we will communicate any changes clearly in advance.",
+  },
+  {
+    q: "Will more free tools be added?",
+    a: 'Yes. We\'re actively developing additional tools — including a property website generator, a listing comparison generator, an open house announcement generator, and a virtual tour embed tool. Bookmark this page and check back regularly. If there\'s a specific tool you\'d like to see, <a href="/contact-us/">contact us</a> and let us know.',
+  },
+];
+
 export const pricingFaqs: Faq[] = [
   {
     q: "Why does the price change based on square footage?",
