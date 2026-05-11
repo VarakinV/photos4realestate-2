@@ -244,7 +244,7 @@ const faqCategories: FaqCategory[] = [
       },
       {
         q: "Why should I choose Photos 4 Real Estate?",
-        a: "Photos 4 Real Estate combines professional photography, local Calgary real estate knowledge, fast next-day delivery, RMS-compliant measurements, iGUIDE tours, drone media, and included marketing assets to help listings look polished and attract more buyer attention.",
+        a: 'Photos 4 Real Estate combines professional photography, local Calgary real estate knowledge, fast next-day delivery, RMS-compliant measurements, iGUIDE tours, drone media, and included marketing assets to help listings look polished and attract more buyer attention. You can also review our <a href="/real-estate-photography-comparison-calgary">Why Choose Us comparison page</a> to see how our included services, free tools, and rewards differ from other Calgary providers.',
       },
     ],
   },

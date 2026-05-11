@@ -31,6 +31,10 @@ export function Footer() {
     { href: "/free-tools", label: "Free Realtor Tools" },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About Us" },
+    {
+      href: "/real-estate-photography-comparison-calgary",
+      label: "Why Choose Us",
+    },
     { href: "/photoshoot-checklist", label: "Photoshoot Checklist" },
     { href: "/points-rewards", label: "Points & Rewards" },
     { href: "/faq", label: "FAQ" },
