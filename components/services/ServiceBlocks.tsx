@@ -7,6 +7,7 @@ import {
   Sofa,
   Moon,
   Megaphone,
+  Sparkles,
   Clock,
   Award,
 } from "lucide-react";
@@ -57,8 +58,39 @@ export function ServiceBlocks() {
       />
 
       <ServiceBlock
-        id="videography"
+        id="style-shots"
         number="02"
+        eyebrow="Signature Detail Shots"
+        icon={<Sparkles {...iconProps} />}
+        title="Magazine-Style Close-Ups That Sell the Story"
+        lead="Add 3–4 editorial detail photos to your real estate photoshoot. Style Shots highlight textures, finishes, décor, lighting, and craftsmanship so buyers feel the lifestyle behind the listing."
+        features={[
+          "3–4 magazine-style close-ups",
+          "Décor and finish details",
+          "Professionally edited with the gallery",
+          "Perfect for staged and luxury homes",
+          "Social-media-friendly visuals",
+          "$35 photography add-on",
+        ]}
+        learnMoreHref="/services/style-shots"
+        learnMoreLabelSuffix="Style Shots for Calgary real estate photography"
+        reverse
+        visual={
+          <ServiceImage
+            src={servicesImages.styleShots}
+            alt="Magazine-style close-up photo of a styled coffee table for a Calgary real estate listing"
+            badge={{
+              icon: <Sparkles size={16} strokeWidth={2} aria-hidden="true" />,
+              label: "Add-on",
+              value: "$35",
+            }}
+          />
+        }
+      />
+
+      <ServiceBlock
+        id="videography"
+        number="03"
         eyebrow="Real Estate Videography"
         icon={<Video {...iconProps} />}
         title="Cinematic Property Videos for Every Platform"
@@ -87,7 +119,7 @@ export function ServiceBlocks() {
 
       <ServiceBlock
         id="rms"
-        number="03"
+        number="04"
         eyebrow="RMS Measurements & Floor Plans"
         icon={<Ruler {...iconProps} />}
         title="RECA-Compliant Measurements & Floor Plans"
@@ -117,7 +149,7 @@ export function ServiceBlocks() {
 
       <ServiceBlock
         id="iguide"
-        number="04"
+        number="05"
         eyebrow="iGUIDE 3D Virtual Tours"
         icon={<Box {...iconProps} />}
         title="Immersive iGUIDE 3D Virtual Tours"
@@ -143,7 +175,7 @@ export function ServiceBlocks() {
 
       <ServiceBlock
         id="drone"
-        number="05"
+        number="06"
         eyebrow="Drone Photography & Videography"
         icon={<Drone {...iconProps} />}
         title="Aerial Perspectives That Show the Full Picture"
@@ -178,7 +210,7 @@ export function ServiceBlocks() {
 
       <ServiceBlock
         id="virtual-staging"
-        number="06"
+        number="07"
         eyebrow="Virtual Staging"
         icon={<Sofa {...iconProps} />}
         title="Transform Empty Rooms into Buyer Magnets"
@@ -206,7 +238,7 @@ export function ServiceBlocks() {
 
       <ServiceBlock
         id="twilight"
-        number="07"
+        number="08"
         eyebrow="Twilight Photography"
         icon={<Moon {...iconProps} />}
         title="Exteriors that Glow Past the Competition"
@@ -231,7 +263,7 @@ export function ServiceBlocks() {
 
       <ServiceBlock
         id="marketing-kit"
-        number="08"
+        number="09"
         eyebrow="Marketing Kit for Realtors"
         icon={<Megaphone {...iconProps} />}
         title="A Complete Marketing Kit with Every Shoot"

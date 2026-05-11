@@ -84,6 +84,11 @@ export const services = [
     schemaName: "Twilight Photography",
   },
   {
+    slug: "style-shots",
+    name: "Style Shots",
+    schemaName: "Signature Detail Shots",
+  },
+  {
     slug: "marketing-kit-for-realtors",
     name: "Marketing Kit for Realtors",
     schemaName: "Marketing Kit for Realtors",

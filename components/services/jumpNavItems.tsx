@@ -7,6 +7,7 @@ import {
   Sofa,
   Moon,
   Megaphone,
+  Sparkles,
 } from "lucide-react";
 import type { JumpNavItem } from "@/components/services/ServicesJumpNav";
 
@@ -21,4 +22,5 @@ export const servicesJumpNavItems: ReadonlyArray<JumpNavItem> = [
   { id: "virtual-staging", label: "Virtual Staging", icon: <Sofa {...iconProps} /> },
   { id: "twilight", label: "Twilight", icon: <Moon {...iconProps} /> },
   { id: "marketing-kit", label: "Marketing Kit", icon: <Megaphone {...iconProps} /> },
+  { id: "style-shots", label: "Style Shots", icon: <Sparkles {...iconProps} /> },
 ];

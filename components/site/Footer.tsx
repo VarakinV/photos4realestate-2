@@ -32,6 +32,7 @@ export function Footer() {
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About Us" },
     { href: "/photoshoot-checklist", label: "Photoshoot Checklist" },
+    { href: "/points-rewards", label: "Points & Rewards" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact-us", label: "Contact" },
   ] as const;

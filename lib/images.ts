@@ -72,6 +72,30 @@ export const photographyImages = {
     "https://cdn.photos4realestate.ca/p4re-static-media/re-photography-service-page/Drone-Mahogany-Lake-03.webp",
 } as const;
 
+// Style Shots add-on service page
+export const styleShotsImages = {
+  mirrorLiving:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/Close-up-photo.jpg",
+  bedroomPillows:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/desigh-focused-shot.jpg",
+  kitchenLights:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/detail-focused-photo.jpg",
+  bathroomMirrorBedroom:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/detailed-interior-photos.jpg",
+  kitchenIsland:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/detailed-shot.jpg",
+  bathroomSinkMirror:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/home-decor-photography.jpg",
+  coffeeTableBooks:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/magazine-style-real-estate-photos.jpg",
+  diningTable:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/magazine-styled-photo.jpg",
+  bathroomSinkDetail:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/style-shot.jpg",
+  bathtubWindow:
+    "https://cdn.photos4realestate.ca/p4re-static-media/style-shots-service-page/style-shots-real-estate-photography.jpg",
+} as const;
+
 // Drone service page
 export const droneImages = {
   introMain: `${cdn}/2025/08/Drone-view-to-Downtown-Calgary-Photos-4-Real-Estate-1024x768.webp`,
@@ -260,4 +284,5 @@ export const servicesImages = {
     "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Twilight-photo-of-a-house-in-Harmony-01.jpg",
   marketingKit:
     "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Marketing%20Kit%20from%20Photos%204%20Real%20Estate.webp",
+  styleShots: styleShotsImages.coffeeTableBooks,
 } as const;

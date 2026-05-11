@@ -9,7 +9,7 @@ export const localBusinessSchema = {
   logo: `${siteConfig.url}/logos/map-pin-logo.svg`,
   image: `${siteConfig.url}/og/homepage.jpg`,
   description:
-    "Professional real estate photography, videography, 3D virtual tours, drone photography, RMS measurements, virtual staging, and twilight photography serving Calgary and surrounding areas.",
+    "Professional real estate photography, videography, 3D virtual tours, drone photography, RMS measurements, style shots, virtual staging, and twilight photography serving Calgary and surrounding areas.",
   telephone: siteConfig.phoneE164,
   email: siteConfig.email,
   address: {

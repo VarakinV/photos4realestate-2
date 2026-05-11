@@ -104,6 +104,66 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     },
   },
 
+  "style-shots": {
+    slug: "style-shots",
+    seoTitle: "Style Shots Photography Calgary | Photos 4 Real Estate",
+    seoDescription:
+      "Add 3–4 magazine-style detail shots to your Calgary real estate photoshoot for $35. Showcase finishes, décor, and design details. Book online today.",
+    ogAlt: "Style Shots photography for Calgary real estate listings by Photos 4 Real Estate",
+    eyebrow: "Signature Detail Shots",
+    h1: "Style Shots Photography in Calgary",
+    lead: "Style Shots are magazine-style close-up photographs captured as an add-on to your Calgary real estate photoshoot. They highlight the textures, finishes, décor, lighting, and craftsmanship that make a home feel memorable — and help buyers connect emotionally with the lifestyle behind the listing.",
+    overviewHeading: "What are Style Shots in real estate photography?",
+    overviewParagraphs: [
+      "Style Shots are detail-focused, editorial real estate photos designed to complement the main wide-angle listing gallery. Instead of showing the full room, they focus on visual moments such as a styled coffee table, linen textures, marble counters, pendant lighting, tile work, or carefully selected décor.",
+      "These close-up images are especially useful for listings where staging, materials, finishes, or design choices are part of the story. They add personality to MLS, brochures, property websites, Instagram Reels, and social posts without replacing the essential room-by-room photography buyers still need.",
+    ],
+    includedHeading: "What's included with Style Shots",
+    features: [
+      "3–4 magazine-style close-up photos",
+      "Décor, texture, lighting, and finish details",
+      "Carefully composed editorial imagery",
+      "Professional editing matched to the main photo set",
+      "High-resolution delivery for web and print",
+      "$35 add-on to a real estate photography session",
+    ],
+    whoForHeading: "Who should add Style Shots?",
+    whoForBody:
+      "Style Shots are ideal for Calgary realtors marketing luxury or designer listings, professionally staged homes, builder and renovator projects, interior design portfolios, and Airbnb or vacation rental listings where lifestyle details help the property stand out online.",
+    faqs: [
+      {
+        q: "How many Style Shots are included?",
+        a: "The Style Shots add-on includes 3–4 magazine-style detail photos, depending on the property's size, staging, finishes, and available visual details.",
+      },
+      {
+        q: "How much do Style Shots cost?",
+        a: "Style Shots cost $35 + GST as an add-on to any real estate photography package. The add-on includes 3–4 edited close-up detail photos.",
+      },
+      {
+        q: "Can I request specific areas or décor details?",
+        a: "Yes. You can request specific features such as a kitchen island, marble countertop, pendant lighting, bathroom fixtures, styled shelves, bedding, fireplace details, or other décor moments you want highlighted.",
+      },
+      {
+        q: "Are Style Shots edited the same way as my listing photos?",
+        a: "Yes. Style Shots are professionally edited to match the look and colour consistency of your main real estate photo gallery, so the full set feels polished and cohesive.",
+      },
+      {
+        q: "Can I book Style Shots as a standalone service?",
+        a: "Style Shots are designed as an add-on to a full real estate photography session because they work best alongside the main room photos. Standalone bookings may be arranged upon request when scheduling allows.",
+      },
+    ],
+    relatedSlugs: [
+      "real-estate-photography-in-calgary",
+      "twilight-photography-for-real-estate-in-calgary",
+      "marketing-kit-for-realtors",
+    ],
+    visual: {
+      kind: "image",
+      src: servicesImages.styleShots,
+      alt: "Magazine-style close-up detail shot of home décor for a Calgary real estate listing",
+    },
+  },
+
   "real-estate-videos-in-calgary": {
     slug: "real-estate-videos-in-calgary",
     seoTitle: "Real Estate Videography Calgary | Photos 4 Real Estate",

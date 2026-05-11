@@ -62,6 +62,8 @@ export function generateMetadata(): Metadata {
 const serviceDescriptions: Record<(typeof services)[number]["slug"], string> = {
   "real-estate-photography-in-calgary":
     "Professional MLS-ready real estate photography for Calgary realtors and homeowners with HDR editing, blue-sky replacement and next-day delivery.",
+  "style-shots":
+    "Magazine-style close-up detail photos for Calgary listings, highlighting finishes, décor, textures, staging, and design details as a photography add-on.",
   "real-estate-videos-in-calgary":
     "Cinematic property video walkthroughs for Calgary listings, edited and optimized for MLS, YouTube, Instagram Reels, Facebook and TikTok.",
   "rms-measurements-and-floor-plans-in-calgary":
