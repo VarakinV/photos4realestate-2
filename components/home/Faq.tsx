@@ -14,6 +14,7 @@ type FaqProps = {
   intro?: ReactNode;
   faqs?: ReadonlyArray<FaqItem>;
   allFaqsLabelSuffix?: string;
+  sectionClassName?: string;
 };
 
 export function Faq({
@@ -21,6 +22,7 @@ export function Faq({
   intro,
   faqs,
   allFaqsLabelSuffix,
+  sectionClassName,
 }: FaqProps = {}) {
   const items = faqs ?? homeFaqs;
   const [openIndex, setOpenIndex] = useState(0);
@@ -29,7 +31,10 @@ export function Faq({
   const allFaqsLabel = `View all FAQs about ${allFaqsLabelSuffixText}`;
 
   return (
-    <section className="faq-section" aria-labelledby="faq-heading">
+    <section
+      className={`faq-section${sectionClassName ? ` ${sectionClassName}` : ""}`}
+      aria-labelledby="faq-heading"
+    >
       <div className="container">
         <div className="faq-grid">
           <div className="faq-sidebar">

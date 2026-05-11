@@ -32,6 +32,25 @@ export const primaryNav = [
   { href: "/contact-us", label: "Contact" },
 ] as const;
 
+export const freeTools = [
+  {
+    href: "/free-tools/reel-generator",
+    name: "Social Media Reel Generator",
+  },
+  {
+    href: "/free-tools/slideshow-generator",
+    name: "Slideshow Generator",
+  },
+  {
+    href: "/free-tools/flyer-generator",
+    name: "Property Flyer Generator",
+  },
+  {
+    href: "/free-tools/qr-code-generator",
+    name: "QR Code Generator",
+  },
+] as const;
+
 export const services = [
   {
     slug: "real-estate-photography-in-calgary",

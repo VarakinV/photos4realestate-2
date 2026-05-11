@@ -7,7 +7,7 @@ import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import { Logo } from "@/components/site/Logo";
 import { ServicesNavParentLink } from "@/components/site/ServicesNavParentLink";
 import { ServicesSubmenuLink } from "@/components/site/ServicesSubmenuLink";
-import { primaryNav, services, siteConfig } from "@/lib/site";
+import { freeTools, primaryNav, services, siteConfig } from "@/lib/site";
 
 function FacebookIcon() {
   return (
@@ -43,12 +43,16 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isServicesDismissed, setIsServicesDismissed] = useState(false);
+  const [isFreeToolsOpen, setIsFreeToolsOpen] = useState(false);
+  const [isFreeToolsDismissed, setIsFreeToolsDismissed] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
       setIsServicesOpen(false);
       setIsServicesDismissed(false);
+      setIsFreeToolsOpen(false);
+      setIsFreeToolsDismissed(false);
 
       if (window.innerWidth > 1024) {
         setIsMenuOpen(false);
@@ -62,10 +66,16 @@ export function Header() {
   const closeMenus = () => {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
+    setIsFreeToolsOpen(false);
   };
 
   const dismissServicesMenu = () => {
     setIsServicesDismissed(true);
+    closeMenus();
+  };
+
+  const dismissFreeToolsMenu = () => {
+    setIsFreeToolsDismissed(true);
     closeMenus();
   };
 
@@ -104,6 +114,7 @@ export function Header() {
                         aria-label={isServicesOpen ? "Collapse Services menu" : "Expand Services menu"}
                         onClick={() => {
                           setIsServicesDismissed(false);
+                          setIsFreeToolsOpen(false);
                           setIsServicesOpen((open) => !open);
                         }}
                       >
@@ -118,6 +129,48 @@ export function Header() {
                             href={`/services/${service.slug}`}
                             name={service.name}
                             onNavigate={dismissServicesMenu}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
+
+              if (item.href === "/free-tools") {
+                return (
+                  <li
+                    key={item.href}
+                    className={`nav-item-has-children${isFreeToolsOpen ? " is-open" : ""}${isFreeToolsDismissed ? " is-dismissed" : ""}`}
+                    onMouseLeave={() => setIsFreeToolsDismissed(false)}
+                  >
+                    <div className="nav-parent-row">
+                      <ServicesNavParentLink href={item.href} onNavigate={dismissFreeToolsMenu}>
+                        {item.label}
+                      </ServicesNavParentLink>
+                      <button
+                        type="button"
+                        className="nav-submenu-toggle"
+                        aria-expanded={isFreeToolsOpen}
+                        aria-controls="free-tools-submenu"
+                        aria-label={isFreeToolsOpen ? "Collapse Free Tools menu" : "Expand Free Tools menu"}
+                        onClick={() => {
+                          setIsFreeToolsDismissed(false);
+                          setIsServicesOpen(false);
+                          setIsFreeToolsOpen((open) => !open);
+                        }}
+                      >
+                        <ChevronDown size={16} aria-hidden="true" strokeWidth={2} />
+                      </button>
+                    </div>
+
+                    <ul id="free-tools-submenu" className="nav-submenu">
+                      {freeTools.map((tool) => (
+                        <li key={tool.href}>
+                          <ServicesSubmenuLink
+                            href={tool.href}
+                            name={tool.name}
+                            onNavigate={dismissFreeToolsMenu}
                           />
                         </li>
                       ))}
@@ -190,6 +243,7 @@ export function Header() {
               const nextOpen = !open;
               if (!nextOpen) {
                 setIsServicesOpen(false);
+                setIsFreeToolsOpen(false);
               }
               return nextOpen;
             });

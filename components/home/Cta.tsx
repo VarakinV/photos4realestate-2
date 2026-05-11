@@ -7,6 +7,10 @@ type CtaProps = {
   eyebrow?: ReactNode;
   title?: ReactNode;
   description?: ReactNode;
+  primaryHref?: string;
+  primaryLabel?: ReactNode;
+  primarySrSuffix?: string;
+  primaryTargetBlank?: boolean;
   secondaryHref?: string;
   secondaryLabel?: ReactNode;
   secondarySrSuffix?: string;
@@ -16,10 +20,18 @@ export function Cta({
   eyebrow,
   title,
   description,
+  primaryHref,
+  primaryLabel,
+  primarySrSuffix,
+  primaryTargetBlank,
   secondaryHref,
   secondaryLabel,
   secondarySrSuffix,
 }: CtaProps = {}) {
+  const firstHref = primaryHref ?? siteConfig.bookingUrl;
+  const firstLabel = primaryLabel ?? "Book Online";
+  const firstSrText =
+    primarySrSuffix ?? " for Calgary real estate photography and media services";
   const secondHref = secondaryHref ?? "/prices";
   const secondLabel = secondaryLabel ?? "View Pricing & Packages";
   const secondSrText = secondarySrSuffix ?? " for Calgary real estate photography packages";
@@ -40,9 +52,14 @@ export function Cta({
           )}
         </p>
         <div className="cta-actions">
-          <a href={siteConfig.bookingUrl} className="btn btn-primary">
-            Book Online
-            <span className="sr-only"> for Calgary real estate photography and media services</span>
+          <a
+            href={firstHref}
+            className="btn btn-primary"
+            target={primaryTargetBlank ? "_blank" : undefined}
+            rel={primaryTargetBlank ? "noopener noreferrer" : undefined}
+          >
+            {firstLabel}
+            <span className="sr-only">{firstSrText}</span>
             <ArrowRight size={16} aria-hidden="true" />
           </a>
           <Link href={secondHref} className="btn btn-outline">

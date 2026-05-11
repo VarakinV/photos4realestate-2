@@ -1637,6 +1637,7 @@ h4 {
   padding: 96px 0;
   background: var(--off-white);
 }
+.faq-section.faq-section-white { background: var(--white); }
 .faq-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -4379,6 +4380,49 @@ h4 {
   .ft-tool-free-tag { display: none; }
   .ft-why-grid { grid-template-columns: 1fr; }
   .ft-intro-visual { grid-template-columns: 1fr; }
+}
+
+/* ── INDIVIDUAL FREE TOOL PAGES ── */
+.tool-detail-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.tool-detail-section { padding: 88px 0; }
+.tool-detail-section-muted { background: var(--off-white); }
+.tool-detail-intro-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr); gap: 56px; align-items: start; }
+.tool-detail-copy h2,
+.tool-detail-centered h2 { font-size: clamp(26px, 3vw, 38px); color: var(--navy); margin-bottom: 16px; }
+.tool-detail-copy p,
+.tool-detail-centered p { color: var(--text-muted); font-size: 15px; font-weight: 300; line-height: 1.8; margin-bottom: 14px; }
+.tool-detail-copy .lead { color: var(--text); font-size: 16px; font-weight: 400; }
+.tool-detail-card-list { display: grid; gap: 14px; }
+.tool-detail-mini-card { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: flex-start; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+.tool-detail-mini-card h3 { color: var(--navy); font-size: 16px; margin: 0 0 5px; }
+.tool-detail-mini-card p { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin: 0; }
+.tool-detail-centered { max-width: 680px; margin: 0 auto 42px; text-align: center; }
+.tool-reel-three-up { align-items: flex-start; gap: 18px; flex-wrap: wrap; }
+.tool-reel-three-up .marketing-reel-phone { width: 272px; }
+.tool-slideshow-preview { max-width: 920px; margin: 0 auto; }
+.tool-flyer-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.tool-flyer-card { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--white); border: 1px solid var(--border); box-shadow: var(--shadow-lg); }
+.tool-flyer-card img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; display: block; background: var(--white); }
+.tool-flyer-card figcaption { padding: 12px 16px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--flyer-color); background: var(--flyer-light); border-top: 1px solid rgba(217, 119, 6, 0.18); text-align: center; }
+.tool-qr-preview { max-width: 860px; margin: 0 auto; }
+.tool-qr-preview .ft-qr-grid { gap: 18px; }
+.tool-qr-preview .ft-qr-preview { max-width: 220px; }
+.tool-detail-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.tool-detail-step { position: relative; padding: 30px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+.tool-detail-step svg { color: var(--reel-color); margin-bottom: 16px; }
+.tool-detail-step-num { display: inline-flex; margin-bottom: 18px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: var(--reel-color); background: var(--reel-light); padding: 5px 10px; border-radius: 999px; }
+.tool-detail-step h3 { color: var(--navy); font-size: 18px; margin-bottom: 8px; }
+.tool-detail-step p { color: var(--text-muted); font-size: 14px; line-height: 1.7; margin: 0; }
+
+@media (max-width: 960px) {
+  .tool-detail-intro-grid,
+  .tool-detail-steps,
+  .tool-flyer-grid { grid-template-columns: 1fr; }
+  .tool-detail-section { padding: 72px 0; }
+}
+
+@media (max-width: 760px) {
+  .tool-reel-three-up .marketing-reel-phone { width: 252px; }
 }
 
 /* ── iGUIDE CUSTOM STYLES ── */

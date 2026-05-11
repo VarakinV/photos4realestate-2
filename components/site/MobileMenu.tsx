@@ -11,7 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Logo } from "@/components/site/Logo";
-import { primaryNav, services, siteConfig } from "@/lib/site";
+import { freeTools, primaryNav, services, siteConfig } from "@/lib/site";
 
 function FacebookIcon({ size = 18 }: { size?: number }) {
   return (
@@ -50,7 +50,12 @@ function InstagramIcon({ size = 18 }: { size?: number }) {
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const close = () => setOpen(false);
+  const [freeToolsOpen, setFreeToolsOpen] = useState(false);
+  const close = () => {
+    setOpen(false);
+    setServicesOpen(false);
+    setFreeToolsOpen(false);
+  };
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -85,7 +90,10 @@ export function MobileMenu() {
                             ? "Collapse services menu"
                             : "Expand services menu"
                         }
-                        onClick={() => setServicesOpen((v) => !v)}
+                        onClick={() => {
+                          setFreeToolsOpen(false);
+                          setServicesOpen((v) => !v);
+                        }}
                       >
                         <ChevronDown
                           size={18}
@@ -119,6 +127,59 @@ export function MobileMenu() {
                   </li>
                 );
               }
+
+              if (item.href === "/free-tools") {
+                return (
+                  <li key={item.href} className="mobile-has-children">
+                    <div className="mobile-row">
+                      <Link href={item.href} onClick={close}>
+                        {item.label}
+                      </Link>
+                      <button
+                        type="button"
+                        className="mobile-submenu-toggle"
+                        aria-expanded={freeToolsOpen}
+                        aria-controls="mobile-free-tools-submenu"
+                        aria-label={
+                          freeToolsOpen
+                            ? "Collapse free tools menu"
+                            : "Expand free tools menu"
+                        }
+                        onClick={() => {
+                          setServicesOpen(false);
+                          setFreeToolsOpen((v) => !v);
+                        }}
+                      >
+                        <ChevronDown
+                          size={18}
+                          strokeWidth={2}
+                          aria-hidden="true"
+                          className={`mobile-caret${
+                            freeToolsOpen ? " is-open" : ""
+                          }`}
+                        />
+                      </button>
+                    </div>
+                    <ul
+                      id="mobile-free-tools-submenu"
+                      className={`mobile-submenu${
+                        freeToolsOpen ? " is-open" : ""
+                      }`}
+                      hidden={!freeToolsOpen}
+                    >
+                      {freeTools.map((tool) => (
+                        <li key={tool.href}>
+                          <Link href={tool.href} onClick={close}>
+                            {tool.name}
+                            <span className="sr-only"> for Calgary real estate marketing</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
+
               return (
                 <li key={item.href}>
                   <Link href={item.href} onClick={close}>
