@@ -324,7 +324,7 @@ export default function PointsRewardsPage() {
                 There are no sign-up forms, subscriptions, or manual spreadsheets. Points are added to your account after eligible services are completed, reviews are verified, or qualified referrals place an order.
               </p>
               <p>
-                Rewards pair well with our included <Link href="/services/marketing-kit-for-realtors" className="body-link">marketing kit for Calgary realtors<span className="sr-only"> from Photos 4 Real Estate</span></Link>, professional <Link href="/services/real-estate-photography-in-calgary" className="body-link">real estate photography<span className="sr-only"> in Calgary</span></Link>, and the free tools available on this website.
+                Rewards pair well with our included <Link href="/services/marketing-kit-for-realtors" className="body-link">marketing kit for Calgary realtors<span className="sr-only"> from Photos 4 Real Estate</span></Link>, professional <Link href="/services/real-estate-photography-in-calgary" className="body-link">real estate photography<span className="sr-only"> in Calgary</span></Link>, and the free tools available on this website. If you want a side-by-side breakdown of what is included, review our <Link href="/real-estate-photography-comparison-calgary" className="body-link">real estate photography comparison in Calgary</Link>.
               </p>
             </div>
             <div className="points-summary-card">
