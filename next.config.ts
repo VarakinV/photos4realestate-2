@@ -19,6 +19,16 @@ const nextConfig: NextConfig = {
           "https://app.photos4realestate.ca/book/cmfwsiyl30000jo04z3lcndl3",
         permanent: true,
       },
+      {
+        source: "/favicon.ico",
+        destination: "/logos/map-pin-1000.png",
+        permanent: false,
+      },
+      {
+        source: "/real-estate-photography-near-me",
+        destination: "/services/real-estate-photography-in-calgary",
+        permanent: true,
+      },
     ];
   },
 };

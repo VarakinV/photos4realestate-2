@@ -27,6 +27,42 @@ const townOgData = {
     title: "Real Estate Photography in Cochrane",
     subtitle: "Photos, Drone, Video, RMS Floor Plans & 3D Tours",
   },
+  chestermere: {
+    city: "Chestermere",
+    eyebrow: "Chestermere Real Estate Photography",
+    title: "Real Estate Photography in Chestermere",
+    subtitle: "Photos, Drone, Video, RMS Floor Plans & 3D Tours",
+  },
+  "high-river": {
+    city: "High River",
+    eyebrow: "High River Real Estate Photography",
+    title: "Real Estate Photography in High River",
+    subtitle: "Photos, Drone, Video, RMS Floor Plans & 3D Tours",
+  },
+  springbank: {
+    city: "Springbank",
+    eyebrow: "Springbank Luxury Real Estate Photography",
+    title: "Real Estate Photography in Springbank",
+    subtitle: "Luxury Estates, Acreages, Drone, Video & 3D Tours",
+  },
+  bearspaw: {
+    city: "Bearspaw",
+    eyebrow: "Bearspaw Luxury Real Estate Photography",
+    title: "Real Estate Photography in Bearspaw",
+    subtitle: "Luxury Estates, Acreages, Drone, Video & 3D Tours",
+  },
+  "rocky-view-county": {
+    city: "Rocky View County",
+    eyebrow: "Rocky View County Real Estate Photography",
+    title: "Real Estate Photography in Rocky View County",
+    subtitle: "Acreages, Estates, Rural Homes, Drone, Video & 3D Tours",
+  },
+  banff: {
+    city: "Banff",
+    eyebrow: "Banff Real Estate Photography",
+    title: "Real Estate Photography in Banff",
+    subtitle: "Mountain Homes, Condos, Drone, Video & 3D Tours",
+  },
 } as const;
 
 type TownSlug = keyof typeof townOgData;

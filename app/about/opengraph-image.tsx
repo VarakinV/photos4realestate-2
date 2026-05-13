@@ -42,7 +42,7 @@ export default async function OgImage() {
           </h1>
         </div>
         <div style={{ display: "flex", gap: 28, fontSize: 24, color: "rgba(255,255,255,0.82)", alignItems: "center" }}>
-          <span>5★ Google Rating</span>
+          <span>5-Star Google Rating</span>
           <span style={{ color: "#cb4154" }}>•</span>
           <span>RECA Certified</span>
           <span style={{ color: "#cb4154" }}>•</span>

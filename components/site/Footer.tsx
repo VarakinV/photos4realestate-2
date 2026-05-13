@@ -114,7 +114,7 @@ export function Footer() {
             <ul>
               {serviceAreas.map((area) => (
                 <li key={area}>
-                  <Link href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}/`}>
+                  <Link href={area === "Calgary" ? "/" : `/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}/`}>
                     {area}
                   </Link>
                 </li>

@@ -62,6 +62,7 @@ type TravelCard = {
 type TownPage = {
   city: string;
   province: string;
+  placeType?: "City" | "AdministrativeArea";
   seoTitle: string;
   seoDescription: string;
   ogAlt: string;
@@ -85,6 +86,7 @@ type TownPage = {
   travelCards: readonly TravelCard[];
   travelIntro: string;
   travelNote: string;
+  travelOfferDescription?: string;
   faqs: readonly FaqItem[];
   images: {
     hero: string;
@@ -663,17 +665,1154 @@ const townPages = {
         "Drone view of a Cochrane property and surrounding hillside neighbourhood for real estate marketing",
     },
   },
+  chestermere: {
+    city: "Chestermere",
+    province: "AB",
+    seoTitle: "Real Estate Photography Chestermere | Photos 4 Real Estate",
+    seoDescription:
+      "Real estate photography in Chestermere with photos, drone, video, RMS floor plans, and 3D tours. Ideal for waterfront, luxury, and family homes near Calgary.",
+    ogAlt: "Real estate photography in Chestermere by Photos 4 Real Estate",
+    heroEyebrow: "Chestermere Real Estate Media • Lakeside Coverage",
+    heroIntro:
+      "Chestermere offers a unique lifestyle with lakeside living, family-friendly neighbourhoods, and quick access to Calgary. Photos 4 Real Estate provides real estate photography in Chestermere with bright MLS-ready photos, drone imagery, video tours, RMS floor plans, and 3D media that help listings stand out in this competitive lake-community market.",
+    introHeading: "Professional real estate photography for Chestermere listings",
+    introLead:
+      "Chestermere buyers are often shopping for more than square footage. They are comparing waterfront lifestyle, lake access, canal or pond surroundings, newer construction, and the convenience of being close to Calgary. Whether it is a waterfront home on Chestermere Lake, a modern build in Kinniburgh, or a family home in Rainbow Falls, strong listing media helps buyers understand both the home and the lifestyle it offers.",
+    introParagraphs: [
+      "At Photos 4 Real Estate, we regularly travel east from Calgary to photograph Chestermere condos, townhomes, duplexes, single-family homes, lakefront properties, luxury listings, and builder inventory. We focus on clean interior composition, bright natural-looking edits, accurate floor plans, and fast delivery so agents can get listings live quickly.",
+      "Chestermere homes often benefit from context-driven visuals, especially when the property is near the lake, along canals, beside ponds, or in a newer development where community amenities help sell the story. Drone photography is especially useful for waterfront homes, premium lots, homes with outdoor entertaining space, and properties where location relative to the lake adds clear marketing value.",
+    ],
+    introStats: ["7 popular communities", "24h next-morning turnaround", "9 services in one visit"],
+    communities: [
+      "Kinniburgh",
+      "Rainbow Falls",
+      "Westmere",
+      "East Chestermere",
+      "Lake Ere Estates",
+      "The Cove",
+      "Dawson’s Landing",
+    ],
+    propertyTypes: [
+      "Waterfront and lake-view homes near Chestermere Lake",
+      "Luxury listings in Kinniburgh and The Cove",
+      "Family homes in Rainbow Falls and Westmere",
+      "Newer builds and builder inventory in Dawson’s Landing",
+      "Canal, pond, and premium-lot properties across Chestermere",
+    ],
+    localMarketTitle: "Chestermere communities we serve",
+    localMarketParagraph:
+      "We capture homes across Chestermere, including Kinniburgh, Rainbow Falls, Westmere, East Chestermere, Lake Ere Estates, The Cove, and Dawson’s Landing. From luxury waterfront homes to new developments and family-focused neighbourhoods, we deliver media that brings out the best in every property.",
+    localMarketParagraphTwo:
+      "Because Chestermere listings often compete on setting, outdoor lifestyle, and curb appeal as much as interior layout, the media package matters. We combine photography, floor plans, drone coverage, video, and detail shots where appropriate so buyers can quickly understand the home, the lot, and the community around it.",
+    servicesHeading: "Our Chestermere real estate photography services",
+    servicesIntro:
+      "We provide a full range of listing media for Chestermere properties, with each service linking back to the relevant service page for examples, package details, and deliverables.",
+    reasonsHeading: "Why Chestermere realtors and homeowners choose Photos 4 Real Estate",
+    reasonsIntro:
+      "Chestermere listings often need media that highlights water, views, outdoor spaces, and premium finishes. Our Calgary-based team regularly works in Chestermere and delivers polished, MLS-ready assets with fast turnaround.",
+    whyChoose: [
+      {
+        title: "Lakefront and luxury experience",
+        icon: MapPin,
+        copy: "We regularly photograph waterfront, luxury, and family homes in Chestermere and understand how to capture the setting as well as the home itself.",
+      },
+      {
+        title: "Fast turnaround",
+        icon: Clock,
+        copy: "Most Chestermere photography, floor plans, and 3D tour deliverables are sent the next morning so listings can launch quickly.",
+      },
+      {
+        title: "Strong community knowledge",
+        icon: House,
+        copy: "We work across Chestermere’s in-demand communities and adapt the shot list for lakefront, builder, family, and premium-lot properties.",
+      },
+      {
+        title: "MLS-ready and flexible",
+        icon: ShieldCheck,
+        copy: "Our media is prepared for real-world listing use, with flexible packages available for agents, builders, and homeowners.",
+      },
+    ],
+    services: [
+      {
+        title: "Real Estate Photography",
+        href: "/services/real-estate-photography-in-calgary",
+        icon: Camera,
+        copy: "Bright, MLS-ready photos that showcase Chestermere interiors, curb appeal, lake-adjacent settings, and outdoor entertaining spaces.",
+      },
+      {
+        title: "RMS Measurements & Floor Plans",
+        href: "/services/rms-measurements-and-floor-plans-in-calgary",
+        icon: Ruler,
+        copy: "Accurate RMS measurements and floor plans that help buyers understand layout, flow, and usable space before they visit.",
+      },
+      {
+        title: "Drone Photography",
+        href: "/services/real-estate-aerial-drone-photography-in-calgary",
+        icon: Drone,
+        copy: "Aerial coverage for waterfront homes, canal and pond properties, premium lots, and homes where proximity to Chestermere Lake matters.",
+      },
+      {
+        title: "Real Estate Videography",
+        href: "/services/real-estate-videos-in-calgary",
+        icon: Video,
+        copy: "Smooth walkthrough videos and cinematic listing edits for agent websites, YouTube, Instagram, Facebook, and marketing campaigns.",
+      },
+      {
+        title: "iGUIDE 3D Virtual Tours",
+        href: "/services/iguide-virtual-tours-in-calgary",
+        icon: Box,
+        copy: "Interactive 3D tours that help buyers explore Chestermere homes remotely and understand room-to-room flow before booking.",
+      },
+      {
+        title: "Virtual Staging",
+        href: "/services/virtual-staging",
+        icon: Sparkles,
+        copy: "Photo-realistic staging for vacant rooms so buyers can better visualize how premium or family-focused spaces can live.",
+      },
+      {
+        title: "Twilight Photography",
+        href: "/services/twilight-photography-for-real-estate-in-calgary",
+        icon: Moon,
+        copy: "Evening exterior imagery that works especially well for waterfront homes, luxury listings, and standout Chestermere properties.",
+      },
+      {
+        title: "Style Shots",
+        href: "/services/style-shots",
+        icon: Images,
+        copy: "Detail-focused images for kitchens, finishes, staging, lake-view patios, and design features that help a listing feel memorable.",
+      },
+      {
+        title: "Marketing Kit",
+        href: "/services/marketing-kit-for-realtors",
+        icon: Megaphone,
+        copy: "Social graphics, flyers, reels, and branded assets that help promote Chestermere listings across multiple channels quickly.",
+      },
+    ],
+    travelCards: [
+      {
+        variant: "free",
+        icon: MapPin,
+        area: "Within 35 km of Calgary City Centre",
+        price: "Free",
+      },
+      {
+        variant: "flat",
+        icon: Building2,
+        area: "Chestermere, Airdrie, Okotoks, High River, Cochrane, Langdon",
+        price: "$30 flat fee",
+      },
+      {
+        variant: "km",
+        icon: Car,
+        area: "Beyond 35 km from Calgary City Centre",
+        price: "$0.85 / km",
+      },
+    ],
+    travelIntro:
+      "Chestermere falls under our nearby-community travel pricing, so agents and sellers can confirm travel costs before the appointment is booked.",
+    travelNote:
+      "Travel within 35 km of Calgary City Centre is free. Chestermere bookings are covered by our published $30 flat-fee nearby-community rate, and properties beyond that radius use distance-based travel pricing. You can review full details on our pricing page or confirm the fee with us before you book.",
+    faqs: [
+      {
+        q: "Do you travel to Chestermere for real estate photography?",
+        a: "Yes. Photos 4 Real Estate is based in Calgary and regularly travels to Chestermere for photography, drone imagery, video tours, RMS measurements, floor plans, iGUIDE tours, virtual staging, twilight photos, Style Shots, and Marketing Kit assets.",
+      },
+      {
+        q: "What is the travel fee for Chestermere?",
+        a: "Chestermere is covered by our nearby-community travel pricing, which is currently a <strong>$30 flat fee</strong>. Full pricing details are available on our <a href=\"/prices\">pricing page</a>, and we can confirm the exact fee before your booking is finalized.",
+      },
+      {
+        q: "Which Chestermere communities do you serve?",
+        a: "We photograph homes throughout Chestermere, including Kinniburgh, Rainbow Falls, Westmere, East Chestermere, Lake Ere Estates, The Cove, Dawson’s Landing, and surrounding lake-area properties.",
+      },
+      {
+        q: "Can you photograph waterfront or lake-view homes in Chestermere?",
+        a: "Yes. We regularly photograph lakefront, lake-view, canal, and premium-lot properties where outdoor setting and water proximity are a major part of the marketing story. Drone coverage is especially useful for these listings.",
+      },
+      {
+        q: "Can photos, drone, video, and floor plans be captured in one Chestermere visit?",
+        a: "In most cases, yes. We can coordinate photography, RMS measurements, floor plans, iGUIDE 3D tours, drone, video, and detail shots during one property visit to keep scheduling simple for agents, sellers, and homeowners.",
+      },
+      {
+        q: "How quickly do you deliver Chestermere listing media?",
+        a: "Most Chestermere photography, floor plans, and 3D tour deliverables are sent the next morning. Video turnaround may vary slightly depending on the package and editing scope, but timelines are always confirmed before the shoot.",
+      },
+    ],
+    images: {
+      hero: "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/chestermere/Service-Areas-Chestermere.webp",
+      interior:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/chestermere/Living-Room-House-in-Chestermere-1024x682.webp",
+      drone:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/chestermere/Chestermere-Lake-Drone-View.webp",
+    },
+    imageAlts: {
+      hero: "Exterior real estate photo of a Chestermere home near the lake by Photos 4 Real Estate",
+      interior:
+        "Bright living room real estate photo of a Chestermere home prepared for an MLS listing",
+      drone:
+        "Drone view of Chestermere Lake and surrounding homes for real estate marketing",
+    },
+  },
+  "high-river": {
+    city: "High River",
+    province: "AB",
+    seoTitle: "Real Estate Photography High River | Photos 4 Real Estate",
+    seoDescription:
+      "Real estate photography in High River with photos, drone, video, RMS floor plans, and 3D tours. Fast turnaround for heritage homes, family properties, and acreages.",
+    ogAlt: "Real estate photography in High River by Photos 4 Real Estate",
+    heroEyebrow: "High River Real Estate Media • South of Calgary",
+    heroIntro:
+      "High River is a charming town just south of Calgary, known for its welcoming community, scenic landscapes, heritage character, and the Highwood River running through town. Photos 4 Real Estate provides real estate photography in High River with bright MLS-ready photos, drone imagery, video tours, RMS floor plans, and 3D media that help listings stand out in a competitive market.",
+    introHeading: "Professional real estate photography for High River listings",
+    introLead:
+      "High River buyers are often drawn to more than the square footage alone. They are looking at character, mature streetscapes, family-friendly neighbourhoods, quiet residential pockets, access to parks and pathways, and the small-town lifestyle that makes High River different from a suburban Calgary listing. From cozy heritage homes in the downtown core to newer developments on the town’s edges, strong listing media helps communicate both the home and the lifestyle around it.",
+    introParagraphs: [
+      "At Photos 4 Real Estate, we regularly travel south from Calgary to photograph High River townhomes, duplexes, family homes, heritage properties, newer subdivision homes, and surrounding acreages. We focus on balanced natural-looking interiors, clean composition, practical floor plans, and fast delivery so agents and homeowners can market confidently without delay.",
+      "High River properties often benefit from media that captures warmth and setting. Mature trees, larger lots, character architecture, quiet streets, backyard spaces, and proximity to the Highwood River or recreation corridors all help tell the story. Detail photography, video, and drone coverage can be especially valuable for acreage properties, riverside locations, and homes where lot context adds clear marketing value.",
+    ],
+    introStats: ["7 popular communities", "24h next-morning turnaround", "9 services in one visit"],
+    communities: [
+      "Downtown High River",
+      "Montrose",
+      "Sunshine Meadows",
+      "Lineham Acres",
+      "Vista Mirage",
+      "Hampton Hills",
+      "Emerson Lake Estates",
+    ],
+    propertyTypes: [
+      "Historic and character homes in Downtown High River",
+      "Family homes and newer builds in Montrose",
+      "Practical residential properties in Sunshine Meadows",
+      "Established homes in Lineham Acres and Vista Mirage",
+      "Larger lots and green-space-adjacent homes in Emerson Lake Estates",
+    ],
+    localMarketTitle: "High River communities we serve",
+    localMarketParagraph:
+      "We proudly work with real estate agents and homeowners across High River and the surrounding area, including Downtown High River, Montrose, Sunshine Meadows, Lineham Acres, Vista Mirage, Hampton Hills, and Emerson Lake Estates. Whether the listing is a historic character property, a quiet family home, or a newer build on the edge of town, we deliver the professional media needed to help it stand out.",
+    localMarketParagraphTwo:
+      "High River listings often sell on warmth, livability, and community feel as much as on finishes. That is why we tailor the media package to the property itself — combining bright photography, floor plans, video, drone coverage, and detail shots where appropriate so buyers get a stronger sense of both the home and the neighbourhood around it.",
+    servicesHeading: "Our High River real estate photography services",
+    servicesIntro:
+      "We provide a full range of listing media for High River properties, with each service linking back to the relevant service page for examples, package details, and deliverables.",
+    reasonsHeading: "Why High River realtors and homeowners choose Photos 4 Real Estate",
+    reasonsIntro:
+      "High River homes deserve to be presented in their best light. Our local experience helps us capture not only the home itself, but also the character, warmth, and lifestyle that make this market unique.",
+    whyChoose: [
+      {
+        title: "Character and lifestyle focus",
+        icon: MapPin,
+        copy: "We know how to photograph High River listings in a way that reflects both the property and the small-town lifestyle buyers are looking for.",
+      },
+      {
+        title: "Fast turnaround",
+        icon: Clock,
+        copy: "Most High River photography, floor plans, and 3D tour deliverables are sent the next morning so listings can launch quickly.",
+      },
+      {
+        title: "Flexible for all property types",
+        icon: House,
+        copy: "We work with heritage homes, family houses, newer subdivisions, riverside properties, and acreages on the outskirts of town.",
+      },
+      {
+        title: "MLS-ready media",
+        icon: ShieldCheck,
+        copy: "Our photos, tours, floor plans, and marketing assets are prepared for real-world listing use and built to help listings stand out online.",
+      },
+    ],
+    services: [
+      {
+        title: "Real Estate Photography",
+        href: "/services/real-estate-photography-in-calgary",
+        icon: Camera,
+        copy: "Bright, MLS-ready photos that showcase High River interiors, curb appeal, mature streetscapes, and inviting family spaces.",
+      },
+      {
+        title: "RMS Measurements & Floor Plans",
+        href: "/services/rms-measurements-and-floor-plans-in-calgary",
+        icon: Ruler,
+        copy: "Accurate RMS measurements and floor plans that help buyers understand layout, room flow, and usable space before they visit.",
+      },
+      {
+        title: "Drone Photography",
+        href: "/services/real-estate-aerial-drone-photography-in-calgary",
+        icon: Drone,
+        copy: "Aerial coverage for larger lots, acreages, riverside properties, and homes where setting and surrounding land add market value.",
+      },
+      {
+        title: "Real Estate Videography",
+        href: "/services/real-estate-videos-in-calgary",
+        icon: Video,
+        copy: "Smooth walkthrough videos and cinematic listing edits for websites, YouTube, Instagram, Facebook, and broader marketing use.",
+      },
+      {
+        title: "iGUIDE 3D Virtual Tours",
+        href: "/services/iguide-virtual-tours-in-calgary",
+        icon: Box,
+        copy: "Interactive 3D tours that help buyers explore High River homes remotely and understand room-to-room flow before booking.",
+      },
+      {
+        title: "Virtual Staging",
+        href: "/services/virtual-staging",
+        icon: Sparkles,
+        copy: "Photo-realistic staging for vacant or under-furnished rooms so buyers can better imagine how the home can live.",
+      },
+      {
+        title: "Twilight Photography",
+        href: "/services/twilight-photography-for-real-estate-in-calgary",
+        icon: Moon,
+        copy: "Evening exterior imagery for standout homes, character properties, and premium listings that benefit from extra curb appeal.",
+      },
+      {
+        title: "Style Shots",
+        href: "/services/style-shots",
+        icon: Images,
+        copy: "Detail-focused images for kitchens, finishes, heritage features, staging, and design elements that help a listing feel memorable.",
+      },
+      {
+        title: "Marketing Kit",
+        href: "/services/marketing-kit-for-realtors",
+        icon: Megaphone,
+        copy: "Social graphics, flyers, reels, and branded assets that help High River listings launch across multiple channels quickly.",
+      },
+    ],
+    travelCards: [
+      {
+        variant: "free",
+        icon: MapPin,
+        area: "Within 35 km of Calgary City Centre",
+        price: "Free",
+      },
+      {
+        variant: "flat",
+        icon: Building2,
+        area: "Chestermere, Airdrie, Okotoks, High River, Cochrane, Langdon",
+        price: "$30 flat fee",
+      },
+      {
+        variant: "km",
+        icon: Car,
+        area: "Beyond 35 km from Calgary City Centre",
+        price: "$0.85 / km",
+      },
+    ],
+    travelIntro:
+      "High River falls under our nearby-community travel pricing, so agents and sellers can confirm travel costs before the appointment is booked.",
+    travelNote:
+      "Travel within 35 km of Calgary City Centre is free. High River bookings are covered by our published $30 flat-fee nearby-community rate, and properties beyond that radius use distance-based travel pricing. You can review full details on our pricing page or confirm the fee with us before you book.",
+    faqs: [
+      {
+        q: "Do you travel to High River for real estate photography?",
+        a: "Yes. Photos 4 Real Estate is based in Calgary and regularly travels to High River for photography, drone imagery, video tours, RMS measurements, floor plans, iGUIDE tours, virtual staging, twilight photos, Style Shots, and Marketing Kit assets.",
+      },
+      {
+        q: "What is the travel fee for High River?",
+        a: "High River is covered by our nearby-community travel pricing, which is currently a <strong>$30 flat fee</strong>. Full pricing details are available on our <a href=\"/prices\">pricing page</a>, and we can confirm the exact fee before your booking is finalized.",
+      },
+      {
+        q: "Which High River communities do you serve?",
+        a: "We work throughout High River, including Downtown High River, Montrose, Sunshine Meadows, Lineham Acres, Vista Mirage, Hampton Hills, Emerson Lake Estates, and surrounding acreage properties near town.",
+      },
+      {
+        q: "Can you photograph heritage homes and acreages in High River?",
+        a: "Yes. We regularly photograph character homes, family properties, newer subdivisions, riverside listings, and acreages where lot context and surrounding landscape are an important part of the marketing story.",
+      },
+      {
+        q: "Can photos, drone, video, and floor plans be captured in one High River visit?",
+        a: "In most cases, yes. We can coordinate photography, RMS measurements, floor plans, iGUIDE 3D tours, drone, video, and detail shots during one property visit to keep scheduling simple for agents, sellers, and homeowners.",
+      },
+      {
+        q: "How quickly do you deliver High River listing media?",
+        a: "Most High River photography, floor plans, and 3D tour deliverables are sent the next morning. Video turnaround may vary slightly depending on the package and editing scope, but timelines are always confirmed before the shoot.",
+      },
+    ],
+    images: {
+      hero: "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/high-river/Service-Areas-High-River.webp",
+      interior:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/high-river/House-in-High-River-1024x682.webp",
+      drone:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/high-river/Kitchen-Real-Estate-Photography-1024x682.webp",
+    },
+    imageAlts: {
+      hero: "Exterior real estate photo of a High River home with small-town character by Photos 4 Real Estate",
+      interior:
+        "Bright interior real estate photo of a High River home prepared for an MLS listing",
+      drone:
+        "Kitchen real estate photo from a High River listing showing bright finishes and open layout",
+    },
+  },
+  springbank: {
+    city: "Springbank",
+    province: "AB",
+    seoTitle: "Real Estate Photography Springbank | Photos 4 Real Estate",
+    seoDescription:
+      "Real estate photography in Springbank with luxury photos, drone, video, RMS floor plans, and 3D tours for acreages, estates, and mountain-view homes.",
+    ogAlt: "Real estate photography in Springbank by Photos 4 Real Estate",
+    heroEyebrow: "Springbank Luxury Real Estate Media • Acreage Coverage",
+    heroIntro:
+      "Springbank is one of the Calgary area’s most prestigious markets, known for luxury estates, acreages, private lots, equestrian properties, and Rocky Mountain views. Photos 4 Real Estate creates real estate photography in Springbank with polished MLS-ready photos, drone imagery, video tours, RMS floor plans, and 3D media designed to capture the scale, privacy, and lifestyle of high-value properties.",
+    introHeading: "Professional real estate photography for Springbank luxury listings",
+    introLead:
+      "Springbank properties are rarely simple point-and-shoot listings. Buyers are evaluating architecture, land, privacy, views, gated entrances, outdoor living spaces, outbuildings, and proximity to Calgary, schools, golf, and mountain recreation. Whether the listing is a custom estate, a luxury acreage, or a property with sweeping Rocky Mountain views, the media needs to communicate scale and exclusivity from the first online impression.",
+    introParagraphs: [
+      "At Photos 4 Real Estate, we regularly travel west from Calgary to photograph Springbank acreages, estate homes, luxury properties, equestrian facilities, and large-lot residences. We focus on refined interior composition, clean exterior coverage, accurate floor plans, and image sets that give agents enough variety for MLS, brochures, social media, websites, and premium listing presentations.",
+      "Springbank listings often benefit from a wider visual strategy than standard suburban homes. Drone photography helps show property boundaries, long driveways, mountain-view orientation, outbuildings, paddocks, and surrounding land. Video tours and Style Shots help highlight custom finishes, architectural details, outdoor entertaining areas, and the lifestyle features that attract qualified luxury buyers.",
+    ],
+    introStats: ["Luxury acreage market", "24h next-morning turnaround", "9 services in one visit"],
+    communities: [
+      "Central Springbank",
+      "Lower Springbank",
+      "Upper Springbank",
+      "Elbow Valley Area",
+      "Harmony Area",
+      "Devonian Ridge Estates",
+      "Aventerra Estates",
+    ],
+    propertyTypes: [
+      "Luxury acreages and custom estate homes",
+      "Mountain-view properties and large private lots",
+      "Equestrian facilities, barns, paddocks, and outbuildings",
+      "Gated entrances, long driveways, and premium landscaping",
+      "Architectural homes with high-end finishes and outdoor living spaces",
+    ],
+    localMarketTitle: "Springbank properties and areas we serve",
+    localMarketParagraph:
+      "We photograph Springbank properties across Central Springbank, Lower Springbank, Upper Springbank, the Elbow Valley area, Harmony-area acreages, Devonian Ridge Estates, Aventerra Estates, and nearby Rocky View County locations. From private gated estates to modern acreage homes with panoramic mountain views, we build media packages that show both the home and the land around it.",
+    localMarketParagraphTwo:
+      "Because Springbank buyers are often looking for luxury, space, privacy, and lifestyle, every listing needs more context than a standard interior photo set. We combine professional photography, aerial views, video, floor plans, 3D tours, twilight photography, and detail-focused imagery when appropriate so buyers can understand the full value of the property before booking a showing.",
+    servicesHeading: "Our Springbank real estate photography services",
+    servicesIntro:
+      "We provide a full range of luxury real estate media for Springbank properties, with each service linking back to the relevant service page for examples, package details, and deliverables.",
+    reasonsHeading: "Why Springbank realtors choose Photos 4 Real Estate",
+    reasonsIntro:
+      "Springbank listings demand premium presentation. Our team is experienced with estate homes, acreages, aerial media, and luxury-focused marketing that helps attract the right buyers without sacrificing fast, reliable turnaround.",
+    whyChoose: [
+      {
+        title: "Estate and acreage experience",
+        icon: MapPin,
+        copy: "We understand how to photograph large properties, luxury finishes, views, outbuildings, and outdoor features that matter in Springbank listings.",
+      },
+      {
+        title: "Drone for scale and views",
+        icon: Drone,
+        copy: "Aerial media helps show lot context, privacy, mountain views, long approaches, equestrian features, and surrounding land clearly.",
+      },
+      {
+        title: "Luxury-focused marketing",
+        icon: House,
+        copy: "We create media that supports MLS, premium brochures, websites, social campaigns, and high-end listing presentations.",
+      },
+      {
+        title: "Reliable turnaround",
+        icon: Clock,
+        copy: "Most photo, floor plan, and 3D tour deliverables are sent the next morning, with timelines confirmed before the shoot.",
+      },
+    ],
+    services: [
+      {
+        title: "Real Estate Photography",
+        href: "/services/real-estate-photography-in-calgary",
+        icon: Camera,
+        copy: "Polished MLS-ready photography for Springbank estates, interiors, exterior elevations, views, grounds, and luxury finishes.",
+      },
+      {
+        title: "RMS Measurements & Floor Plans",
+        href: "/services/rms-measurements-and-floor-plans-in-calgary",
+        icon: Ruler,
+        copy: "Accurate RMS measurements and floor plans for larger homes where layout, wings, suites, and finished areas need clarity.",
+      },
+      {
+        title: "Drone Photography",
+        href: "/services/real-estate-aerial-drone-photography-in-calgary",
+        icon: Drone,
+        copy: "Aerial coverage for acreages, long driveways, mountain views, barns, paddocks, outbuildings, and surrounding land context.",
+      },
+      {
+        title: "Real Estate Videography",
+        href: "/services/real-estate-videos-in-calgary",
+        icon: Video,
+        copy: "Cinematic walkthrough and property videos that communicate flow, scale, lifestyle, and premium features for luxury buyers.",
+      },
+      {
+        title: "iGUIDE 3D Virtual Tours",
+        href: "/services/iguide-virtual-tours-in-calgary",
+        icon: Box,
+        copy: "Interactive 3D tours that let qualified buyers explore large Springbank homes remotely before scheduling a private showing.",
+      },
+      {
+        title: "Virtual Staging",
+        href: "/services/virtual-staging",
+        icon: Sparkles,
+        copy: "Photo-realistic staging for vacant estate rooms, guest suites, lower levels, offices, and large spaces that need visual definition.",
+      },
+      {
+        title: "Twilight Photography",
+        href: "/services/twilight-photography-for-real-estate-in-calgary",
+        icon: Moon,
+        copy: "Evening exterior images that highlight architecture, landscape lighting, outdoor living areas, and luxury curb appeal.",
+      },
+      {
+        title: "Style Shots",
+        href: "/services/style-shots",
+        icon: Images,
+        copy: "Detail-focused images for custom finishes, fireplaces, kitchens, wine rooms, views, patios, and architectural features.",
+      },
+      {
+        title: "Marketing Kit",
+        href: "/services/marketing-kit-for-realtors",
+        icon: Megaphone,
+        copy: "Social graphics, flyers, reels, and branded assets that help promote Springbank luxury listings across multiple channels.",
+      },
+    ],
+    travelCards: [
+      {
+        variant: "free",
+        icon: MapPin,
+        area: "Within 35 km of Calgary City Centre",
+        price: "Free",
+      },
+      {
+        variant: "km",
+        icon: Car,
+        area: "Mileage calculated from Calgary City Centre",
+        price: "$0.85 / km when applicable",
+      },
+      {
+        variant: "km",
+        icon: Building2,
+        area: "Springbank acreage and estate properties",
+        price: "Confirmed before booking",
+      },
+    ],
+    travelIntro:
+      "Springbank travel pricing depends on the property location because acreages and estate homes can vary significantly in distance from Calgary City Centre.",
+    travelNote:
+      "Mileage is calculated from Calgary City Centre. Some Springbank properties may fall within our free 35 km travel zone, while farther acreages may have distance-based travel pricing. We do not use a fixed Springbank travel fee; the exact travel cost is confirmed before you book.",
+    travelOfferDescription:
+      "Mileage is calculated from Calgary City Centre. Some Springbank properties may be free within 35 km, while farther acreages may have distance-based travel pricing confirmed before booking.",
+    faqs: [
+      {
+        q: "Do you travel to Springbank for real estate photography?",
+        a: "Yes. Photos 4 Real Estate is based in Calgary and regularly travels to Springbank for estate photography, acreage photography, drone imagery, video tours, RMS measurements, floor plans, iGUIDE tours, virtual staging, twilight photos, Style Shots, and Marketing Kit assets.",
+      },
+      {
+        q: "What is the travel fee for Springbank?",
+        a: "Springbank travel fees are calculated from Calgary City Centre. Some properties may fall within the free 35 km travel zone, while farther acreages may have distance-based travel pricing. We do not use a fixed Springbank fee, and we confirm the exact travel cost before your booking is finalized.",
+      },
+      {
+        q: "Can you photograph Springbank acreages and luxury estates?",
+        a: "Yes. We regularly photograph luxury estates, acreage homes, mountain-view properties, equestrian facilities, large private lots, gated entrances, and architectural homes throughout Springbank and nearby Rocky View County areas.",
+      },
+      {
+        q: "Is drone photography recommended for Springbank listings?",
+        a: "Yes. Drone photography is highly recommended for many Springbank listings because it helps show the scale of the land, long driveways, outbuildings, paddocks, mountain views, privacy, and the surrounding landscape.",
+      },
+      {
+        q: "Can photos, drone, video, and floor plans be captured in one Springbank visit?",
+        a: "In most cases, yes. We can coordinate photography, RMS measurements, floor plans, iGUIDE 3D tours, drone, video, twilight, and detail shots during one property visit, depending on the package and property size.",
+      },
+      {
+        q: "How quickly do you deliver Springbank listing media?",
+        a: "Most Springbank photography, floor plans, and 3D tour deliverables are sent the next morning. Video and larger luxury media packages may require additional editing time, which we confirm before the shoot.",
+      },
+    ],
+    images: {
+      hero: "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/springbank/Service-Areas-Springbank.webp",
+      interior:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/springbank/House-in-Springbank-1024x682.webp",
+      drone:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/springbank/Acreages-in-Springbank-1024x768.webp",
+    },
+    imageAlts: {
+      hero: "Exterior real estate photo of a luxury Springbank home with acreage setting by Photos 4 Real Estate",
+      interior:
+        "Bright interior real estate photo of a Springbank luxury home prepared for an MLS listing",
+      drone:
+        "Aerial view of Springbank acreages and surrounding land for luxury real estate marketing",
+    },
+  },
+  bearspaw: {
+    city: "Bearspaw",
+    province: "AB",
+    seoTitle: "Real Estate Photography Bearspaw | Photos 4 Real Estate",
+    seoDescription:
+      "Real estate photography in Bearspaw with luxury photos, drone, video, RMS floor plans, and 3D tours for estates, acreages, and mountain-view homes.",
+    ogAlt: "Real estate photography in Bearspaw by Photos 4 Real Estate",
+    heroEyebrow: "Bearspaw Luxury Real Estate Media • Acreage Coverage",
+    heroIntro:
+      "Bearspaw is one of Calgary’s most sought-after rural luxury communities, known for estate homes, sprawling acreages, privacy, and Rocky Mountain views. Photos 4 Real Estate creates real estate photography in Bearspaw with polished MLS-ready photos, drone imagery, cinematic video tours, RMS floor plans, and 3D media that highlight prestige, scale, and setting.",
+    introHeading: "Professional real estate photography for Bearspaw estates and acreages",
+    introLead:
+      "Bearspaw listings need more than standard room-by-room photography. Buyers are evaluating land, architecture, privacy, long driveways, mountain views, mature landscaping, outbuildings, and proximity to Calgary. Whether the property is an executive acreage, a custom estate, or a private retreat surrounded by natural beauty, professional media helps buyers understand the full story before booking a showing.",
+    introParagraphs: [
+      "At Photos 4 Real Estate, we regularly travel northwest from Calgary to photograph Bearspaw estates, acreage homes, luxury residences, custom builds, and premium lots throughout Rocky View County. We focus on refined interior composition, strong exterior coverage, accurate floor plans, and image sets that support MLS, premium brochures, agent websites, social media, and high-end listing presentations.",
+      "Bearspaw properties often benefit from a complete luxury media package. Drone photography helps show lot size, driveway approach, surrounding land, privacy, outbuildings, and Rocky Mountain view orientation. Video tours and Style Shots help capture unique architecture, statement rooms, custom finishes, outdoor living spaces, and the lifestyle features that make Bearspaw listings stand out in Calgary’s luxury market.",
+    ],
+    introStats: ["Luxury acreage market", "24h next-morning turnaround", "9 services in one visit"],
+    communities: [
+      "Watermark at Bearspaw",
+      "Bearspaw Country Estates",
+      "Silverhorn",
+      "Church Ranches",
+      "Lynx Ridge Area",
+      "Lochend Road Acreages",
+      "Bearspaw Road Area",
+    ],
+    propertyTypes: [
+      "Luxury acreages and executive estate homes",
+      "Mountain-view properties and private retreats",
+      "Custom architectural homes with premium finishes",
+      "Large lots, gated entrances, and long driveways",
+      "Outbuildings, landscaped grounds, and rural-lifestyle features",
+    ],
+    localMarketTitle: "Bearspaw properties and areas we serve",
+    localMarketParagraph:
+      "We photograph Bearspaw listings across Watermark at Bearspaw, Bearspaw Country Estates, Silverhorn, Church Ranches, the Lynx Ridge area, Lochend Road acreages, Bearspaw Road properties, and nearby Rocky View County locations. From private retreats to modern luxury estates, we create media packages that show both the home and the acreage setting around it.",
+    localMarketParagraphTwo:
+      "Because Bearspaw buyers are often searching for space, privacy, views, and exclusivity, the listing media needs to show context. We combine professional photography, aerial views, video, floor plans, 3D tours, twilight photography, and detail-focused imagery when appropriate so qualified buyers can understand the property’s full value online.",
+    servicesHeading: "Our Bearspaw real estate photography services",
+    servicesIntro:
+      "We provide a full range of luxury real estate media for Bearspaw properties, with each service linking back to the relevant service page for examples, package details, and deliverables.",
+    reasonsHeading: "Why Bearspaw realtors trust Photos 4 Real Estate",
+    reasonsIntro:
+      "Bearspaw properties require media that captures architecture, land, privacy, and lifestyle. Our team is experienced with estate home and acreage photography, licensed drone operations, and luxury-focused marketing packages that help listings attract the right buyers.",
+    whyChoose: [
+      {
+        title: "Acreage and estate expertise",
+        icon: MapPin,
+        copy: "We understand how to photograph large Bearspaw properties, luxury finishes, views, grounds, outbuildings, and outdoor features that matter to buyers.",
+      },
+      {
+        title: "Licensed drone pilots",
+        icon: Drone,
+        copy: "Aerial media helps show lot context, scale, mountain views, privacy, driveway approach, and surrounding land clearly.",
+      },
+      {
+        title: "Luxury-focused packages",
+        icon: House,
+        copy: "We create media that supports MLS, premium brochures, websites, reels, social campaigns, and high-end listing presentations.",
+      },
+      {
+        title: "Fast, reliable turnaround",
+        icon: Clock,
+        copy: "Most photo, floor plan, and 3D tour deliverables are sent the next morning, with timelines confirmed before the shoot.",
+      },
+    ],
+    services: [
+      {
+        title: "Real Estate Photography",
+        href: "/services/real-estate-photography-in-calgary",
+        icon: Camera,
+        copy: "Polished MLS-ready photography for Bearspaw estates, interiors, exterior elevations, views, grounds, and luxury finishes.",
+      },
+      {
+        title: "RMS Measurements & Floor Plans",
+        href: "/services/rms-measurements-and-floor-plans-in-calgary",
+        icon: Ruler,
+        copy: "Accurate RMS measurements and floor plans for larger homes where layout, wings, suites, and finished areas need clarity.",
+      },
+      {
+        title: "Drone Photography",
+        href: "/services/real-estate-aerial-drone-photography-in-calgary",
+        icon: Drone,
+        copy: "Aerial coverage for acreages, long driveways, mountain views, estate lots, outbuildings, and surrounding land context.",
+      },
+      {
+        title: "Real Estate Videography",
+        href: "/services/real-estate-videos-in-calgary",
+        icon: Video,
+        copy: "Cinematic walkthrough and property videos that communicate flow, scale, lifestyle, and premium features for luxury buyers.",
+      },
+      {
+        title: "iGUIDE 3D Virtual Tours",
+        href: "/services/iguide-virtual-tours-in-calgary",
+        icon: Box,
+        copy: "Interactive 3D tours that let qualified buyers explore large Bearspaw homes remotely before scheduling a private showing.",
+      },
+      {
+        title: "Virtual Staging",
+        href: "/services/virtual-staging",
+        icon: Sparkles,
+        copy: "Photo-realistic staging for vacant estate rooms, guest suites, lower levels, offices, and large spaces that need visual definition.",
+      },
+      {
+        title: "Twilight Photography",
+        href: "/services/twilight-photography-for-real-estate-in-calgary",
+        icon: Moon,
+        copy: "Evening exterior images that highlight architecture, landscape lighting, outdoor living areas, and premium curb appeal.",
+      },
+      {
+        title: "Style Shots",
+        href: "/services/style-shots",
+        icon: Images,
+        copy: "Detail-focused images for custom finishes, dining rooms, staircases, fireplaces, views, patios, and architectural features.",
+      },
+      {
+        title: "Marketing Kit",
+        href: "/services/marketing-kit-for-realtors",
+        icon: Megaphone,
+        copy: "Social graphics, flyers, reels, and branded assets that help promote Bearspaw luxury listings across multiple channels.",
+      },
+    ],
+    travelCards: [
+      {
+        variant: "free",
+        icon: MapPin,
+        area: "Within 35 km of Calgary City Centre",
+        price: "Free",
+      },
+      {
+        variant: "km",
+        icon: Car,
+        area: "Mileage calculated from Calgary City Centre",
+        price: "$0.85 / km when applicable",
+      },
+      {
+        variant: "km",
+        icon: Building2,
+        area: "Bearspaw acreage and estate properties",
+        price: "Confirmed before booking",
+      },
+    ],
+    travelIntro:
+      "Bearspaw travel pricing depends on the property location because estate homes and acreages can vary significantly in distance from Calgary City Centre.",
+    travelNote:
+      "Mileage is calculated from Calgary City Centre. Some Bearspaw properties may fall within our free 35 km travel zone, while farther acreages may have distance-based travel pricing. We do not use a fixed Bearspaw travel fee; the exact travel cost is confirmed before you book.",
+    travelOfferDescription:
+      "Mileage is calculated from Calgary City Centre. Some Bearspaw properties may be free within 35 km, while farther acreages may have distance-based travel pricing confirmed before booking.",
+    faqs: [
+      {
+        q: "Do you travel to Bearspaw for real estate photography?",
+        a: "Yes. Photos 4 Real Estate is based in Calgary and regularly travels to Bearspaw for estate photography, acreage photography, drone imagery, video tours, RMS measurements, floor plans, iGUIDE tours, virtual staging, twilight photos, Style Shots, and Marketing Kit assets.",
+      },
+      {
+        q: "What is the travel fee for Bearspaw?",
+        a: "Bearspaw travel fees are calculated from Calgary City Centre. Some properties may fall within the free 35 km travel zone, while farther acreages may have distance-based travel pricing. We do not use a fixed Bearspaw fee, and we confirm the exact travel cost before your booking is finalized.",
+      },
+      {
+        q: "Can you photograph Bearspaw acreages and luxury estates?",
+        a: "Yes. We regularly photograph luxury estates, acreage homes, mountain-view properties, private retreats, large lots, gated entrances, and custom architectural homes throughout Bearspaw and nearby Rocky View County areas.",
+      },
+      {
+        q: "Is drone photography recommended for Bearspaw listings?",
+        a: "Yes. Drone photography is highly recommended for many Bearspaw listings because it helps show the scale of the property, long driveways, outbuildings, mountain views, privacy, and surrounding landscape.",
+      },
+      {
+        q: "Can photos, drone, video, and floor plans be captured in one Bearspaw visit?",
+        a: "In most cases, yes. We can coordinate photography, RMS measurements, floor plans, iGUIDE 3D tours, drone, video, twilight, and detail shots during one property visit, depending on the package and property size.",
+      },
+      {
+        q: "How quickly do you deliver Bearspaw listing media?",
+        a: "Most Bearspaw photography, floor plans, and 3D tour deliverables are sent the next morning. Video and larger luxury media packages may require additional editing time, which we confirm before the shoot.",
+      },
+    ],
+    images: {
+      hero: "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/bearspaw/Service-Areas-Bearspaw.webp",
+      interior:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/bearspaw/Luxury-dining-room-1024x682.webp",
+      drone:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/bearspaw/Luxuty-stairs-1024x682.webp",
+    },
+    imageAlts: {
+      hero: "Exterior real estate photo of a luxury Bearspaw acreage home by Photos 4 Real Estate",
+      interior:
+        "Luxury dining room real estate photo in a Bearspaw estate home prepared for an MLS listing",
+      drone:
+        "Luxury staircase detail photo in a Bearspaw estate home for high-end real estate marketing",
+    },
+  },
+  "rocky-view-county": {
+    city: "Rocky View County",
+    province: "AB",
+    placeType: "AdministrativeArea",
+    seoTitle: "Real Estate Photography Rocky View County | Photos 4 Real Estate",
+    seoDescription:
+      "Real estate photography in Rocky View County with luxury photos, drone, video, RMS floor plans, and 3D tours for acreages, estates, rural homes, and commercial spaces.",
+    ogAlt: "Real estate photography in Rocky View County by Photos 4 Real Estate",
+    heroEyebrow: "Rocky View County Real Estate Media • Rural & Luxury Coverage",
+    heroIntro:
+      "Looking for professional real estate photography in Rocky View County? Photos 4 Real Estate helps realtors and property owners showcase homes, acreages, and select commercial spaces with polished high-impact visuals that attract more buyers and help listings stand out in a competitive market.",
+    introHeading: "Professional real estate photography for Rocky View County properties",
+    introLead:
+      "Rocky View County surrounds Calgary on three sides and includes some of the region’s most desirable luxury, rural, and lifestyle-driven properties. From prestigious country communities and mountain-view acreages to modern townhomes on the county edge and rural properties with scenic surroundings, listing media needs to show both the property and the land, access, and setting that make it valuable.",
+    introParagraphs: [
+      "At Photos 4 Real Estate, we regularly travel throughout Rocky View County to photograph luxury estates, acreages, executive homes, country residential properties, new builds, and selected commercial spaces. We focus on clean interior composition, strong exterior coverage, accurate floor plans, and practical deliverables that agents and owners can use across MLS, websites, brochures, and social media.",
+      "Rocky View County listings often compete on views, land size, privacy, commute access, and lifestyle. A property near Bragg Creek needs different visual emphasis than an acreage in Bearspaw, a home near Harmony, or a county-side listing outside Cochrane or Langdon. Drone photography, video, twilight images, and detail-focused shots help communicate those differences and give buyers a stronger reason to take a closer look.",
+    ],
+    introStats: ["County-wide coverage", "24h next-morning turnaround", "9 services in one visit"],
+    communities: [
+      "Springbank",
+      "Langdon",
+      "East Lake",
+      "Cochrane County Side",
+      "Bearspaw",
+      "Elbow Valley",
+      "Harmony",
+    ],
+    propertyTypes: [
+      "Luxury estates and executive acreage homes",
+      "Rural properties with foothills or prairie views",
+      "County-edge homes near Calgary, Cochrane, and Langdon",
+      "Private country residences with outbuildings and land",
+      "Selected commercial and mixed-use real estate photography needs",
+    ],
+    localMarketTitle: "Popular Rocky View County communities we serve",
+    localMarketParagraph:
+      "We proudly serve properties across Rocky View County, including Springbank, Langdon, East Lake, county-side Cochrane locations, Bearspaw, Elbow Valley, Harmony, and surrounding rural communities. From foothills properties west of Calgary to prairie acreages east of the city, we bring the same level of professionalism, precision, and creative attention to every shoot.",
+    localMarketParagraphTwo:
+      "Because Rocky View County is so geographically diverse, strong listing media must be tailored to the property itself. Some listings need mountain-view context, some need to show land, shops, barns, or long approaches, and others need polished interiors that make a rural home feel as refined as an in-city luxury listing. We build the media package around those priorities so the property feels distinct and the marketing is stronger.",
+    servicesHeading: "Our Rocky View County real estate photography services",
+    servicesIntro:
+      "We provide a full range of real estate media for Rocky View County properties, with each service linking back to the relevant service page for examples, package details, and deliverables.",
+    reasonsHeading: "Why Rocky View County realtors and property owners choose Photos 4 Real Estate",
+    reasonsIntro:
+      "Rocky View County listings vary widely in size, style, and setting. Our team is experienced with rural homes, acreages, estate properties, aerial media, and luxury-focused marketing that helps each listing present its strongest value online.",
+    whyChoose: [
+      {
+        title: "County and acreage expertise",
+        icon: MapPin,
+        copy: "We understand how to photograph properties where land, privacy, access, views, and outbuildings are part of the sales story, not just the house itself.",
+      },
+      {
+        title: "Drone for scale and context",
+        icon: Drone,
+        copy: "Aerial media helps show acreage size, orientation, nearby amenities, mountain or prairie views, long driveways, and surrounding land clearly.",
+      },
+      {
+        title: "Luxury-to-rural flexibility",
+        icon: House,
+        copy: "We create polished media for luxury estates, country homes, townhomes, and select commercial properties across the county.",
+      },
+      {
+        title: "Fast, reliable turnaround",
+        icon: Clock,
+        copy: "Most photo, floor plan, and 3D tour deliverables are sent the next morning, with timelines confirmed before the shoot.",
+      },
+    ],
+    services: [
+      {
+        title: "Real Estate Photography",
+        href: "/services/real-estate-photography-in-calgary",
+        icon: Camera,
+        copy: "Polished MLS-ready photography for Rocky View County estates, acreages, rural homes, exteriors, views, and premium interior finishes.",
+      },
+      {
+        title: "RMS Measurements & Floor Plans",
+        href: "/services/rms-measurements-and-floor-plans-in-calgary",
+        icon: Ruler,
+        copy: "Accurate RMS measurements and floor plans for larger homes and properties where layout clarity helps buyers and agents plan next steps.",
+      },
+      {
+        title: "Drone Photography",
+        href: "/services/real-estate-aerial-drone-photography-in-calgary",
+        icon: Drone,
+        copy: "Aerial coverage for acreages, country roads, long driveways, estate lots, rural commercial spaces, and scenic foothills or prairie settings.",
+      },
+      {
+        title: "Real Estate Videography",
+        href: "/services/real-estate-videos-in-calgary",
+        icon: Video,
+        copy: "Cinematic walkthrough and property videos that help buyers understand scale, flow, lifestyle, and the setting around the property.",
+      },
+      {
+        title: "iGUIDE 3D Virtual Tours",
+        href: "/services/iguide-virtual-tours-in-calgary",
+        icon: Box,
+        copy: "Interactive 3D tours that let buyers and decision-makers explore Rocky View County properties remotely before scheduling a visit.",
+      },
+      {
+        title: "Virtual Staging",
+        href: "/services/virtual-staging",
+        icon: Sparkles,
+        copy: "Photo-realistic staging for vacant rooms, guest suites, offices, and large spaces that need stronger visual definition online.",
+      },
+      {
+        title: "Twilight Photography",
+        href: "/services/twilight-photography-for-real-estate-in-calgary",
+        icon: Moon,
+        copy: "Evening exterior images that highlight architecture, landscape lighting, outdoor living areas, and premium curb appeal for standout listings.",
+      },
+      {
+        title: "Style Shots",
+        href: "/services/style-shots",
+        icon: Images,
+        copy: "Detail-focused images for kitchens, finishes, outdoor entertaining areas, rural-lifestyle features, and architectural elements that help listings stand out.",
+      },
+      {
+        title: "Marketing Kit",
+        href: "/services/marketing-kit-for-realtors",
+        icon: Megaphone,
+        copy: "Social graphics, flyers, reels, and branded assets that help promote Rocky View County listings across multiple channels.",
+      },
+    ],
+    travelCards: [
+      {
+        variant: "free",
+        icon: MapPin,
+        area: "Within 35 km of Calgary City Centre",
+        price: "Free",
+      },
+      {
+        variant: "km",
+        icon: Car,
+        area: "Mileage calculated from Calgary City Centre",
+        price: "$0.85 / km when applicable",
+      },
+      {
+        variant: "km",
+        icon: Building2,
+        area: "Rocky View County rural and luxury properties",
+        price: "Confirmed before booking",
+      },
+    ],
+    travelIntro:
+      "Rocky View County travel pricing depends on the property location because the county covers a large area and listing addresses can vary significantly in distance from Calgary City Centre.",
+    travelNote:
+      "Mileage is calculated from Calgary City Centre. Some Rocky View County properties may fall within our free 35 km travel zone, while farther acreages, rural homes, and county properties may have distance-based travel pricing. We do not use a fixed Rocky View County travel fee; the exact travel cost is confirmed before you book.",
+    travelOfferDescription:
+      "Mileage is calculated from Calgary City Centre. Some Rocky View County properties may be free within 35 km, while farther rural and acreage properties may have distance-based travel pricing confirmed before booking.",
+    faqs: [
+      {
+        q: "Do you travel throughout Rocky View County for real estate photography?",
+        a: "Yes. Photos 4 Real Estate regularly travels throughout Rocky View County for photography, drone imagery, video tours, RMS measurements, floor plans, iGUIDE tours, virtual staging, twilight photos, Style Shots, and Marketing Kit assets.",
+      },
+      {
+        q: "What is the travel fee for Rocky View County?",
+        a: "Rocky View County travel fees are calculated from Calgary City Centre. Some properties may fall within the free 35 km travel zone, while farther rural and acreage locations may have distance-based travel pricing. We do not use a fixed Rocky View County fee, and we confirm the exact travel cost before your booking is finalized.",
+      },
+      {
+        q: "What types of properties do you photograph in Rocky View County?",
+        a: "We photograph luxury estates, acreages, rural homes, country residential properties, townhomes on the county edge, and select commercial spaces. We tailor the media package to the property type, land size, and marketing goals.",
+      },
+      {
+        q: "Is drone photography recommended for Rocky View County listings?",
+        a: "Yes. Drone photography is especially useful in Rocky View County because many listings benefit from aerial context showing land, outbuildings, driveways, views, nearby amenities, or the relationship between the home and its surroundings.",
+      },
+      {
+        q: "Can photos, drone, video, and floor plans be captured in one Rocky View County visit?",
+        a: "In most cases, yes. We can coordinate photography, RMS measurements, floor plans, iGUIDE 3D tours, drone, video, twilight, and detail shots during one property visit, depending on the package and property size.",
+      },
+      {
+        q: "How quickly do you deliver Rocky View County listing media?",
+        a: "Most Rocky View County photography, floor plans, and 3D tour deliverables are sent the next morning. Video and larger luxury or rural media packages may require additional editing time, which we confirm before the shoot.",
+      },
+    ],
+    images: {
+      hero: "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/rocky-view-county/Service-Areas-Rocky-View-Country.webp",
+      interior:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/rocky-view-county/House-near-Bragg-Creek-1024x768.webp",
+      drone:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/rocky-view-county/Bragg-Creek-Drone-View-Rocky-View-County-1024x598.webp",
+    },
+    imageAlts: {
+      hero: "Exterior real estate photo of a Rocky View County acreage property by Photos 4 Real Estate",
+      interior:
+        "Exterior real estate photo of a home near Bragg Creek in Rocky View County prepared for listing marketing",
+      drone:
+        "Drone view of a Bragg Creek area property in Rocky View County showing land and surrounding landscape",
+    },
+  },
+  banff: {
+    city: "Banff",
+    province: "AB",
+    seoTitle: "Real Estate Photography Banff | Photos 4 Real Estate",
+    seoDescription:
+      "Real estate photography in Banff with photos, drone, video, RMS floor plans, and 3D tours for mountain homes, condos, chalets, and luxury listings.",
+    ogAlt: "Real estate photography in Banff by Photos 4 Real Estate",
+    heroEyebrow: "Banff Real Estate Media • Mountain Property Coverage",
+    heroIntro:
+      "Banff listings need more than standard property photos. In a mountain market where buyers notice views, architecture, natural light, and lifestyle immediately, strong real estate media helps a listing stand out. Photos 4 Real Estate provides real estate photography in Banff with polished MLS-ready photos, drone imagery, video tours, RMS floor plans, and 3D media designed for mountain homes, condos, chalets, and luxury properties.",
+    introHeading: "Professional real estate photography for Banff mountain listings",
+    introLead:
+      "Banff is one of Alberta’s most recognizable mountain communities, with a real estate market shaped by alpine views, distinctive architecture, tourism-driven appeal, and homes that often feel more like retreats than standard suburban properties. Whether the listing is a condo near downtown Banff, a chalet-style home near Tunnel Mountain, or a premium property in the Banff Springs area, the media needs to capture both the home and the atmosphere around it.",
+    introParagraphs: [
+      "At Photos 4 Real Estate, we travel from Calgary to create polished listing media for Banff properties that need more than ordinary coverage. We focus on clean interior composition, balanced window views, warm editorial-style detail images, and exterior photography that reflects the mountain setting without losing the practical clarity buyers need when comparing listings online.",
+      "Banff homes often benefit from visuals that highlight fireplaces, vaulted ceilings, timber details, stonework, large windows, mountain-facing patios, and natural surroundings. Drone photography, video, and Style Shots help show the scale of the setting, the design character of the home, and the lifestyle cues that make Banff real estate feel distinct from listings in Calgary or nearby bedroom communities.",
+    ],
+    introStats: ["Mountain market coverage", "24h next-morning turnaround", "9 services in one visit"],
+    communities: [
+      "Downtown Banff",
+      "Tunnel Mountain",
+      "Banff Springs Area",
+      "Middle Springs",
+      "North Side Residential Areas",
+      "Bow River Area",
+      "Mountain-Edge Homes & Condos",
+    ],
+    propertyTypes: [
+      "Mountain homes with premium views",
+      "Condos and townhomes near downtown Banff",
+      "Chalet-style and architectural properties",
+      "Luxury homes with fireplaces, sunrooms, and timber details",
+      "Listings where setting, trails, and alpine lifestyle help sell the property",
+    ],
+    localMarketTitle: "Popular Banff areas we serve",
+    localMarketParagraph:
+      "We photograph properties throughout Banff, including Downtown Banff, Tunnel Mountain, the Banff Springs area, Middle Springs, north-side residential pockets, Bow River-adjacent locations, and mountain-edge homes and condos. From walkable in-town properties to private mountain-view homes, we tailor the media package to the listing’s architecture, setting, and buyer profile.",
+    localMarketParagraphTwo:
+      "Because Banff properties often sell on atmosphere as much as square footage, the media strategy matters. Some listings need strong architectural photography, some need warm lifestyle details, and others need to showcase views, sunrooms, fireplaces, or the proximity to trails and amenities. We build the shoot around those priorities so the property feels unique instead of generic.",
+    servicesHeading: "Our Banff real estate photography services",
+    servicesIntro:
+      "We provide a full range of real estate media for Banff properties, with each service linking back to the relevant service page for examples, package details, and deliverables.",
+    reasonsHeading: "Why Banff realtors and property owners choose Photos 4 Real Estate",
+    reasonsIntro:
+      "Banff listings compete in a visually demanding market. Our team creates polished media that highlights mountain views, natural materials, luxury finishes, and the unique atmosphere of Banff homes without sacrificing speed or reliability.",
+    whyChoose: [
+      {
+        title: "Mountain property experience",
+        icon: MapPin,
+        copy: "We understand how to photograph Banff homes where views, setting, natural light, and architecture matter as much as the floor plan itself.",
+      },
+      {
+        title: "Editorial-style detail coverage",
+        icon: Camera,
+        copy: "Fireplaces, kitchens, timber details, stonework, and sunrooms are photographed in a way that supports both MLS clarity and premium marketing.",
+      },
+      {
+        title: "Drone and video for setting",
+        icon: Drone,
+        copy: "Aerial and motion coverage help communicate surrounding landscape, mountain context, and the lifestyle appeal that buyers expect in Banff.",
+      },
+      {
+        title: "Reliable turnaround",
+        icon: Clock,
+        copy: "Most photo, floor plan, and 3D tour deliverables are sent the next morning, with timelines confirmed before the shoot.",
+      },
+    ],
+    services: [
+      {
+        title: "Real Estate Photography",
+        href: "/services/real-estate-photography-in-calgary",
+        icon: Camera,
+        copy: "Polished MLS-ready photography for Banff homes, condos, exteriors, mountain views, premium interiors, and distinctive architectural details.",
+      },
+      {
+        title: "RMS Measurements & Floor Plans",
+        href: "/services/rms-measurements-and-floor-plans-in-calgary",
+        icon: Ruler,
+        copy: "Accurate RMS measurements and floor plans that help buyers understand layout and livable space before they arrange a viewing.",
+      },
+      {
+        title: "Drone Photography",
+        href: "/services/real-estate-aerial-drone-photography-in-calgary",
+        icon: Drone,
+        copy: "Aerial coverage for Banff properties where the surrounding mountain setting, lot position, or landscape context adds significant marketing value.",
+      },
+      {
+        title: "Real Estate Videography",
+        href: "/services/real-estate-videos-in-calgary",
+        icon: Video,
+        copy: "Cinematic walkthrough and property videos that capture atmosphere, flow, views, and the mountain-lifestyle story of the listing.",
+      },
+      {
+        title: "iGUIDE 3D Virtual Tours",
+        href: "/services/iguide-virtual-tours-in-calgary",
+        icon: Box,
+        copy: "Interactive 3D tours that let remote buyers explore Banff properties online before scheduling a visit or private showing.",
+      },
+      {
+        title: "Virtual Staging",
+        href: "/services/virtual-staging",
+        icon: Sparkles,
+        copy: "Photo-realistic staging for vacant or under-furnished rooms so buyers can better imagine how the property can live.",
+      },
+      {
+        title: "Twilight Photography",
+        href: "/services/twilight-photography-for-real-estate-in-calgary",
+        icon: Moon,
+        copy: "Evening exterior images that highlight warm interior glow, mountain ambience, and architectural presence for standout Banff listings.",
+      },
+      {
+        title: "Style Shots",
+        href: "/services/style-shots",
+        icon: Images,
+        copy: "Detail-focused images for kitchens, fireplaces, sunrooms, timber features, stonework, and curated mountain-home finishes.",
+      },
+      {
+        title: "Marketing Kit",
+        href: "/services/marketing-kit-for-realtors",
+        icon: Megaphone,
+        copy: "Social graphics, flyers, reels, and branded assets that help promote Banff listings across multiple channels.",
+      },
+    ],
+    travelCards: [
+      {
+        variant: "free",
+        icon: MapPin,
+        area: "Within 35 km of Calgary City Centre",
+        price: "Free",
+      },
+      {
+        variant: "km",
+        icon: Car,
+        area: "Mileage calculated from Calgary City Centre",
+        price: "$0.85 / km when applicable",
+      },
+      {
+        variant: "km",
+        icon: Building2,
+        area: "Banff and nearby mountain communities",
+        price: "Confirmed before booking",
+      },
+    ],
+    travelIntro:
+      "Banff travel pricing is based on the distance from Calgary City Centre, and the final travel cost is confirmed before the shoot is booked.",
+    travelNote:
+      "Mileage is calculated from Calgary City Centre. Banff and nearby mountain-community bookings use distance-based travel pricing depending on the property location, timing, and scope of the shoot. We do not use a fixed Banff travel fee, and the exact travel cost is confirmed before you book.",
+    travelOfferDescription:
+      "Mileage is calculated from Calgary City Centre. Banff and nearby mountain-community bookings use distance-based travel pricing confirmed before booking.",
+    faqs: [
+      {
+        q: "Do you travel to Banff for real estate photography?",
+        a: "Yes. Photos 4 Real Estate travels from Calgary to Banff for photography, drone imagery, video tours, RMS measurements, floor plans, iGUIDE tours, virtual staging, twilight photos, Style Shots, and Marketing Kit assets.",
+      },
+      {
+        q: "What is the travel fee for Banff?",
+        a: "Banff travel pricing is based on the distance from Calgary City Centre. We do not use a fixed Banff fee, and the exact travel cost is confirmed before your booking is finalized based on the property location and scope of the shoot.",
+      },
+      {
+        q: "What types of properties do you photograph in Banff?",
+        a: "We photograph mountain homes, condos, townhomes, chalet-style properties, luxury residences, and listings where architecture, views, fireplaces, or surrounding natural setting are part of the buyer appeal.",
+      },
+      {
+        q: "Is drone photography useful for Banff listings?",
+        a: "Yes. Drone photography can be especially useful when the listing benefits from mountain context, lot orientation, surrounding landscape, or a stronger sense of the property’s setting within Banff.",
+      },
+      {
+        q: "Can photos, video, and floor plans be captured in one Banff visit?",
+        a: "In most cases, yes. We can coordinate photography, RMS measurements, floor plans, iGUIDE 3D tours, drone, video, twilight, and detail shots during one property visit, depending on the package and property size.",
+      },
+      {
+        q: "How quickly do you deliver Banff listing media?",
+        a: "Most Banff photography, floor plans, and 3D tour deliverables are sent the next morning. Video and larger premium media packages may require additional editing time, which we confirm before the shoot.",
+      },
+    ],
+    images: {
+      hero: "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/banff/Service-Areas-Banff.webp",
+      interior:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/banff/Photo-of-a-kitchen-house-in-Banff.jpg",
+      drone:
+        "https://cdn.photos4realestate.ca/p4re-static-media/service-areas/banff/Photo-of-a-fireplace-in-sunroom-house-in-Banff.jpg",
+    },
+    imageAlts: {
+      hero: "Exterior real estate photo of a mountain home in Banff by Photos 4 Real Estate",
+      interior:
+        "Kitchen real estate photo from a Banff home showing clean finishes and mountain-home design details",
+      drone:
+        "Fireplace in a Banff sunroom photographed for premium mountain real estate marketing",
+    },
+  },
 } satisfies Record<string, TownPage>;
 
 type TownSlug = keyof typeof townPages;
 
-function getTownContent(town: string) {
-  return townPages[town as TownSlug];
+function getTownContent(town: string): TownPage | undefined {
+  return townPages[town as TownSlug] as TownPage | undefined;
 }
 
 function getServedPlace(content: TownPage) {
   return {
-    "@type": "City",
+    "@type": content.placeType ?? "City",
     name: content.city,
     containedInPlace: {
       "@type": "AdministrativeArea",
@@ -818,7 +1957,9 @@ export default async function ServiceAreaTownPage({
       priceCurrency: "CAD",
       url: `${siteConfig.url}/prices`,
       availability: "https://schema.org/InStock",
-      description: `Travel within 35 km of Calgary City Centre is free. ${content.city} bookings are covered by a $30 flat fee.`,
+      description:
+        content.travelOfferDescription ??
+        `Travel within 35 km of Calgary City Centre is free. ${content.city} bookings are covered by a $30 flat fee.`,
     },
   };
 
@@ -1006,7 +2147,15 @@ export default async function ServiceAreaTownPage({
                 ))}
               </ul>
               <p className="areas-travel-note">
-                <strong>Published travel pricing:</strong> {content.city} is part of our nearby-community coverage with a <strong>$30 flat fee</strong>. Review full details on our{" "}
+                <strong>Published travel pricing:</strong>{" "}
+                {content.travelOfferDescription ? (
+                  <>{content.travelOfferDescription}</>
+                ) : (
+                  <>
+                    {content.city} is part of our nearby-community coverage with a <strong>$30 flat fee</strong>.
+                  </>
+                )}{" "}
+                Review full details on our{" "}
                 <Link href="/prices">pricing page</Link> or call{" "}
                 <a
                   href={siteConfig.phoneHref}
