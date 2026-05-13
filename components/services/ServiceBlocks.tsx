@@ -4,6 +4,7 @@ import {
   Ruler,
   Box,
   Drone,
+  Hotel,
   Sofa,
   Moon,
   Megaphone,
@@ -285,6 +286,36 @@ export function ServiceBlocks() {
             alt="Marketing kit graphic from Photos 4 Real Estate showing flyer, website, and social media assets"
             objectFit="contain"
             aspectRatio="3 / 4"
+          />
+        }
+      />
+
+      <ServiceBlock
+        id="hotel-photography"
+        number="10"
+        eyebrow="Hotel Photography"
+        icon={<Hotel {...iconProps} />}
+        title="Hotel Photography That Drives Bookings"
+        lead="Professional hospitality photography for guest rooms, lobbies, amenities, exterior spaces, and drone aerials. Built for hotels that need polished visuals for OTA listings, brand websites, Google Hotels, social media, and print campaigns."
+        features={[
+          "Guest rooms, suites, lobbies & amenities",
+          "Exterior photography and drone aerials",
+          "OTA-ready high-resolution JPEG delivery",
+          "Hotel preparation checklist for your team",
+          "Commercial usage licence included",
+          "Packages starting at $1,995",
+        ]}
+        learnMoreHref="/services/hotel-photography"
+        learnMoreLabelSuffix="hotel photography in Calgary and Alberta"
+        visual={
+          <ServiceImage
+            src={servicesImages.hotelPhotography}
+            alt="Drone photo of Sandman hotel in Calgary for hotel photography marketing by Photos 4 Real Estate"
+            badge={{
+              icon: <Drone size={16} strokeWidth={2} aria-hidden="true" />,
+              label: "Drone",
+              value: "Included",
+            }}
           />
         }
       />

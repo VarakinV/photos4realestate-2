@@ -4,22 +4,25 @@ import { homeImages } from "@/lib/images";
 
 const cards = [
   {
+    href: "/contact-us",
     img: homeImages.industryAgents,
     alt: "Modern kitchen photographed for a Calgary real estate listing by Photos 4 Real Estate",
     title: "Real Estate Agents",
     copy: "Win more listings with consistent, on-brand visuals, and marketing-ready media that helps impress sellers and attract more qualified buyers in Calgary.",
   },
   {
+    href: "/contact-us",
     img: homeImages.industryHomeowners,
     alt: "Bedroom photographed for an Airbnb or rental listing by Photos 4 Real Estate",
     title: "AirBnB & Home Owhers",
     copy: "Showcase your rental in its best light and increase bookings with professional photography that stands out on listing platforms.",
   },
   {
-    img: homeImages.industryStagers,
-    alt: "Commercial office space photographed for Calgary development marketing by Photos 4 Real Estate",
-    title: "Commercial & Development",
-    copy: "Architecture, hospitality, retail, and construction — we understand the visual requirements of every sector.",
+    href: "/services/hotel-photography",
+    img: homeImages.industryHotelsCommercial,
+    alt: "Sandman hotel in Calgary photographed for hotel and commercial marketing by Photos 4 Real Estate",
+    title: "Hotels & Commercial",
+    copy: "Hotel photography, hospitality, retail, architecture, and commercial spaces — built for properties that need polished visuals to drive bookings and inquiries.",
   },
 ];
 
@@ -38,7 +41,7 @@ export function Industries() {
         <div className="industries-grid">
           {cards.map((card) => (
             <Link
-              href="/contact-us"
+              href={card.href}
               key={card.title}
               className="industry-card"
               aria-label={`${card.title} — ${card.copy}`}

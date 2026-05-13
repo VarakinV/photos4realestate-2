@@ -29,6 +29,11 @@ const nextConfig: NextConfig = {
         destination: "/services/real-estate-photography-in-calgary",
         permanent: true,
       },
+      {
+        source: "/hotel-photography",
+        destination: "/services/hotel-photography",
+        permanent: true,
+      },
     ];
   },
 };

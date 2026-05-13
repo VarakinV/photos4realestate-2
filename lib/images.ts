@@ -13,6 +13,7 @@ export const homeImages = {
   industryAgents: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/kitchen-example-photos-4-real-estate.webp",
   industryHomeowners: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/Bedroom-Photos-4-Real-Estate.webp",
   industryStagers: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/office-Photos-4-Real-Estate.jpg",
+  industryHotelsCommercial: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/Sandman-hotel-Calgary.webp",
 
   diffLiving: "https://cdn.photos4realestate.ca/p4re-static-media/home-page-images/17-mls%20(1).jpg",
 
@@ -137,9 +138,9 @@ export const twilightImages = {
   calgaryHero:
     "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-photo-of-a-home-in-Calgary.jpg",
   compareCalgaryDay:
-    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/A-house-in-Calgary-day-photo-Photos-4-Real-Estate.jpg",
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Lakefront-house-in-Auburn-Bay-Day-Photo-Photos-4-Real-Estate.webp",
   compareCalgaryTwilight:
-    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/A-house-in-Calgary-twilight-photo-Photos-4-Real-Estate.jpg",
+    "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Lakefront-house-in-Auburn-Bay-Twilight-Photos-4-Real-Estate.jpg",
   compareCanyonDay:
     "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Luxury-house-in-Canyon-Meadows-Calgary-Day-photo-Photos-4-Real-Estate.jpg",
   compareCanyonTwilight:
@@ -284,5 +285,7 @@ export const servicesImages = {
     "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Twilight-photo-of-a-house-in-Harmony-01.jpg",
   marketingKit:
     "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Marketing%20Kit%20from%20Photos%204%20Real%20Estate.webp",
+  hotelPhotography:
+    "https://cdn.photos4realestate.ca/p4re-static-media/services-page/Sandman-hotel-Calgary-drone-photo-Photos-4-Real-Estate.webp",
   styleShots: styleShotsImages.coffeeTableBooks,
 } as const;

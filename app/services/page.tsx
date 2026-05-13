@@ -27,13 +27,13 @@ const ogImageUrl = `${pageUrl}/opengraph-image`;
 const title =
   "Real Estate Photography Services Calgary | Photos 4 Real Estate";
 const description =
-  "Real estate photography, video, drone, iGUIDE 3D tours & RMS floor plans in Calgary. One team, one visit, next-day delivery. Book online today.";
+  "Real estate photography, video, drone, iGUIDE 3D tours, RMS floor plans, and hotel photography in Calgary and Alberta. Book online today.";
 
 const ogImage = {
   url: ogImageUrl,
   width: 1200,
   height: 630,
-  alt: "Real estate media services in Calgary — Photos 4 Real Estate",
+  alt: "Property photography and media services in Calgary and Alberta — Photos 4 Real Estate",
 };
 
 export function generateMetadata(): Metadata {
@@ -78,6 +78,8 @@ const serviceDescriptions: Record<(typeof services)[number]["slug"], string> = {
     "Twilight exterior photography for Calgary listings — warm interior lighting, sky enhancement and dramatic MLS hero images.",
   "marketing-kit-for-realtors":
     "Free marketing kit for Calgary realtors — 9 social reels, 2 slideshows, 3 property flyers and 3 branded single-property websites with every shoot.",
+  "hotel-photography":
+    "Professional hotel photography for rooms, lobbies, amenities, exterior images, and drone aerials across Calgary and Alberta.",
 };
 
 const businessId = `${siteConfig.url}/#business`;
@@ -87,7 +89,7 @@ const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "@id": `${pageUrl}#itemlist`,
-  name: "Real Estate Media Services in Calgary",
+  name: "Property Photography and Media Services in Calgary and Alberta",
   itemListOrder: "https://schema.org/ItemListOrderAscending",
   numberOfItems: services.length,
   itemListElement: services.map((s, i) => ({
@@ -112,7 +114,7 @@ const collectionPageSchema = {
   "@type": "CollectionPage",
   "@id": `${pageUrl}#collection`,
   url: pageUrl,
-  name: "Real Estate Media Services in Calgary",
+  name: "Property Photography and Media Services in Calgary and Alberta",
   description,
   isPartOf: { "@id": `${siteConfig.url}/#website` },
   about: businessRef,

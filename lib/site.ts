@@ -93,6 +93,11 @@ export const services = [
     name: "Marketing Kit for Realtors",
     schemaName: "Marketing Kit for Realtors",
   },
+  {
+    slug: "hotel-photography",
+    name: "Hotel Photography",
+    schemaName: "Hotel Photography",
+  },
 ] as const;
 
 export const serviceAreas = [

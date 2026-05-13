@@ -17,8 +17,8 @@ export function ServicesHero() {
               Photos 4 Real Estate provides{" "}
               <strong>everything Calgary realtors need</strong> to market a
               property — from MLS-ready photography to 3D virtual tours, drone
-              footage and floor plans. All services in one visit, delivered the
-              next day.
+              footage, floor plans, and hotel photography for hospitality
+              properties. All services in one visit, delivered the next day.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ export function ServicesHero() {
             aria-label="Key services page stats"
           >
             <li className="services-page-hero-stat">
-              <span className="num">8+</span>
+              <span className="num">10+</span>
               <span className="lbl">Services available</span>
             </li>
             <li className="services-page-hero-stat">

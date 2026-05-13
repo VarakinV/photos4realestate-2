@@ -314,11 +314,11 @@ const twilightComparisons = [
     beforeSrc: twilightImages.compareCalgaryDay,
     afterSrc: twilightImages.compareCalgaryTwilight,
     beforeAlt:
-      "Daytime exterior photo of a Calgary home before twilight photography by Photos 4 Real Estate",
+      "Daytime exterior photo of a lakefront house in Auburn Bay, Calgary before twilight photography by Photos 4 Real Estate",
     afterAlt:
-      "Twilight exterior photo of the same Calgary home by Photos 4 Real Estate",
-    title: "Exterior — front façade",
-    location: "Calgary home comparison",
+      "Twilight exterior photo of the same lakefront house in Auburn Bay, Calgary by Photos 4 Real Estate",
+    title: "Lakefront exterior",
+    location: "Auburn Bay, Calgary",
   },
   {
     beforeSrc: twilightImages.compareCanyonDay,

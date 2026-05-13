@@ -23,6 +23,11 @@ export type PortfolioCategory = {
 };
 
 type CategoryDefinition = Omit<PortfolioCategory, "images">;
+type R2FolderImageOptions = {
+  idPrefix: string;
+  heading: string;
+  maxKeys?: number;
+};
 
 const uploads = "https://photos4realestate.ca/wp-content/uploads";
 const portfolioCdnBase = "https://cdn.photos4realestate.ca";
@@ -205,9 +210,22 @@ export async function getPortfolioCategories(): Promise<PortfolioCategory[]> {
 }
 
 async function listR2CategoryImages(category: CategoryDefinition): Promise<PortfolioImage[] | null> {
-  if (!category.folder || !isR2Configured()) return null;
-  const prefix = `${r2PortfolioRoot}/${category.folder}/`;
-  const response = await signedR2Fetch("GET", `/${env("R2_BUCKET_NAME")}`, { "list-type": "2", prefix, "max-keys": "80" });
+  if (!category.folder) return null;
+  return listR2FolderImages(`${r2PortfolioRoot}/${category.folder}/`, {
+    idPrefix: category.id,
+    heading: category.heading,
+    maxKeys: 80,
+  });
+}
+
+export async function listR2FolderImages(prefix: string, options: R2FolderImageOptions): Promise<PortfolioImage[] | null> {
+  if (!isR2Configured()) return null;
+  const normalizedPrefix = prefix.endsWith("/") ? prefix : `${prefix}/`;
+  const response = await signedR2Fetch("GET", `/${env("R2_BUCKET_NAME")}`, {
+    "list-type": "2",
+    prefix: normalizedPrefix,
+    "max-keys": String(options.maxKeys ?? 80),
+  });
   if (!response.ok) return null;
   const xml = await response.text();
   const keys = [...xml.matchAll(/<Contents>[\s\S]*?<Key>([\s\S]*?)<\/Key>[\s\S]*?<\/Contents>/g)]
@@ -216,9 +234,9 @@ async function listR2CategoryImages(category: CategoryDefinition): Promise<Portf
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
   if (keys.length === 0) return null;
   return keys.map((key, index) => ({
-    id: `${category.id}-${index}-${key}`,
+    id: `${options.idPrefix}-${index}-${key}`,
     src: `${portfolioCdnBase}/${encodeKeyPath(key)}`,
-    alt: `${category.heading} example by Photos 4 Real Estate in Calgary`,
+    alt: `${options.heading} example by Photos 4 Real Estate in Calgary`,
     caption: titleFromKey(key),
     ratio: index % 5 === 0 ? "wide" : index % 3 === 0 ? "portrait" : "landscape",
     featured: index === 0,

@@ -35,7 +35,8 @@ export function ServicesIntro() {
             <p>
               Every package includes next-day delivery, MLS-Ready Exports and a
               suite of free marketing tools that no other local provider
-              includes as standard.
+              includes as standard. Hotel photography is also available for
+              hospitality properties across Calgary and Alberta.
             </p>
             <ul className="intro-badges">
               {badges.map((label) => (

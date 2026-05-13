@@ -655,6 +655,54 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     },
   },
 
+  "hotel-photography": {
+    slug: "hotel-photography",
+    seoTitle: "Hotel Photography Calgary | Photos 4 Real Estate",
+    seoDescription:
+      "Professional hotel photography in Calgary and Alberta for rooms, amenities, lobbies, exterior images, and drone aerials. Packages from $1,995.",
+    ogAlt: "Hotel photography in Calgary and Alberta by Photos 4 Real Estate",
+    eyebrow: "Hotel Photography",
+    h1: "Hotel Photography in Calgary",
+    lead: "Professional hotel and hospitality photography for every space that helps guests choose your property — from rooms and lobbies to amenities, exterior images, and drone aerials.",
+    overviewHeading: "What is hotel photography?",
+    overviewParagraphs: [
+      "Hotel photography is the professional planning, capture, and editing of hospitality images for OTA listings, brand websites, Google Hotels, social media, and print campaigns.",
+      "Photos 4 Real Estate photographs the complete guest journey with consistent editing, commercial usage, and clear preparation guidance for your operations team.",
+    ],
+    includedHeading: "What's included with hotel photography",
+    features: [
+      "Guest rooms, suites, lobbies & amenities",
+      "Exterior photography and drone aerials",
+      "OTA-ready high-resolution JPEG delivery",
+      "Hotel preparation checklist for your team",
+      "Commercial usage licence included",
+      "Packages starting at $1,995",
+    ],
+    whoForHeading: "Who is this for?",
+    whoForBody:
+      "Hotels, resorts, inns, short-term rental operators, and hospitality marketing teams across Calgary and Alberta that need polished, booking-ready images for every guest-facing channel.",
+    faqs: [
+      {
+        q: "How much does hotel photography cost in Calgary?",
+        a: "Hotel photography packages start at $1,995 CAD and include room, amenity, exterior, and drone coverage with professionally edited, OTA-ready files.",
+      },
+      {
+        q: "Is drone photography included?",
+        a: "Yes. Drone aerial photography is included in our hotel photography packages, with flight planning, weather coordination, and Transport Canada requirements handled by our team.",
+      },
+    ],
+    relatedSlugs: [
+      "real-estate-aerial-drone-photography-in-calgary",
+      "real-estate-videos-in-calgary",
+      "marketing-kit-for-realtors",
+    ],
+    visual: {
+      kind: "image",
+      src: servicesImages.hotelPhotography,
+      alt: "Drone photo of Sandman hotel in Calgary by Photos 4 Real Estate",
+    },
+  },
+
 
 
 };
