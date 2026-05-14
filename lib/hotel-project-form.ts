@@ -36,11 +36,12 @@ export type HotelProjectInput = {
   email: string;
   phone: string;
   notes: string;
+  recaptchaToken?: string;
 };
 
-export type HotelProjectField = keyof HotelProjectInput;
+export type HotelProjectField = Exclude<keyof HotelProjectInput, "recaptchaToken">;
 
-export type HotelProjectFieldErrors = Partial<Record<HotelProjectField, string>>;
+export type HotelProjectFieldErrors = Partial<Record<HotelProjectField | "recaptchaToken", string>>;
 
 export type HotelProjectResult =
   | { ok: true; message: string }

@@ -14,8 +14,9 @@ import { siteConfig } from "@/lib/site";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const SMTP2GO_ENDPOINT = "https://api.smtp2go.com/v3/email/send";
+const RECAPTCHA_ENDPOINT = "https://www.google.com/recaptcha/api/siteverify";
 
-type PreparedHotelProject = HotelProjectInput & {
+type PreparedHotelProject = Omit<HotelProjectInput, "recaptchaToken"> & {
   receivedAt: string;
 };
 
@@ -28,8 +29,15 @@ type Smtp2GoResponse = {
   error?: string;
 };
 
+type RecaptchaResponse = {
+  success?: boolean;
+  hostname?: string;
+  "error-codes"?: string[];
+};
+
 export async function submitHotelProject(input: HotelProjectInput): Promise<HotelProjectResult> {
   const fieldErrors: HotelProjectFieldErrors = {};
+  const recaptchaToken = (input.recaptchaToken ?? "").trim();
   const project = prepareHotelProject(input);
 
   if (project.propertyName.length < 2) fieldErrors.propertyName = "Please enter the property name.";
@@ -53,6 +61,16 @@ export async function submitHotelProject(input: HotelProjectInput): Promise<Hote
     };
   }
 
+  const recaptchaResult = await verifyRecaptcha(recaptchaToken);
+  if (!recaptchaResult.ok) {
+    console.error("[hotel-project] reCAPTCHA verification failed", recaptchaResult.error);
+    return {
+      ok: false,
+      message: "Please complete the reCAPTCHA check and try again.",
+      fieldErrors: { recaptchaToken: "Please complete the reCAPTCHA check." },
+    };
+  }
+
   const emailResult = await sendHotelProjectEmails(project);
   if (!emailResult.ok) {
     console.error("[hotel-project] SMTP2GO send failed", emailResult.error);
@@ -66,6 +84,37 @@ export async function submitHotelProject(input: HotelProjectInput): Promise<Hote
     ok: true,
     message: "Thanks! We received your hotel project request and emailed you a confirmation.",
   };
+}
+
+async function verifyRecaptcha(token: string) {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+
+  if (!secretKey) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn("[hotel-project] RECAPTCHA_SECRET_KEY is not configured. Skipping reCAPTCHA verification in development.");
+      return { ok: true } as const;
+    }
+
+    return { ok: false, error: "RECAPTCHA_SECRET_KEY is not configured." } as const;
+  }
+
+  if (!token) return { ok: false, error: "Missing reCAPTCHA token." } as const;
+
+  const body = new URLSearchParams({ secret: secretKey, response: token });
+  const response = await fetch(RECAPTCHA_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body,
+    cache: "no-store",
+  });
+
+  const data = (await response.json().catch(() => null)) as RecaptchaResponse | null;
+
+  if (!response.ok || !data?.success) {
+    return { ok: false, error: data?.["error-codes"]?.join(", ") ?? response.statusText } as const;
+  }
+
+  return { ok: true } as const;
 }
 
 function prepareHotelProject(input: HotelProjectInput): PreparedHotelProject {

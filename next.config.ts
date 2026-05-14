@@ -34,6 +34,11 @@ const nextConfig: NextConfig = {
         destination: "/services/hotel-photography",
         permanent: true,
       },
+      {
+        source: "/social-media-real-estate-marketing-sell-listings-faster-in-calgary",
+        destination: "/blog/social-media-marketing-for-real-estate-listings-calgary",
+        permanent: true,
+      },
     ];
   },
 };

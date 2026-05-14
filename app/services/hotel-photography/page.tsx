@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import {
   BadgeCheck,
   BedDouble,
@@ -403,32 +402,12 @@ function hotelGallerySchema(categories: HotelGalleryCategory[]) {
   };
 }
 
-const restoreFromHistoryScript = `
-(() => {
-  const getNavigationType = () => {
-    const entry = performance.getEntriesByType?.("navigation")?.[0];
-    return entry?.type;
-  };
-
-  const reloadIfRestoredFromHistory = (event) => {
-    if (event?.persisted || getNavigationType() === "back_forward") {
-      window.location.reload();
-    }
-  };
-
-  if (getNavigationType() === "back_forward") window.location.reload();
-  window.addEventListener("pageshow", reloadIfRestoredFromHistory);
-})();
-`;
-
 export default async function HotelPhotographyPage() {
   const hotelGalleryCategories = await getHotelGalleryCategories();
+  const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY;
 
   return (
     <>
-      <Script id="hotel-history-restore" strategy="beforeInteractive">
-        {restoreFromHistoryScript}
-      </Script>
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
@@ -450,7 +429,7 @@ export default async function HotelPhotographyPage() {
                 Professional hotel photography for every space that earns a 5-star stay — from guest rooms and lobbies to pools, conference halls, exterior images, and drone aerials. Serving Calgary and all of Alberta.
               </p>
               <div className="tool-detail-hero-actions">
-                <HotelProjectDialog srSuffix=" for hotel photography in Calgary and Alberta" />
+                <HotelProjectDialog srSuffix=" for hotel photography in Calgary and Alberta" recaptchaSiteKey={recaptchaSiteKey} />
                 <Link href="#packages" className="btn btn-outline">
                   View Packages
                   <span className="sr-only"> for hotel photography</span>
@@ -467,7 +446,7 @@ export default async function HotelPhotographyPage() {
         </div>
       </section>
 
-      <PageBody hotelGalleryCategories={hotelGalleryCategories} />
+      <PageBody hotelGalleryCategories={hotelGalleryCategories} recaptchaSiteKey={recaptchaSiteKey} />
 
       <JsonLd id="ld-service-hotel-photography" data={serviceSchema} />
       <JsonLd id="ld-gallery-hotel-photography" data={hotelGallerySchema(hotelGalleryCategories)} />
@@ -478,7 +457,7 @@ export default async function HotelPhotographyPage() {
   );
 }
 
-function PageBody({ hotelGalleryCategories }: { hotelGalleryCategories: HotelGalleryCategory[] }) {
+function PageBody({ hotelGalleryCategories, recaptchaSiteKey }: { hotelGalleryCategories: HotelGalleryCategory[]; recaptchaSiteKey?: string }) {
   return (
     <>
       <section className="hotel-intro-section" aria-labelledby="hotel-intro-heading">
@@ -561,6 +540,7 @@ function PageBody({ hotelGalleryCategories }: { hotelGalleryCategories: HotelGal
                   initialPackageInterest={pkg.formPackage}
                   srSuffix={` for the ${pkg.name} hotel photography package`}
                   showIcon={false}
+                  recaptchaSiteKey={recaptchaSiteKey}
                 >
                   {pkg.cta}
                 </HotelProjectDialog>
@@ -719,7 +699,7 @@ function PageBody({ hotelGalleryCategories }: { hotelGalleryCategories: HotelGal
         eyebrow="Ready To Fill More Rooms?"
         title="Book Hotel Photography That Helps Guests Choose You."
         description={<>Let&rsquo;s discuss your property and build the right hotel photography package — rooms, amenities, exterior, drone aerials, and OTA-ready delivery.</>}
-        primaryAction={<HotelProjectDialog srSuffix=" for hotel photography in Calgary and Alberta" />}
+        primaryAction={<HotelProjectDialog srSuffix=" for hotel photography in Calgary and Alberta" recaptchaSiteKey={recaptchaSiteKey} />}
         secondaryHref="#packages"
         secondaryLabel="View Packages"
         secondarySrSuffix=" for hotel photography"
