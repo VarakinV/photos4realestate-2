@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, CheckCircle2 } from "lucide-react";
+import { BlogFeaturedImage, BlogMediaGrid } from "@/components/blog/BlogLightboxMedia";
 import { BlogSidebar } from "@/components/blog/BlogSidebar";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
@@ -49,10 +49,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="blog-post-section">
         <div className="container blog-layout">
           <article className="blog-post-article">
-            <div className="blog-post-featured"><Image src={post.image.src} alt={post.image.alt} fill priority sizes="(max-width: 1180px) 100vw, 760px" /></div>
+            <BlogFeaturedImage src={post.image.src} alt={post.image.alt} />
             <div className="blog-card-badges blog-post-categories">{categories.map((category) => <Link key={category.slug} href={`/blog/category/${category.slug}`} className="blog-badge">{category.name}</Link>)}</div>
             <section className="blog-takeaways" aria-labelledby="takeaways-heading"><h2 id="takeaways-heading">Key takeaways</h2><ul>{post.takeaways.map((item) => <li key={item}><CheckCircle2 size={18} aria-hidden="true" />{item}</li>)}</ul></section>
-            {post.sections.map((section) => (<section key={section.heading} className="blog-content-section"><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul> : null}</section>))}
+            {post.sections.map((section) => (<section key={section.heading} className="blog-content-section"><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.bullets ? <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul> : null}{section.media ? <BlogMediaGrid items={section.media.items} layout={section.media.layout} /> : null}</section>))}
             {post.faqs?.length ? <section className="blog-content-section speakable-faq"><h2>Frequently asked questions</h2>{post.faqs.map((faq) => <div key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}</section> : null}
             <section className="blog-related-services" aria-labelledby="related-services-heading"><h2 id="related-services-heading">Related Photos 4 Real Estate services</h2><ul>{post.relatedServices.map((service) => <li key={service.href}><Link href={service.href}>{service.label}</Link></li>)}</ul></section>
           </article>

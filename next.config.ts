@@ -39,6 +39,31 @@ const nextConfig: NextConfig = {
         destination: "/blog/social-media-marketing-for-real-estate-listings-calgary",
         permanent: true,
       },
+      {
+        source: "/why-use-professional-real-estate-photography",
+        destination: "/blog/professional-real-estate-photography-calgary",
+        permanent: true,
+      },
+      {
+        source: "/calgary-real-estate-photos",
+        destination: "/blog/calgary-real-estate-photography",
+        permanent: true,
+      },
+      {
+        source: "/professional-real-estate-photos-in-calgary-sell-homes-faster",
+        destination: "/blog/professional-real-estate-photos-calgary-buyer-engagement",
+        permanent: true,
+      },
+      {
+        source: "/drone-services-real-estate-calgary",
+        destination: "/blog/real-estate-drone-photography-calgary",
+        permanent: true,
+      },
+      {
+        source: "/blog/drone-photography-real-estate-calgary",
+        destination: "/blog/real-estate-drone-photography-calgary",
+        permanent: true,
+      },
     ];
   },
 };
