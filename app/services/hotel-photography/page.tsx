@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import {
-  ArrowRight,
   BadgeCheck,
   BedDouble,
   Building2,
@@ -28,6 +28,7 @@ import { Cta } from "@/components/home/Cta";
 import { Faq } from "@/components/home/Faq";
 import { Reviews } from "@/components/home/Reviews";
 import { HotelPhotographyGallery } from "@/components/hotel/HotelPhotographyGallery";
+import { HotelProjectDialog } from "@/components/hotel/HotelProjectDialog";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import type { Faq as FaqItem } from "@/lib/faqs";
@@ -136,8 +137,8 @@ const packages = [
       "OTA-ready JPEG delivery and commercial licence",
       "Private online gallery download",
     ],
-    href: siteConfig.bookingUrl,
-    cta: "Get a Quote",
+    formPackage: "Standard $1,995",
+    cta: "Start Your Project",
   },
   {
     name: "Advanced",
@@ -152,8 +153,8 @@ const packages = [
       "OTA-ready JPEG delivery and commercial licence",
       "Private online gallery download",
     ],
-    href: siteConfig.bookingUrl,
-    cta: "Get a Quote",
+    formPackage: "Advanced $2,595",
+    cta: "Start Your Project",
   },
   {
     name: "Custom",
@@ -168,8 +169,8 @@ const packages = [
       "Photo and video combinations available",
       "Seasonal refresh or priority scheduling options",
     ],
-    href: "/contact-us",
-    cta: "Contact Us",
+    formPackage: "Custom",
+    cta: "Start Your Project",
   },
 ] as const;
 
@@ -402,11 +403,32 @@ function hotelGallerySchema(categories: HotelGalleryCategory[]) {
   };
 }
 
+const restoreFromHistoryScript = `
+(() => {
+  const getNavigationType = () => {
+    const entry = performance.getEntriesByType?.("navigation")?.[0];
+    return entry?.type;
+  };
+
+  const reloadIfRestoredFromHistory = (event) => {
+    if (event?.persisted || getNavigationType() === "back_forward") {
+      window.location.reload();
+    }
+  };
+
+  if (getNavigationType() === "back_forward") window.location.reload();
+  window.addEventListener("pageshow", reloadIfRestoredFromHistory);
+})();
+`;
+
 export default async function HotelPhotographyPage() {
   const hotelGalleryCategories = await getHotelGalleryCategories();
 
   return (
     <>
+      <Script id="hotel-history-restore" strategy="beforeInteractive">
+        {restoreFromHistoryScript}
+      </Script>
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
@@ -428,11 +450,7 @@ export default async function HotelPhotographyPage() {
                 Professional hotel photography for every space that earns a 5-star stay — from guest rooms and lobbies to pools, conference halls, exterior images, and drone aerials. Serving Calgary and all of Alberta.
               </p>
               <div className="tool-detail-hero-actions">
-                <a href={siteConfig.bookingUrl} className="btn btn-primary">
-                  Get a Free Quote
-                  <span className="sr-only"> for hotel photography in Calgary and Alberta</span>
-                  <ArrowRight size={16} aria-hidden="true" />
-                </a>
+                <HotelProjectDialog srSuffix=" for hotel photography in Calgary and Alberta" />
                 <Link href="#packages" className="btn btn-outline">
                   View Packages
                   <span className="sr-only"> for hotel photography</span>
@@ -538,17 +556,14 @@ function PageBody({ hotelGalleryCategories }: { hotelGalleryCategories: HotelGal
                     <li key={feature}><Check size={15} aria-hidden="true" />{feature}</li>
                   ))}
                 </ul>
-                {pkg.href.startsWith("http") ? (
-                  <a href={pkg.href} className={`btn ${pkg.featured ? "btn-primary" : "btn-outline-dark"}`}>
-                    {pkg.cta}
-                    <span className="sr-only"> for the {pkg.name} hotel photography package</span>
-                  </a>
-                ) : (
-                  <Link href={pkg.href} className="btn btn-outline-dark">
-                    {pkg.cta}
-                    <span className="sr-only"> about custom hotel photography</span>
-                  </Link>
-                )}
+                <HotelProjectDialog
+                  triggerClassName={`btn ${pkg.featured ? "btn-primary" : "btn-outline-dark"} hotel-project-trigger`}
+                  initialPackageInterest={pkg.formPackage}
+                  srSuffix={` for the ${pkg.name} hotel photography package`}
+                  showIcon={false}
+                >
+                  {pkg.cta}
+                </HotelProjectDialog>
               </article>
             ))}
           </div>
@@ -704,8 +719,7 @@ function PageBody({ hotelGalleryCategories }: { hotelGalleryCategories: HotelGal
         eyebrow="Ready To Fill More Rooms?"
         title="Book Hotel Photography That Helps Guests Choose You."
         description={<>Let&rsquo;s discuss your property and build the right hotel photography package — rooms, amenities, exterior, drone aerials, and OTA-ready delivery.</>}
-        primaryLabel="Get a Free Quote"
-        primarySrSuffix=" for hotel photography in Calgary and Alberta"
+        primaryAction={<HotelProjectDialog srSuffix=" for hotel photography in Calgary and Alberta" />}
         secondaryHref="#packages"
         secondaryLabel="View Packages"
         secondarySrSuffix=" for hotel photography"

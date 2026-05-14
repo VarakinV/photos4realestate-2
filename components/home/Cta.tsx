@@ -7,10 +7,12 @@ type CtaProps = {
   eyebrow?: ReactNode;
   title?: ReactNode;
   description?: ReactNode;
+  primaryAction?: ReactNode;
   primaryHref?: string;
   primaryLabel?: ReactNode;
   primarySrSuffix?: string;
   primaryTargetBlank?: boolean;
+  secondaryAction?: ReactNode;
   secondaryHref?: string;
   secondaryLabel?: ReactNode;
   secondarySrSuffix?: string;
@@ -20,10 +22,12 @@ export function Cta({
   eyebrow,
   title,
   description,
+  primaryAction,
   primaryHref,
   primaryLabel,
   primarySrSuffix,
   primaryTargetBlank,
+  secondaryAction,
   secondaryHref,
   secondaryLabel,
   secondarySrSuffix,
@@ -52,20 +56,24 @@ export function Cta({
           )}
         </p>
         <div className="cta-actions">
-          <a
-            href={firstHref}
-            className="btn btn-primary"
-            target={primaryTargetBlank ? "_blank" : undefined}
-            rel={primaryTargetBlank ? "noopener noreferrer" : undefined}
-          >
-            {firstLabel}
-            <span className="sr-only">{firstSrText}</span>
-            <ArrowRight size={16} aria-hidden="true" />
-          </a>
-          <Link href={secondHref} className="btn btn-outline">
-            {secondLabel}
-            <span className="sr-only">{secondSrText}</span>
-          </Link>
+          {primaryAction ?? (
+            <a
+              href={firstHref}
+              className="btn btn-primary"
+              target={primaryTargetBlank ? "_blank" : undefined}
+              rel={primaryTargetBlank ? "noopener noreferrer" : undefined}
+            >
+              {firstLabel}
+              <span className="sr-only">{firstSrText}</span>
+              <ArrowRight size={16} aria-hidden="true" />
+            </a>
+          )}
+          {secondaryAction ?? (
+            <Link href={secondHref} className="btn btn-outline">
+              {secondLabel}
+              <span className="sr-only">{secondSrText}</span>
+            </Link>
+          )}
         </div>
         <div className="cta-contact">
           <span className="cta-contact-item">

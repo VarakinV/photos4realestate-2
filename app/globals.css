@@ -4948,6 +4948,8 @@ h4 {
 .hotel-feature-list li { display: flex; align-items: flex-start; gap: 9px; color: var(--text-muted); font-size: 14px; line-height: 1.55; }
 .hotel-feature-list svg { color: var(--green); flex-shrink: 0; margin-top: 3px; }
 .hotel-price-card .btn { justify-content: center; margin-top: auto; }
+button.hotel-project-trigger { font: inherit; cursor: pointer; }
+button.hotel-project-trigger:disabled { cursor: not-allowed; opacity: 0.7; }
 .hotel-addons-title { color: var(--navy); font-size: 24px; margin: 36px 0 16px; }
 .hotel-addons-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
 .hotel-addon-card { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; padding: 24px; }
@@ -5009,6 +5011,32 @@ h4 {
 .hotel-areas-panel svg { color: var(--brick); margin-bottom: 16px; }
 .hotel-areas-panel h3 { color: var(--white); font-size: 24px; margin-bottom: 10px; }
 .hotel-areas-panel p { color: rgba(255,255,255,0.62); font-size: 14px; line-height: 1.8; margin: 0; }
+.hotel-project-modal { position: fixed; inset: 0; z-index: 1200; isolation: isolate; display: grid; place-items: center; padding: 24px; }
+.hotel-project-overlay { position: absolute; inset: 0; background: rgba(19,29,59,0.68); backdrop-filter: blur(6px); }
+.hotel-project-dialog { position: relative; z-index: 1; width: min(920px, 100%); max-height: min(90vh, 980px); overflow: auto; border-radius: var(--radius); background: var(--white); box-shadow: 0 28px 90px rgba(19,29,59,0.34); padding: clamp(24px, 4vw, 44px); outline: none; }
+.hotel-project-close { position: absolute; top: 16px; right: 16px; display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 999px; background: var(--white); color: var(--navy); cursor: pointer; transition: border-color var(--transition), color var(--transition), box-shadow var(--transition); }
+.hotel-project-close:hover,
+.hotel-project-close:focus-visible { border-color: var(--brick); color: var(--brick); box-shadow: 0 0 0 3px rgba(203,65,84,0.1); outline: none; }
+.hotel-project-header { max-width: 720px; padding-right: 44px; margin-bottom: 24px; }
+.hotel-project-header h2 { color: var(--navy); font-size: clamp(28px, 3vw, 42px); line-height: 1.1; margin: 6px 0 10px; }
+.hotel-project-header p { color: var(--text-muted); font-size: 15px; line-height: 1.75; margin: 0; }
+.hotel-project-form { display: grid; gap: 22px; }
+.hotel-project-fieldset { display: grid; gap: 16px; min-width: 0; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; }
+.hotel-project-fieldset legend { padding: 0 8px; color: var(--navy); font-size: 15px; font-weight: 800; }
+.hotel-project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.hotel-project-choice-group { display: grid; gap: 9px; }
+.hotel-project-choice-title { color: var(--navy); font-size: 13px; font-weight: 700; line-height: 1.35; margin: 0; }
+.hotel-project-choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.hotel-project-radio-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.hotel-project-choice { display: flex; align-items: center; gap: 9px; min-width: 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: #fbfaf8; padding: 10px 12px; color: var(--navy); font-size: 14px; line-height: 1.35; cursor: pointer; transition: border-color var(--transition), background var(--transition), box-shadow var(--transition); }
+.hotel-project-choice:hover { border-color: rgba(203,65,84,0.38); background: var(--white); }
+.hotel-project-choice:has(input:focus-visible) { border-color: var(--brick); box-shadow: 0 0 0 3px rgba(203,65,84,0.1); }
+.hotel-project-choice:has(input:checked) { border-color: rgba(203,65,84,0.72); background: rgba(203,65,84,0.08); }
+.hotel-project-choice input { width: 16px; height: 16px; flex: 0 0 auto; accent-color: var(--brick); }
+.hotel-project-actions { display: flex; justify-content: flex-end; gap: 12px; flex-wrap: wrap; padding-top: 2px; }
+.hotel-project-success { border: 1px solid rgba(22,163,74,0.22); border-radius: var(--radius-sm); background: var(--green-light); padding: 24px; }
+.hotel-project-success h3 { color: var(--navy); font-size: 22px; margin: 0 0 8px; }
+.hotel-project-success p { color: var(--text-muted); line-height: 1.7; margin: 0 0 18px; }
 
 @media (max-width: 1080px) {
   .hotel-coverage-grid,
@@ -5028,6 +5056,12 @@ h4 {
   .hotel-gallery-photo { min-width: 0; min-height: 0; }
   .hotel-gallery-photo.is-featured,
   .hotel-gallery-photo--wide { grid-column: auto; }
+  .hotel-project-modal { padding: 14px; align-items: end; }
+  .hotel-project-dialog { width: 100%; max-height: 92vh; border-radius: 22px 22px 0 0; padding: 28px 20px; }
+  .hotel-project-grid,
+  .hotel-project-choice-grid { grid-template-columns: 1fr; }
+  .hotel-project-radio-row { flex-direction: column; }
+  .hotel-project-actions .btn { width: 100%; justify-content: center; }
   .hotel-gallery-lightbox { padding: 72px 18px 32px; }
   .hotel-gallery-lightbox-frame { height: 64vh; }
   .hotel-gallery-lightbox-nav { top: auto; bottom: 20px; width: 46px; height: 46px; transform: none; }
