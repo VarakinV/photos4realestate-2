@@ -4,7 +4,7 @@ import { BlogPagination } from "@/components/blog/BlogPagination";
 import { BlogSidebar } from "@/components/blog/BlogSidebar";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { blogPosts } from "@/lib/blog";
+import { getBlogPostsPage, totalBlogPages } from "@/lib/blog";
 import { siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -15,6 +15,7 @@ const title = "Real Estate Photography Blog Calgary | Photos 4 Real Estate";
 const description =
   "Read Calgary real estate photography, staging, drone, iGUIDE, video, and listing marketing tips from Photos 4 Real Estate. Book online today.";
 const ogImageUrl = `${siteConfig.url}/opengraph-image`;
+const posts = getBlogPostsPage(1);
 
 export function generateMetadata(): Metadata {
   return {
@@ -34,13 +35,13 @@ const blogSchema = {
   description,
   url: pageUrl,
   publisher: { "@id": `${siteConfig.url}/#business` },
-  blogPost: blogPosts.map((post) => ({ "@type": "BlogPosting", headline: post.title, url: `${pageUrl}/${post.slug}`, datePublished: post.date })),
+  blogPost: posts.map((post) => ({ "@type": "BlogPosting", headline: post.title, url: `${pageUrl}/${post.slug}`, datePublished: post.date })),
 };
 
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  itemListElement: blogPosts.map((post, index) => ({ "@type": "ListItem", position: index + 1, url: `${pageUrl}/${post.slug}`, name: post.title })),
+  itemListElement: posts.map((post, index) => ({ "@type": "ListItem", position: index + 1, url: `${pageUrl}/${post.slug}`, name: post.title })),
 };
 
 export default function BlogPage() {
@@ -51,7 +52,7 @@ export default function BlogPage() {
         <div className="container"><div className="services-page-hero-inner"><div>
           <div className="services-page-hero-eyebrow">Tips, Guides &amp; Insights</div>
           <h1 id="blog-title">The Real Estate Photography Blog</h1>
-          <p className="services-page-hero-sub speakable-intro">Practical guides on real estate photography, MLS listing preparation, virtual staging, iGUIDE virtual tours, drone photography, and marketing — written by the Photos4RealEstate team for Calgary realtors and homeowners.</p>
+          <p className="services-page-hero-sub speakable-intro">Practical guides on real estate photography, MLS listing preparation, virtual staging, iGUIDE virtual tours, drone photography, and marketing — written by the Photos 4 Real Estate team for Calgary realtors and homeowners.</p>
         </div></div></div>
       </section>
 
@@ -64,9 +65,9 @@ export default function BlogPage() {
               <p>Browse the latest Photos 4 Real Estate posts on photography preparation, virtual staging, drone media, video, RMS measurements, iGUIDE tours, and realtor marketing.</p>
             </div>
             <div className="blog-grid">
-              {blogPosts.map((post, index) => <BlogCard key={post.slug} post={post} priority={index < 2} />)}
+              {posts.map((post, index) => <BlogCard key={post.slug} post={post} priority={index < 2} />)}
             </div>
-            <BlogPagination />
+            <BlogPagination currentPage={1} totalPages={totalBlogPages} />
           </div>
           <BlogSidebar />
         </div>

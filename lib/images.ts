@@ -6,7 +6,7 @@ const cdn = "https://photos4realestate.ca/wp-content/uploads";
 export const homeImages = {
   heroLarge: "https://cdn.photos4realestate.ca/p4re-static-media/hero-section-images/28.jpg",
   heroTopLeft: "https://cdn.photos4realestate.ca/p4re-static-media/hero-section-images/04-04.jpg",
-  heroBottomLeft: "https://cdn.photos4realestate.ca/p4re-static-media/hero-section-images/17.jpg",
+  heroBottomLeft: "https://cdn.photos4realestate.ca/p4re-static-media/hero-section-images/Lakefront-house-in-Auburn-Bay-Twilight-Photos-4-Real-Estate.jpg",
   heroSmall: `${u}/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80`,
 
   servicePhoto: `${u}/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80`,

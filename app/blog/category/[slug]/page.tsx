@@ -5,7 +5,7 @@ import { BlogPagination } from "@/components/blog/BlogPagination";
 import { BlogSidebar } from "@/components/blog/BlogSidebar";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { blogCategories, getBlogCategory, getPostsByCategory } from "@/lib/blog";
+import { blogCategories, getBlogCategory, getCategoryPostsPage, getCategoryTotalPages, getPostsByCategory } from "@/lib/blog";
 import { siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -30,7 +30,9 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
   const { slug } = await params;
   const category = getBlogCategory(slug);
   if (!category) notFound();
-  const posts = getPostsByCategory(category.slug);
+  const posts = getCategoryPostsPage(category.slug, 1);
+  const totalPosts = getPostsByCategory(category.slug).length;
+  const totalPages = getCategoryTotalPages(category.slug);
   const pageUrl = `${siteConfig.url}/blog/category/${category.slug}`;
   const collectionSchema = { "@context": "https://schema.org", "@type": "CollectionPage", "@id": `${pageUrl}#webpage`, name: `${category.name} Blog`, description: category.description, url: pageUrl, isPartOf: { "@id": `${siteConfig.url}/#website` } };
 
@@ -47,9 +49,9 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
       <section className="blog-index-section" aria-labelledby="category-posts-heading">
         <div className="container blog-layout">
           <div className="blog-main-column">
-            <div className="blog-section-header"><span className="section-label">Category Archive</span><h2 id="category-posts-heading">{category.name} articles</h2><p>{posts.length} post{posts.length === 1 ? "" : "s"} in this category.</p></div>
+            <div className="blog-section-header"><span className="section-label">Category Archive</span><h2 id="category-posts-heading">{category.name} articles</h2><p>{totalPosts} post{totalPosts === 1 ? "" : "s"} in this category.</p></div>
             {posts.length ? <div className="blog-grid">{posts.map((post, index) => <BlogCard key={post.slug} post={post} priority={index < 2} />)}</div> : <p className="blog-empty-state">No posts are published in this category yet. Please check back soon.</p>}
-            <BlogPagination />
+            <BlogPagination currentPage={1} totalPages={totalPages} basePath={`/blog/category/${category.slug}`} />
           </div>
           <BlogSidebar />
         </div>

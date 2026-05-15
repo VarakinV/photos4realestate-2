@@ -8,6 +8,16 @@ export type BlogSection = {
   heading: string;
   paragraphs: string[];
   bullets?: string[];
+  statCards?: Array<{ value: string; label: string; source?: string }>;
+  barGroups?: Array<{
+    heading: string;
+    note?: string;
+    items: Array<{ label: string; value: number; displayValue: string; tone?: "brick" | "gold" | "blue" | "green" }>;
+  }>;
+  comparisonTable?: {
+    columns: string[];
+    rows: Array<{ cells: string[] }>;
+  };
   media?: {
     layout?: "grid" | "vertical-videos";
     items: Array<{
@@ -107,6 +117,126 @@ export const blogPosts: BlogPost[] = [
       { heading: "Why vacant rooms are harder to read", paragraphs: ["Empty rooms often look smaller online because buyers have no furniture reference for scale. Virtual staging adds context so viewers can understand whether a room works as a bedroom, office, dining area, or living space." ] },
       { heading: "What makes virtual staging effective", paragraphs: ["The best virtual staging looks realistic, matches the property style, and avoids overcrowding the room. It should support the listing, not distract from it."], bullets: ["Use consistent furniture style across rooms.", "Keep pathways and windows visible.", "Avoid exaggerated decor or unrealistic proportions.", "Use MLS-compliant disclosure where required."] },
       { heading: "When to choose it", paragraphs: ["Virtual staging is a strong option for vacant condos, new builds, estate sales, investment properties, and homes where physical staging is not practical. It is also useful when only a few key rooms need visual context." ] },
+    ],
+  },
+  {
+    slug: "realtor-marketing-challenges-2026",
+    title: "Realtor Marketing Challenges in 2026: How Photos 4 Real Estate Helps",
+    excerpt: "Realtors face higher costs, tougher leads, social media fatigue, and rising buyer expectations. See how Photos 4 Real Estate helps Calgary agents compete.",
+    date: "2026-03-02",
+    updated: "2026-05-15",
+    readingTime: "10 min read",
+    categorySlugs: ["marketing", "marketing-and-social", "real-estate-photography-tips"],
+    image: { src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-03-02/marketing-challenges-for-realtors-2.webp", alt: "Marketing challenges for realtors in 2026 and Photos 4 Real Estate listing media solutions" },
+    seoTitle: "Realtor Marketing Challenges 2026 | Photos 4 Real Estate",
+    seoDescription: "See how Photos 4 Real Estate helps Calgary realtors solve 2026 marketing challenges with photos, iGUIDE, RMS, reels, websites, and tools.",
+    takeaways: ["Realtors are facing pressure from affordability concerns, higher business costs, inconsistent lead quality, and constant demand for digital content.", "Modern buyers expect more than basic photos; professional photography, floor plans, iGUIDE tours, drone media, and video all support stronger listing confidence.", "Photos 4 Real Estate helps agents save time with packages, next-day delivery, a marketing kit, property websites, reels, flyers, slideshows, QR tools, and rewards value."],
+    relatedServices: [
+      { label: "Marketing kit for Calgary realtors", href: "/services/marketing-kit-for-realtors" },
+      { label: "Calgary real estate photography services", href: "/services/real-estate-photography-in-calgary" },
+      { label: "Real estate videos and reels in Calgary", href: "/services/real-estate-videos-in-calgary" },
+      { label: "Free real estate marketing tools", href: "/free-tools" },
+    ],
+    sections: [
+      { heading: "The realtor marketing landscape has changed", paragraphs: ["Real estate agents in Canada and the United States are navigating a more complex market than the one they worked in a few years ago. Affordability pressure, higher carrying costs, cautious buyers, more competition, and rising client expectations are changing how listings need to be launched.", "For Calgary realtors, the challenge is practical: sellers still expect strong exposure, buyers still judge properties online first, and agents still need consistent content across MLS, REALTOR.ca, websites, email, Instagram, Facebook, TikTok, YouTube Shorts, open houses, and listing presentations."], bullets: ["Buyers expect complete visual information before they book a showing.", "Sellers expect agents to prove strong marketing value.", "Social media rewards consistency, but content creation takes time.", "Agents need listing media that works across MLS, mobile, print, video, and lead follow-up." ] },
+      { heading: "Real estate market challenges: 2025–2026 data", paragraphs: ["Industry reporting points to the same theme: the core business of buying and selling homes remains, but the marketing strategy needed to win attention has changed. Agents are being asked to do more with tighter margins, faster timelines, and more digital channels.", "The numbers below summarize the pressures shaping realtor marketing in 2025 and 2026, along with the buyer demand for richer visual assets."], statCards: [
+        { value: "56%", label: "of real estate firms cite housing affordability as a top challenge", source: "NAR 2025 survey" },
+        { value: "36%", label: "of firms report rising business costs as a major challenge", source: "NAR 2025 survey" },
+        { value: "46%", label: "reported adoption rate for 3D virtual tours", source: "Virtuance 2026 report" },
+        { value: "58%", label: "buyer demand/adoption signal for 2D floor plans", source: "Virtuance 2026 report" },
+        { value: "90%", label: "of agent business often depends on repeat and referral relationships", source: "Industry analysis" },
+        { value: "98%", label: "professional photography adoption in listing marketing", source: "Virtuance 2026 report" },
+      ], barGroups: [
+        { heading: "Top challenges facing realtors", note: "Social media consistency and lead quality are directional estimates based on industry and online discussion themes.", items: [
+          { label: "Housing affordability and high rates", value: 56, displayValue: "56%", tone: "brick" },
+          { label: "Rising business costs", value: 36, displayValue: "36%", tone: "gold" },
+          { label: "Local economic conditions", value: 35, displayValue: "35%", tone: "gold" },
+          { label: "Social media and content consistency", value: 70, displayValue: "~70%", tone: "blue" },
+          { label: "Lead quality and conversion", value: 65, displayValue: "~65%", tone: "green" },
+        ] },
+        { heading: "What buyers expect from listing media", items: [
+          { label: "Professional photos", value: 98, displayValue: "98%", tone: "brick" },
+          { label: "Floor plans", value: 58, displayValue: "58%", tone: "blue" },
+          { label: "3D virtual tours", value: 46, displayValue: "46%", tone: "blue" },
+          { label: "Drone photography", value: 49, displayValue: "49%", tone: "green" },
+          { label: "Property video", value: 42, displayValue: "42%", tone: "gold" },
+        ] },
+      ] },
+      { heading: "The top challenges facing realtors today", paragraphs: ["Housing affordability remains a major concern. Higher interest rates, elevated prices, and payment shock can lengthen decision cycles and put more pressure on agents to prove value quickly. In a market like Calgary, the listing presentation needs to help buyers understand value before they lose attention.", "Agents are also facing social media fatigue. CRM follow-up, open houses, short-form video, listing posts, seller updates, and online lead nurturing all compete for time. Even motivated agents can struggle when every platform demands fresh content."], bullets: ["Economic headwinds can make buyers more cautious and sellers more demanding.", "Content consistency is hard when agents are expected to publish across multiple channels.", "Lead quality matters more when fewer buyers are ready to act immediately.", "Basic photos alone are no longer enough for many buyers comparing homes remotely." ] },
+      { heading: "Realtor challenges and Photos 4 Real Estate solutions", paragraphs: ["Photos 4 Real Estate is built to solve these problems as a listing media and marketing partner, not just a camera provider. The goal is to help Calgary agents launch listings faster, present properties better, and reduce the amount of manual marketing work required after the shoot.", "The table below connects common 2026 realtor challenges to practical solutions inside the Photos 4 Real Estate workflow."], comparisonTable: {
+        columns: ["Key challenge", "Impact on realtors", "How Photos 4 Real Estate helps"],
+        rows: [
+          { cells: ["Housing affordability and high rates", "Longer decision cycles and more pressure to justify value.", "Professional photos, iGUIDE tours, RMS floor plans, and drone media help serious buyers understand the property faster."] },
+          { cells: ["Digital marketing maze", "Agents spend too much time creating posts, reels, flyers, slideshows, and listing pages.", "The marketing kit and free tools help turn listing media into reusable social, web, print, and video assets."] },
+          { cells: ["Lead quality and conversion", "Agents need to attract buyers who are informed, engaged, and ready to book.", "Complete property presentation builds trust and helps higher-intent buyers self-qualify before showings."] },
+          { cells: ["Evolving visual standard", "Listings without tours, floor plans, drone, or video can feel incomplete.", "Packages combine photography with iGUIDE, RMS, floor plans, drone photos, reels, and video options depending on listing needs."] },
+        ],
+      } },
+      { heading: "Packages built for listing success", paragraphs: ["Photos 4 Real Estate packages are designed around how listings are marketed today. Instead of making agents coordinate separate vendors for photos, measurements, virtual tours, drone, video, and marketing assets, the package structure keeps the listing launch more streamlined.", "Essential gives agents the modern foundation: professional photos, RMS measurements, floor plans, and an iGUIDE 3D virtual tour. Skyline adds drone photos for stronger exterior and neighbourhood context. Social Boost adds a 60–90 second social media reel and drone video footage for listings that need maximum online reach."], bullets: ["Essential: professional photography, RMS measurements, floor plans, and iGUIDE 3D virtual tour.", "Skyline: everything in Essential plus 5–10 drone photos.", "Social Boost: everything in Skyline plus a 60–90 second social media reel and drone video footage.", "Add-ons include virtual staging, twilight photography, signature detail shots, and additional listing media options.", "Next-day delivery helps agents move from shoot day to launch day without unnecessary delays." ] },
+      { heading: "The marketing kit fights social media fatigue", paragraphs: ["What sets Photos 4 Real Estate apart is what happens after the shoot. Listing photos and tours are valuable, but agents also need assets they can publish quickly across social media, email, print, and property websites.", "The marketing kit helps solve content consistency problems by giving agents ready-to-use assets once listing information is provided. It turns one media appointment into a broader launch package that supports online exposure and seller communication."], bullets: ["9 social media reels for Instagram, Facebook, TikTok, and YouTube Shorts.", "2 professional slideshows for email, social media, websites, and buyer sharing.", "3 property flyers/spec sheets for open houses, print, and digital promotion.", "3 property websites that create a central hub for listing photos, tour links, details, and lead capture.", "Marketing assets help agents look consistent without rebuilding every listing campaign from scratch." ] },
+      { heading: "Free tools help agents move faster", paragraphs: ["Free tools reduce the friction of day-to-day listing marketing. Instead of waiting on design software or outside help for every small asset, Calgary realtors can create useful marketing pieces directly from listing photos and property information.", "Photos 4 Real Estate offers a free social media reel generator, slideshow generator, property flyer generator, and QR code generator. These tools help connect offline marketing to digital listings and make it easier to promote a property before, during, and after launch day."], bullets: ["The reel generator creates three short social media teaser videos.", "The slideshow generator creates a property slideshow from listing photos.", "The flyer generator creates three professional property flyer layouts.", "The QR code generator creates standard and branded QR codes for flyers, sign riders, feature sheets, and print campaigns.", "The tools are designed to save time and reduce technology overload for busy realtors." ] },
+      { heading: "Partner with Photos 4 Real Estate for a marketing advantage", paragraphs: ["The market is demanding more from realtors than ever before. Sellers want stronger marketing. Buyers want better information. Platforms reward consistent content. Agents need listing media that solves all three problems at once.", "Photos 4 Real Estate helps Calgary agents move beyond the lens with professional photography, iGUIDE tours, RMS floor plans, drone media, video, virtual staging, marketing kits, property websites, reels, flyers, slideshows, QR tools, and rewards value. The result is a listing launch workflow built for how real estate is marketed in 2026." ] },
+      { heading: "Sources referenced", paragraphs: ["This article references industry trends and public reporting including National Association of REALTORS commentary on affordability and business costs, Realtor discussion trends from 2025, and Virtuance reporting on real estate marketing trends for 2026. The recommendations have been adapted for Calgary real estate marketing and Photos 4 Real Estate service offerings." ] },
+    ],
+    faqs: [
+      { question: "What are the biggest marketing challenges for realtors in 2026?", answer: "The biggest challenges include affordability pressure, higher business costs, inconsistent lead quality, social media fatigue, and rising buyer expectations for professional photos, floor plans, 3D tours, drone media, and video." },
+      { question: "How does Photos 4 Real Estate help realtors save time?", answer: "Photos 4 Real Estate combines photography, RMS measurements, floor plans, iGUIDE tours, drone media, video options, next-day delivery, marketing kit assets, and free tools so agents can launch listings without coordinating multiple vendors or building every marketing asset manually." },
+      { question: "What is included in the Photos 4 Real Estate marketing kit?", answer: "The marketing kit includes 9 social media reels, 3 property websites, 3 property flyers, and 2 slideshows once the required listing information is provided. These assets help agents promote listings across social, web, email, print, and open house channels." },
+      { question: "Why are floor plans and iGUIDE tours important for Calgary listings?", answer: "Floor plans and iGUIDE tours help buyers understand layout, room relationships, and property flow before booking a showing. In Alberta, RMS measurements also support more accurate square footage presentation for MLS listings." },
+      { question: "Do realtors still need social media content if they have MLS photos?", answer: "Yes. MLS photos are essential, but buyers and sellers also see listings on Instagram, Facebook, TikTok, YouTube Shorts, email, websites, and print materials. Reels, slideshows, flyers, and property websites help extend the life and reach of the listing media." },
+      { question: "Which Photos 4 Real Estate package is best for maximum marketing exposure?", answer: "Social Boost is the strongest option for maximum online exposure because it includes everything in Skyline plus a 60–90 second social media reel and drone video footage. Essential and Skyline are strong options for listings that need photography, RMS, floor plans, iGUIDE, and drone photos." },
+      { question: "Are the Photos 4 Real Estate free tools only for clients?", answer: "The free tools are designed for real estate marketing and can help agents create reels, slideshows, flyers, and QR codes quickly. They are especially useful when paired with professional listing photos and the Photos 4 Real Estate marketing kit." },
+    ],
+  },
+  {
+    slug: "compare-real-estate-photography-services-calgary",
+    title: "How to Compare Real Estate Photography Services in Calgary",
+    excerpt: "A practical 2026 guide for Calgary realtors comparing photography, iGUIDE, RMS, drone media, social content, pricing, and included marketing value.",
+    date: "2026-01-12",
+    updated: "2026-05-14",
+    readingTime: "10 min read",
+    categorySlugs: ["real-estate-photography-tips", "marketing", "rms-and-iguide"],
+    image: { src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/Real-Estate-Photography-Comparison-in-Calgary.jpeg", alt: "Real estate photography comparison in Calgary guide for choosing a listing media provider" },
+    seoTitle: "Compare Real Estate Photography Calgary | Photos 4 Real Estate",
+    seoDescription: "Compare Calgary real estate photography services for photos, iGUIDE, RMS, drone, reels, tools, pricing, and turnaround. See what matters.",
+    takeaways: ["The best Calgary real estate photography provider should offer more than standard photos; compare RMS, iGUIDE, floor plans, drone, social media, delivery speed, and included marketing tools.", "For Alberta listings, accurate RMS measurements and clear floor plans reduce buyer uncertainty and support compliant listing presentation.", "Photos 4 Real Estate bundles professional photography, iGUIDE, RMS, blue-sky replacement, next-day delivery, marketing assets, free tools, and rewards support."],
+    relatedServices: [
+      { label: "Compare Calgary real estate photography companies", href: "/real-estate-photography-comparison-calgary" },
+      { label: "Calgary real estate photography services", href: "/services/real-estate-photography-in-calgary" },
+      { label: "Pricing for Calgary listing media packages", href: "/prices" },
+      { label: "Free real estate marketing tools", href: "/free-tools" },
+    ],
+    sections: [
+      { heading: "How to compare real estate photography services before you hire", paragraphs: ["In Calgary's fast-moving real estate market, high-quality listing media can determine whether a buyer stops, clicks, saves, shares, or scrolls past. Photos still create the first impression, but a complete listing launch now depends on a stronger mix of photography, tours, measurements, video, and marketing assets.", "This guide explains how Calgary realtors and sellers can compare real estate photography companies before booking. If you want a side-by-side feature breakdown, use the Photos 4 Real Estate comparison page for a direct look at photography, iGUIDE, RMS, reels, flyers, rewards, and included value."], bullets: ["Start with the quality of the photography portfolio, but do not stop there.", "Compare what is included by default versus what becomes an add-on.", "Check whether the provider supports Calgary-specific needs such as RMS measurements, iGUIDE tours, winter exterior presentation, and next-day delivery.", "Look for marketing assets that help you launch beyond MLS." ] },
+      { heading: "Why real estate marketing quality matters in Calgary", paragraphs: ["Professional media helps a listing earn better online engagement because buyers are comparing dozens of properties in seconds. Strong photos, accurate floor plans, and immersive tours make the home easier to understand before the showing request happens.", "Quality media also affects perceived value and client trust. A polished gallery, clear floor plan, and mobile-ready marketing package show sellers that the property is being launched seriously, while giving buyers confidence that the home is worth viewing."], bullets: ["Better online engagement through stronger MLS thumbnails, galleries, websites, and social content.", "Higher perceived value because polished media makes the listing feel more prepared and credible.", "More showing confidence when buyers can understand layout, light, views, and scale before visiting.", "Greater realtor trust because professional media reflects the agent's marketing standard."], media: { items: [
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/Lake-view-twilight-drone-photo-of-a-house-in-Auburn-Bay.jpg", alt: "Twilight drone photo of a lake-view Auburn Bay house for Calgary real estate marketing", caption: "Premium listings often need aerial, twilight, and lifestyle context beyond standard room photos." },
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/Auburn-Bay-Lake-view-from-a-balcony.jpg", alt: "Auburn Bay lake view from a balcony photographed for a Calgary real estate listing", caption: "View photos help buyers understand location value and the lifestyle attached to the home." },
+      ] } },
+      { heading: "Key features every realtor should compare", paragraphs: ["Choosing the right provider requires more than reviewing a few portfolio images. A complete Calgary listing media partner should help with photography quality, measurement accuracy, delivery speed, social media reach, and practical assets that make launch day easier.", "When comparing real estate photography services in Calgary, ask whether the provider can support both the listing and the agent's marketing workflow. The best value is often the package that reduces separate vendors, surprise fees, and time spent building marketing materials manually."], bullets: ["Professional interior and exterior photos with consistent editing, corrected verticals, balanced windows, and blue-sky replacement.", "iGUIDE 3D virtual tours and floor plans so buyers can explore room flow remotely.", "RMS measurements for Alberta listing accuracy and a more complete property presentation.", "Next-day delivery so the listing can launch while buyer interest is fresh.", "Short-form video, reels, flyers, property websites, and analytics that support MLS, social media, email, and print.", "Transparent package pricing so common essentials do not turn into hidden add-on costs."], media: { items: [
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/Kitchen-with-lake-view-Auburn-Bay.jpg", alt: "Auburn Bay kitchen with lake view photographed for Calgary real estate marketing", caption: "Professional kitchen photos should show finishes, light, flow, and the view when it matters." },
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/Living-room-with-a-fireplace-Auburn-Bay.jpg", alt: "Auburn Bay living room with fireplace photographed for a real estate listing", caption: "Living room photos need to feel bright, accurate, and emotionally inviting on mobile screens." },
+      ] } },
+      { heading: "Where many real estate photographers fall short", paragraphs: ["Many photography providers can deliver a basic image gallery, but not every provider offers a complete media workflow. Realtors often discover gaps only after booking: no floor plans, no RMS support, no social media deliverables, slow delivery, or extra fees for items they expected to be included.", "Those gaps matter because Calgary listings move quickly. If an agent has to coordinate one vendor for photos, another for RMS, another for a tour, and another for marketing assets, launch day becomes slower and less consistent."], bullets: ["Limited service offerings that stop at standard photos.", "No RMS measurements or floor plans for Alberta listing presentation.", "Slow delivery that delays MLS launch timing.", "No short-form video, reels, property websites, flyers, or free marketing tools.", "No analytics, rewards, or bundled value that helps agents market repeatedly."], media: { items: [
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/style-shots-real-estate-photography-Photos-4-Real-Estate.jpg", alt: "Style shot for real estate photography by Photos 4 Real Estate in Calgary", caption: "Style shots can add emotional detail to a listing gallery without replacing essential room coverage." },
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/desigh-focused-shot-Photos-4-Real-Estate.jpg", alt: "Design-focused detail photo for a Calgary real estate listing by Photos 4 Real Estate", caption: "Design-focused images help buyers remember finishes, textures, and lifestyle moments." },
+      ] } },
+      { heading: "A new standard for real estate media in Calgary", paragraphs: ["Photos 4 Real Estate is built around a complete listing launch, not just a photo appointment. Our packages combine the core media Calgary buyers expect with practical marketing assets that help agents publish faster and look more consistent across channels.", "Standard package value can include professional interior and exterior photography, iGUIDE 3D virtual tours, RMS measurements, standard 2D floor plans, blue-sky replacement, MLS-ready and web-ready files, iGUIDE analytics, and next-day delivery depending on the selected package."], bullets: ["Essential includes professional photography, iGUIDE 3D tour, RMS measurements, and floor plans.", "Skyline adds 5 to 10 drone photos for stronger exterior, lot, and neighbourhood context.", "Social Boost adds a 60–90 second social media reel and drone video footage for maximum online reach.", "The marketing kit includes 9 social media reels, 3 property websites, 3 flyers, and 2 slideshows once listing information is provided.", "Free tools include the reel generator, slideshow generator, flyer generator, and QR code generator."], media: { items: [
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/style-shots-of-a-bathroom-Photos-4-Real-Estate.jpg", alt: "Bathroom style shot for Calgary real estate photography by Photos 4 Real Estate", caption: "Detail photos help highlight craftsmanship, materials, staging, and premium finishes." },
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-01-12/style-shots-of-a-dining-table-Photos-4-Real-Estate.jpg", alt: "Dining table style shot for real estate marketing by Photos 4 Real Estate", caption: "Lifestyle details can give social posts, flyers, and slideshows more visual variety." },
+      ] } },
+      { heading: "Why free tools matter for Calgary realtors", paragraphs: ["Free marketing tools are no longer optional for agents who want to launch quickly. They help you create useful assets before, during, and after the listing goes live without waiting on a designer or learning new software.", "Photos 4 Real Estate offers free tools for real estate reels, slideshows, property flyers, and QR codes. These tools are designed for practical listing promotion: Instagram, Facebook, TikTok, YouTube Shorts, open houses, sign riders, print campaigns, email follow-up, and seller updates."], bullets: ["Save time creating listing assets from existing photos and details.", "Promote properties earlier and more consistently across channels.", "Create professional-looking materials without a subscription or design software.", "Support every listing with social, print, and scan-to-view assets." ] },
+      { heading: "How to choose the right provider for your listings", paragraphs: ["The right Calgary real estate photography provider should make your listings look better and make your process easier. Compare providers by what they include, how quickly they deliver, whether they understand Alberta RMS requirements, and how well they support social media and buyer engagement beyond MLS.", "If a provider looks cheaper but forces you to add floor plans, tours, drone, blue-sky replacement, reels, flyers, and websites separately, the final value may be weaker. A transparent bundle can be more cost-effective because it reduces coordination and gives the listing a more consistent brand experience."], bullets: ["Review inclusions carefully, not just the starting price.", "Confirm next-day delivery expectations before booking.", "Ask whether RMS measurements and floor plans are included or separate.", "Check whether the provider supports social media reels, property websites, flyers, and QR codes.", "Choose the media partner that helps you win trust with sellers and make better first impressions with buyers." ] },
+      { heading: "Final thoughts", paragraphs: ["High-quality real estate media is not a luxury in Calgary; it is a core part of a successful listing launch. Professional photos create the first impression, but the strongest results come when photography is supported by accurate measurements, floor plans, tours, drone context, short-form video, and marketing assets.", "If you are comparing Calgary real estate photography companies, start with the side-by-side comparison page, then choose the provider that gives you the clearest combination of quality, speed, transparency, and included value." ] },
+    ],
+    faqs: [
+      { question: "What should I compare when choosing a real estate photographer in Calgary?", answer: "Compare photography quality, editing style, blue-sky replacement, iGUIDE or virtual tour options, RMS measurements, floor plans, drone media, turnaround time, social media content, pricing transparency, and included marketing assets." },
+      { question: "Why does RMS matter when comparing real estate photography providers in Alberta?", answer: "RMS measurements are important because Alberta listings need accurate square footage presentation. A provider that can capture RMS measurements and floor plans in the same visit as photography reduces scheduling friction and supports a more complete listing package." },
+      { question: "Is iGUIDE better than Matterport for Calgary real estate listings?", answer: "Both can provide immersive virtual tours, but iGUIDE is especially useful for Alberta real estate because it combines a 3D tour with accurate measurements and floor plans. This makes it practical for listings where RMS information and layout clarity matter." },
+      { question: "How fast should a Calgary real estate photographer deliver photos?", answer: "Next-day delivery is the practical standard for many Calgary listings. Photos 4 Real Estate delivers edited photos within 24 hours, with most galleries ready by the next morning, so agents can launch quickly." },
+      { question: "Should social media reels be included with real estate photography?", answer: "Short-form video is increasingly important for listing visibility on Instagram, Facebook, TikTok, and YouTube Shorts. Photos 4 Real Estate includes marketing assets with packages and offers Social Boost when agents want a stronger reel and drone video package." },
+      { question: "What hidden fees should realtors watch for?", answer: "Watch for add-on fees for blue-sky replacement, floor plans, virtual tours, RMS measurements, drone photos, web-ready files, flyers, property websites, and social media assets. The best comparison looks at total included value, not only the lowest starting price." },
+      { question: "Does Photos 4 Real Estate offer free marketing tools?", answer: "Yes. Photos 4 Real Estate offers free tools for real estate reels, slideshows, property flyers, and QR codes. These tools help Calgary realtors create marketing assets quickly without extra software." },
+      { question: "Where can I compare Calgary real estate photography companies side by side?", answer: "You can review the Photos 4 Real Estate comparison page at /real-estate-photography-comparison-calgary to compare included services such as photography, blue-sky replacement, iGUIDE, RMS, floor plans, reels, flyers, rewards, and free tools." },
     ],
   },
   {
@@ -386,6 +516,25 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export const recentBlogPosts = blogPosts.slice(0, 5);
+
+export const BLOG_POSTS_PER_PAGE = 10;
+
+export const totalBlogPages = Math.max(1, Math.ceil(blogPosts.length / BLOG_POSTS_PER_PAGE));
+
+export function getBlogPostsPage(page: number, pageSize = BLOG_POSTS_PER_PAGE) {
+  const startIndex = (page - 1) * pageSize;
+  return blogPosts.slice(startIndex, startIndex + pageSize);
+}
+
+export function getCategoryPostsPage(slug: string, page: number, pageSize = BLOG_POSTS_PER_PAGE) {
+  const posts = getPostsByCategory(slug);
+  const startIndex = (page - 1) * pageSize;
+  return posts.slice(startIndex, startIndex + pageSize);
+}
+
+export function getCategoryTotalPages(slug: string, pageSize = BLOG_POSTS_PER_PAGE) {
+  return Math.max(1, Math.ceil(getPostsByCategory(slug).length / pageSize));
+}
 
 export function getBlogPost(slug: string) {
   return blogPosts.find((post) => post.slug === slug);

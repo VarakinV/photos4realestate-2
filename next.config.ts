@@ -55,6 +55,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/real-estate-photographer-calgary-guide",
+        destination: "/blog/compare-real-estate-photography-services-calgary",
+        permanent: true,
+      },
+      {
+        source: "/beyond-the-lens-how-photos-4-real-estate-solves-realtors-toughest-marketing-challenges-in-2026",
+        destination: "/blog/realtor-marketing-challenges-2026",
+        permanent: true,
+      },
+      {
         source: "/drone-services-real-estate-calgary",
         destination: "/blog/real-estate-drone-photography-calgary",
         permanent: true,
