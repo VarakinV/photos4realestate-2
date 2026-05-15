@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
+import { HotelProjectDialog } from "@/components/hotel/HotelProjectDialog";
 import { Logo } from "@/components/site/Logo";
 import { ServicesNavParentLink } from "@/components/site/ServicesNavParentLink";
 import { ServicesSubmenuLink } from "@/components/site/ServicesSubmenuLink";
@@ -39,7 +40,11 @@ function InstagramIcon() {
   );
 }
 
-export function Header() {
+type HeaderProps = {
+  recaptchaSiteKey?: string;
+};
+
+export function Header({ recaptchaSiteKey }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isServicesDismissed, setIsServicesDismissed] = useState(false);
@@ -68,6 +73,8 @@ export function Header() {
     setIsServicesOpen(false);
     setIsFreeToolsOpen(false);
   };
+
+  const isHotelPhotographyPage = pathname === "/services/hotel-photography" || pathname === "/hotel-photography";
 
   const dismissServicesMenu = () => {
     setIsServicesDismissed(true);
@@ -189,10 +196,22 @@ export function Header() {
             })}
           </ul>
 
-          <a href={siteConfig.bookingUrl} className="btn btn-primary nav-cta nav-cta-mobile" onClick={closeMenus}>
-            Book Now
-            <span className="sr-only"> for Calgary real estate photography and media services</span>
-          </a>
+          {isHotelPhotographyPage ? (
+            <HotelProjectDialog
+              triggerClassName="btn btn-primary nav-cta nav-cta-mobile"
+              srSuffix=" for hotel photography"
+              showIcon={false}
+              recaptchaSiteKey={recaptchaSiteKey}
+              onOpen={closeMenus}
+            >
+              Start Project
+            </HotelProjectDialog>
+          ) : (
+            <a href={siteConfig.bookingUrl} className="btn btn-primary nav-cta nav-cta-mobile" onClick={closeMenus}>
+              Book Now
+              <span className="sr-only"> for Calgary real estate photography and media services</span>
+            </a>
+          )}
 
           <div className="nav-menu-contact">
             <a href={siteConfig.phoneHref} className="nav-contact-item">
@@ -227,10 +246,21 @@ export function Header() {
           </div>
         </nav>
 
-        <a href={siteConfig.bookingUrl} className="btn btn-primary nav-cta nav-cta-desktop">
-          Book Now
-          <span className="sr-only"> for Calgary real estate photography and media services</span>
-        </a>
+        {isHotelPhotographyPage ? (
+          <HotelProjectDialog
+            triggerClassName="btn btn-primary nav-cta nav-cta-desktop"
+            srSuffix=" for hotel photography"
+            showIcon={false}
+            recaptchaSiteKey={recaptchaSiteKey}
+          >
+            Start Project
+          </HotelProjectDialog>
+        ) : (
+          <a href={siteConfig.bookingUrl} className="btn btn-primary nav-cta nav-cta-desktop">
+            Book Now
+            <span className="sr-only"> for Calgary real estate photography and media services</span>
+          </a>
+        )}
 
         <button
           type="button"

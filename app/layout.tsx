@@ -88,6 +88,8 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY;
+
   return (
     <html lang="en-CA" className={cn(rubik.variable, dmSans.variable, "font-sans", geist.variable)}>
       <body suppressHydrationWarning>
@@ -107,7 +109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <TopBar />
-        <Header />
+        <Header recaptchaSiteKey={recaptchaSiteKey} />
         <PromoStrip />
         <main>{children}</main>
         <Footer />

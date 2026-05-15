@@ -28,6 +28,7 @@ type HotelProjectDialogProps = {
   initialPackageInterest?: string;
   showIcon?: boolean;
   recaptchaSiteKey?: string;
+  onOpen?: () => void;
 };
 
 declare global {
@@ -76,6 +77,7 @@ export function HotelProjectDialog({
   initialPackageInterest = "",
   showIcon = true,
   recaptchaSiteKey,
+  onOpen,
 }: HotelProjectDialogProps) {
   const titleId = useId();
   const descriptionId = useId();
@@ -170,6 +172,7 @@ export function HotelProjectDialog({
   }, [renderRecaptcha]);
 
   function openDialog() {
+    onOpen?.();
     setSubmitted(false);
     setErrors({});
     setRecaptchaToken("");
