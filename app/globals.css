@@ -2831,6 +2831,21 @@ h4 {
   margin-top: auto;
   padding-top: 20px;
 }
+.packages-section .pkg-cta .btn {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.packages-section .pkg-cta .btn-ghost {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--border);
+}
+.packages-section .pkg-cta .btn-ghost:hover {
+  background: rgba(19, 29, 59, 0.04);
+  border-color: var(--navy);
+  transform: translateY(-1px);
+}
 
 .pricing-summary {
   padding: 0 0 52px;
