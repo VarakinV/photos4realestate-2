@@ -9,8 +9,9 @@ export type BlogSection = {
   paragraphs: string[];
   bullets?: string[];
   subSections?: Array<{ heading: string; paragraphs?: string[]; bullets?: string[] }>;
+  embed?: { src: string; title: string; caption?: string; href?: string; linkLabel?: string; aspectRatio?: string };
   cta?: { heading: string; copy: string; href: string; label: string };
-  beforeAfterComparisons?: Array<{ beforeSrc: string; afterSrc: string; beforeAlt: string; afterAlt: string; title: string; caption: string }>;
+  beforeAfterComparisons?: Array<{ beforeSrc: string; afterSrc: string; beforeAlt: string; afterAlt: string; title: string; caption: string; beforeLabel?: string; afterLabel?: string }>;
   statCards?: Array<{ value: string; label: string; source?: string }>;
   barGroups?: Array<{
     heading: string;
@@ -22,7 +23,7 @@ export type BlogSection = {
     rows: Array<{ cells: string[] }>;
   };
   media?: {
-    layout?: "grid" | "vertical-videos";
+    layout?: "grid" | "vertical-videos" | "full-width-video";
     items: Array<{
       type: "image" | "video";
       src: string;
@@ -41,6 +42,7 @@ export type BlogPost = {
   readingTime: string;
   categorySlugs: string[];
   image: { src: string; alt: string };
+  ogImage?: { src: string; alt?: string };
   seoTitle: string;
   seoDescription: string;
   sections: BlogSection[];
@@ -152,9 +154,9 @@ export const blogPosts: BlogPost[] = [
         { heading: "Daylight Photography", bullets: ["Best for interior clarity and bright rooms.", "Best for standard listings and quick scheduling.", "Best when accurate exterior detail matters more than mood.", "Useful for complete MLS galleries where buyers need clear property information." ] },
         { heading: "Twilight Photography", bullets: ["Best for emotional impact and premium first impressions.", "Best for luxury branding and exterior-focused marketing.", "Best for outdoor living spaces, pools, views, and architectural lighting.", "Useful for premium social media visuals and attention-grabbing thumbnails." ] },
       ], beforeAfterComparisons: [
-        { title: "Auburn Bay lakefront home", caption: "Daytime photography shows accurate property detail; twilight photography adds glow, sky colour, and stronger waterfront mood.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Daytime-drone-photo-of-a-house-in-Auburn-Bay-Photos-4-Real-Estate.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Twilight-drone-photo-of-a-house-in-Auburn-Bay-Photos-4-Real-Estate.jpg", beforeAlt: "Daytime drone photo of a lakefront house in Auburn Bay Calgary by Photos 4 Real Estate", afterAlt: "Twilight drone photo of a lakefront house in Auburn Bay Calgary by Photos 4 Real Estate" },
-        { title: "Canyon Meadows luxury exterior", caption: "A luxury exterior can feel more premium at dusk when lighting, landscaping, and architecture work together.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Luxury-house-in-Canyon-Meadows-Calgary-Day-photo-Photos-4-Real-Estate.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Luxury-house-in-Canyon-Meadows-Calgary-twilight-photo-Photos-4-Real-Estate.jpg", beforeAlt: "Daytime photo of a luxury house in Canyon Meadows Calgary by Photos 4 Real Estate", afterAlt: "Twilight photo of a luxury house in Canyon Meadows Calgary by Photos 4 Real Estate" },
-        { title: "Northwest Calgary curb appeal", caption: "Twilight can turn a strong exterior into a more memorable MLS and social media hero image.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Daytime-photo-of-a-house-in-NW-Calgary-Photos-4-Real-Estate.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Twilight-photo-of-a-house-in-NW-Calgary-Photos-4-Real-Estate.webp", beforeAlt: "Daytime photo of a house in northwest Calgary by Photos 4 Real Estate", afterAlt: "Twilight photo of a house in northwest Calgary by Photos 4 Real Estate" },
+        { title: "Auburn Bay lakefront home", caption: "Daytime photography shows accurate property detail; twilight photography adds glow, sky colour, and stronger waterfront mood.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Daytime-drone-photo-of-a-house-in-Auburn-Bay-Photos-4-Real-Estate.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Twilight-drone-photo-of-a-house-in-Auburn-Bay-Photos-4-Real-Estate.jpg", beforeAlt: "Daytime drone photo of a lakefront house in Auburn Bay Calgary by Photos 4 Real Estate", afterAlt: "Twilight drone photo of a lakefront house in Auburn Bay Calgary by Photos 4 Real Estate", beforeLabel: "Day", afterLabel: "Twilight" },
+        { title: "Canyon Meadows luxury exterior", caption: "A luxury exterior can feel more premium at dusk when lighting, landscaping, and architecture work together.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Luxury-house-in-Canyon-Meadows-Calgary-Day-photo-Photos-4-Real-Estate.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Luxury-house-in-Canyon-Meadows-Calgary-twilight-photo-Photos-4-Real-Estate.jpg", beforeAlt: "Daytime photo of a luxury house in Canyon Meadows Calgary by Photos 4 Real Estate", afterAlt: "Twilight photo of a luxury house in Canyon Meadows Calgary by Photos 4 Real Estate", beforeLabel: "Day", afterLabel: "Twilight" },
+        { title: "Northwest Calgary curb appeal", caption: "Twilight can turn a strong exterior into a more memorable MLS and social media hero image.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Daytime-photo-of-a-house-in-NW-Calgary-Photos-4-Real-Estate.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-10/Twilight-photo-of-a-house-in-NW-Calgary-Photos-4-Real-Estate.webp", beforeAlt: "Daytime photo of a house in northwest Calgary by Photos 4 Real Estate", afterAlt: "Twilight photo of a house in northwest Calgary by Photos 4 Real Estate", beforeLabel: "Day", afterLabel: "Twilight" },
       ] },
       { heading: "How to Prepare a Home for Twilight Photography", paragraphs: ["Twilight photography sessions happen during a very short lighting window after sunset, so preparation before the photographer arrives is essential. The home should be ready before dusk begins, not during the shoot."], subSections: [
         { heading: "Turn On All Lights", bullets: ["Turn on interior lights in visible rooms.", "Turn on exterior sconces, pot lights, and garage lights.", "Turn on landscape lighting, pathway lighting, pool lights, and fire features where safe.", "Replace burnt bulbs before the appointment." ] },
@@ -180,20 +182,69 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "virtual-staging-vacant-homes-calgary",
     title: "Virtual Staging for Vacant Calgary Homes: What to Know",
-    excerpt: "Virtual staging helps buyers understand scale, layout, and room purpose without the cost and logistics of physical furniture rental.",
+    excerpt: "Vacant Calgary homes can feel cold, smaller, or harder to understand online. Virtual staging adds realistic digital furniture and decor so buyers can visualize room purpose, layout, and lifestyle.",
     date: "2026-05-06",
-    updated: "2026-05-06",
-    readingTime: "5 min read",
+    updated: "2026-05-15",
+    readingTime: "10 min read",
     categorySlugs: ["virtual-staging", "marketing"],
-    image: { src: unsplash("photo-1600210491892-03d54c0aaf87"), alt: "Vacant living room suitable for virtual staging in a Calgary listing" },
+    image: { src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/virtual-staging-after-image-farmhouse-style-Photos-4-Real-Estate.webp", alt: "Virtually staged farmhouse-style room for a vacant Calgary home listing by Photos 4 Real Estate" },
     seoTitle: "Virtual Staging Calgary Homes | Photos 4 Real Estate",
-    seoDescription: "See how virtual staging helps vacant Calgary homes feel furnished, easier to understand, and more marketable online. View staging options today.",
-    takeaways: ["Virtual staging clarifies room purpose.", "It works best with clean, empty rooms and realistic furniture.", "Listings should disclose when images are virtually staged."],
-    relatedServices: [{ label: "Virtual staging services for Calgary listings", href: "/services/virtual-staging" }],
+    seoDescription: "See how virtual staging helps vacant Calgary homes look inviting, show room purpose, and improve online listing photos. Book today.",
+    takeaways: ["Virtual staging helps buyers understand room size and layout.", "Empty rooms often appear smaller in listing photos.", "Realistic furniture design is critical for credibility.", "Virtual staging is commonly used for condos, new builds, and vacant homes.", "MLS-compliant disclosure may be required for virtually staged images.", "Virtual staging is usually more affordable than physical staging."],
+    relatedServices: [
+      { label: "Virtual staging services", href: "/services/virtual-staging" },
+      { label: "Professional real estate photography in Calgary", href: "/services/real-estate-photography-in-calgary" },
+      { label: "RMS measurements and floor plans", href: "/services/rms-measurements-and-floor-plans-in-calgary" },
+      { label: "Condo photography services", href: "/services/real-estate-photography-in-calgary" },
+      { label: "When to use twilight photography", href: "/blog/twilight-real-estate-photography-calgary-listings" },
+      { label: "Book a real estate photography session", href: "/book-online" },
+    ],
     sections: [
-      { heading: "Why vacant rooms are harder to read", paragraphs: ["Empty rooms often look smaller online because buyers have no furniture reference for scale. Virtual staging adds context so viewers can understand whether a room works as a bedroom, office, dining area, or living space." ] },
-      { heading: "What makes virtual staging effective", paragraphs: ["The best virtual staging looks realistic, matches the property style, and avoids overcrowding the room. It should support the listing, not distract from it."], bullets: ["Use consistent furniture style across rooms.", "Keep pathways and windows visible.", "Avoid exaggerated decor or unrealistic proportions.", "Use MLS-compliant disclosure where required."] },
-      { heading: "When to choose it", paragraphs: ["Virtual staging is a strong option for vacant condos, new builds, estate sales, investment properties, and homes where physical staging is not practical. It is also useful when only a few key rooms need visual context." ] },
+      { heading: "What Is Virtual Staging?", paragraphs: ["Virtual staging is the process of adding realistic digital furniture, decor, rugs, artwork, and accessories to real estate photos. No physical furniture is delivered to the property, and the original room remains vacant during the photo shoot.", "Real estate virtual staging is used primarily in vacant properties where buyers need help understanding scale, furniture placement, and room purpose. It can turn empty rooms into digitally staged real estate photos that feel warmer and easier to interpret online.", "For Calgary real estate photography, virtual furniture staging is often used for condos, new builds, investment properties, estate sales, rental turnovers, and vacant homes where physical staging may not be practical." ] },
+      { heading: "Why Vacant Homes Are Harder to Market Online", paragraphs: ["Most buyers begin their home search online, and vacant rooms can be difficult to interpret without visual context. Empty spaces often feel smaller, colder, and less emotional because buyers have no furniture reference for scale or lifestyle.", "Without furniture, buyers may struggle to understand whether a space works as an office, bedroom, dining area, family room, or flex space. Online shoppers also scroll quickly, so vacant listing photos may not create enough immediate interest to stop the scroll.", "Virtual staging for vacant homes helps create a more inviting and understandable presentation. It gives buyers a clear idea of how the space could function while keeping the marketing process faster and more affordable than traditional staging."], beforeAfterComparisons: [
+        { title: "Vacant family room", caption: "A large empty family room becomes easier to understand when buyers can see a realistic seating layout and scale reference.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Empty-family-room.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Virtually-staged-family-room.jpg", beforeAlt: "Empty family room before virtual staging in a Calgary home", afterAlt: "Virtually staged family room with furniture in a Calgary home", beforeLabel: "Empty", afterLabel: "Staged" },
+        { title: "Vacant living room", caption: "Virtual staging can make a living room feel warmer and more memorable while preserving the true room layout.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Empty-Living-Room-by-Photos-4-Real-Estate.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Virtually-Staged-Living-Room-by-Photos-4-Real-Estate.jpg", beforeAlt: "Empty living room before virtual staging by Photos 4 Real Estate", afterAlt: "Virtually staged living room by Photos 4 Real Estate", beforeLabel: "Empty", afterLabel: "Staged" },
+      ] },
+      { heading: "Benefits of Virtual Staging for Calgary Listings", paragraphs: ["Virtual staging Calgary listings is most effective when it solves a specific marketing problem: the room is empty, the layout is unclear, or buyers need help imagining how the home could feel furnished."], subSections: [
+        { heading: "Helps Buyers Understand Room Purpose", paragraphs: ["Virtual staging can show whether an empty room is best used as a bedroom, office, dining space, family room, basement seating area, or awkward flex space. Clear room purpose helps buyers move through the listing photos with less confusion." ] },
+        { heading: "Makes Rooms Feel More Inviting", paragraphs: ["Furniture, rugs, artwork, and warm decor can add lifestyle presentation and emotional connection. Instead of seeing an empty shell, buyers can imagine daily life in the home." ] },
+        { heading: "More Affordable Than Physical Staging", paragraphs: ["Physical staging can involve furniture rental, delivery logistics, setup, removal, and scheduling coordination. Virtual staging is usually more affordable, faster to complete, and easier to use for online marketing when the home is vacant." ] },
+        { heading: "Useful for Remote and Online Buyers", paragraphs: ["Relocation buyers, investors, international buyers, and mobile-first shoppers often rely heavily on online listing photos. Digitally staged listing photos can make a vacant property easier to understand before an in-person showing." ] },
+      ], beforeAfterComparisons: [
+        { title: "Living room layout", caption: "Living room staging helps buyers understand seating placement, scale, and how the main gathering space can function.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Empty-primary-bedroom-2.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Virtually-staged-primary-bedroom-2.jpg", beforeAlt: "Empty living room before virtual staging in a Calgary listing", afterAlt: "Virtually staged living room with furniture and decor in a Calgary listing", beforeLabel: "Empty", afterLabel: "Staged" },
+        { title: "Primary bedroom layout", caption: "Bedroom staging helps buyers understand bed placement, walking space, and the intended use of the room.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Virtual-Staging-Bedroom-Before-01.webp", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Virtual-Staging-Bedroom-After-01.webp", beforeAlt: "Empty primary bedroom before virtual staging in a Calgary home", afterAlt: "Virtually staged primary bedroom in a Calgary home", beforeLabel: "Empty", afterLabel: "Staged" },
+        { title: "Small office or flex room", caption: "Virtual staging can clarify small or awkward rooms by showing a realistic office layout instead of leaving buyers guessing.", beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Empty-small-office-room.jpg.jpg", afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-05-06/Virtually-staged-small-office.jpg", beforeAlt: "Empty small office room before virtual staging", afterAlt: "Virtually staged small office room for a Calgary listing", beforeLabel: "Empty", afterLabel: "Staged" },
+      ] },
+      { heading: "What Makes Virtual Staging Look Realistic?", paragraphs: ["Realistic virtual staging for MLS listings depends on design quality, restraint, and accuracy. The staging should support the property, not distract from it or misrepresent it."], subSections: [
+        { heading: "Matching Furniture to the Property Style", paragraphs: ["Modern condos, luxury homes, and traditional family homes should not all use the same furniture package. The staging style should match the architecture, finishes, price point, and likely buyer profile." ] },
+        { heading: "Proper Furniture Scale and Placement", paragraphs: ["Oversized furniture looks fake and can make rooms feel smaller. Realistic spacing matters, pathways should remain visible, and furniture should be placed where it could reasonably fit in real life." ] },
+        { heading: "Consistent Design Across Rooms", paragraphs: ["A cohesive colour palette and consistent decor style create better buyer perception. If every room uses a different design style, the listing can feel disjointed and less credible." ] },
+        { heading: "Avoiding Overediting", paragraphs: ["Unrealistic sunsets, excessive decor, cluttered staging, impossible furniture layouts, and edits that hide permanent defects reduce trust. Virtual staging should improve presentation while accurately representing the property layout." ] },
+      ] },
+      { heading: "When Virtual Staging Works Best", paragraphs: ["Virtual staging works best when a property is vacant or partly empty and buyers need help understanding how the home could function."], subSections: [
+        { heading: "Vacant Condos", paragraphs: ["Condos can feel compact without furniture. Virtual staging helps show living, dining, office, and bedroom layouts in a way that makes square footage easier to understand." ] },
+        { heading: "New Construction Homes", paragraphs: ["New builds often have clean finishes but empty rooms. Staging adds warmth and helps buyers imagine the finished lifestyle." ] },
+        { heading: "Estate Sales", paragraphs: ["Estate properties may be vacant or dated. Virtual staging can help refresh the online presentation without moving furniture into the home." ] },
+        { heading: "Investment Properties", paragraphs: ["Investors and landlords can use virtual staging to show rental potential, furniture placement, and room function without staging costs." ] },
+        { heading: "Rental Property Turnovers", paragraphs: ["When a rental is empty between tenants, virtual staging can support listing photos quickly and help prospective renters understand the layout." ] },
+        { heading: "Homes With Only One or Two Empty Rooms", paragraphs: ["Sometimes only the living room, primary bedroom, office, or awkward flex space needs help. Staging a few key rooms is often enough to improve buyer understanding." ] },
+      ] },
+      { heading: "Virtual Staging vs Physical Staging", paragraphs: ["Virtual staging and physical staging both have a place in real estate marketing. The best choice depends on the property, budget, timeline, and how much of the buyer experience happens online versus in person."], subSections: [
+        { heading: "Virtual Staging", bullets: ["Best for vacant listings and lower budgets.", "Best when faster turnaround is important.", "Best for online marketing, MLS photos, and digital listing presentation.", "Useful for condos, investment properties, new builds, and homes with a few empty rooms." ] },
+        { heading: "Physical Staging", bullets: ["Best for luxury in-person showings and open houses.", "Best when buyers need to physically experience furnished rooms.", "Useful for high-end buyer experiences and occupied homes that need design support.", "Can be stronger when the staging needs to influence both photos and showings." ] },
+      ] },
+      { heading: "Important Disclosure Rules for Virtual Staging", paragraphs: ["Virtually staged images should accurately represent the property layout and should be disclosed appropriately where MLS or brokerage rules require it. This supports ethical marketing and helps maintain buyer trust.", "Disclosure requirements can vary by board, brokerage, and listing platform. Calgary agents should confirm local MLS compliance and make sure digitally altered images are labelled or explained when required. Virtual staging should never hide permanent defects, change room dimensions, or mislead buyers about what is included in the property." ] },
+      { heading: "Common Virtual Staging Mistakes to Avoid", paragraphs: ["Virtual staging works best when it looks believable and supports the listing strategy. Avoid choices that make buyers question whether the image is accurate."], bullets: ["Using unrealistic furniture scale.", "Overcrowding rooms with too much decor.", "Mixing inconsistent styles across rooms.", "Using excessive editing, fake views, or misleading sunsets.", "Hiding permanent defects or changing the property layout.", "Staging every room unnecessarily instead of focusing on the highest-impact spaces." ] },
+      { heading: "Final Thoughts", paragraphs: ["Virtual staging is a marketing tool, not a replacement for accurate real estate photography. It helps buyers understand the property, visualize room purpose, and feel more connected to vacant spaces online.", "For vacant Calgary homes, realistic virtual staging can help listing photos feel more inviting, improve online presentation, and give buyers a clearer understanding of how a space can function." ] },
+    ],
+    faqHeading: "Frequently Asked Questions About Virtual Staging",
+    faqs: [
+      { question: "Is virtual staging worth it for vacant homes?", answer: "Virtual staging is often worth it for vacant homes because it helps buyers understand room purpose, scale, and layout. It can make empty rooms feel more inviting online without the cost and logistics of physical staging." },
+      { question: "Does virtual staging look realistic?", answer: "Virtual staging can look realistic when furniture style, scale, lighting, shadows, and placement match the property. Poorly scaled furniture, inconsistent styles, or excessive editing can make staged images look fake." },
+      { question: "How much does virtual staging cost?", answer: "Virtual staging usually costs less than physical staging because there is no furniture rental, delivery, setup, or removal. Pricing depends on the number of rooms, image complexity, and turnaround requirements." },
+      { question: "Is virtual staging allowed on MLS listings?", answer: "Virtual staging is commonly used, but MLS and brokerage rules may require disclosure that images have been digitally staged. Agents should confirm local rules and ensure the images accurately represent the property layout." },
+      { question: "Can occupied rooms be virtually staged?", answer: "Occupied rooms can sometimes be virtually restyled, but the best results usually come from clean vacant rooms. Removing existing furniture digitally can be more complex and may not look as natural as staging an empty room." },
+      { question: "Which rooms should be virtually staged first?", answer: "The highest-impact rooms are usually the living room, primary bedroom, dining area, office or flex room, and basement family room. These spaces benefit most from clear furniture placement and room-purpose context." },
     ],
   },
   {
@@ -516,45 +567,143 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "rms-measurements-iguide-virtual-tours-alberta-listings",
     title: "RMS Measurements and iGUIDE Tours for Alberta Listings",
-    excerpt: "Learn how RMS measurements, floor plans, and iGUIDE 3D tours support listing accuracy and give buyers more confidence online.",
+    excerpt: "Accurate property information plays a major role in buyer confidence and online listing performance. In Alberta real estate, RMS measurements provide standardized square footage calculations, while floor plans and iGUIDE 3D tours help buyers understand layout, room flow, and usable space before scheduling a showing.",
     date: "2026-04-29",
-    updated: "2026-04-29",
-    readingTime: "6 min read",
+    updated: "2026-05-16",
+    readingTime: "10 min read",
     categorySlugs: ["rms-and-iguide", "marketing"],
-    image: { src: unsplash("photo-1554224155-6726b3ff858f"), alt: "Floor plan and measurement documents used for Alberta real estate listings" },
+    image: { src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-29/iGUIDE-Specialist-from-Photos-4-Real-Estate-Taking-Measurements-of-a-Living-Room.webp", alt: "iGUIDE specialist from Photos 4 Real Estate taking RMS measurements of a living room for an Alberta listing" },
     seoTitle: "RMS Measurements and iGUIDE Calgary | Photos 4 Real Estate",
-    seoDescription: "Understand RMS measurements, floor plans, and iGUIDE 3D tours for Alberta listings and how they support buyer confidence. Book online today.",
-    takeaways: ["RMS supports consistent Alberta listing measurement standards.", "Floor plans help buyers understand layout quickly.", "iGUIDE tours add interactive context to online listings."],
+    seoDescription: "Learn how RMS measurements, floor plans, and iGUIDE tours improve Alberta listing accuracy, buyer confidence, and online presentation. Book online today.",
+    takeaways: ["RMS measurements provide standardized property sizing in Alberta.", "Floor plans help buyers understand room layout and flow.", "iGUIDE tours create interactive online walkthrough experiences.", "Accurate measurements reduce uncertainty for buyers.", "These tools improve listing presentation and transparency.", "Interactive assets are especially valuable for remote buyers."],
     relatedServices: [
+      { label: "Professional real estate photography in Calgary", href: "/services/real-estate-photography-in-calgary" },
       { label: "RMS measurements and floor plans in Calgary", href: "/services/rms-measurements-and-floor-plans-in-calgary" },
       { label: "iGUIDE 3D virtual tours in Calgary", href: "/services/iguide-virtual-tours-in-calgary" },
+      { label: "Real estate drone photography", href: "/services/real-estate-aerial-drone-photography-in-calgary" },
+      { label: "Virtual staging for vacant homes", href: "/blog/virtual-staging-vacant-homes-calgary" },
+      { label: "When to use twilight photography", href: "/blog/twilight-real-estate-photography-calgary-listings" },
+      { label: "Book a real estate photography session", href: "/book-online" },
     ],
     sections: [
-      { heading: "Why measurements and floor plans matter", paragraphs: ["Photos create interest, but floor plans help buyers understand the structure of the home. Measurements and room layouts reduce uncertainty and make it easier to compare properties online." ] },
-      { heading: "What iGUIDE adds", paragraphs: ["An iGUIDE tour combines interactive 3D navigation, visual room-to-room context, and floor plan information. It gives buyers a better sense of flow before a showing and helps out-of-town buyers evaluate a home more confidently." ] },
-      { heading: "How agents can use the assets", paragraphs: ["Floor plans, 3D tours, and measurement documents can be used across MLS, feature sheets, listing pages, email campaigns, and social posts. They are especially helpful for properties with unusual layouts, developed basements, additions, or larger square footage." ] },
+      { heading: "What Are RMS Measurements?", paragraphs: ["RMS measurements Alberta agents use are based on the Residential Measurement Standard, a standardized method for measuring and reporting above-grade residential space. In Alberta real estate, RMS square footage helps create consistency between listings so buyers can compare homes with clearer expectations.", "The residential measurement standard matters because different measuring methods can produce different square footage totals. Alberta real estate measurements based on RMS reduce confusion by following a common framework for what is included, how spaces are measured, and how above-grade areas are reported.", "For sellers, realtors, and buyers, RMS measurements support more transparent listing information. They do not replace great photography, but they work alongside Calgary real estate photography, floor plans, and virtual tours to make a property easier to understand online." ] },
+      { heading: "Why Accurate Measurements Matter in Real Estate Listings", paragraphs: ["Accurate square footage affects how buyers interpret value, compare homes, and decide whether a property fits their needs. Online buyers rely heavily on listing data before they ever step inside the home, so inconsistent measurements can create uncertainty before the showing even happens.", "When Alberta listing measurement standards are followed carefully, buyers can compare properties with more confidence. Accurate measurements help reduce misunderstandings about usable space, improve transparency, and make it easier for agents to explain differences between similar listings.", "Clear measurement information also supports stronger marketing. Buyers looking through MLS, REALTOR.ca, property websites, and email campaigns often decide very quickly which homes deserve a closer look. Trustworthy sizing information helps the listing feel more complete and credible."], bullets: ["Buyer trust improves when square footage is measured consistently.", "Transparent listing data helps reduce surprises before showings.", "Square footage affects perceived value and comparison shopping.", "Accurate property information supports better-qualified buyer inquiries."] },
+      { heading: "How Floor Plans Help Buyers Understand a Property", paragraphs: ["Floor plans for real estate listings help translate square footage into something buyers can visualize. Photos show finishes and atmosphere, but floor plans explain layout, room relationships, and how the home actually functions from one space to the next."], subSections: [
+        { heading: "Visualizing Room Layout", paragraphs: ["Floor plans help buyers understand where the kitchen sits relative to the dining area, how bedrooms connect to hallways, and whether furniture can fit realistically in the main living spaces. This is especially helpful in open-concept homes where photos alone may not explain the full layout." ] },
+        { heading: "Understanding Property Flow", paragraphs: ["Stair locations, bedroom separation, basement access, and overall traffic flow all become easier to understand when buyers can see the plan view. A floor plan can quickly clarify how a family home, duplex, condo, or multi-level property moves from one zone to another." ] },
+        { heading: "Comparing Homes More Efficiently", paragraphs: ["Many buyers shortlist homes online before scheduling tours. Interactive floor plans and standard floor plans make that process faster by helping buyers compare room layout, circulation, and usable space without guessing from photos alone." ] },
+      ], media: { items: [
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-29/Real-estate-floor-plan-generated-from-iGUIDE-property-scan.webp", alt: "Real estate floor plan generated from an iGUIDE property scan for an Alberta listing", caption: "Floor plans help buyers understand room relationships, circulation, and how the full property is organized." },
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-29/Standard%20iGUIDE%20Floor%20Plan.webp", alt: "Standard iGUIDE floor plan with room labels and dimensions for a real estate listing", caption: "A standard iGUIDE floor plan gives buyers a quick visual summary of the home's structure and dimensions." },
+      ] } },
+      { heading: "What Is an iGUIDE 3D Tour?", paragraphs: ["iGUIDE tours are interactive 3D real estate tours that let buyers move through a home room by room from their phone, tablet, or computer. Instead of looking at a fixed slideshow, buyers can explore the property at their own pace and understand how each space connects.", "An iGUIDE virtual home walkthrough combines immersive navigation with floor plan context, room dimensions, and spatial orientation. That makes it more useful than photos alone for buyers who want to evaluate layout, traffic flow, and usable space before deciding whether to book a showing.", "For Alberta listings, iGUIDE tours can be especially valuable when the home has multiple levels, developed basement space, additions, or a layout that is difficult to understand from still images. Interactive floor plans and virtual walkthroughs help the listing feel more informative and buyer friendly online."], embed: { src: "https://youriguide.com/embed/20729_main_st_se_calgary_ab?unbranded=1&bgcolor=FFFFFF", title: "Example iGUIDE 3D tour for an Alberta real estate listing", caption: "Example iGUIDE virtual tour: buyers can navigate room to room, view layout context, and explore the home before booking a showing.", href: "https://youriguide.com/20729_main_st_se_calgary_ab", linkLabel: "Open the full iGUIDE tour in a new tab", aspectRatio: "57%" } },
+      { heading: "Benefits of iGUIDE Tours for Alberta Listings", paragraphs: ["Interactive real estate tours help listings deliver more information before a showing request is made. That can create a better online experience for buyers and help agents present complex homes more clearly."], subSections: [
+        { heading: "Better Online Buyer Engagement", paragraphs: ["iGUIDE tours often keep buyers engaged longer because the experience is interactive. Instead of flipping through a gallery and leaving, buyers can explore the property more deeply and spend more time understanding the home." ] },
+        { heading: "More Confidence Before Showings", paragraphs: ["Virtual home walkthroughs can reduce uncertainty by giving buyers clearer expectations before they visit. When layout and room flow are easier to understand online, showings can feel better qualified and more purposeful." ] },
+        { heading: "Useful for Out-of-Town Buyers", paragraphs: ["Relocation buyers, investors, remote home shoppers, and international buyers often rely heavily on online media. iGUIDE tours give them a much stronger sense of the property than photos alone, which is especially helpful when they cannot view the home immediately in person." ] },
+        { heading: "Helpful for Complex Layouts", paragraphs: ["Developed basements, split-level homes, acreage properties, additions, and large luxury homes often need more than a photo gallery to explain the layout clearly. iGUIDE tours help show how these spaces connect and where key rooms sit within the home." ] },
+      ], media: { items: [
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-29/real-estate-virtual-tour-example-iguide.webp", alt: "Example iGUIDE virtual tour interface for a real estate listing", caption: "An iGUIDE tour gives buyers a room-by-room online walkthrough experience instead of a passive gallery." },
+        { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-29/Premium%20iGUIDE%20Floor%20Plan.webp", alt: "Premium iGUIDE floor plan showing enhanced detail for a large real estate listing", caption: "Detailed floor plan assets are especially useful for larger homes, additions, and more complex layouts." },
+      ] } },
+      { heading: "RMS Measurements vs Floor Plans vs iGUIDE Tours", paragraphs: ["These tools work best together because each one answers a different buyer question."], comparisonTable: {
+        columns: ["Asset", "Primary focus", "How it helps buyers"],
+        rows: [
+          { cells: ["RMS Measurements", "Square footage accuracy and standardized calculations", "Helps buyers compare Alberta listings with more confidence and understand reported above-grade size."] },
+          { cells: ["Floor Plans", "Layout understanding, room dimensions, and structure visualization", "Helps buyers see room relationships, traffic flow, furniture fit, and how the home is organized."] },
+          { cells: ["iGUIDE Tours", "Interactive exploration, immersive navigation, and room flow understanding", "Helps buyers move through the property virtually and understand how spaces connect before scheduling a showing."] },
+        ],
+      } },
+      { heading: "How Realtors Use These Assets in Marketing", paragraphs: ["RMS measurements, floor plans, and iGUIDE tours support much more than the MLS upload itself. Realtors can use these assets across the full listing campaign to create a more complete online experience for buyers.", "Listings with interactive assets often feel more informative because buyers can see the photos, understand the layout, review square footage, and explore the property virtually in one place. That combination is useful on MLS, property websites, email campaigns, and listing presentations."], bullets: ["MLS listings and REALTOR.ca links.", "Feature sheets and buyer presentation materials.", "Social media posts and teaser campaigns.", "Email campaigns for active buyers and sphere marketing.", "Single-property websites and landing pages.", "Seller updates that demonstrate marketing depth and transparency."] },
+      { heading: "Which Types of Homes Benefit Most?", paragraphs: ["Almost any listing can benefit from better property information, but some home types gain even more value from RMS measurements, floor plans, and iGUIDE tours because layout clarity is especially important."], subSections: [
+        { heading: "Large Family Homes", paragraphs: ["Larger homes often have more rooms, more circulation paths, and more questions about how the spaces connect. Floor plans and iGUIDE tours help buyers understand the full layout faster." ] },
+        { heading: "Acreage Properties", paragraphs: ["Acreage homes can have expansive footprints, multiple entrances, attached or detached outbuildings, and unique room arrangements. Interactive tools help buyers evaluate the home more thoroughly before travelling for a showing." ] },
+        { heading: "Homes With Additions", paragraphs: ["When part of the home has been extended or reconfigured, buyers often want extra clarity around how the old and new spaces connect. Floor plans and virtual walkthroughs reduce guesswork." ] },
+        { heading: "Split-Level and Unique Layouts", paragraphs: ["Split levels, bi-levels, and other non-linear floor plans can be difficult to interpret from photos alone. Interactive tours and layout plans help explain level changes and room placement more clearly." ] },
+        { heading: "Luxury Listings", paragraphs: ["Luxury homes often need a more complete digital presentation because buyers expect stronger detail online. iGUIDE tours, floor plans, and accurate measurements help premium listings feel polished and transparent." ] },
+        { heading: "Investment Properties and Multi-Level Homes", paragraphs: ["Investors and practical buyers often focus on layout efficiency, rentable space, and room use. Clear floor plans and interactive tours help them evaluate those details more quickly." ] },
+      ] },
+      { heading: "Final Thoughts", paragraphs: ["Accurate property information builds trust. Today’s buyers expect more than a photo gallery alone, especially when they are comparing homes online before booking a showing.", "RMS measurements, floor plans, and iGUIDE tours help Alberta real estate listings feel more transparent, informative, and buyer friendly in a competitive online market. When these tools are paired with professional real estate photography in Calgary, they create a much stronger listing presentation from first click to showing request." ] },
+    ],
+    faqHeading: "Common Questions About RMS Measurements and iGUIDE Tours",
+    faqs: [
+      { question: "Are RMS measurements required in Alberta?", answer: "RMS measurements are widely used in Alberta real estate because they provide a standardized way to report residential square footage. Listing requirements can vary by brokerage or board, so agents should confirm the current rules that apply to their market and listing process." },
+      { question: "What spaces are included in RMS square footage?", answer: "RMS square footage focuses on above-grade living space measured according to the Residential Measurement Standard. Basements and some other areas may be reported separately rather than included in the main RMS total, which is one reason consistent reporting matters." },
+      { question: "How accurate are iGUIDE floor plans?", answer: "iGUIDE floor plans are generated from a property scan and are designed to provide strong layout clarity and measurement support for real estate marketing. They help buyers understand room size and flow, while agents should still use the correct reporting method for any official square footage disclosures." },
+      { question: "Can buyers measure rooms using iGUIDE?", answer: "Buyers can usually view room dimensions and use the floor plan context inside an iGUIDE tour to understand space more clearly. That makes it easier to estimate furniture placement, circulation, and whether the layout fits their needs before an in-person visit." },
+      { question: "Do 3D tours help homes sell faster?", answer: "Interactive tours can improve online engagement and help buyers better understand the property before booking a showing. They do not guarantee a faster sale, but they often make the listing presentation feel more complete and useful for serious buyers." },
+      { question: "Are floor plans important for MLS listings?", answer: "Floor plans are very helpful because they show layout, room relationships, and dimensions in a format buyers can review quickly. For homes with multiple levels, developed basements, additions, or unusual layouts, floor plans can be especially valuable alongside photos and virtual tours." },
     ],
   },
   {
     slug: "real-estate-video-reels-calgary-realtors",
     title: "Real Estate Video and Reels Ideas for Calgary Realtors",
-    excerpt: "Use listing videos, short reels, room highlights, and neighbourhood clips to promote properties across MLS, Instagram, and email.",
+    excerpt: "Real estate video marketing helps buyers experience a property beyond still photos. Walkthrough videos, Instagram Reels, and short-form listing clips can showcase layout, lighting, atmosphere, and neighbourhood context in a more engaging way for Calgary realtors.",
     date: "2026-04-24",
-    updated: "2026-04-24",
-    readingTime: "5 min read",
+    updated: "2026-05-16",
+    readingTime: "12 min read",
     categorySlugs: ["videography", "marketing-and-social", "marketing"],
-    image: { src: unsplash("photo-1497366754035-f200968a6e72"), alt: "Real estate video editing workspace for Calgary realtor listing reels" },
-    seoTitle: "Real Estate Video Calgary Realtor Reels | Photos 4 Real Estate",
-    seoDescription: "Real estate video and reels help Calgary realtors market listings with walkthroughs, social clips, and stronger launch campaigns. Book media today.",
-    takeaways: ["Video helps buyers understand flow and atmosphere.", "Short clips perform well on social media.", "Plan video around the strongest listing features."],
+    image: { src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-24/Vlad-Varakin-Shooting-Video-with-Ronin-RS-4-and-Canon-Camera.webp", alt: "Vlad Varakin filming a Calgary real estate video with a Ronin RS 4 gimbal and Canon camera" },
+    seoTitle: "Real Estate Video Calgary | Photos 4 Real Estate",
+    seoDescription: "Explore real estate video marketing, reels, walkthroughs, and platform ideas for Calgary realtors. Improve listing engagement. Book online today.",
+    takeaways: ["Video helps buyers understand layout and atmosphere.", "Short-form reels perform well on Instagram and social media.", "Strong listing videos focus on key property features.", "Realtors can reuse video content across multiple platforms.", "Neighbourhood clips help add local lifestyle context.", "Professional editing improves engagement and branding."],
     relatedServices: [
-      { label: "Calgary real estate videography services", href: "/services/real-estate-videos-in-calgary" },
-      { label: "Marketing kit for Calgary realtors", href: "/services/marketing-kit-for-realtors" },
+      { label: "Real estate video services in Calgary", href: "/services/real-estate-videos-in-calgary" },
+      { label: "Professional real estate photography", href: "/services/real-estate-photography-in-calgary" },
+      { label: "Drone video and photography", href: "/services/real-estate-aerial-drone-photography-in-calgary" },
+      { label: "Twilight photography for real estate listings", href: "/blog/twilight-real-estate-photography-calgary-listings" },
+      { label: "Virtual staging for vacant Calgary homes", href: "/blog/virtual-staging-vacant-homes-calgary" },
+      { label: "Book a Calgary listing media session", href: "/book-online" },
     ],
     sections: [
-      { heading: "What video does differently", paragraphs: ["Photos show key spaces clearly, while video helps buyers feel the movement and atmosphere of a home. A short walkthrough can connect the kitchen, living room, bedrooms, basement, and exterior in a way still images cannot." ] },
-      { heading: "Simple reel ideas", paragraphs: ["Short-form videos do not need to show every room. Often the best reels focus on one strong hook and a few polished clips."], bullets: ["Front exterior to main living space.", "Kitchen, pantry, dining, and patio flow.", "Primary suite and ensuite reveal.", "Neighbourhood amenity or nearby park intro."] },
-      { heading: "Use video beyond Instagram", paragraphs: ["Listing videos and reels can support MLS links, YouTube, agent websites, email newsletters, QR codes, property pages, and paid social posts. The strongest campaigns reuse the same shoot assets across multiple channels." ] },
+      { heading: "Why Video Matters in Real Estate Marketing", paragraphs: ["Real estate video marketing matters because buyers start their search online and make quick decisions from a phone, tablet, or laptop. Photos remain essential, but listing videos and property walkthrough videos add movement, pacing, and context that help a home feel easier to understand before a showing is booked.", "Video keeps attention longer because it shows how rooms connect. A buyer can move from the front entry to the kitchen, through the living room, out to the deck, and down to the basement in one guided sequence. That room-to-room flow makes Calgary real estate marketing feel more complete and memorable.", "For Calgary realtors, video also supports emotional connection. Music, natural light, smooth camera movement, and strong editing can make a listing feel warm, polished, and lifestyle-focused without replacing accurate listing information. Because buyers browse on mobile first, short video clips and real estate reels are now important parts of modern listing video marketing strategies."], media: { layout: "full-width-video", items: [
+        { type: "video", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-24/137%20100%20Auburn%20Shores%20Landing%20Se%2C%20Calgary%20(1).mp4", alt: "Horizontal Calgary real estate walkthrough video for a property listing", caption: "Example horizontal listing video: a full-width walkthrough format works well for MLS, YouTube, property websites, and email campaigns." },
+      ] } },
+      { heading: "What Video Shows That Photos Cannot", paragraphs: ["Professional Calgary real estate photography captures a home's strongest still moments. Video adds the missing movement between those moments, which is why real estate walkthrough videos are useful for homes with open layouts, multiple levels, views, outdoor features, or strong lifestyle details."], subSections: [
+        { heading: "Room-to-Room Flow", paragraphs: ["Video is especially helpful for open-concept layouts because buyers can see how the kitchen, dining area, and living room connect. It also clarifies transitions between spaces, staircase flow, hallway relationships, basement access, and how exterior entrances relate to the main living areas." ] },
+        { heading: "Atmosphere and Lighting", paragraphs: ["A video can show how natural light moves through a room, how evening ambiance feels, or how a fireplace, feature wall, or luxury lighting detail changes the mood of a space. Outdoor living areas also benefit from motion because buyers can feel the transition from interior space to patio, deck, or landscaped yard." ] },
+        { heading: "Scale and Spatial Awareness", paragraphs: ["Still images show room features, but video helps buyers understand ceiling height, room proportions, and overall spatial awareness. Camera movement can make a two-storey foyer, large great room, wide hallway, or developed basement feel easier to evaluate online." ] },
+      ] },
+      { heading: "Best Real Estate Reel Ideas for Calgary Realtors", paragraphs: ["The best real estate reel ideas are simple, visual, and focused on one buyer benefit at a time. Instead of trying to show every room equally, a strong reel should lead with the most attractive feature and then give viewers a reason to click, save, share, or book a showing."], subSections: [
+        { heading: "Front Exterior to Main Living Space Reveal", paragraphs: ["Start outside with curb appeal, then move through the front door into the main living space. This style works well for homes with strong elevations, bright entrances, impressive foyers, or open main floors." ] },
+        { heading: "Kitchen and Dining Flow Videos", paragraphs: ["Kitchen reels are consistently useful because buyers pay attention to islands, cabinetry, pantry reveals, dining flow, and patio transitions. A short sequence can start on the island, reveal the appliances, move through the dining area, and end at the backyard or balcony." ] },
+        { heading: "Primary Bedroom and Ensuite Reveal", paragraphs: ["A primary suite reel can show the bedroom, walk-in closet, ensuite, soaker tub, shower, and vanity details in one polished sequence. This format works especially well for luxury homes, newer builds, and renovated properties." ] },
+        { heading: "Backyard and Outdoor Living Features", paragraphs: ["Outdoor video helps showcase decks, fire pits, pools, mountain views, landscaped yards, garden spaces, hot tubs, and covered patios. In Calgary, this type of clip can also highlight sunny exposure, privacy, and how the outdoor space connects to the main floor." ] },
+        { heading: "Neighbourhood and Lifestyle Clips", paragraphs: ["Neighbourhood clips are valuable for local SEO and buyer context. Calgary community features such as parks, pathways, coffee shops, schools, playgrounds, downtown access, shopping districts, and nearby recreation areas can make a listing feel more lifestyle-driven." ] },
+        { heading: "Before-and-After Renovation Clips", paragraphs: ["Before-and-after clips are useful when a property has been renovated, refreshed, virtually staged, or prepared for market. They help buyers understand transformation and give realtors extra social media content for listing launches." ] },
+        { heading: "Twilight Video Clips", paragraphs: ["Twilight video clips can add drama when a home has exterior lighting, large windows, city views, outdoor living features, or strong curb appeal. Pairing reels with twilight photography can give a listing a premium look for social media and hero marketing assets." ] },
+      ], media: { layout: "vertical-videos", items: [
+        { type: "video", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-24/306%20Cranbrook%20Walk%20Se%20-%20Vertical%20Property%20Video%2C%20Calgary.mp4", alt: "Vertical real estate reel for a Calgary property listing in Cranston", caption: "Vertical reel example: front exterior and interior walkthrough clips formatted for Instagram Reels and mobile discovery." },
+        { type: "video", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-24/112%20Cranbrook%20View%20Se%2C%20Calgary%20(1).mp4", alt: "Vertical property video reel for a Calgary listing with interior and exterior highlights", caption: "Short-form listing clips can highlight the strongest rooms and create quick social media momentum." },
+      ] } },
+      { heading: "Best Platforms for Real Estate Video Content", paragraphs: ["A strong Calgary realtor marketing plan uses different video formats for different platforms. The same shoot can support vertical reels, horizontal listing videos, YouTube uploads, MLS media, email campaigns, and paid ad creatives."], subSections: [
+        { heading: "Instagram Reels", paragraphs: ["Instagram reels for realtors are built for short attention spans and mobile-first browsing. Vertical format, trending audio, concise hooks, and strong first frames can improve discoverability and help listings reach people beyond an agent's existing followers." ] },
+        { heading: "YouTube Listing Videos", paragraphs: ["YouTube is useful for longer walkthroughs, property tours, and evergreen listing video content. It also offers SEO benefits because YouTube videos can be indexed by Google and embedded on property websites, blog posts, and agent pages." ] },
+        { heading: "Facebook and Paid Ads", paragraphs: ["Facebook video can support listing campaigns, local audience targeting, retargeting, and paid promotion. Short videos are useful for awareness, while longer clips or property website links can help move interested viewers toward a showing request." ] },
+        { heading: "MLS and Property Websites", paragraphs: ["MLS-compatible listing videos and embedded media create a richer listing experience. Property websites can combine photos, video, floor plans, iGUIDE tours, feature sheets, and booking links in one organized place." ] },
+        { heading: "Email Marketing Campaigns", paragraphs: ["Email remains useful for listing announcements, newsletters, realtor databases, and buyer updates. A video thumbnail or property website link can make an email campaign more engaging than text and photos alone." ] },
+      ], media: { layout: "vertical-videos", items: [
+        { type: "video", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-24/316-3107%20Warren%20St%2C%20Nw%2C%20Calgary%20V2.mp4", alt: "Vertical Calgary condo listing video for real estate social media marketing", caption: "Condo and infill listings can use vertical video to show layout, finishes, and location-friendly buyer details." },
+        { type: "video", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-04-24/V2%209759%20Sanderling%20Way%20Nw%20Calgary%20-%20Videos.mp4", alt: "Vertical real estate reel for a northwest Calgary property listing", caption: "Vertical listing videos can be reused for Instagram, Facebook, TikTok, YouTube Shorts, stories, and ad creatives." },
+      ] } },
+      { heading: "Tips for Planning a Better Real Estate Video Shoot", paragraphs: ["A better real estate video starts before the camera is turned on. Planning the shot list, preparing the property, and choosing the right time of day help the final edit feel polished and intentional."], subSections: [
+        { heading: "Focus on the Property's Strongest Features", paragraphs: ["The best listing videos lead with what buyers will remember: views, kitchens, luxury bathrooms, outdoor areas, architecture, renovated finishes, or unique community access. Not every room needs the same screen time." ] },
+        { heading: "Keep the Property Clean and Bright", paragraphs: ["Video reveals clutter, reflections, fingerprints, crooked blinds, dim bulbs, and messy surfaces more easily than still photography. Clean counters, open blinds, tidy rooms, and simple styling make every camera move look smoother." ] },
+        { heading: "Plan for Lighting and Timing", paragraphs: ["Natural light, sunset timing, exterior exposure, and weather all affect video quality. Bright daytime shoots work well for interiors, while twilight or golden-hour clips may be useful for luxury exteriors, outdoor living spaces, or homes with strong evening ambiance." ] },
+        { heading: "Capture Vertical and Horizontal Formats", paragraphs: ["Modern listing video marketing strategies should include both horizontal and vertical video for real estate. Horizontal edits work well for MLS, YouTube, and property websites, while vertical edits are better for Instagram Reels, Facebook Reels, TikTok, YouTube Shorts, and story content." ] },
+      ] },
+      { heading: "How Realtors Reuse Video Across Multiple Marketing Channels", paragraphs: ["The most effective real estate marketing campaigns reuse the same video assets across several platforms instead of creating separate content for each channel. One shoot can create a hero walkthrough, short reels, teaser clips, YouTube uploads, paid ad creatives, story content, website banners, and email-friendly media.", "This approach gives Calgary realtors more value from the same appointment and keeps the listing campaign consistent. A polished video can support MLS exposure, social media marketing for realtors, property websites, listing presentations, open house promotion, and seller updates."], bullets: ["Use the full horizontal video on MLS, YouTube, and the property website.", "Post vertical reels as launch-day teasers and feature highlights.", "Turn kitchen, primary suite, backyard, and neighbourhood moments into separate clips.", "Use short video thumbnails in newsletters and listing announcements.", "Create paid ad versions for retargeting and local audience campaigns.", "Save the best clips for stories, open house reminders, and just-listed posts."] },
+      { heading: "Common Mistakes in Real Estate Video Marketing", paragraphs: ["Real estate video ideas for listings work best when the video is clear, stable, and focused. The goal is to make the property easier to understand, not to overwhelm buyers with every possible clip."], bullets: ["Shaky footage that feels distracting or unprofessional.", "Poor lighting or filming at the wrong time of day.", "Clips that are too long for the platform.", "Showing every room equally instead of emphasizing the strongest features.", "Inconsistent branding between reels, listing videos, and property websites.", "Distracting music choices that do not match the home or audience.", "Overusing transitions, speed ramps, or effects that take attention away from the property."] },
+      { heading: "Final Thoughts", paragraphs: ["Video increases engagement because it gives buyers a more dynamic way to understand layout, atmosphere, and lifestyle. Short-form content is growing quickly, and Calgary listings benefit when video is planned for multiple platforms from the start.", "Professional real estate videos and reels help Calgary listings feel more dynamic, memorable, and engaging across MLS, social media, YouTube, and online advertising campaigns. When video is paired with professional real estate photography, drone media, twilight assets, and strong listing preparation, the full campaign becomes easier for buyers to notice and remember." ] },
+    ],
+    faqHeading: "Frequently Asked Questions About Real Estate Videos and Reels",
+    faqs: [
+      { question: "Are real estate videos worth it for every listing?", answer: "Real estate videos are useful for many listings because they help buyers understand layout, flow, and atmosphere before a showing. Smaller or entry-level listings may only need short reels, while larger homes, luxury properties, view homes, and unique layouts often benefit from a full walkthrough video." },
+      { question: "How long should a real estate reel be?", answer: "Most real estate reels perform best when they are short, focused, and easy to watch on mobile. A 15 to 45 second reel is usually enough for a feature highlight, while a more complete vertical listing video may run closer to 60 to 90 seconds depending on the property." },
+      { question: "What type of properties benefit most from video?", answer: "Homes with open layouts, luxury finishes, great kitchens, outdoor living spaces, views, acreage settings, renovated interiors, or strong neighbourhood context usually benefit most from video. Video is also helpful when a floor plan is difficult to understand from photos alone." },
+      { question: "Should listing videos be vertical or horizontal?", answer: "Both formats are useful. Horizontal videos work well for MLS, YouTube, property websites, and email campaigns, while vertical videos are best for Instagram Reels, Facebook Reels, TikTok, YouTube Shorts, and mobile-first social media marketing." },
+      { question: "Do Instagram Reels help realtors get more exposure?", answer: "Instagram Reels can help realtors reach more people because the format is designed for mobile discovery and short attention spans. Results depend on the video quality, hook, caption, timing, audience, and consistency of the agent's overall social media strategy." },
+      { question: "Can one video shoot create multiple pieces of content?", answer: "Yes. One real estate video shoot can often create a horizontal walkthrough, vertical reels, teaser clips, social stories, ad creatives, YouTube content, property website media, and email campaign assets. Planning both formats in advance makes the shoot more efficient." },
     ],
   },
   {
@@ -592,7 +741,20 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
-export const recentBlogPosts = blogPosts.slice(0, 5);
+function compareBlogPostsByNewest(a: BlogPost, b: BlogPost) {
+  return b.date.localeCompare(a.date) || b.updated.localeCompare(a.updated) || a.title.localeCompare(b.title);
+}
+
+export const sortedBlogPosts = [...blogPosts].sort(compareBlogPostsByNewest);
+
+export function getBlogOpenGraphImage(post: BlogPost) {
+  return {
+    src: post.ogImage?.src ?? post.image.src,
+    alt: post.ogImage?.alt ?? post.image.alt,
+  };
+}
+
+export const recentBlogPosts = sortedBlogPosts.slice(0, 5);
 
 export const BLOG_POSTS_PER_PAGE = 10;
 
@@ -600,7 +762,7 @@ export const totalBlogPages = Math.max(1, Math.ceil(blogPosts.length / BLOG_POST
 
 export function getBlogPostsPage(page: number, pageSize = BLOG_POSTS_PER_PAGE) {
   const startIndex = (page - 1) * pageSize;
-  return blogPosts.slice(startIndex, startIndex + pageSize);
+  return sortedBlogPosts.slice(startIndex, startIndex + pageSize);
 }
 
 export function getCategoryPostsPage(slug: string, page: number, pageSize = BLOG_POSTS_PER_PAGE) {
@@ -622,7 +784,7 @@ export function getBlogCategory(slug: string) {
 }
 
 export function getPostsByCategory(slug: string) {
-  return blogPosts.filter((post) => post.categorySlugs.includes(slug));
+  return sortedBlogPosts.filter((post) => post.categorySlugs.includes(slug));
 }
 
 export function getPostCategories(post: BlogPost) {

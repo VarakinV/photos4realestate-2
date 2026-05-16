@@ -7695,8 +7695,14 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
 .blog-before-after-slider { background: var(--navy); }
 .blog-before-after-card figcaption { display: grid; gap: 4px; padding: 14px 16px 16px; color: var(--text-muted); font-size: 13px; line-height: 1.55; }
 .blog-before-after-card figcaption strong { color: var(--navy); font-size: 15px; }
+.blog-embed-card { margin: 24px 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: 0 10px 30px rgba(19,29,59,0.06); }
+.blog-embed-frame { position: relative; width: 100%; height: 0; overflow: hidden; background: var(--navy); }
+.blog-embed-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.blog-embed-card figcaption { display: grid; gap: 8px; padding: 14px 16px 16px; color: var(--text-muted); font-size: 13px; line-height: 1.55; }
+.blog-embed-card figcaption a { color: var(--brick); font-weight: 700; }
 .blog-media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
 .blog-media-grid--vertical { align-items: start; max-width: 620px; margin-inline: auto; }
+.blog-media-grid--full { grid-template-columns: 1fr; }
 .blog-media-item { margin: 0; border: 1px solid var(--border); border-radius: calc(var(--radius) - 4px); overflow: hidden; background: var(--off-white); box-shadow: 0 8px 28px rgba(19,29,59,0.05); }
 .blog-image-lightbox-button { display: block; width: 100%; border: 0; padding: 0; background: transparent; cursor: zoom-in; overflow: hidden; }
 .blog-image-lightbox-button:focus-visible { outline: 3px solid rgba(203,65,84,0.45); outline-offset: 3px; }
@@ -7704,6 +7710,7 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
 .blog-media-item img, .blog-media-item video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--navy); transition: transform 0.5s ease; }
 .blog-media-item .blog-image-lightbox-button:hover img, .blog-post-featured .blog-image-lightbox-button:hover img { transform: scale(1.04); }
 .blog-media-grid--vertical .blog-media-item video { aspect-ratio: 9 / 16; }
+.blog-media-grid--full .blog-media-item video { aspect-ratio: 16 / 9; }
 .blog-media-item figcaption { color: var(--text-muted); font-size: 13px; line-height: 1.55; padding: 12px 14px; }
 .blog-stat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
 .blog-stat-card { border: 1px solid var(--border); border-left: 4px solid var(--brick); border-radius: var(--radius-sm); background: var(--off-white); padding: 20px; box-shadow: 0 8px 24px rgba(19,29,59,0.04); }

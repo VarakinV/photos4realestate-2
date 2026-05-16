@@ -97,12 +97,12 @@ export function BlogFeaturedImage({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-export function BlogMediaGrid({ items, layout }: { items: BlogMediaItem[]; layout?: "grid" | "vertical-videos" }) {
+export function BlogMediaGrid({ items, layout }: { items: BlogMediaItem[]; layout?: "grid" | "vertical-videos" | "full-width-video" }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const imageItems = items.filter(isImageItem);
 
   return (
-    <div className={`blog-media-grid ${layout === "vertical-videos" ? "blog-media-grid--vertical" : ""}`}>
+    <div className={`blog-media-grid ${layout === "vertical-videos" ? "blog-media-grid--vertical" : ""} ${layout === "full-width-video" ? "blog-media-grid--full" : ""}`}>
       {items.map((item) => {
         const imageIndex = item.type === "image" ? imageItems.findIndex((image) => image.src === item.src) : -1;
         return (
