@@ -13,7 +13,7 @@ const cards = [
   {
     href: "/contact-us",
     img: homeImages.industryHomeowners,
-    alt: "Bedroom photographed for an Airbnb or rental listing by Photos 4 Real Estate",
+    alt: "Bathroom with view to bedroom photographed for an Airbnb or rental listing by Photos 4 Real Estate",
     title: "AirBnB & Home Owhers",
     copy: "Showcase your rental in its best light and increase bookings with professional photography that stands out on listing platforms.",
   },

@@ -73,7 +73,7 @@ export function Hero() {
           <div className="hero-img-item span-row">
             <Image
               src={homeImages.heroLarge}
-              alt="Close-up bathroom detail shot in a Calgary luxury home photographed for a real estate listing by Photos 4 Real Estate"
+              alt="Living room with fireplace and mirror in a Calgary home photographed for a real estate listing by Photos 4 Real Estate"
               fill
               priority
               sizes="(max-width: 900px) 100vw, 50vw"

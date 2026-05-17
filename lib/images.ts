@@ -4,14 +4,14 @@ const u = "https://images.unsplash.com";
 const cdn = "https://photos4realestate.ca/wp-content/uploads";
 
 export const homeImages = {
-  heroLarge: "https://cdn.photos4realestate.ca/p4re-static-media/hero-section-images/28.jpg",
+  heroLarge: "https://cdn.photos4realestate.ca/p4re-static-media/hero-section-images/Living-room-with-fireplace-and-mirror-Photos-4-Real-Estate.jpg",
   heroTopLeft: "https://cdn.photos4realestate.ca/p4re-static-media/hero-section-images/04-04.jpg",
   heroBottomLeft: "https://cdn.photos4realestate.ca/p4re-static-media/hero-section-images/Lakefront-house-in-Auburn-Bay-Twilight-Photos-4-Real-Estate.jpg",
   heroSmall: `${u}/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80`,
 
   servicePhoto: `${u}/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80`,
   industryAgents: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/kitchen-example-photos-4-real-estate.webp",
-  industryHomeowners: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/Bedroom-Photos-4-Real-Estate.webp",
+  industryHomeowners: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/Bathroom-with-view-to-bedroom-Photos-4-Real-Estate.jpg",
   industryStagers: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/office-Photos-4-Real-Estate.jpg",
   industryHotelsCommercial: "https://cdn.photos4realestate.ca/p4re-static-media/industries-section-images/Sandman-hotel-Calgary.webp",
 
