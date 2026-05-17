@@ -25,6 +25,7 @@ import { Reviews } from "@/components/home/Reviews";
 import { BeforeAfter } from "@/components/bits/BeforeAfter";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
+import { photosOnlyTiers, pricingTiers } from "@/lib/pricing";
 import { siteConfig, serviceAreas } from "@/lib/site";
 import { servicesContent } from "@/lib/services-content";
 import { photographyImages } from "@/lib/images";
@@ -41,6 +42,8 @@ const slug = "real-estate-photography-in-calgary";
 const content = servicesContent[slug];
 const pageUrl = `${siteConfig.url}/services/${slug}`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
+const photosOnlyStartPrice = photosOnlyTiers[0].price;
+const essentialStartPrice = pricingTiers[0].essential;
 
 export function generateMetadata(): Metadata {
   return {
@@ -83,7 +86,7 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "CAD",
-    price: "140",
+    price: `${photosOnlyStartPrice}`,
     url: `${siteConfig.url}/prices`,
     availability: "https://schema.org/InStock",
   },
@@ -291,7 +294,7 @@ export default function RealEstatePhotographyCalgaryPage() {
                 <span className="lbl">Google rating</span>
               </li>
               <li className="services-page-hero-stat">
-                <span className="num">$140</span>
+                <span className="num">{`$${photosOnlyStartPrice}`}</span>
                 <span className="lbl">Starting price</span>
               </li>
             </ul>
@@ -808,7 +811,7 @@ function PageBody() {
                 Transparent Pricing.<br /><em>No Hidden Fees.</em>
               </h2>
               <p className="pc-body">
-                Real estate photography in Calgary starts from $140 for photos only, or from $245 when bundled with our iGUIDE 3D virtual tour and RMS measurements. Pricing scales by square footage &mdash; select your home size on the pricing page to see your exact quote.
+                Real estate photography in Calgary starts from {`$${photosOnlyStartPrice}`} for photos only, or from {`$${essentialStartPrice}`} when bundled with our iGUIDE 3D virtual tour and RMS measurements. Pricing scales by square footage &mdash; select your home size on the pricing page to see your exact quote.
               </p>
               <div className="pc-includes" aria-label="What's always included">
                 <div className="pc-pill"><div className="pc-pill-dot" aria-hidden="true"></div>Blue-sky replacement</div>
@@ -821,7 +824,7 @@ function PageBody() {
 
             <div className="pc-right">
               <span className="pc-from">Photography starting from</span>
-              <span className="pc-price"><sup>$</sup>140</span>
+              <span className="pc-price"><sup>$</sup>{photosOnlyStartPrice}</span>
               <span className="pc-gst">+ GST &nbsp;&middot;&nbsp; photos only</span>
               <div className="pc-actions">
                 <Link href="/prices" className="btn btn-primary">
@@ -835,7 +838,7 @@ function PageBody() {
               </div>
               <p className="pc-sqft-note">
                 Prices vary by square footage.<br />
-                Packages from $245 include iGUIDE&nbsp;+&nbsp;RMS.
+                Packages from {`$${essentialStartPrice}`} include iGUIDE&nbsp;+&nbsp;RMS.
               </p>
             </div>
           </div>

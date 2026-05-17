@@ -7,12 +7,25 @@ export type PricingTier = {
 };
 
 export const pricingTiers: ReadonlyArray<PricingTier> = [
-  { label: "Up to 1,000 sq ft", short: "≤ 1,000", essential: 245, skyline: 345, social: 485 },
-  { label: "1,001–1,500 sq ft", short: "1,001–1,500", essential: 265, skyline: 365, social: 515 },
-  { label: "1,501–3,000 sq ft", short: "1,501–3,000", essential: 345, skyline: 445, social: 605 },
-  { label: "3,001–4,000 sq ft", short: "3,001–4,000", essential: 395, skyline: 495, social: 665 },
-  { label: "4,001–5,000 sq ft", short: "4,001–5,000", essential: 475, skyline: 575, social: 755 },
-  { label: "5,001–6,000 sq ft", short: "5,001–6,000", essential: 545, skyline: 645, social: 845 },
+  { label: "Up to 1,000 sq ft", short: "≤ 1,000", essential: 265, skyline: 365, social: 565 },
+  { label: "1,001–1,500 sq ft", short: "1,001–1,500", essential: 285, skyline: 385, social: 585 },
+  { label: "1,501–3,000 sq ft", short: "1,501–3,000", essential: 365, skyline: 465, social: 665 },
+  { label: "3,001–4,000 sq ft", short: "3,001–4,000", essential: 425, skyline: 525, social: 695 },
+  { label: "4,001–5,000 sq ft", short: "4,001–5,000", essential: 500, skyline: 600, social: 800 },
+  { label: "5,001–6,000 sq ft", short: "5,001–6,000", essential: 575, skyline: 675, social: 875 },
+];
+
+export type ServicePricingTier = {
+  label: string;
+  price: number;
+};
+
+export const photosOnlyTiers: ReadonlyArray<ServicePricingTier> = [
+  { label: "Up to 1,500 sq ft", price: 150 },
+  { label: "1,501–3,000 sq ft", price: 200 },
+  { label: "3,001–4,000 sq ft", price: 250 },
+  { label: "4,001–5,000 sq ft", price: 300 },
+  { label: "5,001–6,000 sq ft", price: 350 },
 ];
 
 export type PricingPackage = {

@@ -1,8 +1,14 @@
 import { services } from "@/lib/site";
 import { servicesImages } from "@/lib/images";
 import type { Faq } from "@/lib/faqs";
+import { photosOnlyTiers, pricingTiers } from "@/lib/pricing";
 
 export type ServiceSlug = (typeof services)[number]["slug"];
+
+const startPhotosOnly = photosOnlyTiers[0].price;
+const startEssential = pricingTiers[0].essential;
+const startSkyline = pricingTiers[0].skyline;
+const startSocial = pricingTiers[0].social;
 
 export type ServiceVisual =
   | { kind: "image"; src: string; alt: string }
@@ -65,7 +71,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     faqs: [
       {
         q: "How much does real estate photography cost in Calgary?",
-        a: "Real estate photography in Calgary starts at $140 for photos only (up to 1,500 sq ft). Our most popular package — Essential, which includes photos, iGUIDE 3D tour, and RMS measurements — starts at $245 for homes up to 1,000 sq ft. All prices are before GST. <a href=\"/prices\">See full pricing<span class=\"sr-only\"> for Calgary real estate photography packages</span> &rarr;</a>",
+        a: `Real estate photography in Calgary starts at $${startPhotosOnly} for photos only (up to 1,500 sq ft). Our most popular package — Essential, which includes photos, iGUIDE 3D tour, and RMS measurements — starts at $${startEssential} for homes up to 1,000 sq ft. All prices are before GST. <a href="/prices">See full pricing<span class="sr-only"> for Calgary real estate photography packages</span> &rarr;</a>`,
       },
       {
         q: "How long does a real estate photo shoot take?",
@@ -89,7 +95,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "Can I book real estate photography without the iGUIDE tour and RMS measurements?",
-        a: "Yes — our Photos Only service starts at $140 and includes professional photography, blue-sky replacement, and MLS-ready files without the iGUIDE or RMS component. This is a good option if you already have recent floor plans or are photographing a rental property that doesn't require RMS.",
+        a: `Yes — our Photos Only service starts at $${startPhotosOnly} and includes professional photography, blue-sky replacement, and MLS-ready files without the iGUIDE or RMS component. This is a good option if you already have recent floor plans or are photographing a rental property that doesn't require RMS.`,
       },
     ],
     relatedSlugs: [
@@ -270,7 +276,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "How much do RMS measurements cost in Calgary?",
-        a: 'Standalone RMS measurements and floor plans start at $150 + GST for homes up to 1,500 sq ft. When combined with photography in our Essential, Skyline, or Social Boost packages, RMS and floor plans are included starting from $245 + GST. <a href="/prices/">See the full pricing breakdown by square footage &rarr;</a>',
+        a: `Standalone RMS measurements and floor plans start at $150 + GST for homes up to 1,500 sq ft. When combined with photography in our Essential, Skyline, or Social Boost packages, RMS and floor plans are included starting from $${startEssential} + GST. <a href="/prices/">See the full pricing breakdown by square footage &rarr;</a>`,
       },
       {
         q: "How long does an RMS measurement take?",
@@ -342,7 +348,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "How much does an iGUIDE virtual tour cost in Calgary?",
-        a: "The iGUIDE service (3D tour + RMS + floor plans) starts at $150 + GST as a standalone service for homes up to 1,500 sq ft. When bundled with photography in an Essential, Skyline, or Social Boost package, it is included starting from $245 + GST. Pricing scales by billable square footage. <a href=\"/prices\">See the full pricing breakdown <span class=\"sr-only\">for iGUIDE virtual tours in Calgary</span>&rarr;</a>",
+        a: `The iGUIDE service (3D tour + RMS + floor plans) starts at $150 + GST as a standalone service for homes up to 1,500 sq ft. When bundled with photography in an Essential, Skyline, or Social Boost package, it is included starting from $${startEssential} + GST. Pricing scales by billable square footage. <a href="/prices">See the full pricing breakdown <span class="sr-only">for iGUIDE virtual tours in Calgary</span>&rarr;</a>`,
       },
       {
         q: "How is iGUIDE different from Matterport?",
@@ -406,7 +412,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     faqs: [
       {
         q: "How much does drone photography cost for real estate in Calgary?",
-        a: "Drone photography for real estate in Calgary costs $125 + GST as an add-on to any photography package. It is included as standard in the Skyline package (from $345) and the Social Boost package (from $485). Drone video footage is an additional $125 &mdash; or included in Social Boost. All drone pricing is fixed, not square footage based. <a href=\"/prices\">See the full pricing breakdown<span class=\"sr-only\"> for Calgary drone photography packages</span> &rarr;</a>",
+        a: `Drone photography for real estate in Calgary costs $125 + GST as an add-on to any photography package. It is included as standard in the Skyline package (from $${startSkyline}) and the Social Boost package (from $${startSocial}). Drone video footage is an additional $125 &mdash; or included in Social Boost. All drone pricing is fixed, not square footage based. <a href="/prices">See the full pricing breakdown<span class="sr-only"> for Calgary drone photography packages</span> &rarr;</a>`,
       },
       {
         q: "Are your drone pilots licensed in Canada?",

@@ -20,6 +20,7 @@ import { Cta } from "@/components/home/Cta";
 import { Reviews } from "@/components/home/Reviews";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
+import { pricingTiers } from "@/lib/pricing";
 import { siteConfig, serviceAreas } from "@/lib/site";
 import { servicesContent } from "@/lib/services-content";
 import { rmsImages } from "@/lib/images";
@@ -30,6 +31,7 @@ const slug = "rms-measurements-and-floor-plans-in-calgary";
 const content = servicesContent[slug];
 const pageUrl = `${siteConfig.url}/services/${slug}`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
+const bundledStartPrice = pricingTiers[0].essential;
 
 export function generateMetadata(): Metadata {
   return {
@@ -615,7 +617,7 @@ function PageBody() {
                 RMS Measurements &amp;<br /><em>Floor Plans Pricing</em>
               </h2>
               <p className="pc-body">
-                Standalone RMS measurements and floor plans start at $150 for homes up to 1,500 sq ft. When bundled with photography in an Essential, Skyline, or Social Boost package, RMS and floor plans are included from $245 &mdash; making the package significantly better value. Pricing scales by billable square footage.
+                Standalone RMS measurements and floor plans start at $150 for homes up to 1,500 sq ft. When bundled with photography in an Essential, Skyline, or Social Boost package, RMS and floor plans are included from {`$${bundledStartPrice}`} &mdash; making the package significantly better value. Pricing scales by billable square footage.
               </p>
               <div className="pc-includes">
                 <div className="pc-pill"><div className="pc-pill-dot" />RECA-compliant report</div>
@@ -641,7 +643,7 @@ function PageBody() {
               </div>
               <p className="pc-sqft-note">
                 Included in Essential, Skyline &amp; Social Boost<br />
-                packages from $245. Scales by sq ft.
+                packages from {`$${bundledStartPrice}`}. Scales by sq ft.
               </p>
             </div>
           </div>

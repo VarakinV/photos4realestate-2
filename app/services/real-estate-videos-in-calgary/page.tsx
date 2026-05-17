@@ -22,6 +22,7 @@ import { Cta } from "@/components/home/Cta";
 import { Reviews } from "@/components/home/Reviews";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
+import { pricingTiers } from "@/lib/pricing";
 import { siteConfig, serviceAreas } from "@/lib/site";
 import { servicesContent } from "@/lib/services-content";
 import { videographyImages, photographyImages } from "@/lib/images";
@@ -39,6 +40,8 @@ const content = servicesContent[slug];
 const pageUrl = `${siteConfig.url}/services/${slug}`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
 const businessId = `${siteConfig.url}/#business`;
+const videoStartingPrice = pricingTiers[0].social - pricingTiers[0].skyline;
+const standaloneVideoPrice = 300;
 
 export function generateMetadata(): Metadata {
   return {
@@ -80,7 +83,7 @@ const serviceSchema = {
   offers: {
     "@type": "Offer",
     priceCurrency: "CAD",
-    price: "140",
+    price: `${videoStartingPrice}`,
     url: `${siteConfig.url}/prices`,
     availability: "https://schema.org/InStock",
   },
@@ -281,7 +284,7 @@ export default function RealEstateVideographyCalgaryPage() {
                 <span className="lbl">Google rating</span>
               </li>
               <li className="services-page-hero-stat">
-                <span className="num">$140</span>
+                <span className="num">{`$${videoStartingPrice}`}</span>
                 <span className="lbl">Starting price</span>
               </li>
             </ul>
@@ -607,7 +610,7 @@ function PageBody() {
                 Transparent Pricing.<br /><em>No Hidden Fees.</em>
               </h2>
               <p className="pc-body">
-                Real estate videography in Calgary starts from $140 when bundled with our Social Boost package, or from $300 as a standalone service. Our pricing scales logically with your property&apos;s size so you always know exactly what to expect.
+                Real estate videography in Calgary starts from {`$${videoStartingPrice}`} when bundled with our Social Boost package, or from {`$${standaloneVideoPrice}`} as a standalone service. Our pricing scales logically with your property&apos;s size so you always know exactly what to expect.
               </p>
               <div className="pc-includes" aria-label="What's always included">
                 <div className="pc-pill"><div className="pc-pill-dot" aria-hidden="true"></div>Licensed background music</div>
@@ -620,8 +623,8 @@ function PageBody() {
 
             <div className="pc-right">
               <span className="pc-from">Videography starting from</span>
-              <span className="pc-price"><sup>$</sup>140</span>
-              <span className="pc-gst">+ GST &nbsp;&middot;&nbsp; when booked with social boost package</span>
+              <span className="pc-price"><sup>$</sup>{videoStartingPrice}</span>
+              <span className="pc-gst">+ GST &nbsp;&middot;&nbsp; when booked with Social Boost package</span>
               <div className="pc-actions">
                 <Link href="/prices" className="btn btn-primary">
                   See Full Pricing

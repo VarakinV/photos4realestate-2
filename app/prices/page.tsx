@@ -37,17 +37,21 @@ import {
 } from "@/lib/reviews";
 import { siteConfig } from "@/lib/site";
 import { pricingFaqs } from "@/lib/faqs";
-import { pricingTiers } from "@/lib/pricing";
+import { photosOnlyTiers, pricingTiers } from "@/lib/pricing";
 
 export const dynamic = "force-static";
 
 const pageUrl = `${siteConfig.url}/prices`;
 const ogImageUrl = `${pageUrl}/opengraph-image`;
+const startPhotosOnly = photosOnlyTiers[0].price;
+const startEssential = pricingTiers[0].essential;
+const startSkyline = pricingTiers[0].skyline;
+const startSocial = pricingTiers[0].social;
 
 const title =
   "Real Estate Photography Prices Calgary | Photos 4 Real Estate";
 const description =
-  "Calgary real estate photography pricing: Essential $245, Skyline $345, Social Boost $485. iGUIDE 3D tour, RMS floor plans & next-day delivery. Book online today.";
+  `Calgary real estate photography pricing: Essential $${startEssential}, Skyline $${startSkyline}, Social Boost $${startSocial}. iGUIDE 3D tour, RMS floor plans & next-day delivery. Book online today.`;
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -281,15 +285,12 @@ const alacarteCards: AlacarteCard[] = [
   {
     icon: Camera,
     name: "Photos Only",
-    price: "From $140",
+    price: `From $${startPhotosOnly}`,
     desc: "Interior & exterior photography without iGUIDE or RMS. Ideal if you already have floor plans or just need updated photos.",
-    rows: [
-      { label: "Up to 1,500 sq ft", price: "$140" },
-      { label: "1,501–3,000 sq ft", price: "$160" },
-      { label: "3,001–4,000 sq ft", price: "$180" },
-      { label: "4,001–5,000 sq ft", price: "$200" },
-      { label: "5,001–6,000 sq ft", price: "$220" },
-    ],
+    rows: photosOnlyTiers.map(({ label, price }) => ({
+      label,
+      price: `$${price}`,
+    })),
     link: { href: "/services/real-estate-photography-in-calgary", label: "Learn more" },
   },
   {
@@ -471,8 +472,9 @@ export default function PricesPage() {
             </h2>
             <p>
               Calgary real estate photography with Photos 4 Real Estate starts
-              at $245 + GST for homes up to 1,000 sq ft. Pricing increases by
-              iGUIDE billable-area tier, and every tier offers Essential,
+              at {`$${startEssential.toLocaleString("en-CA")}`} + GST for homes up to
+              1,000 sq ft. Pricing increases by iGUIDE billable-area tier,
+              and every tier offers Essential,
               Skyline, and Social Boost package options.
             </p>
             <p>
@@ -483,7 +485,9 @@ export default function PricesPage() {
           </div>
           <div className="pricing-summary-highlights" aria-label="Pricing summary highlights">
             <div className="pricing-summary-stat">
-              <div className="pricing-summary-stat-value">$245+</div>
+              <div className="pricing-summary-stat-value">
+                {`$${startEssential.toLocaleString("en-CA")}+`}
+              </div>
               <div className="pricing-summary-stat-label">starting package price</div>
             </div>
             <div className="pricing-summary-stat">
