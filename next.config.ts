@@ -35,6 +35,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/drone-photography-videography",
+        destination: "/services/real-estate-aerial-drone-photography-in-calgary",
+        permanent: true,
+      },
+      {
         source: "/social-media-real-estate-marketing-sell-listings-faster-in-calgary",
         destination: "/blog/social-media-marketing-for-real-estate-listings-calgary",
         permanent: true,
