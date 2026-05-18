@@ -75,7 +75,6 @@ export default async function PortfolioPage() {
     aggregateRating: { "@type": "AggregateRating", ratingValue: AVERAGE_RATING, reviewCount: REVIEW_COUNT, bestRating: 5, worstRating: 1 },
     review: reviewItems.slice(0, 5).map((review) => ({
       "@type": "Review",
-      itemReviewed: { "@id": businessId },
       author: { "@type": "Person", name: review.name },
       datePublished: toIsoDate(review.date),
       reviewBody: review.text,

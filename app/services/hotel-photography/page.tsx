@@ -354,7 +354,6 @@ const reviewSchema = {
   review: reviewItems.map((review) => ({
     "@type": "Review",
     author: { "@type": "Person", name: review.name },
-    itemReviewed: { "@id": businessId },
     reviewBody: review.text,
     reviewRating: {
       "@type": "Rating",

@@ -1925,7 +1925,6 @@ export default async function ServiceAreaTownPage({
       },
       datePublished: toIsoDate(review.date),
       publisher: { "@type": "Organization", name: "Google" },
-      itemReviewed: { "@id": businessId },
     })),
   };
 

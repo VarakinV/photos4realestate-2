@@ -117,9 +117,6 @@ const reviewSchema = {
       "@type": "Person",
       name: review.name,
     },
-    itemReviewed: {
-      "@id": businessId,
-    },
     reviewBody: review.text,
     reviewRating: {
       "@type": "Rating",
