@@ -117,6 +117,21 @@ const softwareSchema = {
   ],
 };
 
+const imageCreatorSchema = {
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
+} as const;
+
+const imageLicenseSchema = {
+  creator: imageCreatorSchema,
+  creditText: siteConfig.name,
+  copyrightNotice: "© IKorolova Photos and Marketing Inc. All rights reserved.",
+  license: `${siteConfig.url}/terms-and-conditions`,
+  acquireLicensePage: `${siteConfig.url}/contact-us`,
+} as const;
+
 const imageSchema = flyerExamples.map((flyer, index) => ({
   "@context": "https://schema.org",
   "@type": "ImageObject",
@@ -124,7 +139,7 @@ const imageSchema = flyerExamples.map((flyer, index) => ({
   description: flyer.alt,
   contentUrl: flyer.src,
   thumbnailUrl: flyer.src,
-  creator: { "@id": `${siteConfig.url}/#business` },
+  ...imageLicenseSchema,
   mainEntityOfPage: pageUrl,
 }));
 
@@ -135,7 +150,12 @@ const speakableSchema = {
   url: pageUrl,
   name: title,
   description,
-  primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrl },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: ogImageUrl,
+    contentUrl: ogImageUrl,
+    ...imageLicenseSchema,
+  },
   speakable: {
     "@type": "SpeakableSpecification",
     cssSelector: [".speakable-intro", ".speakable-faq"],

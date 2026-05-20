@@ -4429,7 +4429,7 @@ h4 {
 .ft-compare-header h2 { font-size: clamp(24px, 2.8vw, 36px); color: var(--navy); margin-bottom: 10px; }
 .ft-compare-header p { font-size: 15px; color: var(--text-muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
 .ft-compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.ft-compare-card { border-radius: var(--radius); padding: 36px; }
+.ft-compare-card { border-radius: var(--radius); padding: 36px; min-width: 0; }
 .ft-compare-card.free-card { background: var(--white); border: 1.5px solid var(--border); }
 .ft-compare-card.kit-card { background: var(--navy); border: 1.5px solid transparent; }
 .ft-compare-card-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; display: block; }
@@ -4478,6 +4478,15 @@ h4 {
   .ft-tool-free-tag { display: none; }
   .ft-why-grid { grid-template-columns: 1fr; }
   .ft-intro-visual { grid-template-columns: 1fr; }
+  .ft-compare-card {
+    padding: 24px;
+  }
+  .ft-compare-card .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
 }
 
 /* ── INDIVIDUAL FREE TOOL PAGES ── */
