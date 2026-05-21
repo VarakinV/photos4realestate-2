@@ -151,7 +151,7 @@ export function PortfolioGallery({ categories }: PortfolioGalleryProps) {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 600px) 100vw, (max-width: 960px) 50vw, 33vw"
                     className="portfolio-photo-img"
                   />
                   <span className="portfolio-photo-overlay">

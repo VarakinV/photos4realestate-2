@@ -4986,8 +4986,8 @@ button.hotel-project-trigger:disabled { cursor: not-allowed; opacity: 0.7; }
 .hotel-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .hotel-gallery-photo { position: relative; min-height: 260px; aspect-ratio: 4 / 3; border-radius: var(--radius-sm); overflow: hidden; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); margin: 0; box-shadow: var(--shadow-lg); }
 .hotel-gallery-photo.is-featured,
-.hotel-gallery-photo--wide { grid-column: span 2; aspect-ratio: 16 / 9; }
-.hotel-gallery-photo--portrait { aspect-ratio: 3 / 4; }
+.hotel-gallery-photo--wide { grid-column: auto; }
+.hotel-gallery-photo--portrait { aspect-ratio: 4 / 3; }
 .hotel-gallery-button { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
 .hotel-gallery-button:focus-visible { outline: 3px solid rgba(255,255,255,0.82); outline-offset: -6px; border-radius: var(--radius-sm); }
 .hotel-gallery-img { object-fit: cover; transition: transform 0.45s ease; }
@@ -5078,8 +5078,6 @@ button.hotel-project-trigger:disabled { cursor: not-allowed; opacity: 0.7; }
   .hotel-checklist-grid,
   .hotel-why-grid { grid-template-columns: 1fr; }
   .hotel-gallery-photo { min-width: 0; min-height: 0; }
-  .hotel-gallery-photo.is-featured,
-  .hotel-gallery-photo--wide { grid-column: auto; }
   .hotel-project-modal { padding: 14px; align-items: end; }
   .hotel-project-dialog { width: 100%; max-height: 92vh; border-radius: 22px 22px 0 0; padding: 28px 20px; }
   .hotel-project-grid,
@@ -7545,12 +7543,12 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
 .portfolio-gallery-intro h2 { color: var(--navy); font-size: clamp(24px, 2.7vw, 34px); margin-bottom: 8px; }
 .portfolio-gallery-intro p { max-width: 620px; color: var(--text-muted); font-size: 15px; line-height: 1.75; font-weight: 300; }
 .portfolio-category-cta { border-width: 1.5px; justify-content: center; }
-.portfolio-photo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
-.portfolio-photo { position: relative; display: block; width: 100%; min-height: 220px; border: 0; border-radius: var(--radius-sm); overflow: hidden; background: var(--off-white); cursor: zoom-in; padding: 0; }
-.portfolio-photo--wide, .portfolio-photo.is-featured { grid-column: span 2; aspect-ratio: 8 / 5; }
-.portfolio-photo--landscape { aspect-ratio: 4 / 3; }
-.portfolio-photo--portrait { aspect-ratio: 3 / 4; }
-.portfolio-photo--square { aspect-ratio: 1 / 1; }
+.portfolio-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.portfolio-photo { position: relative; display: block; width: 100%; min-height: 220px; border: 0; border-radius: var(--radius-sm); overflow: hidden; background: var(--off-white); cursor: zoom-in; padding: 0; aspect-ratio: 4 / 3; }
+.portfolio-photo--wide, .portfolio-photo.is-featured { grid-column: auto; }
+.portfolio-photo--landscape,
+.portfolio-photo--portrait,
+.portfolio-photo--square { aspect-ratio: 4 / 3; }
 .portfolio-photo-img { object-fit: cover; transition: transform 0.45s ease; }
 .portfolio-photo:hover .portfolio-photo-img { transform: scale(1.06); }
 .portfolio-photo-overlay { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 14px; background: linear-gradient(to top, rgba(19,29,59,0.65), transparent 55%); color: rgba(255,255,255,0.92); opacity: 0; transition: opacity var(--transition); text-align: left; font-size: 12px; font-weight: 600; }
@@ -7601,7 +7599,6 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
     scroll-padding-inline: 16px;
   }
   .portfolio-photo-grid, .portfolio-services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .portfolio-photo--wide, .portfolio-photo.is-featured { grid-column: auto; }
   .legal-policy-hero { padding: 88px 0; }
   .legal-page-card { padding: 32px 28px 36px; }
 }
@@ -7626,7 +7623,7 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
   .about-member-badges { position: static; margin-top: 12px; padding-inline: 0; }
   .about-cert-badge { width: 100%; max-width: none; align-items: flex-start; }
   .portfolio-tabs { top: 64px; }
-  .portfolio-photo-grid { gap: 4px; }
+  .portfolio-photo-grid { grid-template-columns: 1fr; gap: 4px; }
   .portfolio-photo { min-height: 170px; }
   .portfolio-lightbox-nav { width: 42px; height: 42px; }
   .portfolio-lightbox-prev { left: 8px; }

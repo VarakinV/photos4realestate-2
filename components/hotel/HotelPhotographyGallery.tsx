@@ -133,7 +133,7 @@ export function HotelPhotographyGallery({ categories }: HotelPhotographyGalleryP
                     src={image.src}
                     alt={image.alt}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 760px) 100vw, (max-width: 1080px) 50vw, 33vw"
                     className="hotel-gallery-img"
                     priority={index === 0}
                   />
