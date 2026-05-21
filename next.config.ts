@@ -20,6 +20,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/book-now",
+        destination:
+          "https://app.photos4realestate.ca/book/cmfwsiyl30000jo04z3lcndl3",
+        permanent: true,
+      },
+      {
         source: "/favicon.ico",
         destination: "/logos/map-pin-1000.png",
         permanent: false,
