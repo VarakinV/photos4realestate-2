@@ -104,7 +104,7 @@ export const reviews: Review[] = [
 
 // Overall Google Business profile stats. Keep in sync with Google whenever
 // reviews are refreshed (the full count can exceed `reviews.length`).
-export const REVIEW_COUNT = 15;
+export const REVIEW_COUNT = 16;
 export const AVERAGE_RATING = 5.0;
 
 export const GOOGLE_REVIEW_URL = "https://g.page/r/CfdYTRLO_KYdEBM/review";
