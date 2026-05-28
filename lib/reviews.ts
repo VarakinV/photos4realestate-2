@@ -13,6 +13,14 @@ export type Review = {
 
 export const reviews: Review[] = [
   {
+    name: "Al Hamza",
+    avatar:
+      "https://lh3.googleusercontent.com/a-/ALV-UjUkdTWLxaXgAv2MKmCsNeULKph96YMst-yPPBg3VnwLo5Y5J9g=s36-c-rp-mo-br100",
+    date: "May 2026",
+    rating: 5,
+    text: "amazing service, super affordable rates, and perfect quality of imagery, They go above and beyond.",
+  },
+  {
     name: "Christopher Ramage",
     avatar:
       "https://lh3.googleusercontent.com/a-/ALV-UjXTMYJJeZ1c65cJBL-B1fvv-QlhapbUsgZnNwo0j5V1NvcK35RrKw=s36-c-rp-mo-br100",

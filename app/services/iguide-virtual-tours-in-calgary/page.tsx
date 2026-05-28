@@ -317,7 +317,7 @@ function PageBody() {
               <div className="ig-tour-img-pair">
                 <div>
                   <Image
-                    src={iguideTourImages.standardFloorPlan}
+                    src="https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/Standard%20iGUIDE%20Floor%20Plan.webp"
                     alt="Standard iGUIDE floor plan with room dimensions for a Calgary listing"
                     width={400}
                     height={300}
@@ -326,8 +326,8 @@ function PageBody() {
                 </div>
                 <div>
                   <Image
-                    src={iguideTourImages.rmsMeasurements}
-                    alt="RMS measurement report generated from an iGUIDE scan"
+                    src="https://cdn.photos4realestate.ca/p4re-static-media/iguide-virtual-tour-service-page/real-estate-virtual-tour-example-iguide.webp"
+                    alt="Example iGUIDE virtual tour interface for a Calgary real estate listing"
                     width={400}
                     height={300}
                     sizes="(max-width: 900px) 50vw, 19vw"
