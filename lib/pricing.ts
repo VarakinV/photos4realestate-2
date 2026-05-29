@@ -42,7 +42,7 @@ export const pricingPackages: ReadonlyArray<PricingPackage> = [
     id: "essential",
     name: "Essential",
     tagline:
-      "Photos + iGUIDE 3D Tour + RMS Floor Plans. Everything you need for a strong MLS listing.",
+      "Photos + RMS Floor Plans + iGUIDE 3D Tour. Everything you need for a strong MLS listing.",
     bookCta: "Book Essential",
     ctaVariant: "ghost",
   },
