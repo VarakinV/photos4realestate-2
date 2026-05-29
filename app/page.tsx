@@ -27,7 +27,7 @@ import { siteConfig } from "@/lib/site";
 export const dynamic = "force-static";
 
 const businessId = `${siteConfig.url}/#business`;
-const homeTitle = `Real Estate Photography Calgary | ${siteConfig.name}`;
+const homeTitle = `Calgary Real Estate Photo & Video | ${siteConfig.name}`;
 const homeDescription = siteConfig.description;
 
 export const metadata: Metadata = {
