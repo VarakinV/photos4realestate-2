@@ -1,14 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
-import { HotelProjectDialog } from "@/components/hotel/HotelProjectDialog";
 import { Logo } from "@/components/site/Logo";
 import { ServicesNavParentLink } from "@/components/site/ServicesNavParentLink";
 import { ServicesSubmenuLink } from "@/components/site/ServicesSubmenuLink";
 import { freeTools, primaryNav, services, siteConfig } from "@/lib/site";
+
+const HotelProjectDialog = dynamic(
+  () => import("@/components/hotel/HotelProjectDialog").then((module) => module.HotelProjectDialog),
+  { ssr: false },
+);
 
 function FacebookIcon() {
   return (

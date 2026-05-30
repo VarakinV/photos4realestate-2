@@ -685,6 +685,8 @@ h4 {
   z-index: 0;
   opacity: 0.96;
   filter: saturate(1.08);
+  background: radial-gradient(circle at 26% 24%, rgba(222, 54, 80, 0.24), transparent 34%),
+    radial-gradient(circle at 78% 66%, rgba(74, 134, 217, 0.16), transparent 38%);
 }
 .hero-eyebrow {
   display: inline-flex;
@@ -1262,6 +1264,12 @@ h4 {
   height: 100%;
   border-radius: inherit;
   overflow: hidden;
+}
+.feature-img > .before-after {
+  height: 100%;
+}
+.feature-img .before-after-item {
+  aspect-ratio: auto;
 }
 .before-after {
   display: grid;
