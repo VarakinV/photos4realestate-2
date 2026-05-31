@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useRef, useState, useTransition, type FormEvent, type ReactNode } from "react";
+import { useState, useTransition, type FormEvent, type ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { submitFreeHeadshotsLead, type FreeHeadshotsFieldErrors } from "@/app/actions/free-headshots";
 import {
@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { getRecaptchaToken } from "@/lib/recaptcha-client";
 
 type FreeHeadshotsOfferDialogProps = {
   children?: ReactNode;
@@ -22,25 +23,6 @@ type FreeHeadshotsOfferDialogProps = {
   showIcon?: boolean;
   recaptchaSiteKey?: string;
 };
-
-declare global {
-  interface Window {
-    grecaptcha?: {
-      ready: (callback: () => void) => void;
-      render: (
-        container: HTMLElement,
-        parameters: {
-          sitekey: string;
-          callback: (token: string) => void;
-          "expired-callback": () => void;
-          "error-callback": () => void;
-          size?: "normal" | "compact";
-        }
-      ) => number;
-      reset: (widgetId?: number) => void;
-    };
-  }
-}
 
 type FormValues = {
   firstName: string;
@@ -73,61 +55,19 @@ export function FreeHeadshotsOfferDialog({
   const [open, setOpen] = useState(false);
   const [values, setValues] = useState<FormValues>(INITIAL_VALUES);
   const [errors, setErrors] = useState<FieldErrors>({});
-  const [recaptchaToken, setRecaptchaToken] = useState("");
+  const [isVerifyingRecaptcha, setIsVerifyingRecaptcha] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const [isPending, startTransition] = useTransition();
-  const recaptchaRef = useRef<HTMLDivElement>(null);
-  const recaptchaWidgetId = useRef<number | null>(null);
-
-  const resetRecaptcha = useCallback(() => {
-    if (recaptchaWidgetId.current !== null && window.grecaptcha) {
-      window.grecaptcha.reset(recaptchaWidgetId.current);
-    }
-    setRecaptchaToken("");
-  }, []);
-
-  const renderRecaptcha = useCallback(() => {
-    if (!open || !recaptchaSiteKey || !recaptchaRef.current || recaptchaWidgetId.current !== null || !window.grecaptcha) return;
-
-    if (typeof window.grecaptcha.render !== "function") {
-      window.grecaptcha.ready(() => {
-        window.setTimeout(renderRecaptcha, 0);
-      });
-      return;
-    }
-
-    recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-      sitekey: recaptchaSiteKey,
-      callback: (token: string) => {
-        setRecaptchaToken(token);
-        setErrors((current) => {
-          if (!current.recaptchaToken) return current;
-          const next = { ...current };
-          delete next.recaptchaToken;
-          return next;
-        });
-      },
-      "expired-callback": () => setRecaptchaToken(""),
-      "error-callback": () => setRecaptchaToken(""),
-      size: window.matchMedia("(max-width: 420px)").matches ? "compact" : "normal",
-    });
-  }, [open, recaptchaSiteKey]);
-
-  useEffect(() => {
-    renderRecaptcha();
-  }, [renderRecaptcha]);
+  const isSubmitting = isPending || isVerifyingRecaptcha;
 
   function openDialog() {
     setValues(INITIAL_VALUES);
     setErrors({});
     setStatusMessage("");
-    setRecaptchaToken("");
     setOpen(true);
   }
 
   function closeDialog() {
-    resetRecaptcha();
-    recaptchaWidgetId.current = null;
     setOpen(false);
   }
 
@@ -153,7 +93,7 @@ export function FreeHeadshotsOfferDialog({
     return nextErrors;
   }
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const nextErrors = validate(values);
     setErrors(nextErrors);
@@ -161,9 +101,17 @@ export function FreeHeadshotsOfferDialog({
 
     if (Object.keys(nextErrors).length > 0) return;
 
-    if (recaptchaSiteKey && !recaptchaToken) {
-      setErrors((current) => ({ ...current, recaptchaToken: "Please complete the reCAPTCHA check." }));
-      return;
+    let recaptchaToken = "";
+    if (recaptchaSiteKey) {
+      try {
+        setIsVerifyingRecaptcha(true);
+        recaptchaToken = await getRecaptchaToken(recaptchaSiteKey, "free_headshots");
+      } catch {
+        setErrors((current) => ({ ...current, recaptchaToken: "We couldn’t verify this submission. Please try again." }));
+        setIsVerifyingRecaptcha(false);
+        return;
+      }
+      setIsVerifyingRecaptcha(false);
     }
 
     startTransition(async () => {
@@ -180,7 +128,6 @@ export function FreeHeadshotsOfferDialog({
 
       setStatusMessage(result.message);
       setErrors(result.fieldErrors ?? {});
-      if (result.fieldErrors?.recaptchaToken) resetRecaptcha();
     });
   }
 
@@ -199,8 +146,6 @@ export function FreeHeadshotsOfferDialog({
           if (!nextOpen) {
             setErrors({});
             setStatusMessage("");
-            resetRecaptcha();
-            recaptchaWidgetId.current = null;
           }
         }}
       >
@@ -304,19 +249,18 @@ export function FreeHeadshotsOfferDialog({
                 file until you&rsquo;re ready to book.
               </p>
 
-              {recaptchaSiteKey ? (
+              {recaptchaSiteKey ? <Script src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`} strategy="afterInteractive" /> : null}
+              {errors.recaptchaToken ? (
                 <div className="contact-form-recaptcha-wrap free-headshots-recaptcha-wrap">
-                  <Script src="https://www.google.com/recaptcha/api.js?render=explicit" strategy="afterInteractive" onLoad={renderRecaptcha} />
-                  <div ref={recaptchaRef} className="contact-form-recaptcha" />
-                  {errors.recaptchaToken ? <p className="contact-form-error">{errors.recaptchaToken}</p> : null}
+                  <p className="contact-form-error">{errors.recaptchaToken}</p>
                 </div>
               ) : null}
 
               {statusMessage ? <p className="contact-form-error">{statusMessage}</p> : null}
 
               <div className="free-headshots-dialog-actions">
-                <button type="submit" className="btn btn-primary" disabled={isPending}>
-                  {isPending ? "Sending…" : "Submit Request"}
+                <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending…" : "Submit Request"}
                   <ArrowRight size={16} aria-hidden="true" />
                 </button>
               </div>

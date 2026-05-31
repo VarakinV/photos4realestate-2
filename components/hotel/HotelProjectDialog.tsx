@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import type { HTMLAttributes, ReactNode } from "react";
-import { useCallback, useEffect, useId, useRef, useState, useTransition } from "react";
+import { useEffect, useId, useRef, useState, useTransition } from "react";
 import { createPortal } from "react-dom";
 import { ArrowRight, X } from "lucide-react";
 import { toast } from "sonner";
@@ -10,6 +10,7 @@ import { submitHotelProject } from "@/app/actions/hotel-project";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { getRecaptchaToken } from "@/lib/recaptcha-client";
 import {
   hotelDecisionOptions,
   hotelPackageOptions,
@@ -30,25 +31,6 @@ type HotelProjectDialogProps = {
   recaptchaSiteKey?: string;
   onOpen?: () => void;
 };
-
-declare global {
-  interface Window {
-    grecaptcha?: {
-      ready: (callback: () => void) => void;
-      render: (
-        container: HTMLElement,
-        parameters: {
-          sitekey: string;
-          callback: (token: string) => void;
-          "expired-callback": () => void;
-          "error-callback": () => void;
-          size?: "normal" | "compact";
-        }
-      ) => number;
-      reset: (widgetId?: number) => void;
-    };
-  }
-}
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let hasRegisteredBackForwardReload = false;
@@ -87,44 +69,9 @@ export function HotelProjectDialog({
   const [submitted, setSubmitted] = useState(false);
   const [values, setValues] = useState<HotelProjectInput>(() => createInitialValues(initialPackageInterest));
   const [errors, setErrors] = useState<HotelProjectFieldErrors>({});
-  const [recaptchaToken, setRecaptchaToken] = useState("");
+  const [isVerifyingRecaptcha, setIsVerifyingRecaptcha] = useState(false);
   const [isPending, startTransition] = useTransition();
-  const recaptchaRef = useRef<HTMLDivElement>(null);
-  const recaptchaWidgetId = useRef<number | null>(null);
-
-  const resetRecaptcha = useCallback(() => {
-    if (recaptchaWidgetId.current !== null && window.grecaptcha) {
-      window.grecaptcha.reset(recaptchaWidgetId.current);
-    }
-    setRecaptchaToken("");
-  }, []);
-
-  const renderRecaptcha = useCallback(() => {
-    if (!open || !recaptchaSiteKey || !recaptchaRef.current || recaptchaWidgetId.current !== null || !window.grecaptcha) return;
-
-    if (typeof window.grecaptcha.render !== "function") {
-      window.grecaptcha.ready(() => {
-        window.setTimeout(renderRecaptcha, 0);
-      });
-      return;
-    }
-
-    recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-      sitekey: recaptchaSiteKey,
-      callback: (token: string) => {
-        setRecaptchaToken(token);
-        setErrors((current) => {
-          if (!current.recaptchaToken) return current;
-          const next = { ...current };
-          delete next.recaptchaToken;
-          return next;
-        });
-      },
-      "expired-callback": () => setRecaptchaToken(""),
-      "error-callback": () => setRecaptchaToken(""),
-      size: window.matchMedia("(max-width: 420px)").matches ? "compact" : "normal",
-    });
-  }, [open, recaptchaSiteKey]);
+  const isSubmitting = isPending || isVerifyingRecaptcha;
 
   useEffect(() => {
     if (hasRegisteredBackForwardReload) return;
@@ -167,15 +114,10 @@ export function HotelProjectDialog({
     };
   }, [open]);
 
-  useEffect(() => {
-    renderRecaptcha();
-  }, [renderRecaptcha]);
-
   function openDialog() {
     onOpen?.();
     setSubmitted(false);
     setErrors({});
-    setRecaptchaToken("");
     setValues((current) => ({
       ...current,
       packageInterest: initialPackageInterest || current.packageInterest,
@@ -184,8 +126,6 @@ export function HotelProjectDialog({
   }
 
   function closeDialog() {
-    resetRecaptcha();
-    recaptchaWidgetId.current = null;
     setOpen(false);
     window.setTimeout(() => triggerRef.current?.focus({ preventScroll: true }), 0);
   }
@@ -242,7 +182,7 @@ export function HotelProjectDialog({
     return { trimmed, nextErrors };
   }
 
-  function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const { trimmed, nextErrors } = validateForm();
     setErrors(nextErrors);
@@ -252,10 +192,19 @@ export function HotelProjectDialog({
       return;
     }
 
-    if (recaptchaSiteKey && !recaptchaToken) {
-      toast.error("Please complete the reCAPTCHA check.");
-      setErrors((current) => ({ ...current, recaptchaToken: "Please complete the reCAPTCHA check." }));
-      return;
+    let recaptchaToken = "";
+    if (recaptchaSiteKey) {
+      try {
+        setIsVerifyingRecaptcha(true);
+        recaptchaToken = await getRecaptchaToken(recaptchaSiteKey, "hotel_project");
+      } catch {
+        const message = "We couldn’t verify this submission. Please try again.";
+        toast.error(message);
+        setErrors((current) => ({ ...current, recaptchaToken: message }));
+        setIsVerifyingRecaptcha(false);
+        return;
+      }
+      setIsVerifyingRecaptcha(false);
     }
 
     startTransition(async () => {
@@ -265,11 +214,9 @@ export function HotelProjectDialog({
         setSubmitted(true);
         setValues(createInitialValues(initialPackageInterest));
         setErrors({});
-        resetRecaptcha();
       } else {
         toast.error(result.message);
         setErrors(result.fieldErrors ?? {});
-        if (result.fieldErrors?.recaptchaToken) resetRecaptcha();
       }
     });
   }
@@ -315,7 +262,7 @@ export function HotelProjectDialog({
                   </div>
                 ) : (
                   <form className="hotel-project-form" onSubmit={onSubmit} noValidate>
-                    {recaptchaSiteKey ? <Script src="https://www.google.com/recaptcha/api.js?render=explicit" strategy="afterInteractive" onLoad={renderRecaptcha} /> : null}
+                    {recaptchaSiteKey ? <Script src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`} strategy="afterInteractive" /> : null}
                 <fieldset className="hotel-project-fieldset">
                   <legend>Section 1 — About the Property</legend>
                   <div className="hotel-project-grid">
@@ -361,17 +308,15 @@ export function HotelProjectDialog({
                   </div>
                 </fieldset>
 
-                {recaptchaSiteKey ? (
+                {errors.recaptchaToken ? (
                   <div className="contact-form-recaptcha-wrap">
-                    <div ref={recaptchaRef} className="contact-form-recaptcha" />
                     <FieldError id="hotel-recaptcha-error" message={errors.recaptchaToken} />
                   </div>
                 ) : null}
 
                 <div className="hotel-project-actions">
-                  <button type="button" className="btn btn-outline-dark hotel-project-trigger" onClick={closeDialog}>Cancel</button>
-                  <button type="submit" className="btn btn-primary hotel-project-trigger" disabled={isPending}>
-                    {isPending ? "Sending…" : "Send Project Request"}
+                  <button type="submit" className="btn btn-primary hotel-project-trigger" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending…" : "Send Project Request"}
                     <ArrowRight size={16} aria-hidden="true" />
                   </button>
                 </div>

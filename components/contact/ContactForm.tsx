@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { useCallback, useEffect, useRef, useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,27 +9,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { submitContact } from "@/app/actions/contact";
+import { getRecaptchaToken } from "@/lib/recaptcha-client";
 
 type FieldErrors = Partial<Record<"firstName" | "lastName" | "email" | "phone" | "message" | "recaptchaToken", string>>;
-
-declare global {
-  interface Window {
-    grecaptcha?: {
-      ready: (callback: () => void) => void;
-      render: (
-        container: HTMLElement,
-        parameters: {
-          sitekey: string;
-          callback: (token: string) => void;
-          "expired-callback": () => void;
-          "error-callback": () => void;
-          size?: "normal" | "compact";
-        }
-      ) => number;
-      reset: (widgetId?: number) => void;
-    };
-  }
-}
 
 const INITIAL = {
   firstName: "",
@@ -46,49 +28,27 @@ type ContactFormProps = {
 export function ContactForm({ recaptchaSiteKey }: ContactFormProps) {
   const [values, setValues] = useState(INITIAL);
   const [errors, setErrors] = useState<FieldErrors>({});
-  const [recaptchaToken, setRecaptchaToken] = useState("");
+  const [isVerifyingRecaptcha, setIsVerifyingRecaptcha] = useState(false);
   const [isPending, startTransition] = useTransition();
-  const recaptchaRef = useRef<HTMLDivElement>(null);
-  const recaptchaWidgetId = useRef<number | null>(null);
+  const isSubmitting = isPending || isVerifyingRecaptcha;
 
-  const resetRecaptcha = useCallback(() => {
-    if (recaptchaWidgetId.current !== null && window.grecaptcha) {
-      window.grecaptcha.reset(recaptchaWidgetId.current);
-    }
-    setRecaptchaToken("");
-  }, []);
-
-  const renderRecaptcha = useCallback(() => {
-    if (!recaptchaSiteKey || !recaptchaRef.current || recaptchaWidgetId.current !== null || !window.grecaptcha) return;
-
-    if (typeof window.grecaptcha.render !== "function") {
-      window.grecaptcha.ready(() => {
-        window.setTimeout(renderRecaptcha, 0);
-      });
-      return;
-    }
-
-    recaptchaWidgetId.current = window.grecaptcha.render(recaptchaRef.current, {
-      sitekey: recaptchaSiteKey,
-      callback: (token: string) => setRecaptchaToken(token),
-      "expired-callback": () => setRecaptchaToken(""),
-      "error-callback": () => setRecaptchaToken(""),
-      size: window.matchMedia("(max-width: 420px)").matches ? "compact" : "normal",
-    });
-  }, [recaptchaSiteKey]);
-
-  useEffect(() => {
-    renderRecaptcha();
-  }, [renderRecaptcha]);
-
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setErrors({});
 
-    if (recaptchaSiteKey && !recaptchaToken) {
-      toast.error("Please complete the reCAPTCHA check.");
-      setErrors({ recaptchaToken: "Please complete the reCAPTCHA check." });
-      return;
+    let recaptchaToken = "";
+    if (recaptchaSiteKey) {
+      try {
+        setIsVerifyingRecaptcha(true);
+        recaptchaToken = await getRecaptchaToken(recaptchaSiteKey, "contact_form");
+      } catch {
+        const message = "We couldn’t verify this submission. Please try again.";
+        toast.error(message);
+        setErrors({ recaptchaToken: message });
+        setIsVerifyingRecaptcha(false);
+        return;
+      }
+      setIsVerifyingRecaptcha(false);
     }
 
     startTransition(async () => {
@@ -96,11 +56,9 @@ export function ContactForm({ recaptchaSiteKey }: ContactFormProps) {
       if (result.ok) {
         toast.success(result.message);
         setValues(INITIAL);
-        resetRecaptcha();
       } else {
         toast.error(result.message);
         setErrors(result.fieldErrors ?? {});
-        if (result.fieldErrors?.recaptchaToken) resetRecaptcha();
       }
     });
   }
@@ -194,11 +152,10 @@ export function ContactForm({ recaptchaSiteKey }: ContactFormProps) {
         {errors.message ? <p className="contact-form-error">{errors.message}</p> : null}
       </div>
 
-      {recaptchaSiteKey ? (
+      {recaptchaSiteKey ? <Script src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`} strategy="afterInteractive" /> : null}
+      {errors.recaptchaToken ? (
         <div className="contact-form-recaptcha-wrap">
-          <Script src="https://www.google.com/recaptcha/api.js?render=explicit" strategy="afterInteractive" onLoad={renderRecaptcha} />
-          <div ref={recaptchaRef} className="contact-form-recaptcha" />
-          {errors.recaptchaToken ? <p className="contact-form-error">{errors.recaptchaToken}</p> : null}
+          <p className="contact-form-error">{errors.recaptchaToken}</p>
         </div>
       ) : null}
 
@@ -206,10 +163,10 @@ export function ContactForm({ recaptchaSiteKey }: ContactFormProps) {
         <Button
           type="submit"
           size="lg"
-          disabled={isPending}
+          disabled={isSubmitting}
           className="contact-form-submit bg-[var(--brick)] text-white hover:bg-[var(--brick-dark)] [a]:hover:bg-[var(--brick-dark)]"
         >
-          {isPending ? "Sending…" : "Send Message"}
+          {isSubmitting ? "Sending…" : "Send Message"}
           <ArrowRight className="ml-1" data-icon="inline-end" />
         </Button>
       </div>

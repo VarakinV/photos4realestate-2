@@ -7523,8 +7523,8 @@ button.hotel-project-trigger:disabled { cursor: not-allowed; opacity: 0.7; }
 }
 textarea.contact-form-control { min-height: 110px !important; resize: vertical; }
 .contact-form-error { font-size: 12px; line-height: 1.45; color: var(--destructive); }
-.contact-form-recaptcha-wrap { display: grid; gap: 6px; margin-top: 18px; min-height: 78px; }
-.contact-form-recaptcha { min-height: 78px; }
+.contact-form-recaptcha-wrap { display: grid; gap: 6px; margin-top: 18px; min-height: 0; }
+.contact-form-recaptcha { min-height: 0; }
 .contact-form-actions { margin-top: 24px; }
 .contact-form-submit {
   width: 100%;

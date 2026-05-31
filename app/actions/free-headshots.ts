@@ -1,5 +1,7 @@
 "use server";
 
+import { verifyRecaptchaToken } from "@/lib/recaptcha";
+
 type FreeHeadshotsInput = {
   firstName: string;
   lastName: string;
@@ -16,16 +18,9 @@ export type FreeHeadshotsResult =
   | { ok: false; message: string; fieldErrors?: FreeHeadshotsFieldErrors };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const RECAPTCHA_ENDPOINT = "https://www.google.com/recaptcha/api/siteverify";
 const FREE_HEADSHOT_TAGS = ["realtor", "free headshot requested"] as const;
 
 type PreparedFreeHeadshotsLead = Omit<FreeHeadshotsInput, "recaptchaToken">;
-
-type RecaptchaResponse = {
-  success?: boolean;
-  hostname?: string;
-  "error-codes"?: string[];
-};
 
 type GhlUpsertResponse = {
   contact?: {
@@ -59,13 +54,13 @@ export async function submitFreeHeadshotsLead(input: FreeHeadshotsInput): Promis
     };
   }
 
-  const recaptchaResult = await verifyRecaptcha(recaptchaToken);
+  const recaptchaResult = await verifyRecaptchaToken(recaptchaToken, "free_headshots", "free-headshots");
   if (!recaptchaResult.ok) {
     console.error("[free-headshots] reCAPTCHA verification failed", recaptchaResult.error);
     return {
       ok: false,
-      message: "Please complete the reCAPTCHA check and try again.",
-      fieldErrors: { recaptchaToken: "Please complete the reCAPTCHA check." },
+      message: "We couldn’t verify this submission. Please try again.",
+      fieldErrors: { recaptchaToken: "We couldn’t verify this submission. Please try again." },
     };
   }
 
@@ -82,35 +77,6 @@ export async function submitFreeHeadshotsLead(input: FreeHeadshotsInput): Promis
     ok: true,
     message: "Thanks! Your complimentary headshot request was received.",
   };
-}
-
-async function verifyRecaptcha(token: string) {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-
-  if (!secretKey) {
-    if (process.env.NODE_ENV !== "production") {
-      console.warn("[free-headshots] RECAPTCHA_SECRET_KEY is not configured. Skipping reCAPTCHA verification in development.");
-      return { ok: true } as const;
-    }
-
-    return { ok: false, error: "RECAPTCHA_SECRET_KEY is not configured." } as const;
-  }
-
-  if (!token) return { ok: false, error: "Missing reCAPTCHA token." } as const;
-
-  const response = await fetch(RECAPTCHA_ENDPOINT, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ secret: secretKey, response: token }),
-    cache: "no-store",
-  });
-  const data = (await response.json().catch(() => null)) as RecaptchaResponse | null;
-
-  if (!response.ok || !data?.success) {
-    return { ok: false, error: data?.["error-codes"]?.join(", ") ?? response.statusText } as const;
-  }
-
-  return { ok: true } as const;
 }
 
 async function upsertGhlContactAndApplyTags(lead: PreparedFreeHeadshotsLead) {
