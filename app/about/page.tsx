@@ -84,7 +84,7 @@ const team = [
     reverse: true,
     badges: [{ icon: Drone, title: "TC Licensed Pilot", sub: "Transport Canada Advanced Cert" }, { icon: Award, title: "RECA Certified", sub: "RMS Measurement Specialist" }],
     bio: [
-      "Vlad brings a dynamic visual edge and technical depth to every project. With a background in digital media and a deep understanding of what performs on social media and MLS platforms, he knows how to tell each property's story through motion — from cinematic walkthrough videos to aerial drone sequences.",
+      "Vlad brings a dynamic visual edge and technical depth to every project. With a background in digital marketing and a deep understanding of what performs on social media and MLS platforms, he knows how to tell each property's story through motion — from cinematic walkthrough videos to aerial drone sequences.",
       "As a Transport Canada licensed drone pilot holding an Advanced Operations certificate, Vlad conducts every aerial shoot in full compliance with RPAS regulations. He performs pre-flight airspace checks for every property and carries full liability insurance on drone operations.",
       "Vlad also holds a RECA RMS certificate, making him fully qualified to conduct residential measurements for Alberta MLS listings — which means on joint shoots, iGUIDE scanning and measurements can proceed efficiently alongside photography.",
     ],
