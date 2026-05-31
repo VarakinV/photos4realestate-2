@@ -416,7 +416,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "Are your drone pilots licensed in Canada?",
-        a: "Yes. All Photos4RealEstate drone operations are conducted by pilots holding a valid Transport Canada Advanced Operations Remote Pilot Certificate. This is the highest level of certification available for commercial drone pilots in Canada. We carry full liability insurance covering all RPAS operations and comply with all Transport Canada regulations.",
+        a: "Yes. All Photos 4 Real Estate drone operations are conducted by pilots holding a valid Transport Canada Advanced Operations Remote Pilot Certificate. This is the highest level of certification available for commercial drone pilots in Canada. We carry full liability insurance covering all RPAS operations and comply with all Transport Canada regulations.",
       },
       {
         q: "Can you fly a drone anywhere in Calgary?",

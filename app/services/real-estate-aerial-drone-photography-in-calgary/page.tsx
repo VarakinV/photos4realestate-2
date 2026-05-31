@@ -484,7 +484,7 @@ function PageBody() {
               <span className="section-label">Safety &amp; Compliance</span>
               <h2 id="tc-heading">Transport Canada Licensed &amp; Fully Compliant</h2>
               <p>
-                In Canada, commercial drone operations require a valid Transport Canada Remote Pilot Certificate. Flying without one &mdash; or hiring someone without certification &mdash; is illegal and voids any insurance coverage. Every Photos4RealEstate drone operation is conducted by pilots holding a current <strong>Advanced Operations certificate</strong> issued by Transport Canada.
+                In Canada, commercial drone operations require a valid Transport Canada Remote Pilot Certificate. Flying without one &mdash; or hiring someone without certification &mdash; is illegal and voids any insurance coverage. Every Photos 4 Real Estate drone operation is conducted by pilots holding a current <strong>Advanced Operations certificate</strong> issued by Transport Canada.
               </p>
               <p>
                 Before every shoot, we conduct a full airspace check using Transport Canada&apos;s RPAS Portal and NAV CANADA&apos;s DroneAssist application. If your property falls within a controlled zone, we obtain the required authorization before your scheduled shoot date &mdash; so there are no day-of surprises.

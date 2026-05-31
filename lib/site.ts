@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Photos 4 Real Estate",
-  shortName: "Photos4RealEstate",
+  shortName: "Photos 4 Real Estate",
   tagline: "Elevate Your Real Estate Listings",
   url: "https://photos4realestate.ca",
   description:
