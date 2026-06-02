@@ -69,6 +69,7 @@ export function HotelProjectDialog({
   const [submitted, setSubmitted] = useState(false);
   const [values, setValues] = useState<HotelProjectInput>(() => createInitialValues(initialPackageInterest));
   const [errors, setErrors] = useState<HotelProjectFieldErrors>({});
+  const [statusMessage, setStatusMessage] = useState("");
   const [isVerifyingRecaptcha, setIsVerifyingRecaptcha] = useState(false);
   const [isPending, startTransition] = useTransition();
   const isSubmitting = isPending || isVerifyingRecaptcha;
@@ -118,6 +119,7 @@ export function HotelProjectDialog({
     onOpen?.();
     setSubmitted(false);
     setErrors({});
+    setStatusMessage("");
     setValues((current) => ({
       ...current,
       packageInterest: initialPackageInterest || current.packageInterest,
@@ -186,6 +188,7 @@ export function HotelProjectDialog({
     event.preventDefault();
     const { trimmed, nextErrors } = validateForm();
     setErrors(nextErrors);
+    setStatusMessage("");
 
     if (Object.keys(nextErrors).length > 0) {
       toast.error("Please correct the highlighted fields and try again.");
@@ -200,6 +203,7 @@ export function HotelProjectDialog({
       } catch {
         const message = "We couldn’t verify this submission. Please try again.";
         toast.error(message);
+        setStatusMessage(message);
         setErrors((current) => ({ ...current, recaptchaToken: message }));
         setIsVerifyingRecaptcha(false);
         return;
@@ -214,8 +218,10 @@ export function HotelProjectDialog({
         setSubmitted(true);
         setValues(createInitialValues(initialPackageInterest));
         setErrors({});
+        setStatusMessage("");
       } else {
         toast.error(result.message);
+        setStatusMessage(result.message);
         setErrors(result.fieldErrors ?? {});
       }
     });
@@ -313,6 +319,8 @@ export function HotelProjectDialog({
                     <FieldError id="hotel-recaptcha-error" message={errors.recaptchaToken} />
                   </div>
                 ) : null}
+
+                {statusMessage ? <p className="contact-form-error" role="status">{statusMessage}</p> : null}
 
                 <div className="hotel-project-actions">
                   <button type="submit" className="btn btn-primary hotel-project-trigger" disabled={isSubmitting}>

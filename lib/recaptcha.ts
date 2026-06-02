@@ -1,7 +1,7 @@
 export type RecaptchaAction = "contact_form" | "hotel_project" | "free_headshots";
 
 const RECAPTCHA_ENDPOINT = "https://www.google.com/recaptcha/api/siteverify";
-const DEFAULT_MIN_SCORE = 0.5;
+const DEFAULT_MIN_SCORE = 0.3;
 
 type RecaptchaResponse = {
   success?: boolean;

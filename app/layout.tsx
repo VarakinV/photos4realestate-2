@@ -8,6 +8,7 @@ import { TopBar } from "@/components/site/TopBar";
 import { Header } from "@/components/site/Header";
 import { PromoStrip } from "@/components/site/PromoStrip";
 import { Footer } from "@/components/site/Footer";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -113,6 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <PromoStrip />
         <main>{children}</main>
         <Footer />
+        <Toaster richColors position="top-center" />
         <JsonLd id="ld-localbusiness" data={localBusinessSchema} />
         <JsonLd id="ld-website" data={websiteSchema} />
       </body>
