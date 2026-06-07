@@ -29,6 +29,7 @@ type PreparedContact = {
 };
 
 type Smtp2GoResponse = {
+  result?: string;
   data?: {
     succeeded?: number;
     failed?: number;
@@ -104,7 +105,7 @@ async function sendContactEmail(contact: PreparedContact) {
       return { ok: true } as const;
     }
 
-    return { ok: false, error: "SMTP2GO_API_KEY is not configured." } as const;
+    return { ok: false, error: { reason: "missing-api-key" } } as const;
   }
 
   const response = await fetch(SMTP2GO_ENDPOINT, {
@@ -130,7 +131,19 @@ async function sendContactEmail(contact: PreparedContact) {
   const succeeded = data?.data?.succeeded;
 
   if (!response.ok || failed > 0 || succeeded === 0) {
-    return { ok: false, error: data?.error ?? JSON.stringify(data) ?? response.statusText } as const;
+    return {
+      ok: false,
+      error: {
+        reason: "smtp2go-send-failed",
+        status: response.status,
+        statusText: response.statusText,
+        result: data?.result,
+        succeeded,
+        failed,
+        failureCount: data?.data?.failures?.length ?? 0,
+        error: data?.error,
+      },
+    } as const;
   }
 
   return { ok: true } as const;

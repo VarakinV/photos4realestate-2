@@ -13,6 +13,14 @@ export type Review = {
 
 export const reviews: Review[] = [
   {
+    name: "Rui Torneiro",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocLsxsZpTWRWIKL_nu4JRukF3SgEMS0s6FuBD-2LzHxMAwp6sA=s36-c-rp-mo-br100",
+    date: "June 2026",
+    rating: 5,
+    text: "I have used Photos 4 Real Estate for my last few listing and they were very proficient and reliable. Iryna was very professional and invested in made sure to get some great pictures of the home.I would highly recommend using Photos 4 Real Estate!!",
+  },
+  {
     name: "Al Hamza",
     avatar:
       "https://lh3.googleusercontent.com/a-/ALV-UjUkdTWLxaXgAv2MKmCsNeULKph96YMst-yPPBg3VnwLo5Y5J9g=s36-c-rp-mo-br100",
