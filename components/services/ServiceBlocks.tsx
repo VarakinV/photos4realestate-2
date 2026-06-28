@@ -273,7 +273,7 @@ export function ServiceBlocks() {
           "9 social media reels",
           "2 slideshow videos",
           "3 property flyers",
-          "3 branded websites",
+          "6 branded websites",
           "Single-property websites",
           "Free with every package",
         ]}

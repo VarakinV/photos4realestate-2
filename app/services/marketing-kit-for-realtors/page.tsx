@@ -277,7 +277,7 @@ const kitTotals = [
     desc: "9:16 vertical clips for Instagram, Facebook, and TikTok",
   },
   {
-    num: "3",
+    num: "6",
     name: "Property Websites",
     desc: "Branded listing sites with a shareable URL",
   },

@@ -164,7 +164,7 @@ const marketingKitItems = [
   },
   {
     icon: Globe,
-    name: "3 Property Websites",
+    name: "6 Property Websites",
     desc: "Branded single-property websites with your logo and contact info",
   },
   {

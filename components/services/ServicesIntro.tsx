@@ -5,7 +5,7 @@ const packageIncludes = [
   "Professional editing & blue-sky replacement",
   "MLS-Ready Exports (JPEG + web formats)",
   "9 social media reels & 2 slideshows",
-  "3 property flyers & 3 branded websites",
+  "3 property flyers & 6 branded websites",
   "Rewards points on every order",
 ];
 
