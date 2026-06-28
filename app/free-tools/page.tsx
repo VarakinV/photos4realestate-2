@@ -248,7 +248,7 @@ export default function FreeToolsPage() {
                 >
                   complete marketing kit
                 </Link>{" "}
-                (9 reels, 3 websites, 3 flyers, 2 slideshows) is generated
+                (9 reels, 6 websites, 3 flyers, 2 slideshows) is generated
                 automatically and delivered with your photos the next day once
                 property information is provided — no tool use required.
               </p>
@@ -262,7 +262,7 @@ export default function FreeToolsPage() {
                     When you book any photography package, your marketing kit
                     is generated automatically from your professional listing
                     photos and delivered the next day alongside your photos once
-                    property information is provided — 9 reels, 3 property
+                    property information is provided — 9 reels, 6 property
                     websites, 3 flyers, and 2 slideshows.{" "}
                     <Link href="/services/marketing-kit-for-realtors">
                       Learn about the full marketing kit →
