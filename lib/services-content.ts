@@ -597,11 +597,11 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     slug: "marketing-kit-for-realtors",
     seoTitle: "Marketing Kit for Calgary Realtors | Photos 4 Real Estate",
     seoDescription:
-      "Free marketing kit for Calgary realtors with every shoot — 9 reels, 2 slideshows, 3 flyers, and 3 branded property websites. Book your listing shoot today.",
+      "Free marketing kit for Calgary realtors with every shoot — 9 reels, 2 slideshows, 3 flyers, and 6 branded property websites. Book your listing shoot today.",
     ogAlt: "Marketing Kit for Calgary Realtors by Photos 4 Real Estate",
     eyebrow: "Marketing Kit",
     h1: "Marketing Kit for Calgary Realtors",
-    lead: "Every Photos 4 Real Estate booking includes a complete marketing kit no other Calgary provider offers as standard — 9 social reels, 2 slideshow videos, 3 property flyers and 3 branded single-property websites. The kit is generated once we have the required listing information, and in most cases it is delivered the next day.",
+    lead: "Every Photos 4 Real Estate booking includes a complete marketing kit no other Calgary provider offers as standard — 9 social reels, 2 slideshow videos, 3 property flyers and 6 branded single-property websites. The kit is generated once we have the required listing information, and in most cases it is delivered the next day.",
     overviewHeading: "What is included in the Marketing Kit?",
     overviewParagraphs: [
       "The Marketing Kit is a bundle of done-for-you marketing assets we generate from every photography or video booking — at no extra cost. Once we have the required listing information, we prepare everything you need to market the listing across MLS, social, email and print without opening a design tool.",
@@ -610,7 +610,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     includedHeading: "What you receive with every shoot",
     features: [
       "9 social media reels",
-      "3 branded property websites",
+      "6 branded property websites",
       "3 print-ready property flyers",
       "2 animated photo slideshows",
       "Branded with your contact info",
@@ -622,11 +622,11 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     faqs: [
       {
         q: "What is included in the Photos 4 Real Estate marketing kit?",
-        a: "Every Photos 4 Real Estate package includes a free marketing kit consisting of 9 social media video reels, 3 branded property websites, 3 print-ready PDF property flyers, and 2 professional slideshows. The kit is generated once we have the required listing information for the property, and in most cases it is delivered the next day.",
+        a: "Every Photos 4 Real Estate package includes a free marketing kit consisting of 9 social media video reels, 6 branded property websites, 3 print-ready PDF property flyers, and 2 professional slideshows. The kit is generated once we have the required listing information for the property, and in most cases it is delivered the next day.",
       },
       {
         q: "Is the marketing kit really free with every package?",
-        a: "Yes. The complete marketing kit — 9 reels, 3 property websites, 3 flyers, and 2 slideshows — is included at no extra cost with every Essential, Skyline, and Social Boost photography package. There is no upgrade required and no additional fee.",
+        a: "Yes. The complete marketing kit — 9 reels, 6 property websites, 3 flyers, and 2 slideshows — is included at no extra cost with every Essential, Skyline, and Social Boost photography package. There is no upgrade required and no additional fee.",
       },
       {
         q: "What are the 9 social media reels?",
@@ -634,7 +634,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "How do I access my property websites?",
-        a: "Your three property website links are included when the marketing kit is delivered. Each link opens a mobile-responsive property website showcasing your listing photos and listing details. You can share these links directly — no login or account required for buyers to view them.",
+        a: "Your six property website links are included when the marketing kit is delivered. Each link opens a mobile-responsive property website showcasing your listing photos and listing details. You can share these links directly — no login or account required for buyers to view them.",
       },
       {
         q: "What listing information do you need before the marketing kit can be generated?",

@@ -77,7 +77,7 @@ const serviceDescriptions: Record<(typeof services)[number]["slug"], string> = {
   "twilight-photography-for-real-estate-in-calgary":
     "Twilight exterior photography for Calgary listings — warm interior lighting, sky enhancement and dramatic MLS hero images.",
   "marketing-kit-for-realtors":
-    "Free marketing kit for Calgary realtors — 9 social reels, 2 slideshows, 3 property flyers and 3 branded single-property websites with every shoot.",
+    "Free marketing kit for Calgary realtors — 9 social reels, 2 slideshows, 3 property flyers and 6 branded single-property websites with every shoot.",
   "hotel-photography":
     "Professional hotel photography for rooms, lobbies, amenities, exterior images, and drone aerials across Calgary and Alberta.",
 };

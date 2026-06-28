@@ -901,7 +901,7 @@ export default function FreeToolsPage() {
                   <div className="ft-ci-check">
                     <Check size={12} strokeWidth={3} />
                   </div>
-                  <strong>3 branded property websites</strong> — shareable
+                  <Link href="/single-property-websites"><strong>6 branded property websites</strong><span className="sr-only"> — free single property website designs for Calgary realtors</span></Link> — shareable
                   URLs
                 </li>
                 <li className="ft-compare-item">

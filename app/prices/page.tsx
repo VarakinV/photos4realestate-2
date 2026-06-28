@@ -222,7 +222,7 @@ const compareRows: CompareRow[] = [
   { kind: "feature", label: "60-90 sec social media reel", values: ["addon", "addon", "yes"] },
   { kind: "section", label: "Free Marketing Kit" },
   { kind: "feature", label: "9 social media reels (teaser)", values: ["yes", "yes", "yes"] },
-  { kind: "feature", label: "3 property websites", values: ["yes", "yes", "yes"] },
+  { kind: "feature", label: "6 property websites", values: ["yes", "yes", "yes"], labelHref: "/single-property-websites" },
   { kind: "feature", label: "3 property flyers", values: ["yes", "yes", "yes"] },
   { kind: "feature", label: "2 slideshows", values: ["yes", "yes", "yes"] },
   { kind: "feature", label: "Rewards points", values: ["yes", "yes", "yes"] },
@@ -675,7 +675,7 @@ export default function PricesPage() {
               <h3 className="alacarte-name">Marketing Kit</h3>
               <div className="alacarte-price alacarte-price-free">Free</div>
               <p className="alacarte-desc">
-                Included with every package at no cost: 3 property websites, 3
+                Included with every package at no cost: <Link href="/single-property-websites" className="body-link">6 property websites</Link>, 3
                 property flyers, 9 social media reels, and 2 slideshows.
               </p>
               <Link href="/services/marketing-kit-for-realtors" className="alacarte-link">

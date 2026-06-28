@@ -206,7 +206,7 @@ const faqCategories: FaqCategory[] = [
       },
       {
         q: "What is included in the free marketing kit?",
-        a: 'Photography packages include a marketing kit with 9 social media reels, 3 property websites, 3 property flyers, and 2 slideshows once property information is provided. See the <a href="/services/marketing-kit-for-realtors">marketing kit page</a> for details.',
+        a: 'Photography packages include a marketing kit with 9 social media reels, <a href="/single-property-websites">6 property websites</a>, 3 property flyers, and 2 slideshows once property information is provided. See the <a href="/services/marketing-kit-for-realtors">marketing kit page</a> for details.',
       },
       {
         q: "Do you offer free real estate marketing tools?",

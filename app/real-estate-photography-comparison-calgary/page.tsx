@@ -111,7 +111,7 @@ const comparisonRows: Array<{
     values: ["yes", "no", "no", "no", "no", "no"],
   },
   {
-    feature: "3 Property Webpages",
+    feature: "6 Property Webpages",
     detail: "Shareable single-property webpages for modern listing promotion.",
     values: ["yes", "no", "no", "no", "no", "no"],
   },
@@ -147,7 +147,7 @@ const bonusDeliverables = [
   "9 social media reels",
   "2 slideshows",
   "3 property flyers",
-  "3 property webpages",
+  "6 property webpages",
 ] as const;
 
 const freeToolCards = [
@@ -196,7 +196,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: "What marketing assets are included with Photos 4 Real Estate packages?",
-    a: "When property information is provided, photo packages include 9 social media reels, 2 slideshows, 3 property flyers, and 3 property webpages, giving agents ready-to-use assets for social media, print, email, and online promotion.",
+    a: "When property information is provided, photo packages include 9 social media reels, 2 slideshows, 3 property flyers, and 6 property webpages, giving agents ready-to-use assets for social media, print, email, and online promotion.",
   },
   {
     q: "Does Photos 4 Real Estate offer free marketing tools for realtors?",
@@ -378,7 +378,7 @@ export default function RealEstatePhotographyComparisonCalgaryPage() {
             </div>
             <ul className="services-page-hero-stats" aria-label="Comparison page highlights">
               <li className="services-page-hero-stat"><span className="num">9</span><span className="lbl">Reels included</span></li>
-              <li className="services-page-hero-stat"><span className="num">3</span><span className="lbl">Property webpages</span></li>
+              <li className="services-page-hero-stat"><span className="num">6</span><span className="lbl">Property webpages</span></li>
               <li className="services-page-hero-stat"><span className="num">2026</span><span className="lbl">Calgary comparison</span></li>
             </ul>
           </div>

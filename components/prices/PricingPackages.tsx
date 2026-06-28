@@ -52,10 +52,10 @@ const socialAddons = [
   "Signature Detail Shots — $35/photo",
 ];
 
-const marketingKitNote = "9 social media reels, 3 websites, 3 flyers, 2 slideshows";
+const marketingKitNote = "9 social media reels, 6 websites, 3 flyers, 2 slideshows";
 const essentialKit = [
   "9 social media reels (teaser videos)",
-  "3 property websites",
+  "6 property websites",
   "3 property flyers & 2 slideshows",
 ];
 
@@ -288,7 +288,16 @@ export function PricingPackages() {
                             <span className="pkg-check included" aria-hidden="true">
                               <Check size={11} strokeWidth={3} />
                             </span>
-                            <span>{f}</span>
+                            <span>
+                              {f === "6 property websites" ? (
+                                <Link href="/single-property-websites">
+                                  {f}
+                                  <span className="sr-only"> — free single property websites for Calgary realtors</span>
+                                </Link>
+                              ) : (
+                                f
+                              )}
+                            </span>
                           </li>
                         ))
                       ) : (

@@ -3,12 +3,13 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 
-export const alt = "Marketing Kit for Calgary Realtors | Photos 4 Real Estate";
+export const alt =
+  "Free Single Property Websites for Realtors | Photos 4 Real Estate";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const runtime = "nodejs";
 
-async function getLogoSvgDataUrl() {
+async function getLogoDataUrl() {
   const logoSvg = await readFile(
     join(process.cwd(), "public", "logos", "map-pin-logo.svg"),
     "utf8"
@@ -18,7 +19,7 @@ async function getLogoSvgDataUrl() {
 }
 
 export default async function OgImage() {
-  const logoSrc = await getLogoSvgDataUrl();
+  const logoSrc = await getLogoDataUrl();
 
   return new ImageResponse(
     (
@@ -35,8 +36,14 @@ export default async function OgImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <img src={logoSrc} alt="" width="72" height="72" style={{ width: 72, height: 72 }} />
-          <span style={{ color: "#fff", fontSize: 34, fontWeight: 600, letterSpacing: "-0.01em" }}>
+          <img
+            src={logoSrc}
+            alt=""
+            width="64"
+            height="64"
+            style={{ width: 64, height: 64 }}
+          />
+          <span style={{ color: "#fff", fontSize: 34, fontWeight: 600 }}>
             {siteConfig.name}
           </span>
         </div>
@@ -52,12 +59,12 @@ export default async function OgImage() {
               fontWeight: 500,
             }}
           >
-            Marketing Kit for Calgary Realtors
+            Single Property Websites
           </span>
           <h1
             style={{
               color: "#fff",
-              fontSize: 70,
+              fontSize: 72,
               lineHeight: 1.05,
               fontWeight: 700,
               letterSpacing: "-0.02em",
@@ -65,7 +72,7 @@ export default async function OgImage() {
               maxWidth: 980,
             }}
           >
-            20 Marketing Assets Included Free With Every Package
+            Free Realtor Websites Built to Generate Leads
           </h1>
         </div>
 
@@ -78,11 +85,11 @@ export default async function OgImage() {
             alignItems: "center",
           }}
         >
-          <span>Listing Info Required</span>
+          <span>6 RECA-Compliant Designs</span>
           <span style={{ color: "#cb4154" }}>•</span>
-          <span>Agent-Branded Assets</span>
+          <span>4 Built-In Lead Gen Tools</span>
           <span style={{ color: "#cb4154" }}>•</span>
-          <span>Calgary & Surrounding Areas</span>
+          <span>$0 With Any Package</span>
         </div>
       </div>
     ),

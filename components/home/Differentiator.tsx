@@ -16,7 +16,7 @@ const extras = [
   { label: "9 social media reels (teaser videos)" },
   { label: "2 listing slideshows" },
   { label: "3 branded property flyers" },
-  { label: "3 branded property websites" },
+  { label: "6 branded property websites", href: "/single-property-websites" },
   {
     label: "Free realtor tools: reel, slideshow, flyer & QR code generators",
     href: "/free-tools",

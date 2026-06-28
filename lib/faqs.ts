@@ -14,7 +14,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "What's included in a standard photography package?",
-    a: "Every package includes professional interior and exterior photos, blue-sky replacement, MLS-ready exports, RMS measurements, iGUIDE 3D virtual tour, floor plans, 9 social media reels, 2 slideshows, 3 property flyers, and 3 branded property websites — all at no extra cost.",
+    a: "Every package includes professional interior and exterior photos, blue-sky replacement, MLS-ready exports, RMS measurements, iGUIDE 3D virtual tour, floor plans, 9 social media reels, 2 slideshows, 3 property flyers, and 6 branded property websites — all at no extra cost.",
   },
   {
     q: "How long does a typical real estate photo shoot take?",
@@ -88,7 +88,7 @@ export const freeToolsFaqs: Faq[] = [
   },
   {
     q: "What is the difference between the free tools and the marketing kit included with photography packages?",
-    a: 'The free tools let any realtor generate marketing assets from their own photos at any time. The marketing kit — 9 reels, 3 property websites, 3 flyers, and 2 slideshows — is automatically generated from your professional listing photos and delivered the next day with every Photos 4 Real Estate photography package once property information is provided, with zero extra steps required from you. <a href="/services/marketing-kit-for-realtors">Learn more about the marketing kit &rarr;</a>',
+    a: 'The free tools let any realtor generate marketing assets from their own photos at any time. The marketing kit — 9 reels, 6 property websites, 3 flyers, and 2 slideshows — is automatically generated from your professional listing photos and delivered the next day with every Photos 4 Real Estate photography package once property information is provided, with zero extra steps required from you. <a href="/services/marketing-kit-for-realtors">Learn more about the marketing kit &rarr;</a>',
   },
   {
     q: "Can I use the generated content for paid social media ads?",
@@ -135,7 +135,7 @@ export const pricingFaqs: Faq[] = [
   },
   {
     q: "What is included in every package?",
-    a: "Every pricing package includes professional real estate photography, an iGUIDE 3D virtual tour, RMS floor plans, blue-sky replacement when needed, and a free marketing kit. The marketing kit includes 3 property websites, 3 property flyers, 9 teaser social media reels, 2 slideshows, and rewards points.",
+    a: "Every pricing package includes professional real estate photography, an iGUIDE 3D virtual tour, RMS floor plans, blue-sky replacement when needed, and a free marketing kit. The marketing kit includes 6 property websites, 3 property flyers, 9 teaser social media reels, 2 slideshows, and rewards points.",
   },
   {
     q: "How fast will I receive my photos and media?",

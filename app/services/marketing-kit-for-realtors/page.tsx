@@ -139,7 +139,7 @@ const speakableSchema = {
 
 const whyIncluded = [
   "9 social media video reels — generated from your listing photos and listing information",
-  "3 branded property websites — shareable links, no setup required",
+  "6 branded property websites — shareable links, no setup required",
   "3 print-ready PDF flyers — professionally designed with your photos",
   "2 animated slideshows — ready for email campaigns and social media",
 ] as const;
@@ -191,20 +191,30 @@ const toolSections: readonly ToolSection[] = [
     id: "websites",
     num: "02",
     label: "Property Websites",
-    title: "3 Branded Property Websites — Share a Link, Impress Every Buyer",
+    title: "6 Branded Property Websites — Share a Link, Impress Every Buyer",
     icon: <Box size={22} aria-hidden="true" />,
     paragraphs: [
-      "Once we have the listing information, every property gets three dedicated single-property websites — professional, mobile-responsive pages that showcase the listing photos, property details, and your contact information with a single shareable link. No web design skills required. No hosting setup. Just a clean, professional URL you can paste anywhere.",
-      "Each of the three websites uses a different layout or design template, giving you options for different marketing contexts. Share in your email campaigns, paste in the MLS listing notes, include in your social media bio, or send directly to interested buyers via text or WhatsApp.",
+      "Once we have the listing information, every property gets six dedicated single-property website designs — professional, mobile-responsive pages that showcase the listing photos, property details, and your contact information with a single shareable link. No web design skills required. No hosting setup. Just a clean, professional URL you can paste anywhere.",
+      "Each of the six website designs uses a different layout or style — giving you options for different marketing contexts. Share in your email campaigns, paste in the MLS listing notes, include in your social media bio, or send directly to interested buyers via text or WhatsApp.",
     ],
     bullets: [
-      "Three different design templates per listing",
+      "Six different design templates per listing",
       "Your logo, name, and contact info displayed prominently",
       "All listing photos displayed in a professional gallery",
       "Mobile-responsive — looks great on phones and tablets",
       "iGUIDE 3D tour embedded when included in your package",
       "Shareable link — no login required for buyers to view",
     ],
+    note: (
+      <p className="marketing-tool-note marketing-tool-note--card">
+        <strong>Note:</strong> See our{" "}
+        <Link href="/single-property-websites" className="body-link">
+          single property websites page
+        </Link>{" "}
+        to preview all 6 designs and explore the built-in lead generation tools
+        included in every website.
+      </p>
+    ),
   },
   {
     id: "flyers",
@@ -441,7 +451,7 @@ export default function MarketingKitPage() {
               <p className="services-page-hero-sub speakable-intro">
                 <strong>Every Photos 4 Real Estate package includes a complete
                 marketing kit</strong> at no extra cost — 9 social media reels,
-                3 property websites, 3 property flyers, and 2 slideshows,
+                6 property websites, 3 property flyers, and 2 slideshows,
                 generated once your listing information is ready.
               </p>
             </div>
@@ -451,7 +461,7 @@ export default function MarketingKitPage() {
               aria-label="Marketing kit included assets"
             >
               <li className="services-page-hero-stat">
-                <span className="num">17</span>
+                <span className="num">20</span>
                 <span className="lbl">Marketing assets</span>
               </li>
               <li className="services-page-hero-stat">

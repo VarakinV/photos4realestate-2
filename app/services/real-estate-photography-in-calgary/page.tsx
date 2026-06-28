@@ -191,7 +191,7 @@ const deliverables = [
   {
     icon: <Sparkles size={22} aria-hidden="true" />,
     title: "Free Marketing Kit",
-    desc: "Every package also includes 9 social media reels, 3 property websites, 3 property flyers and 2 slideshows — all at no extra cost.",
+    desc: "Every package also includes 9 social media reels, 6 property websites, 3 property flyers and 2 slideshows — all at no extra cost.",
     tag: "Bonus — No Extra Charge",
   },
 ] as const;
