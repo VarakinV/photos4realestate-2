@@ -1,4 +1,4 @@
-export type RecaptchaAction = "contact_form" | "hotel_project" | "free_headshots";
+export type RecaptchaAction = "contact_form" | "hotel_project" | "free_headshots" | "wheel_spin";
 
 const RECAPTCHA_ENDPOINT = "https://www.google.com/recaptcha/api/siteverify";
 const DEFAULT_MIN_SCORE = 0.3;
