@@ -8,7 +8,8 @@ import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import { Logo } from "@/components/site/Logo";
 import { ServicesNavParentLink } from "@/components/site/ServicesNavParentLink";
 import { ServicesSubmenuLink } from "@/components/site/ServicesSubmenuLink";
-import { freeTools, primaryNav, services, siteConfig } from "@/lib/site";
+import { servicesMegamenuGroups } from "@/components/site/servicesMegamenuData";
+import { freeTools, primaryNav, siteConfig } from "@/lib/site";
 
 const HotelProjectDialog = dynamic(
   () => import("@/components/hotel/HotelProjectDialog").then((module) => module.HotelProjectDialog),
@@ -134,14 +135,22 @@ export function Header({ recaptchaSiteKey }: HeaderProps) {
                       </button>
                     </div>
 
-                    <ul id="services-submenu" className="nav-submenu">
-                      {services.map((service) => (
-                        <li key={service.slug}>
-                          <ServicesSubmenuLink
-                            href={`/services/${service.slug}`}
-                            name={service.name}
-                            onNavigate={dismissServicesMenu}
-                          />
+                    <ul id="services-submenu" className="nav-submenu nav-submenu--megamenu" role="menu">
+                      {servicesMegamenuGroups.map((group) => (
+                        <li key={group.title} className="nav-megamenu-group" role="none">
+                          <span className="nav-megamenu-heading">{group.title}</span>
+                          <ul className="nav-megamenu-items" role="none">
+                            {group.items.map((item) => (
+                              <li key={item.slug} role="none">
+                                <ServicesSubmenuLink
+                                  href={`/services/${item.slug}`}
+                                  name={item.name}
+                                  icon={item.icon}
+                                  onNavigate={dismissServicesMenu}
+                                />
+                              </li>
+                            ))}
+                          </ul>
                         </li>
                       ))}
                     </ul>
