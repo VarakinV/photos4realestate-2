@@ -9,8 +9,8 @@ const VALID_PRIZES = new Set([
   "3 Free Virtual Staging Images",
   "Free Virtual Twilight",
   "Free Style Shots",
-  "25% Off First Order",
-  "Marketing Kit",
+  "Free Short Drone Video",
+  "7,000 Loyalty Points",
 ]);
 
 type WheelInput = {

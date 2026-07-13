@@ -125,7 +125,7 @@ export function PrizeModal({ open, prize, onClose, recaptchaSiteKey }: PrizeModa
             You Won &ldquo;{prize}&rdquo;
           </DialogTitle>
           <DialogDescription className="wheel-prize-dialog-description">
-            Fill in your details below to claim your prize.
+            Fill in your details below to claim your prize with your next order.
           </DialogDescription>
         </DialogHeader>
 

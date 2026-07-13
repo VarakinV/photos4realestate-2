@@ -30,6 +30,9 @@ export function WheelInteractive({ recaptchaSiteKey }: WheelInteractiveProps) {
               <p className="wheel-hero-sub">
                 Scan, spin, and see what you win &mdash; from a free drone shoot to virtual staging credits. Every realtor wins something.
               </p>
+              <p className="wheel-hero-note">
+                All prizes are applied as credits toward your next order with Photos 4 Real Estate.
+              </p>
             </div>
 
             <div className="wheel-hero-wheel">

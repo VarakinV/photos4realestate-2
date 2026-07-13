@@ -8182,14 +8182,31 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
 }
 
 .wheel-hero-copy .section-label {
-  color: rgba(255,255,255,0.6);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 20px;
+}
+
+.wheel-hero-copy .section-label::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--brick);
 }
 
 .wheel-hero-copy h1 {
   color: #ffffff;
-  font-size: clamp(34px, 4.5vw, 56px);
-  line-height: 1.05;
-  margin-bottom: 18px;
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 20px;
 }
 
 .wheel-hero-copy h1 em {
@@ -8201,6 +8218,14 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
   color: rgba(255,255,255,0.72);
   font-size: 18px;
   line-height: 1.7;
+  max-width: 520px;
+}
+
+.wheel-hero-note {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 16px;
   max-width: 520px;
 }
 

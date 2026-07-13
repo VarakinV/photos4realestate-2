@@ -9,8 +9,8 @@ export const PRIZES = [
   "3 Free Virtual Staging Images",
   "Free Virtual Twilight",
   "Free Style Shots",
-  "25% Off First Order",
-  "Marketing Kit",
+  "Free Short Drone Video",
+  "7,000 Loyalty Points",
 ];
 
 const COLORS = ["#131d3b", "#cb4154", "#1e2d5a", "#a8303f", "#131d3b", "#cb4154", "#1e2d5a", "#a8303f"];
