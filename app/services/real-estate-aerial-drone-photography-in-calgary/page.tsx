@@ -234,7 +234,7 @@ function PageBody() {
                 Drone photography gives Calgary real estate listings a perspective that no ground-level camera can provide. From 120 metres above the property, buyers can see the full lot, the neighbourhood layout, proximity to parks, lakes, and amenities — context that drives decision-making in ways interior photos cannot.
               </p>
               <p>
-                At <strong>Photos 4 Real Estate</strong>, all drone operations are conducted by Transport Canada licensed pilots holding Advanced Operations certification. We carry full liability insurance, conduct airspace checks before every booking, and follow all RPAS regulations to ensure safe, legal, and high-quality aerial coverage of your listing.
+                At <strong>Photos 4 Real Estate</strong>, all drone operations are conducted by Transport Canada licensed pilots holding Basic Operations certification. We carry full liability insurance, conduct airspace checks before every booking, and follow all RPAS regulations to ensure safe, legal, and high-quality aerial coverage of your listing.
               </p>
               <p>
                 Drone photos and video are available as a <Link href="/prices" className="body-link">standalone add-on from $125</Link>, or included as standard in our <Link href="/prices" className="body-link">Skyline and Social Boost packages</Link>. Every aerial image is professionally edited and delivered the next morning alongside your ground photography.
@@ -484,7 +484,7 @@ function PageBody() {
               <span className="section-label">Safety &amp; Compliance</span>
               <h2 id="tc-heading">Transport Canada Licensed &amp; Fully Compliant</h2>
               <p>
-                In Canada, commercial drone operations require a valid Transport Canada Remote Pilot Certificate. Flying without one &mdash; or hiring someone without certification &mdash; is illegal and voids any insurance coverage. Every Photos 4 Real Estate drone operation is conducted by pilots holding a current <strong>Advanced Operations certificate</strong> issued by Transport Canada.
+                In Canada, commercial drone operations require a valid Transport Canada Remote Pilot Certificate. Flying without one &mdash; or hiring someone without certification &mdash; is illegal and voids any insurance coverage. Every Photos 4 Real Estate drone operation is conducted by pilots holding a current <strong>Basic Operations certificate</strong> issued by Transport Canada.
               </p>
               <p>
                 Before every shoot, we conduct a full airspace check using Transport Canada&apos;s RPAS Portal and NAV CANADA&apos;s DroneAssist application. If your property falls within a controlled zone, we obtain the required authorization before your scheduled shoot date &mdash; so there are no day-of surprises.
@@ -499,7 +499,7 @@ function PageBody() {
                   Our Drone Compliance Checklist
                 </h3>
                 <div className="drone-tc-licence-items">
-                  <div className="drone-tc-item"><div className="drone-tc-check"><Check size={12} strokeWidth={3} /></div>Transport Canada Advanced Operations Certificate</div>
+                  <div className="drone-tc-item"><div className="drone-tc-check"><Check size={12} strokeWidth={3} /></div>Transport Canada Basic Operations Certificate</div>
                   <div className="drone-tc-item"><div className="drone-tc-check"><Check size={12} strokeWidth={3} /></div>Full liability insurance for RPAS operations</div>
                   <div className="drone-tc-item"><div className="drone-tc-check"><Check size={12} strokeWidth={3} /></div>Pre-flight airspace check on every property</div>
                   <div className="drone-tc-item"><div className="drone-tc-check"><Check size={12} strokeWidth={3} /></div>Authorization obtained for controlled airspace where required</div>

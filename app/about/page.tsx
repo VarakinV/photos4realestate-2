@@ -49,14 +49,14 @@ const differences = [
   { icon: LayoutPanelTop, title: "Free Marketing Kit With Every Package", copy: "Every booking automatically includes 9 social media reels, 6 branded property websites, 3 print-ready flyers, and 2 animated slideshows — delivered alongside your photos the next morning." },
   { icon: Box, title: "iGUIDE Always Bundles 3D Tour + RMS + Floor Plans", copy: "Our iGUIDE service is three Calgary MLS deliverables in one scan: the interactive 3D tour, RECA-compliant RMS measurements, and professional 2D floor plans." },
   { icon: BadgeCheck, title: "Both Team Members Hold RECA RMS Certification", copy: "Iryna and Vlad both hold RECA RMS certificates. This gives realtors scheduling flexibility and keeps larger property visits efficient." },
-  { icon: Drone, title: "Transport Canada Licensed Drone Operations", copy: "All drone shoots are conducted by a TC Advanced Operations licensed pilot with full liability insurance and pre-flight airspace checks." },
+  { icon: Drone, title: "Transport Canada Licensed Drone Operations", copy: "All drone shoots are conducted by a TC Basic Operations licensed pilot with full liability insurance and pre-flight airspace checks." },
   { icon: CalendarCheck, title: "Next-Day Delivery — On Every Booking", copy: "Photos, floor plans, RMS report, 3D tour link, and complete marketing kit are delivered every morning after the shoot as a commitment built into every booking we accept." },
   { icon: BadgeDollarSign, title: "Loyalty Rewards + First-Booking Discount", copy: "First-time realtor clients receive 25% off their first booking with code 25%OFF. Returning clients earn loyalty points on every order redeemable for future discounts." },
 ];
 
 const credentials = [
   { icon: Award, title: "RECA RMS Certified", copy: "Both Iryna and Vlad hold current RECA Residential Measurement Standard certificates — approved for Alberta MLS listings." },
-  { icon: Drone, title: "TC Advanced Drone Licence", copy: "Vlad holds a Transport Canada Advanced Operations Remote Pilot Certificate for commercial drone work throughout Calgary." },
+  { icon: Drone, title: "TC Basic Drone Licence", copy: "Vlad holds a Transport Canada Basic Operations Remote Pilot Certificate for commercial drone work throughout Calgary." },
   { icon: Radio, title: "iGUIDE Certified", copy: "Certified operators of the iGUIDE LiDAR-based 3D tour and measurement system — RECA-approved for RMS data capture." },
   { icon: ShieldCheck, title: "Fully Insured", copy: "Full liability insurance covering photography, drone operations, and on-site services — protecting clients on every booking." },
 ];
@@ -82,13 +82,13 @@ const team = [
     image: images.vlad,
     alt: "Vlad Varakin — videographer and Transport Canada licensed drone pilot in Calgary",
     reverse: true,
-    badges: [{ icon: Drone, title: "TC Licensed Pilot", sub: "Transport Canada Advanced Cert" }, { icon: Award, title: "RECA Certified", sub: "RMS Measurement Specialist" }],
+    badges: [{ icon: Drone, title: "TC Licensed Pilot", sub: "Transport Canada Basic Cert" }, { icon: Award, title: "RECA Certified", sub: "RMS Measurement Specialist" }],
     bio: [
       "Vlad brings a dynamic visual edge and technical depth to every project. With a background in digital marketing and a deep understanding of what performs on social media and MLS platforms, he knows how to tell each property's story through motion — from cinematic walkthrough videos to aerial drone sequences.",
-      "As a Transport Canada licensed drone pilot holding an Advanced Operations certificate, Vlad conducts every aerial shoot in full compliance with RPAS regulations. He performs pre-flight airspace checks for every property and carries full liability insurance on drone operations.",
+      "As a Transport Canada licensed drone pilot holding a Basic Operations certificate, Vlad conducts every aerial shoot in full compliance with RPAS regulations. He performs pre-flight airspace checks for every property and carries full liability insurance on drone operations.",
       "Vlad also holds a RECA RMS certificate, making him fully qualified to conduct residential measurements for Alberta MLS listings — which means on joint shoots, iGUIDE scanning and measurements can proceed efficiently alongside photography.",
     ],
-    credentials: [["Transport Canada Advanced Operations Certificate", "Licensed for commercial drone operations throughout Calgary and surrounding areas"], ["RECA RMS Certificate", "Fully certified for RECA-compliant residential measurements"], ["Videography & Social Media Production", "Real estate walkthrough videos, 45-sec social media reels, 4K drone video"]],
+    credentials: [["Transport Canada Basic Operations Certificate", "Licensed for commercial drone operations up to 25 kg throughout Calgary and surrounding areas"], ["RECA RMS Certificate", "Fully certified for RECA-compliant residential measurements"], ["Videography & Social Media Production", "Real estate walkthrough videos, 45-sec social media reels, 4K drone video"]],
   },
 ];
 
