@@ -11,7 +11,7 @@ const startEssential = pricingTiers[0].essential;
 
 export type BlogSection = {
   heading: string;
-  paragraphs: string[];
+  paragraphs?: string[];
   bullets?: string[];
   subSections?: Array<{ heading: string; paragraphs?: string[]; bullets?: string[] }>;
   embed?: { src: string; title: string; caption?: string; href?: string; linkLabel?: string; aspectRatio?: string };
@@ -36,6 +36,8 @@ export type BlogSection = {
       caption?: string;
     }>;
   };
+  serviceCards?: Array<{ icon: string; label: string; description: string; href: string }>;
+  highlightBlock?: { icon: string; paragraphs: string[] };
 };
 
 export type BlogPost = {
@@ -73,6 +75,385 @@ const unsplash = (id: string) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=80`;
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "aerial-photos-calgary",
+    title: "Aerial Photos Calgary: Stunning Drone Views of 9 Calgary Communities",
+    excerpt: "Explore breathtaking aerial photos of Calgary's most sought-after communities — Auburn Bay, Mahogany, Seton, Crescent Heights, East Village, Inglewood, Mission, Mount Royal, and Renfrew. See why drone photography sells homes faster.",
+    date: "2026-07-21",
+    updated: "2026-07-21",
+    readingTime: "12 min read",
+    categorySlugs: ["drone-photography", "real-estate-photography-tips"],
+    image: { src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Calgary-Tower-Drone-View-1.jpg", alt: "Aerial drone photo of East Village Calgary with Calgary Tower and downtown skyline from above" },
+    seoTitle: "Aerial Photos Calgary: Stunning Drone Views of 9 Communities | Photos 4 Real Estate",
+    seoDescription: "Explore breathtaking aerial photos of Calgary's most sought-after communities — from lakeside Auburn Bay to historic Crescent Heights. See why drone photography sells homes faster.",
+    takeaways: [
+      "Aerial photos reveal what ground-level photography cannot: proximity to water, lot context, neighbourhood amenities, and skyline views.",
+      "Lake communities like Auburn Bay and Mahogany benefit enormously from aerial shots that show water proximity.",
+      "Elevated neighbourhoods like Mount Royal and Crescent Heights demonstrate their hillside position and city views from the air.",
+      "Urban communities like East Village and Mission reveal walkability and river proximity through drone photography.",
+      "Licensed drone operators at Photos 4 Real Estate comply fully with Transport Canada regulations on every shoot.",
+    ],
+    relatedServices: [
+      { label: "Real estate drone photography in Calgary", href: "/services/real-estate-aerial-drone-photography-in-calgary" },
+      { label: "Professional real estate photography in Calgary", href: "/services/real-estate-photography-in-calgary" },
+      { label: "Real estate videos and reels in Calgary", href: "/services/real-estate-videos-in-calgary" },
+      { label: "Twilight photography for Calgary listings", href: "/services/twilight-photography-for-real-estate-in-calgary" },
+      { label: "Book a drone photography session", href: "/book-online" },
+    ],
+    sections: [
+      {
+        heading: "Why Aerial Photos Matter for Calgary Real Estate",
+        paragraphs: [
+          "Calgary is a city that rewards a bird's-eye view. Nestled against the foothills of the Canadian Rockies, bisected by the Bow and Elbow rivers, and laid out across a mosaic of distinct neighbourhoods — Calgary's character is simply impossible to capture from the ground alone. Aerial photos reveal what street-level photography cannot: the shimmering surface of a community lake, the way a neighbourhood sits against the downtown skyline, or the gracious lot a listing backs onto.",
+          "At Photos 4 Real Estate, we've flown our drones over dozens of Calgary communities to produce the kind of aerial imagery that makes listings stop buyers mid-scroll. When a buyer opens a listing on MLS or Realtor.ca, they make a split-second judgment. Interior photos tell them about the kitchen and bathrooms — but aerial photos answer something deeper: where exactly is this home, and what kind of life does it enable?",
+          "For Calgary properties in particular, an aerial perspective can communicate proximity to water, lot size and shape, neighbourhood context including parks and schools, skyline and mountain views, and surrounding density. Licensed drone operators at Photos 4 Real Estate comply fully with Transport Canada regulations, flying where airspace rules permit and always prioritising safety. Every aerial image we deliver is MLS-ready and licensed for all your marketing materials.",
+        ],
+        statCards: [
+          { value: "68%", label: "More online views with aerial photos" },
+          { value: "32%", label: "Faster sale time reported by agents using drone" },
+          { value: "5.0★", label: "Google rating — Photos 4 Real Estate" },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Calgary-Tower-Drone-View-1.jpg", alt: "Aerial drone photo of East Village Calgary showing Calgary Tower and downtown high-rises from above", caption: "Aerial photography reveals neighbourhood context, river proximity, and downtown connections that ground-level photos cannot capture." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Drone-View-1.jpg", alt: "Aerial drone photo of Mahogany lake community in southeast Calgary with homes surrounding the water", caption: "Lake communities like Mahogany benefit enormously from aerial shots that show water proximity and community layout." },
+          ],
+        },
+      },
+      {
+        heading: "Auburn Bay — Lakeside Living from Above",
+        paragraphs: [
+          "Auburn Bay is one of Calgary's most recognisable lake communities, built around a private 43-acre freshwater lake in the city's southeast. From the air, the neighbourhood reveals its defining geometry: curved streets orienting toward the water, a central beach club, and a ring of homes that all share access to the lake's amenities including swimming, skating in winter, and a private beach.",
+          "Aerial shots of Auburn Bay are among the most compelling in Calgary real estate. The contrast between the deep blue lake water, the green park spaces, and the warm rooftops of homes creates a natural composition that no ground-level image can replicate. For sellers listing a home near the water, a drone shot showing their property's proximity to the lake is often the single most effective image in the entire listing.",
+        ],
+        subSections: [
+          {
+            heading: "Auburn Bay at a Glance",
+            bullets: [
+              "Private 43-acre lake with swimming, skating, and beach access",
+              "Beach club, spray park, and community centre",
+              "Close proximity to South Health Campus and Seton commercial district",
+              "Established in 2005 — mature streetscapes with abundant park space",
+              "Popular for families seeking a resort-style community lifestyle",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/auburn/Auburn-Bay-Lake-Drone-View-Community-Centre.jpg", alt: "Aerial drone photo of Auburn Bay lake and community centre in southeast Calgary", caption: "The Auburn Bay community centre and lake from above — a central gathering point for residents." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/auburn/Auburn-Bay-Lake-Drone-View-with-Tennis-Courts.jpg", alt: "Drone aerial view of Auburn Bay lake with tennis courts and surrounding homes in Calgary", caption: "Aerial perspective showing Auburn Bay's tennis courts, lake, and the curved streets that orient toward the water." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/auburn/Auburn-Bay-Lake-Drone-View-from-the-middle-of-the-lake.jpg", alt: "Drone photo from the middle of Auburn Bay lake showing surrounding neighbourhood in Calgary", caption: "View from the centre of Auburn Bay lake showing the community's layout and surrounding homes." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/auburn/Auburn-Bay-Lake-Drone-View-beach.jpg", alt: "Aerial drone photo of Auburn Bay lake beach area with homes in southeast Calgary", caption: "The private beach area at Auburn Bay — one of the community's most valued amenities." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/auburn/Auburn-Bay-Lake-Drone-View-South-Health-Campus.jpg", alt: "Aerial drone view of Auburn Bay lake showing proximity to South Health Campus in Calgary", caption: "Auburn Bay's proximity to the South Health Campus is clearly visible from the air." },
+          ],
+        },
+      },
+      {
+        heading: "Mahogany — Calgary's Largest Private Lake Community",
+        paragraphs: [
+          "Mahogany holds the distinction of being home to Calgary's largest private lake — a 63-acre body of water that has made this southeast community one of the most awarded master-planned neighbourhoods in Canada. Multiple wins at the Canadian Home Builders' Association Community of the Year awards have established Mahogany as a benchmark for thoughtful community design.",
+          "From a drone perspective, Mahogany is extraordinary. The sheer scale of the lake — surrounded by private beaches, a 22,000 sq. ft. beach club, and a growing urban village of shops and restaurants — creates aerial compositions that feel more like a resort destination than a Calgary suburb. For listings in Mahogany, aerial photography is not optional; it is essential to communicating why buyers pay a premium to live here.",
+        ],
+        subSections: [
+          {
+            heading: "Mahogany at a Glance",
+            bullets: [
+              "63-acre private lake — Calgary's largest — with two beach clubs",
+              "Multiple CHBA Community of the Year awards",
+              "Mahogany Village Market with groceries, restaurants, and services",
+              "Wetlands, pathways, and extensive natural green space",
+              "Wide range of housing from condos to luxury estate homes",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany%20%E2%80%94%20Calgary's%20Largest%20Private%20Lake%20Community.jpg", alt: "Aerial drone photo of Mahogany — Calgary's largest 63-acre private lake community from above", caption: "Mahogany's 63-acre private lake from above — the largest in Calgary." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Community-Centre.jpg", alt: "Drone aerial view of Mahogany lake and community centre in southeast Calgary", caption: "The Mahogany lake and community centre from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Drone-View-1.jpg", alt: "Aerial drone photo of Mahogany lake surrounded by homes in southeast Calgary", caption: "The scale of Mahogany lake and its surrounding residential streets from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Drone-View-2.jpg", alt: "Drone view of Mahogany lake showing beach areas and neighbourhood layout in Calgary", caption: "Mahogany's lake, beaches, and community layout visible from a drone perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Drone-View-4.jpg", alt: "Aerial drone photo of Mahogany lake with wetlands and green spaces in Calgary", caption: "Mahogany's wetlands and natural green spaces are clearly visible from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Drone-View-3.jpg", alt: "Drone aerial view of Mahogany lake community showing homes and pathways in Calgary", caption: "The pathway system and home orientations around Mahogany lake from the air." },
+          ],
+        },
+      },
+      {
+        heading: "Seton — The Urban District of the South",
+        paragraphs: [
+          "Seton is Calgary's most ambitious urban district development — a mixed-use community in the southeast designed from the ground up to blend residential, commercial, and healthcare uses. South Health Campus, one of Calgary's newest and most advanced hospitals, anchors the neighbourhood and gives it a vitality that purely residential suburbs lack.",
+          "Aerial photos of Seton tell the story of density done right. The urban grid, walkable streets, and commercial spine are all visible from above, and the proximity to neighbouring Mahogany's lake is clear on a map shot. For investors, first-time buyers, and healthcare professionals working at South Health Campus, a drone photo effectively communicates the convenience of the location in a single image.",
+        ],
+        subSections: [
+          {
+            heading: "Seton at a Glance",
+            bullets: [
+              "Planned urban district with mixed residential and commercial zoning",
+              "Home to South Health Campus — one of Alberta's largest hospitals",
+              "YMCA South Health Campus — largest YMCA in the world at opening",
+              "Growing restaurant, retail, and entertainment district",
+              "Adjacent to Auburn Bay and Mahogany — walkable to lake access",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/South-Health-Campus-in-Seton-Drone-View.jpg", alt: "Aerial drone photo of South Health Campus hospital in Seton Calgary from above", caption: "South Health Campus anchors the Seton urban district — visible from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/Seton-Sign-from-Drone-View.jpg", alt: "Drone aerial view of the Seton community entrance sign in southeast Calgary", caption: "The Seton community entrance sign from above — marking Calgary's urban district of the south." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/Cinema-in-Seton-Drone-View.jpg", alt: "Aerial drone photo of the cinema and entertainment area in Seton Calgary", caption: "Seton's growing entertainment district including the cinema from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/Front-Entrance-YMCA-in-Seton-Drone-View.jpg", alt: "Drone view of the YMCA front entrance in Seton Calgary from above", caption: "The YMCA South Health Campus — the largest YMCA in the world at opening." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/High-School-in-Seton-Drone-View.jpg", alt: "Aerial drone photo of the high school in Seton Calgary from above", caption: "Seton's high school campus visible from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/YMCA-and-High-School-in-Seton-Drone-View.jpg", alt: "Drone aerial view showing YMCA and high school together in Seton Calgary", caption: "The YMCA and high school sit adjacent in Seton — convenient for families." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/Safe-On-Foods-in-Seton-Drone-View.jpg", alt: "Aerial drone photo of Save-On-Foods grocery store in Seton Calgary from above", caption: "Save-On-Foods and the commercial core of Seton from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/Shopping-area-in-Seton-Drone-View.jpg", alt: "Drone view of the shopping and retail area in Seton Calgary from above", caption: "Seton's retail and shopping district from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/seton/Superstore-in-Seton-Drone-View.jpg", alt: "Aerial drone photo of Real Canadian Superstore in Seton Calgary from above", caption: "The Real Canadian Superstore in Seton — part of the community's commercial spine." },
+          ],
+        },
+      },
+      {
+        heading: "Crescent Heights — Hilltop Views Over Downtown",
+        paragraphs: [
+          "Crescent Heights sits on the north escarpment of the Bow River valley, directly across the river from downtown Calgary. It is one of Calgary's oldest communities — established in the early 20th century — and its elevated position makes it one of the most photogenic from the air. Aerial photography here captures the dramatic drop from the community's southern edge down to the Bow River pathway below, with the entire downtown skyline as a backdrop.",
+          "For listings in Crescent Heights, drone photography is particularly valuable because it communicates the view directly — a view that is one of the community's most prized attributes and often the primary reason buyers choose a home here. No written description can substitute for a single aerial image showing a property perched above the river valley with the Rockies visible on clear days.",
+        ],
+        subSections: [
+          {
+            heading: "Crescent Heights at a Glance",
+            bullets: [
+              "Established inner-city community — one of Calgary's oldest",
+              "Elevated position above the Bow River with downtown views",
+              "Walking distance to Centre Street, SAIT, and North Hill Centre",
+              "Mix of original character homes, infills, and low-rise condos",
+              "Direct access to the Bow River pathway system",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/crescentheights/Crescent-Heights-River-Drone-View.jpg", alt: "Aerial drone photo of Crescent Heights showing the Bow River valley in Calgary", caption: "Crescent Heights sits above the Bow River valley — the dramatic elevation drop is visible from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/crescentheights/Crescent-Heights-Lions-on-the-Bridge-Drone-View.jpg", alt: "Drone aerial view of the Lions bridge near Crescent Heights in Calgary from above", caption: "The iconic Lions bridge connecting Crescent Heights to downtown from a drone perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/crescentheights/Crescent-Heights-Hills-to-Downtown-Drone-View.jpg", alt: "Aerial drone photo showing Crescent Heights hillside overlooking downtown Calgary skyline", caption: "The hillside position of Crescent Heights overlooking the downtown Calgary skyline." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/crescentheights/Crescent-Heights-Foot-Bridge-Drone-View.jpg", alt: "Drone view of the Crescent Heights foot bridge over the Bow River in Calgary", caption: "The pedestrian foot bridge connecting Crescent Heights to the downtown core." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/crescentheights/Crescent-Heights-Downtown-Drone-View.jpg", alt: "Aerial drone photo of Crescent Heights neighbourhood with downtown Calgary backdrop", caption: "Crescent Heights with the full downtown Calgary skyline as a backdrop from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/crescentheights/Crescent-Heights-Bridge-Drone-View-1.jpg", alt: "Drone aerial view of the bridge connecting Crescent Heights to downtown Calgary", caption: "The bridge connection between Crescent Heights and downtown from above." },
+          ],
+        },
+      },
+      {
+        heading: "East Village — Calgary's Urban Renaissance",
+        paragraphs: [
+          "East Village is Calgary's most dramatic urban transformation story. Once a struggling neighbourhood at the edge of downtown, it has been revitalised over the past fifteen years into a vibrant, design-forward urban community that sits at the confluence of the Bow and Elbow rivers. The National Music Centre, Central Library, and a growing cluster of residential towers define its skyline.",
+          "Aerial photos of East Village capture something unique: the geographical drama of two rivers meeting, the RiverWalk promenade threading along the water's edge, and the proximity to both downtown towers and the historic Fort Calgary site. For condo listings in East Village, drone photography is practically essential — buyers want to see exactly which way the balcony faces, what's visible from each direction, and how close the property sits to the river.",
+        ],
+        subSections: [
+          {
+            heading: "East Village at a Glance",
+            bullets: [
+              "Located at the confluence of the Bow and Elbow rivers",
+              "Home to the National Music Centre (Studio Bell) and Central Library",
+              "RiverWalk promenade with direct Bow River pathway access",
+              "Growing high-density residential community with contemporary condos",
+              "Steps from downtown, Chinatown, and Inglewood",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Calgary-Tower-Drone-View-1.jpg", alt: "Aerial drone photo of East Village Calgary with Calgary Tower rising above the neighbourhood", caption: "East Village with Calgary Tower visible from above — the community's urban renaissance is clear from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Upside-down-house-Drone-View.jpg", alt: "Drone aerial view of the upside-down house art installation in East Village Calgary", caption: "East Village's distinctive character includes public art and design-forward architecture." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-BMO-Centre-Drone-View.jpg", alt: "Aerial drone photo of BMO Centre in East Village Calgary from above", caption: "The BMO Centre in East Village from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Bow-River-View-from-Drone.jpg", alt: "Drone view of the Bow River running alongside East Village in Calgary", caption: "The Bow River borders East Village — the river pathway is visible from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Calgary-Library-Drone-View.jpg", alt: "Aerial drone photo of the Calgary Central Library in East Village from above", caption: "The award-winning Calgary Central Library in East Village from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-River-View-from-Drone.jpg", alt: "Drone aerial view of the river confluence near East Village in Calgary", caption: "The confluence of the Bow and Elbow rivers near East Village from a drone perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Saddledome-Drone-View.jpg", alt: "Aerial drone photo of the Scotiabank Saddledome in East Village Calgary from above", caption: "The Scotiabank Saddledome in East Village from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Skyscrapers-and-Calgary-Tower-View-from-Drone.jpg", alt: "Drone view of East Village skyscrapers and Calgary Tower from above", caption: "East Village's growing tower density with Calgary Tower in the background." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Studio-Bell-View-from-Drone.jpg", alt: "Aerial drone photo of Studio Bell National Music Centre in East Village Calgary", caption: "The National Music Centre (Studio Bell) in East Village from the air." },
+          ],
+        },
+      },
+      {
+        heading: "Inglewood — Historic Character on the Bow River",
+        paragraphs: [
+          "Inglewood is Calgary's oldest neighbourhood — a creative, character-rich community that has evolved from a 19th-century settlement into one of the city's most sought-after inner-city addresses. Its famous 9th Avenue SE strip is lined with independent boutiques, craft breweries, restaurants, and galleries. The Bow River borders the community to the north, with Pearce Estate Park and the Inglewood Bird Sanctuary offering rare wilderness within city limits.",
+          "From the air, Inglewood tells a story of layered history — historic brick commercial buildings, mature tree canopies over century-old residential streets, and the river and sanctuary greens providing a natural counterpoint to the urban fabric. For heritage home listings or properties near the river, aerial photography reveals context that photographs taken at street level simply cannot show.",
+        ],
+        subSections: [
+          {
+            heading: "Inglewood at a Glance",
+            bullets: [
+              "Calgary's oldest neighbourhood — established post-1875",
+              "9 Ave SE: independent shops, restaurants, breweries, and galleries",
+              "Inglewood Bird Sanctuary — natural wetland within city limits",
+              "Pearce Estate Park with Bow River access and pathways",
+              "Heritage character homes alongside modern infill development",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Bridge-Drone-View-1.jpg", alt: "Aerial drone photo of the bridge in Inglewood Calgary from above", caption: "Inglewood's bridge connection over the Bow River from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Bridge-Drone-View-2.jpg", alt: "Drone aerial view of the Inglewood bridge and Bow River in Calgary", caption: "The bridge and Bow River border of Inglewood from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Streets-Drone-View-1.jpg", alt: "Aerial drone photo of Inglewood neighbourhood streets with heritage homes in Calgary", caption: "Inglewood's historic streetscapes and mature tree canopy from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Streets-Drone-View-2.jpg", alt: "Drone view of Inglewood residential streets showing heritage character homes in Calgary", caption: "The layered history of Inglewood's residential streets visible from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Streets-Drone-View-3.jpg", alt: "Aerial drone photo of Inglewood 9th Avenue commercial strip in Calgary from above", caption: "Inglewood's commercial and residential mix from a drone perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Streets-Drone-View-4.jpg", alt: "Drone aerial view of Inglewood neighbourhood streets and mature trees in Calgary", caption: "The mature tree canopy over Inglewood's century-old residential streets." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Wildlands-Drone-View-1.jpg", alt: "Aerial drone photo of Inglewood Bird Sanctuary wildlands in Calgary from above", caption: "The Inglewood Bird Sanctuary — rare wilderness within city limits." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Wildlands-Drone-View-2.jpg", alt: "Drone view of the natural wetlands and green spaces in Inglewood Calgary", caption: "The Bow River wetlands and natural areas adjacent to Inglewood from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/inglewood/Inglewood-Wildlands-Drone-View-3.jpg", alt: "Aerial drone photo of Pearce Estate Park and wildlands near Inglewood Calgary", caption: "Pearce Estate Park and the Inglewood wildlands from an aerial perspective." },
+          ],
+        },
+      },
+      {
+        heading: "Mission — Riverside Elegance in the Inner City",
+        paragraphs: [
+          "Mission is one of Calgary's most desirable inner-city neighbourhoods — a relatively compact community bordered by the Elbow River to the east and 4th Street SW's famous restaurant and bar row to the west. The community attracts professionals and empty-nesters who want walkable urban amenity with the serenity of a quiet, tree-lined residential neighbourhood.",
+          "Aerial photography in Mission is particularly rewarding because the relationship between the built environment and the river greenway is so clear from above. The Elbow River pathway, the Mission footbridge, and the lush green strip along the water provide natural anchors for any aerial composition. Drone shots of Mission also show proximity to the downtown core — something buyers deeply value and that maps alone don't convey as effectively as a real photograph from the sky.",
+        ],
+        subSections: [
+          {
+            heading: "Mission at a Glance",
+            bullets: [
+              "Bordered by the Elbow River with pathway access throughout",
+              "4 St SW: one of Calgary's most celebrated restaurant and café strips",
+              "Walking distance to downtown, 17 Ave SW, and the Beltline",
+              "Predominantly low-rise residential with condos, townhomes, and character homes",
+              "High Walk Score — one of Calgary's most walkable communities",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mission/Mission-St-Marys-Cathedral-Drone-View.jpg", alt: "Aerial drone photo of St. Mary's Cathedral in Mission Calgary from above", caption: "St. Mary's Cathedral in Mission — a landmark visible from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mission/Mission-Calgary-Tower-Drone-View-1.jpg", alt: "Drone aerial view of Mission neighbourhood with Calgary Tower in the background", caption: "Mission's inner-city location with Calgary Tower visible from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mission/Mission-Central-Memorial-Park-Drone-View.jpg", alt: "Aerial drone photo of Central Memorial Park in Mission Calgary from above", caption: "Central Memorial Park in Mission from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mission/Mission-Elbow-River-Drone-View.jpg", alt: "Drone view of the Elbow River running through Mission Calgary from above", caption: "The Elbow River borders Mission — the river greenway is clearly visible from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mission/Mission-Elbow-River-Foot-Bridge-from-Drone-View.jpg", alt: "Aerial drone photo of the Elbow River foot bridge in Mission Calgary from above", caption: "The Mission footbridge over the Elbow River from a drone perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mission/Mission-MNP-Community-Centre-from-Drone-View.jpg", alt: "Drone aerial view of MNP Community Centre in Mission Calgary from above", caption: "The MNP Community Centre in Mission from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mission/Mission-Street-View-from-Drone-View-1.jpg", alt: "Aerial drone photo of Mission neighbourhood streets with tree-lined roads in Calgary", caption: "Mission's tree-lined residential streets from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mission/Mission-Street-View-from-Drone-View-2.jpg", alt: "Drone view of Mission Calgary inner-city neighbourhood streets from above", caption: "The compact, walkable street grid of Mission from the air." },
+          ],
+        },
+      },
+      {
+        heading: "Mount Royal — Calgary's Most Prestigious Hillside",
+        paragraphs: [
+          "Mount Royal is Calgary's most established luxury community — a hillside neighbourhood of large lots, mature elm trees, and prestigious estate homes that has been home to Calgary's business and professional elite since the early 1900s. Upper Mount Royal in particular features some of the most impressive residential architecture in the city, with homes sitting on generous parcels that are increasingly rare at this proximity to the urban core.",
+          "Aerial photography is arguably more important here than anywhere else in Calgary. The lot sizes that justify Mount Royal's price points are simply not apparent from the street — but from the air, the scale of the properties, the depth of the rear yards, and the canopy of mature trees create a visual narrative of exclusivity and space that resonates immediately with luxury buyers. A drone shot over a Mount Royal estate is worth considerably more than any interior photo in the listing.",
+        ],
+        subSections: [
+          {
+            heading: "Mount Royal at a Glance",
+            bullets: [
+              "Calgary's premier inner-city luxury neighbourhood since the 1900s",
+              "Large estate lots with mature tree canopies — rare this close to downtown",
+              "Prestigious heritage homes alongside contemporary custom builds",
+              "Upper Mount Royal Park — a green oasis with city views",
+              "Short drive to 17 Ave SW, the Beltline, and downtown",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Community-Centre-Drone-View.jpg", alt: "Aerial drone photo of Mount Royal Community Centre in Calgary from above", caption: "The Mount Royal Community Centre from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Tennis-Courts-Drone-View-1.jpg", alt: "Drone aerial view of Mount Royal tennis courts in Calgary from above", caption: "Mount Royal's tennis courts from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Tennis-Courts-Drone-View-2.jpg", alt: "Aerial drone photo of Mount Royal tennis courts and surrounding estate homes in Calgary", caption: "The tennis courts and surrounding estate properties in Mount Royal." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Downtown-Drone-View.jpg", alt: "Drone view of Mount Royal neighbourhood overlooking downtown Calgary skyline", caption: "Mount Royal's elevated position overlooking the downtown Calgary skyline." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Drone-View-1.jpg", alt: "Aerial drone photo of Mount Royal estate homes with mature elm trees in Calgary", caption: "The generous lot sizes and mature elm canopy of Mount Royal from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Drone-View-2.jpg", alt: "Drone aerial view of Mount Royal luxury neighbourhood streets in Calgary", caption: "Mount Royal's prestigious residential streets from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Drone-View-3.jpg", alt: "Aerial drone photo of Mount Royal showing large estate lots near downtown Calgary", caption: "The scale of Mount Royal's estate lots is clearly visible from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Park-Drone-View.jpg", alt: "Drone view of Upper Mount Royal Park with city views in Calgary from above", caption: "Upper Mount Royal Park — a green oasis with city views." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mountroyal/Mount-Royal-Sport-Centre-Drone-View.jpg", alt: "Aerial drone photo of Mount Royal Sport Centre in Calgary from above", caption: "The Mount Royal Sport Centre from an aerial perspective." },
+          ],
+        },
+      },
+      {
+        heading: "Renfrew — A Quiet Gem on the City's Edge",
+        paragraphs: [
+          "Renfrew sits adjacent to Crescent Heights on Calgary's north escarpment — a quiet, well-established inner-city community that has attracted significant infill development in recent years as buyers seek affordable inner-city access before prices climb further. The neighbourhood offers excellent connectivity to downtown and SAIT while maintaining the residential character of tree-lined streets and traditional Calgary bungalows alongside new semi-detached and front-attached infill homes.",
+          "From the air, Renfrew's story is about location. Aerial photos show clearly just how close this community sits to downtown, the Bow River valley, and the Trans-Canada Highway access — a proximity argument that drives significant buyer interest. For infill listings in particular, drone photography can show lot context including rear lane access, yard dimensions, and proximity to parks that helps buyers understand exactly what they're getting.",
+        ],
+        subSections: [
+          {
+            heading: "Renfrew at a Glance",
+            bullets: [
+              "Inner-city northeast location adjacent to Crescent Heights",
+              "Active infill market — mix of original bungalows and new builds",
+              "Walking distance to SAIT and short commute to downtown",
+              "Relatively affordable compared to neighbouring inner-city communities",
+              "Easy access to major routes including the Trans-Canada and 16 Ave",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/renfrew/Renfrew-Ukrainian-Church-View-from-Drone-1.jpg", alt: "Aerial drone photo of the Ukrainian church in Renfrew Calgary from above", caption: "Renfrew's Ukrainian church — a community landmark visible from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/renfrew/Renfrew-Ukrainian-Church-View-from-Drone-2.jpg", alt: "Drone aerial view of the Ukrainian church and surrounding streets in Renfrew Calgary", caption: "The Ukrainian church and surrounding Renfrew neighbourhood from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/renfrew/Renfrew-Aquatic-Centre-View-from-Drone-1.jpg", alt: "Aerial drone photo of Renfrew Aquatic Centre in Calgary from above", caption: "The Renfrew Aquatic Centre from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/renfrew/Renfrew-Community-Centre-View-from-Drone-1.jpg", alt: "Drone view of Renfrew Community Centre in Calgary from above", caption: "The Renfrew Community Centre from above." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/renfrew/Renfrew-Community-Centre-View-from-Drone-2.jpg", alt: "Aerial drone photo of Renfrew Community Centre and surrounding neighbourhood in Calgary", caption: "The community centre and surrounding residential streets of Renfrew." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/renfrew/Renfrew-Downtown-View-from-Drone-1.jpg", alt: "Drone aerial view showing Renfrew's proximity to downtown Calgary skyline", caption: "Renfrew's close proximity to downtown is clearly visible from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/renfrew/Renfrew-Downtown-View-from-Drone-2.jpg", alt: "Aerial drone photo of Renfrew neighbourhood with downtown Calgary backdrop", caption: "The downtown Calgary skyline from Renfrew — the commute distance is short." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/renfrew/Renfrew-School-View-from-Drone-1.jpg", alt: "Drone view of the school in Renfrew Calgary from above", caption: "Renfrew's school — convenient access for families in the neighbourhood." },
+          ],
+        },
+      },
+      {
+        heading: "Aerial Photography Services from Photos 4 Real Estate",
+        paragraphs: [
+          "At Photos 4 Real Estate, drone photography is part of a complete real estate media system — not an isolated add-on. Our licensed and insured drone operators work alongside our photography and videography team so that your entire listing can be captured in a single visit, edited consistently, and delivered the next business day.",
+          "Every photography package at Photos 4 Real Estate includes a comprehensive marketing kit at no extra cost: 9 social media reels, 3 property websites, 3 property flyers, and 2 slideshows — all ready to publish the day after your shoot. New clients receive 25% off their first booking with code 25%OFF (realtors only, limited time).",
+        ],
+        serviceCards: [
+          { icon: "Camera", label: "Aerial Still Photography", description: "High-resolution aerial images showing lot context, surroundings, and proximity to community amenities.", href: "/services/real-estate-aerial-drone-photography-in-calgary" },
+          { icon: "Video", label: "Aerial Video", description: "Cinematic drone video sweeping across the property and neighbourhood — ideal for social media and listing videos.", href: "/services/real-estate-aerial-drone-photography-in-calgary" },
+          { icon: "Camera", label: "Interior Photography", description: "HDR interior and exterior photos with blue-sky replacement and MLS-ready exports — delivered next day.", href: "/services/real-estate-photography-in-calgary" },
+          { icon: "Ruler", label: "RMS Measurements", description: "RECA-compliant RMS measurements and detailed floor plans — accurate, consistent, MLS-ready.", href: "/services/rms-measurements-and-floor-plans-in-calgary" },
+          { icon: "Box", label: "iGUIDE 3D Virtual Tours", description: "Immersive 3D walkthroughs with embedded floor plans so buyers can explore remotely before booking a showing.", href: "/services/iguide-virtual-tours-in-calgary" },
+          { icon: "Sunset", label: "Twilight Photography", description: "Real dusk exterior shots — warm glowing windows and dramatic Calgary skies that outperform any other listing image.", href: "/services/twilight-photography-for-real-estate-in-calgary" },
+        ],
+      },
+      {
+        heading: "Calgary Downtown Drone Video",
+        paragraphs: [
+          "There is no better way to understand Calgary's geography than from the air. The downtown core, the Bow and Elbow rivers, the surrounding communities, and the Rocky Mountain backdrop all come together in a single cinematic sweep that ground-level photography simply cannot match.",
+          "This drone video was captured by Photos 4 Real Estate over downtown Calgary and the surrounding inner-city communities. It showcases the river valleys, the downtown skyline, the East Village, Inglewood, and the broader urban fabric that makes Calgary one of Canada's most visually striking cities.",
+        ],
+        media: {
+          layout: "full-width-video",
+          items: [
+            { type: "video", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/video/Calgary-Downtown-Drone-Video.mp4", alt: "Cinematic drone video of downtown Calgary showing the Bow River, skyline, and surrounding inner-city communities" },
+          ],
+        },
+      },
+      {
+        heading: "Aerial Photos Make Calgary Listings Sell",
+        paragraphs: [
+          "Calgary is a city unlike any other in Canada — its geography, its river valleys, its lake communities, and its mountain backdrop create visual storytelling opportunities that top-producing agents have learned to use strategically. Aerial photos aren't a luxury add-on in today's market; they're a fundamental component of any listing that wants to compete for buyer attention online.",
+          "Whether you're listing an estate in Mount Royal, a lakefront home in Mahogany, a character property in Inglewood, or a new infill in Renfrew, Photos 4 Real Estate has the drone operators, the editing team, and the local market knowledge to deliver aerial imagery that works as hard as you do.",
+          "Book online today, and have your Calgary aerial photos delivered by tomorrow morning — MLS-ready, fully licensed, and backed by a 5.0-star Google rating from Calgary realtors who trust us with every listing.",
+        ],
+      },
+      {
+        heading: "Image Usage and Attribution",
+        highlightBlock: {
+          icon: "Copyright",
+          paragraphs: [
+            "All aerial photos in this guide were captured by Photos 4 Real Estate and are available for free use on other websites, blogs, and publications, provided proper attribution is given.",
+            "If you use any of the images from this post, please credit Photos 4 Real Estate and link back to our website at https://photos4realestate.ca/. We appreciate the support and are happy to share our work with the broader real estate and photography community.",
+          ],
+        },
+      },
+    ],
+    faqHeading: "Aerial Photos Calgary — Frequently Asked Questions",
+    faqs: [
+      { question: "Do you need a permit for drone photography in Calgary?", answer: "Yes. All commercial drone operations in Canada are regulated by Transport Canada. Licensed operators must comply with the Canadian Aviation Regulations (CARs) including maintaining visual line of sight, respecting controlled airspace, and obtaining Special Flight Operations Certificates (SFOCs) where required. Photos 4 Real Estate operates with fully licensed and insured drone pilots." },
+      { question: "What is the best time of year for aerial photos in Calgary?", answer: "Late spring through early fall (May–September) typically offers the best conditions — green landscapes, longer days, and stable weather. That said, winter aerial photos in Calgary can be dramatic and unique, especially when snow covers rooftops and parks." },
+      { question: "How much does drone photography cost in Calgary?", answer: "Drone photography pricing at Photos 4 Real Estate depends on the package selected. Aerial shots can be added to any real estate photography package. Visit photos4realestate.ca/prices for current rates." },
+      { question: "Can drone photos be used on MLS listings?", answer: "Yes. All aerial images and videos delivered by Photos 4 Real Estate come with a full marketing license for MLS, property websites, social media, brochures, and other listing materials." },
+      { question: "Which Calgary communities benefit most from aerial photography?", answer: "Lakeside communities like Auburn Bay and Mahogany benefit enormously because aerial shots reveal proximity to the lake. Hillside neighbourhoods like Mount Royal and Crescent Heights show off their elevated position and city views. Urban communities like East Village and Mission reveal walkability and proximity to the Bow River." },
+      { question: "How far in advance should I book drone photography in Calgary?", answer: "Two to three days of notice is ideal, especially during the busy spring and summer listing season. Photos 4 Real Estate can often accommodate last-minute requests when the schedule allows. Call or text (825) 449-5001 for urgent bookings." },
+      { question: "What happens if the weather is bad on shoot day?", answer: "If weather conditions would significantly affect photo quality or drone flight safety, Photos 4 Real Estate will reschedule exterior and drone sessions. We monitor forecasts closely and communicate proactively with all clients." },
+    ],
+  },
   {
     slug: "prepare-home-for-real-estate-photos-calgary",
     title: "How to Prepare a Calgary Home for Real Estate Photos",

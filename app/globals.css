@@ -7986,6 +7986,20 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
 .blog-data-table tbody tr:nth-child(even) { background: #fcfbfa; }
 .blog-related-services ul { gap: 8px; }
 .blog-related-services a { color: var(--brick); font-weight: 700; border-bottom: 1px solid rgba(203,65,84,0.28); }
+.blog-service-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+.blog-service-card { display: flex; flex-direction: column; gap: 10px; padding: 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); box-shadow: 0 8px 28px rgba(19,29,59,0.05); transition: all var(--transition); text-decoration: none; color: inherit; }
+.blog-service-card:hover { border-color: var(--brick); box-shadow: 0 12px 36px rgba(203,65,84,0.12); transform: translateY(-2px); }
+.blog-service-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); background: #fae9eb; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.blog-service-icon svg { color: var(--brick); stroke: currentColor; fill: none; }
+.blog-service-card strong { color: var(--navy); font-size: 16px; font-weight: 700; }
+.blog-service-card span { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
+.blog-highlight-block { display: flex; gap: 16px; padding: 24px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid var(--gold); border-radius: var(--radius); margin: 24px 0; box-shadow: 0 8px 28px rgba(245,158,11,0.15); }
+.blog-highlight-block svg { color: var(--gold-warm); stroke: currentColor; fill: none; flex-shrink: 0; margin-top: 2px; }
+.blog-highlight-block > div { flex: 1; }
+.blog-highlight-block p { color: var(--navy); font-size: 15px; line-height: 1.7; margin: 0 0 12px; }
+.blog-highlight-block p:last-child { margin: 0; }
+.blog-highlight-block a { color: var(--brick); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.blog-highlight-block a:hover { color: var(--brick-dark); }
 
 /* ── CUSTOM 404 PAGE ── */
 .not-found-page {
