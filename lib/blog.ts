@@ -77,15 +77,15 @@ const unsplash = (id: string) =>
 export const blogPosts: BlogPost[] = [
   {
     slug: "aerial-photos-calgary",
-    title: "Aerial Photos Calgary: Stunning Drone Views of 9 Calgary Communities",
-    excerpt: "Explore breathtaking aerial photos of Calgary's most sought-after communities — Auburn Bay, Mahogany, Seton, Crescent Heights, East Village, Inglewood, Mission, Mount Royal, and Renfrew. See why drone photography sells homes faster.",
+    title: "Aerial Photos Calgary: Stunning Drone Views of 10 Calgary Communities",
+    excerpt: "Explore breathtaking aerial photos of Calgary's most sought-after communities — Auburn Bay, Mahogany, Harmony, Seton, Crescent Heights, East Village, Inglewood, Mission, Mount Royal, and Renfrew. See why drone photography sells homes faster.",
     date: "2026-07-21",
     updated: "2026-07-21",
     readingTime: "12 min read",
     categorySlugs: ["drone-photography", "real-estate-photography-tips"],
     image: { src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/eastvillage/East-Village-Calgary-Tower-Drone-View-1.jpg", alt: "Aerial drone photo of East Village Calgary with Calgary Tower and downtown skyline from above" },
-    seoTitle: "Aerial Photos Calgary: Stunning Drone Views of 9 Communities | Photos 4 Real Estate",
-    seoDescription: "Explore breathtaking aerial photos of Calgary's most sought-after communities — from lakeside Auburn Bay to historic Crescent Heights. See why drone photography sells homes faster.",
+    seoTitle: "Aerial Photos Calgary: Stunning Drone Views of 10 Communities | Photos 4 Real Estate",
+    seoDescription: "Explore breathtaking aerial photos of Calgary's most sought-after communities — from lakeside Auburn Bay and Harmony to historic Crescent Heights. See why drone photography sells homes faster.",
     takeaways: [
       "Aerial photos reveal what ground-level photography cannot: proximity to water, lot context, neighbourhood amenities, and skyline views.",
       "Lake communities like Auburn Bay and Mahogany benefit enormously from aerial shots that show water proximity.",
@@ -174,6 +174,36 @@ export const blogPosts: BlogPost[] = [
             { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Drone-View-2.jpg", alt: "Drone view of Mahogany lake showing beach areas and neighbourhood layout in Calgary", caption: "Mahogany's lake, beaches, and community layout visible from a drone perspective." },
             { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Drone-View-4.jpg", alt: "Aerial drone photo of Mahogany lake with wetlands and green spaces in Calgary", caption: "Mahogany's wetlands and natural green spaces are clearly visible from above." },
             { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/mahogany/Mahogany-Lake-Drone-View-3.jpg", alt: "Drone aerial view of Mahogany lake community showing homes and pathways in Calgary", caption: "The pathway system and home orientations around Mahogany lake from the air." },
+          ],
+        },
+      },
+      {
+        heading: "Harmony — Calgary's Premier Lake Community in the Foothills",
+        paragraphs: [
+          "Harmony is one of the most ambitious master-planned communities in the Calgary region, set in the rolling foothills of Springbank just west of the city. Anchored by an 87-acre freshwater lake — the largest in the Calgary area — Harmony was designed from the ground up to blend resort-style lake living with golf, wellness, and nature-focused amenities rarely found together in a single community.",
+          "From the air, Harmony is genuinely spectacular. The lake's scale dominates the landscape, ringed by beaches, a lake club, and homes positioned to maximize water views. Beyond the lake, an 18-hole championship golf course, wetlands, and pathway systems create a patchwork of blue, green, and rooftop that photographs beautifully in a single wide aerial composition — something almost no other Calgary-area community can offer at this scale.",
+          "For listings in Harmony, drone photography does more than showcase a home; it sells a lifestyle. Buyers considering Harmony are typically drawn by the promise of lake access, mountain views, and a slower pace of living just minutes from the city — and an aerial shot capturing the lake, the foothills backdrop, and a property's position within that setting communicates all of that in one frame. Ground-level photos simply cannot convey the scale of the lake or the mountain views to the west, both of which are often the primary reason buyers choose Harmony over comparable communities closer to the city core.",
+        ],
+        subSections: [
+          {
+            heading: "Harmony at a Glance",
+            bullets: [
+              "87-acre freshwater lake — the largest in the Calgary region",
+              "Full-service lake club with beaches, swimming, and paddling",
+              "Springbank Links, an 18-hole championship golf course within the community",
+              "Located in the foothills west of Calgary, with Rocky Mountain views",
+              "Mix of estate lots, single-family homes, and lake-access properties",
+              "Extensive wetlands, parks, and pathway network throughout",
+            ],
+          },
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/harmony/Harmony-Lake-View-from-Drone-1.jpg", alt: "Aerial drone photo of Harmony lake showing the 87-acre freshwater lake in Springbank Calgary", caption: "Harmony's 87-acre lake from above — the largest freshwater lake in the Calgary region." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/harmony/Harmony-Lake-Beach-View-from-Drone.jpg", alt: "Drone aerial view of Harmony lake beach area with lake club in Springbank Calgary", caption: "The Harmony lake club and beach area from an aerial perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/harmony/Harmony-Lake-View-from-Drone-2.jpg", alt: "Aerial drone photo of Harmony lake showing homes and beach areas from above in Springbank Calgary", caption: "Harmony's lake, beaches, and surrounding homes visible from a drone perspective." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/harmony/Harmony-View-from-Drone-1.jpg", alt: "Drone view of Harmony community showing the lake, golf course, and foothills backdrop in Springbank Calgary", caption: "The lake, golf course, and foothills backdrop of Harmony from the air." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-21/harmony/Harmony-View-from-Drone-2.jpg", alt: "Aerial drone photo of Harmony master-planned community with lake and mountain views in Springbank Calgary", caption: "Harmony's master-planned layout with lake and Rocky Mountain views from above." },
           ],
         },
       },
