@@ -68,7 +68,7 @@ const redemptionOptions = [
   {
     icon: <Drone size={22} aria-hidden="true" />,
     title: "Drone Photography",
-    points: "12,500",
+    points: "10,000",
     text: "Add aerial property context, lot views, exterior angles, and neighbourhood perspective to your listing.",
     href: "/services/real-estate-aerial-drone-photography-in-calgary",
   },
