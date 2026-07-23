@@ -76,6 +76,128 @@ const unsplash = (id: string) =>
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "c21-bravo-realty-golf-event-recap",
+    title: "Proud Sponsors: Recapping the C21 Bravo Realty Community Golf Event",
+    excerpt: "Photos 4 Real Estate sponsored C21 Bravo Realty's golf simulator event at LaunchPad, raising $1,700 for Easter Seals. See highlights from Calgary's real estate community.",
+    date: "2026-07-23",
+    updated: "2026-07-23",
+    readingTime: "5 min read",
+    categorySlugs: ["marketing", "marketing-and-social"],
+    image: { src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-23/Vlad-and-Iryna-Photobooth-1.jpg", alt: "Vlad and Iryna at the C21 Bravo Realty golf event photobooth" },
+    seoTitle: "C21 Bravo Realty Golf Event Recap | Photos 4 Real Estate",
+    seoDescription: "We sponsored C21 Bravo Realty's golf simulator event at LaunchPad, raising $1,700 for Easter Seals. See highlights from Calgary's real estate community.",
+    takeaways: [
+      "Photos 4 Real Estate sponsored C21 Bravo Realty's indoor golf event at LaunchPad Golf Heritage Pointe.",
+      "The event brought together close to 100 Calgary real estate professionals for networking and connection.",
+      "Attendees and sponsors raised almost $1,700 for Easter Seals, supporting camps for children and adults with disabilities.",
+      "Salt & Light Photography captured the day with an on-site photo booth for attendees.",
+    ],
+    relatedServices: [
+      { label: "Professional real estate photography in Calgary", href: "/services/real-estate-photography-in-calgary" },
+      { label: "Real estate videography in Calgary", href: "/services/real-estate-videos-in-calgary" },
+      { label: "Real estate drone photography in Calgary", href: "/services/real-estate-aerial-drone-photography-in-calgary" },
+      { label: "iGUIDE 3D virtual tours", href: "/services/iguide-virtual-tours-in-calgary" },
+      { label: "RMS measurements and floor plans", href: "/services/rms-measurements-and-floor-plans-in-calgary" },
+      { label: "Book a real estate photography session", href: "/book-online" },
+    ],
+    sections: [
+      {
+        heading: "An Afternoon Built for Connection",
+        paragraphs: [
+          "This past Wednesday, we had the pleasure of sponsoring something a little different — and a lot of fun. C21 Bravo Realty brought together members of Calgary's real estate community at LaunchPad Golf Heritage Pointe for an afternoon that was refreshingly simple: no agenda, no pitch, no pressure. Just golf simulators, great conversation, and a room full of good people. Photos 4 Real Estate was proud to be one of the sponsors helping make it happen.",
+          "Rather than a traditional 18 holes outdoors, the event took over LaunchPad's indoor golf suites, giving local realtors, brokers, and industry partners a relaxed setting to swing a club, swap stories, and reconnect with familiar faces — while meeting some new ones too. It's the kind of event that reminds you how much stronger this industry is when people actually get in a room together.",
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-23/Iryna-at-the-event-main-banner-with-logos.jpg", alt: "Iryna at the C21 Bravo Realty event main banner with sponsor logos", caption: "Photos 4 Real Estate was proud to sponsor this community event alongside C21 Bravo Realty." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-23/Agen-Appreciation-Event-Group-Photo.webp", alt: "Group photo from the C21 Bravo Realty golf event at LaunchPad", caption: "Close to 100 Calgary real estate professionals came together for an afternoon of connection." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-23/Photos-4-Real-Estate-Marketing-Cookies-with-QR-Code.jpg", alt: "Photos 4 Real Estate marketing cookies with QR code at the golf event", caption: "We had the chance to put our name (and a few giveaways) in front of local real estate professionals." },
+          ],
+        },
+      },
+      {
+        heading: "Raising Almost $1,700 for Easter Seals",
+        paragraphs: [
+          "Beyond the golf and the networking, the event had real purpose. Together, attendees and sponsors raised almost $1,700 for Easter Seals, supporting camps for children and adults with disabilities. It's a cause that makes a tangible difference, and we're glad our participation contributed to that total.",
+        ],
+      },
+      {
+        heading: "Congratulations to the Winners",
+        paragraphs: [
+          "A few well-deserved shoutouts from the day:",
+          "Congratulations to all of you!",
+        ],
+        bullets: [
+          "Grace Gibbons took home the 50/50 raffle prize.",
+          "The four CENTUM Draw winners each took home a notebook: Zunaid Seedat, Annie DeMello, Cindy Cheng, and Kasandra Regular.",
+        ],
+      },
+      {
+        heading: "Relive the Day",
+        paragraphs: [
+          "Salt & Light Photography was on-site running a photo booth throughout the event. If you attended, your photos are ready to view and download.",
+        ],
+        cta: {
+          heading: "View Event Photos",
+          copy: "Salt & Light Photography captured the day at the C21 Bravo Realty golf event. View and download your photos from the photobooth.",
+          href: "https://www.saltandlightphotography.ca/client/c211/gallery",
+          label: "View Photos",
+        },
+      },
+      {
+        heading: "What We Do",
+        paragraphs: [
+          "For anyone we met on Wednesday who's curious what Photos 4 Real Estate actually does day-to-day: we're a Calgary-based real estate media company, and our goal is simple — help realtors win more listings with visuals that make a property stand out.",
+          "Every shoot can include:",
+        ],
+        serviceCards: [
+          { icon: "Camera", label: "Real Estate Photography", description: "Professionally edited interior and exterior photos, MLS-ready and delivered next business day.", href: "/services/real-estate-photography-in-calgary" },
+          { icon: "Video", label: "Videography", description: "Cinematic walkthroughs that give buyers a real feel for the space.", href: "/services/real-estate-videos-in-calgary" },
+          { icon: "Camera", label: "Drone Photography & Videography", description: "Aerial views showcasing lot size, location, and neighbourhood context.", href: "/services/real-estate-aerial-drone-photography-in-calgary" },
+          { icon: "Box", label: "iGUIDE 3D Virtual Tours", description: "Interactive walkthroughs buyers can explore remotely before booking a showing.", href: "/services/iguide-virtual-tours-in-calgary" },
+          { icon: "Ruler", label: "RMS Measurements & Floor Plans", description: "RECA-compliant, accurate, and MLS-ready measurements and floor plans.", href: "/services/rms-measurements-and-floor-plans-in-calgary" },
+          { icon: "Home", label: "Virtual Staging", description: "Turn empty rooms into buyer-ready spaces without the cost of physical staging.", href: "/services/virtual-staging" },
+          { icon: "Sunset", label: "Twilight Photography", description: "The warm, golden-hour shot that consistently outperforms on MLS and social.", href: "/services/twilight-photography-for-real-estate-in-calgary" },
+        ],
+      },
+      {
+        heading: "Delivered Next Business Day With Full Marketing Kit",
+        paragraphs: [
+          "And it's all delivered next business day, along with a full marketing kit — social reels, flyers, slideshows, and a branded property website — included at no extra cost.",
+          "If you're a Calgary-area realtor and we haven't worked together yet, see our full range of services or book your next shoot online.",
+        ],
+        cta: {
+          heading: "Book Your Next Shoot",
+          copy: "See our full range of real estate photography and media services. Book online and get next-business-day delivery with a complete marketing kit included.",
+          href: "/book-online",
+          label: "Book Online",
+        },
+      },
+      {
+        heading: "Thank You, C21 Bravo Realty",
+        paragraphs: [
+          "Events like this only work because of the people who show up — and the organizers who put in the work behind the scenes. A huge thank you to the team at C21 Bravo Realty for putting together an afternoon that felt like exactly what our industry needed: a chance to connect without an agenda.",
+          "If you were there, thank you for stopping by our table and saying hello. If you missed it, keep an eye out — this won't be the last one.",
+          "Photos 4 Real Estate is proud to support the local real estate community through events like this. Interested in working together? Get in touch with us.",
+        ],
+        media: {
+          items: [
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-23/Iryna-at-the-event-small-banner-with-logos.jpg", alt: "Iryna at the C21 Bravo Realty event small banner with sponsor logos", caption: "Thank you to C21 Bravo Realty for organizing a memorable community event." },
+            { type: "image", src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-23/Iryna-playing-golf.jpg", alt: "Iryna playing golf at the C21 Bravo Realty event", caption: "A relaxing afternoon of golf simulators and great conversation." },
+          ],
+        },
+      },
+    ],
+    faqHeading: "C21 Bravo Realty Golf Event — Frequently Asked Questions",
+    faqs: [
+      { question: "Where was the C21 Bravo Realty golf event held?", answer: "The event was held at LaunchPad Golf Heritage Pointe, an indoor golf facility in Calgary." },
+      { question: "How much money was raised for Easter Seals?", answer: "Attendees and sponsors raised almost $1,700 for Easter Seals, supporting camps for children and adults with disabilities." },
+      { question: "Who took photos at the event?", answer: "Salt & Light Photography was on-site running a photo booth throughout the event. Attendees can view and download their photos online." },
+      { question: "What services does Photos 4 Real Estate offer?", answer: "Photos 4 Real Estate offers real estate photography, videography, drone photography and videography, iGUIDE 3D virtual tours, RMS measurements and floor plans, virtual staging, and twilight photography. All services are delivered next business day with a full marketing kit included." },
+      { question: "How can Calgary realtors book a photography session?", answer: "Calgary realtors can book a photography session online through the Photos 4 Real Estate website or by contacting us directly." },
+    ],
+  },
+  {
     slug: "aerial-photos-calgary",
     title: "Aerial Photos Calgary: Stunning Drone Views of 10 Calgary Communities",
     excerpt: "Explore breathtaking aerial photos of Calgary's most sought-after communities — Auburn Bay, Mahogany, Harmony, Seton, Crescent Heights, East Village, Inglewood, Mission, Mount Royal, and Renfrew. See why drone photography sells homes faster.",
