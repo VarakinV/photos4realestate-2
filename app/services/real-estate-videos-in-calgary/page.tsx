@@ -383,10 +383,10 @@ function PageBody() {
             <div className="photo-intro-visual" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <div className="intro-video-wrapper" style={{ borderRadius: "16px", overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.15)", width: "100%", maxWidth: "340px", margin: "0 auto" }}>
                 <video
-                  src={`${videographyImages.heroVideo}#t=1`}
+                  src="https://cdn.photos4realestate.ca/p4re-static-media/re-videography-service-page/1104%20Cranbrook%20Gardens%20SE%20Calgary.mp4#t=1"
                   controls
                   style={{ width: "100%", height: "auto", display: "block" }}
-                  aria-label="Vertical property video walkthrough for 306 Cranbrook Walk SE in Calgary"
+                  aria-label="Vertical property video walkthrough for 1104 Cranbrook Gardens SE in Calgary"
                 />
               </div>
             </div>
@@ -461,10 +461,10 @@ function PageBody() {
             <div className="photo-intro-visual" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <div className="reels-video-wrapper" style={{ borderRadius: "16px", overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.15)", width: "100%", maxWidth: "340px", margin: "0 auto" }}>
                 <video
-                  src={`${videographyImages.reelsVideo}#t=6`}
+                  src="https://cdn.photos4realestate.ca/p4re-static-media/re-videography-service-page/45%20Savoy%20Landing%20Se%2C%20Calgary.mp4#t=6"
                   controls
                   style={{ width: "100%", height: "auto", display: "block" }}
-                  aria-label="Social media property video for 9759 Sanderling Way NW in Calgary"
+                  aria-label="Social media property video for 45 Savoy Landing SE in Calgary"
                 />
               </div>
             </div>
@@ -583,10 +583,10 @@ function PageBody() {
             <div className="prep-visual" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <div className="prep-video-wrapper" style={{ borderRadius: "16px", overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.15)", width: "100%", maxWidth: "340px", margin: "0 auto" }}>
                 <video
-                  src={`${videographyImages.prepVideo}#t=1`}
+                  src="https://cdn.photos4realestate.ca/p4re-static-media/re-videography-service-page/145%20Heartland%20Way%2C%20Cochrane.mp4#t=1"
                   controls
                   style={{ width: "100%", height: "auto", display: "block" }}
-                  aria-label="Real estate video walkthrough example for 244094 Partridge Place"
+                  aria-label="Real estate video walkthrough example for 145 Heartland Way in Cochrane"
                 />
               </div>
             </div>

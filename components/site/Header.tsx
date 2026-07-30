@@ -143,7 +143,7 @@ export function Header({ recaptchaSiteKey }: HeaderProps) {
                             {group.items.map((item) => (
                               <li key={item.slug} role="none">
                                 <ServicesSubmenuLink
-                                  href={`/services/${item.slug}`}
+                                  href={item.href ?? `/services/${item.slug}`}
                                   name={item.name}
                                   icon={item.icon}
                                   onNavigate={dismissServicesMenu}

@@ -2229,7 +2229,8 @@ h4 {
     height: 16px;
   }
   .nav-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: calc(100% + 1px);
     left: 0;
@@ -2245,6 +2246,7 @@ h4 {
     transform: translateY(-14px);
     transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     z-index: 120;
+    max-height: calc(100vh - 73px);
   }
   .nav-menu.is-open {
     opacity: 1;
@@ -2256,6 +2258,10 @@ h4 {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    min-height: 0;
   }
   .nav-links > li {
     position: static;
@@ -2356,11 +2362,17 @@ h4 {
     padding: 0;
     left: auto;
     transform: none;
+    max-height: 0;
+    overflow: hidden;
   }
   .nav-item-has-children:hover .nav-submenu--megamenu,
   .nav-item-has-children:focus-within .nav-submenu--megamenu,
   .nav-item-has-children.is-open .nav-submenu--megamenu {
     transform: none;
+  }
+  .nav-item-has-children.is-open .nav-submenu--megamenu {
+    max-height: none;
+    overflow: visible;
   }
   .nav-megamenu-heading {
     font-size: 10px;
@@ -6978,12 +6990,12 @@ button.hotel-project-trigger:disabled { cursor: not-allowed; opacity: 0.7; }
 }
 .marketing-count-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2px;
   background: rgba(255,255,255,0.06);
   border-radius: var(--radius);
   overflow: hidden;
-  max-width: 860px;
+  max-width: 1060px;
   margin: 32px auto 0;
 }
 .marketing-count-card {
@@ -8480,5 +8492,64 @@ textarea.contact-form-control { min-height: 110px !important; resize: vertical; 
   }
   html {
     @apply font-sans;
+  }
+}
+
+/* ── SMARTSIGN QR PAGE ── */
+.ssqr-intro-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.ssqr-callout {
+  background: #fff7ea;
+  border: 1px solid #f0dcb0;
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.ssqr-callout-icon {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--brick);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.ssqr-callout h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.ssqr-callout p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.ssqr-process-section {
+  background: var(--off-white);
+}
+
+@media (max-width: 900px) {
+  .ssqr-callout {
+    flex-direction: column;
+    padding: 24px;
   }
 }

@@ -17,6 +17,7 @@ const extras = [
   { label: "2 listing slideshows" },
   { label: "3 branded property flyers" },
   { label: "6 branded property websites", href: "/single-property-websites" },
+  { label: "7 SmartSign QR lead-capture codes", href: "/smartsign-qr" },
   {
     label: "Free realtor tools: reel, slideshow, flyer & QR code generators",
     href: "/free-tools",

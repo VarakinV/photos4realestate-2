@@ -648,6 +648,10 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
         q: "When is the marketing kit delivered?",
         a: "In most cases, the marketing kit is delivered the next day once we have all required listing information for the property. If the listing details are still being finalized after the shoot, the marketing kit will follow as soon as that information is provided. You receive a single download link and access to your property portal containing your photos, floor plans, tour link, and all available marketing kit items in one place.",
       },
+      {
+        q: "What are SmartSign QR codes?",
+        a: "SmartSign QR is a free lead-capture QR code system included with every listing. Every listing gets 7 ready-to-print QR designs — sign riders and decals — that link buyers to the property's single property website, capture leads instantly, and can be reassigned to a new listing anytime without reprinting. You get instant email alerts when a buyer submits the form, weekly analytics reports, and full portal access to track every scan and lead. <a href=\"/smartsign-qr\">Learn more about SmartSign QR<span class=\"sr-only\"> codes for Calgary realtors</span> &rarr;</a>",
+      },
     ],
     relatedSlugs: [
       "real-estate-photography-in-calgary",

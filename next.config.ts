@@ -85,6 +85,16 @@ const nextConfig: NextConfig = {
         destination: "/blog/real-estate-drone-photography-calgary",
         permanent: true,
       },
+      {
+        source: "/services/single-property-websites",
+        destination: "/single-property-websites",
+        permanent: true,
+      },
+      {
+        source: "/services/smartsign-qr",
+        destination: "/smartsign-qr",
+        permanent: true,
+      },
     ];
   },
 };

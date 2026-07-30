@@ -9,6 +9,7 @@ import {
   FileText,
   MapPin,
   MonitorPlay,
+  QrCode,
   Sparkles,
   Smartphone,
 } from "lucide-react";
@@ -142,9 +143,10 @@ const whyIncluded = [
   "6 branded property websites — shareable links, no setup required",
   "3 print-ready PDF flyers — professionally designed with your photos",
   "2 animated slideshows — ready for email campaigns and social media",
+  "7 SmartSign QR codes — lead-capture QR codes for your yard sign, reassignable to new listings",
 ] as const;
 
-type ToolVisualKind = "reels" | "websites" | "flyers" | "slideshows";
+type ToolVisualKind = "reels" | "websites" | "flyers" | "slideshows" | "qrcodes";
 
 type ToolSection = {
   id: ToolVisualKind;
@@ -268,6 +270,33 @@ const toolSections: readonly ToolSection[] = [
       </p>
     ),
   },
+  {
+    id: "qrcodes",
+    num: "05",
+    label: "SmartSign QR Codes",
+    title: "7 SmartSign QR Codes — Lead Capture for Your Yard Sign",
+    icon: <QrCode size={22} aria-hidden="true" />,
+    paragraphs: [
+      "Every listing gets 7 ready-to-print SmartSign QR designs — scan-to-lead codes for your sign rider or decal that send you an instant email the moment a buyer fills out the form, track every scan automatically, and can be reassigned to a brand-new listing anytime without reprinting.",
+      "Think of your SmartSign QR code the same way you think of a lockbox: it's a reusable physical tool, not a single-use consumable. Print it once, and when that property sells, simply reassign the same code to your next listing from the portal — the physical sign rider or decal never has to be reprinted.",
+    ],
+    bullets: [
+      "7 print-ready designs per listing — bare QR, 3 sign riders, 3 decals",
+      "Instant lead alerts — get notified the moment a buyer submits the form",
+      "Weekly analytics reports — see which signs are actually working",
+      "Reassign to new listings — no reprinting required",
+      "Full analytics in your realtor portal — track every scan and lead",
+    ],
+    note: (
+      <p className="marketing-tool-note">
+        Learn more about{" "}
+        <Link href="/smartsign-qr" className="body-link">
+          SmartSign QR codes
+        </Link>
+        .
+      </p>
+    ),
+  },
 ] as const;
 
 const kitTotals = [
@@ -290,6 +319,11 @@ const kitTotals = [
     num: "2",
     name: "Slideshows",
     desc: "Animated photo presentations for quick sharing",
+  },
+  {
+    num: "7",
+    name: "SmartSign QR Codes",
+    desc: "Lead-capture QR codes for yard signs, reassignable to new listings",
   },
 ] as const;
 
@@ -421,6 +455,19 @@ function renderToolVisual(kind: ToolVisualKind) {
           </video>
         </div>
       );
+    case "qrcodes":
+      return (
+        <div className="marketing-qrcodes-preview">
+          <Image
+            src="https://cdn.photos4realestate.ca/p4re-static-media/smart-sign-qr/qr-Q-000009-rider-scan-info.png"
+            alt="SmartSign QR sign rider design example showing lead-capture QR code for Calgary realtors"
+            width={1400}
+            height={1050}
+            sizes="(max-width: 1024px) 100vw, 42vw"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+      );
   }
 }
 
@@ -451,7 +498,7 @@ export default function MarketingKitPage() {
               <p className="services-page-hero-sub speakable-intro">
                 <strong>Every Photos 4 Real Estate package includes a complete
                 marketing kit</strong> at no extra cost — 9 social media reels,
-                6 property websites, 3 property flyers, and 2 slideshows,
+                6 property websites, 3 property flyers, 2 slideshows, and 7 SmartSign QR codes,
                 generated once your listing information is ready.
               </p>
             </div>
@@ -461,7 +508,7 @@ export default function MarketingKitPage() {
               aria-label="Marketing kit included assets"
             >
               <li className="services-page-hero-stat">
-                <span className="num">20</span>
+                <span className="num">&gt;20</span>
                 <span className="lbl">Marketing assets</span>
               </li>
               <li className="services-page-hero-stat">

@@ -256,8 +256,8 @@ export function ServiceBlocks() {
         learnMoreLabelSuffix="twilight photography for real estate in Calgary"
         visual={
           <ServiceImage
-            src={servicesImages.twilight}
-            alt="Twilight photo of a house in Harmony with illuminated windows"
+            src="https://cdn.photos4realestate.ca/p4re-static-media/services-page/Twilight-photo-of-a-house-in-Okotoks.jpg"
+            alt="Twilight photo of a house in Okotoks with illuminated windows"
           />
         }
       />
@@ -275,6 +275,7 @@ export function ServiceBlocks() {
           "3 property flyers",
           "6 branded websites",
           "Single-property websites",
+          "SmartSign QR",
           "Free with every package",
         ]}
         learnMoreHref="/services/marketing-kit-for-realtors"

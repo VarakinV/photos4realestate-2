@@ -9,6 +9,8 @@ import {
   Moon,
   Megaphone,
   Sparkles,
+  Globe,
+  QrCode,
 } from "lucide-react";
 import type { ReactNode } from "react";
 
@@ -16,6 +18,7 @@ export type MegamenuServiceItem = {
   slug: string;
   name: string;
   icon: ReactNode;
+  href?: string;
 };
 
 export type MegamenuGroup = {
@@ -78,6 +81,18 @@ export const servicesMegamenuGroups: ReadonlyArray<MegamenuGroup> = [
         slug: "marketing-kit-for-realtors",
         name: "Marketing Kit for Realtors",
         icon: <Megaphone {...iconProps} />,
+      },
+      {
+        slug: "single-property-websites",
+        name: "Property Websites",
+        icon: <Globe {...iconProps} />,
+        href: "/single-property-websites",
+      },
+      {
+        slug: "smartsign-qr",
+        name: "SmartSign QR Codes",
+        icon: <QrCode {...iconProps} />,
+        href: "/smartsign-qr",
       },
     ],
   },

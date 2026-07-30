@@ -116,6 +116,11 @@ const comparisonRows: Array<{
     values: ["yes", "no", "no", "no", "no", "no"],
   },
   {
+    feature: "7 SmartSign QR Codes",
+    detail: "Reusable lead-capture QR codes for yard signs with instant lead alerts and weekly analytics.",
+    values: ["yes", "no", "no", "no", "no", "no"],
+  },
+  {
     feature: "Free Realtor Marketing Tools",
     detail: "Free reel, slideshow, flyer, and QR code generators available directly through the website.",
     values: ["yes", "no", "no", "no", "no", "no"],
@@ -148,6 +153,7 @@ const bonusDeliverables = [
   "2 slideshows",
   "3 property flyers",
   "6 property webpages",
+  "7 SmartSign QR lead-capture codes",
 ] as const;
 
 const freeToolCards = [
