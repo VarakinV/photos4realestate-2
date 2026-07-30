@@ -76,6 +76,268 @@ const unsplash = (id: string) =>
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-real-estate-video-production-calgary",
+    title: "How Photos 4 Real Estate Uses AI to Create Real Estate Videos That Sell Homes Faster in Calgary",
+    excerpt: "See how Photos 4 Real Estate uses AI virtual staging, transition clips & realtor voiceovers to create real estate videos that sell homes faster in Calgary.",
+    date: "2026-07-30",
+    updated: "2026-07-30",
+    readingTime: "10 min read",
+    categorySlugs: ["videography", "virtual-staging"],
+    image: {
+      src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Photo%20of%20stairs%20in%20a%20living%20room%20-%20Lakefront%20house%20in%20Auburn%20Bay.jpg",
+      alt: "AI-enhanced real estate video production in Calgary by Photos 4 Real Estate"
+    },
+    seoTitle: "AI Real Estate Videos in Calgary | Photos 4 Real Estate",
+    seoDescription: "See how Photos 4 Real Estate uses AI virtual staging, transition clips & realtor voiceovers to create real estate videos that sell homes faster in Calgary.",
+    takeaways: [
+      "Photos 4 Real Estate combines professional videography with AI virtual staging and transition technology to create listing videos that help buyers visualize empty spaces.",
+      "AI-generated transition clips morph rooms from empty to furnished in motion, creating a more engaging viewing experience than static before-and-after photos.",
+      "Real-world examples show how AI-enhanced videos help residential and commercial listings stand out, generate more engagement, and sell faster in Calgary and surrounding areas.",
+      "Realtor intros and voiceovers are included at no extra cost, adding a personal touch that boosts viewer engagement and listing performance.",
+      "AI virtual staging and video production services are available for both residential and commercial properties across Calgary, Okotoks, Airdrie, Chestermere, and Cochrane."
+    ],
+    relatedServices: [
+      { label: "Real estate videography in Calgary", href: "/services/real-estate-videos-in-calgary" },
+      { label: "AI virtual staging services", href: "/services/virtual-staging" },
+      { label: "Professional real estate photography in Calgary", href: "/services/real-estate-photography-in-calgary" },
+      { label: "Real estate drone photography and videography", href: "/services/real-estate-aerial-drone-photography-in-calgary" },
+      { label: "Book a real estate media session", href: "/book-online" }
+    ],
+    sections: [
+      {
+        heading: "Why Video Is the New Standard for Real Estate Listings",
+        paragraphs: [
+          "Video has become one of the most powerful tools in real estate marketing — and at Photos 4 Real Estate, we're taking it a step further by combining professional videography with AI-powered virtual staging and transition technology. The result? Listing videos that help buyers fall in love with a property before they ever step through the door.",
+          "In this post, we're pulling back the curtain on how our team produces real estate videos for Calgary and surrounding areas, including Okotoks, Airdrie, Chestermere, Cochrane, and beyond. We'll walk through two real examples — one residential, one commercial — that show exactly how AI helps our clients' listings stand out, generate more engagement, and sell faster.",
+          "Photos alone are no longer enough to capture buyer attention in a competitive market. Listing videos consistently outperform static photo galleries when it comes to time spent on a listing, shares on social media, and overall buyer engagement. A well-produced video tells a story — it walks a potential buyer through the flow of a home or commercial space in a way that photos simply can't.",
+          "That's why real estate videography has become a core part of our services at Photos 4 Real Estate. But we didn't stop at just filming walkthroughs. We've integrated AI tools into our production process to solve one of the biggest challenges in real estate marketing: helping buyers visualize a space that's currently empty, outdated, or unfinished."
+        ]
+      },
+      {
+        heading: "How Photos 4 Real Estate Uses AI to Elevate Listing Videos",
+        paragraphs: [
+          "Our AI-enhanced video production process typically works in a few stages:",
+          "This approach gives realtors and sellers a powerful marketing tool that goes beyond what traditional videography or static virtual staging can do on their own. Below are two real examples from recent Photos 4 Real Estate projects."
+        ],
+        bullets: [
+          "Photograph the space as-is — whether it's an empty residential room or a vacant commercial unit.",
+          "Virtually stage the photos with AI, adding furniture, decor, or business-specific fixtures that suit the space.",
+          "Generate AI transition clips that visually morph the space from empty to fully staged.",
+          "Edit the transitions into the final listing video, alongside traditional video walkthrough footage, so the whole story flows seamlessly from \"before\" to \"after.\""
+        ]
+      },
+      {
+        heading: "Example 1: AI Virtual Staging Video — 354096 48 Street East, Okotoks",
+        paragraphs: [
+          "For this listing in Okotoks, the home had several empty rooms that needed to be photographed as-is. Rather than leaving buyers to imagine how the space could be used, we used AI virtual staging to show them.",
+          "We started by photographing the dining room, living room, and master bedroom exactly as they were — empty and unfurnished. Using AI virtual staging tools, we added furniture and decor that realistically fit the scale, lighting, and style of each room."
+        ]
+      },
+      {
+        heading: "Before & After Staged Photos",
+        paragraphs: [
+          "The images below show the empty rooms as photographed alongside the AI-virtually staged versions. Each room was staged with furniture and decor that realistically fit the scale, lighting, and style of the space."
+        ],
+        beforeAfterComparisons: [
+          {
+            title: "Dining Room — 354096 48 Street East, Okotoks",
+            caption: "Empty dining room virtually staged with dining table and chairs by Photos 4 Real Estate, Okotoks Alberta",
+            beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Dining-room-before.jpg",
+            afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Dining-room-after.png",
+            beforeAlt: "Empty dining room before AI virtual staging in Okotoks",
+            afterAlt: "AI virtually staged dining room in Okotoks real estate listing",
+            beforeLabel: "Before",
+            afterLabel: "After"
+          },
+          {
+            title: "Living Room — 354096 48 Street East, Okotoks",
+            caption: "Before and after AI virtual staging of living room, Okotoks real estate listing",
+            beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Living-room-before.jpg",
+            afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Living-room-after.png",
+            beforeAlt: "Empty living room before AI virtual staging in Okotoks",
+            afterAlt: "AI virtually staged living room in Okotoks real estate listing",
+            beforeLabel: "Before",
+            afterLabel: "After"
+          },
+          {
+            title: "Master Bedroom — 354096 48 Street East, Okotoks",
+            caption: "AI virtually staged master bedroom, 354096 48 Street East Okotoks real estate video",
+            beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/master-bedroom-before.jpg",
+            afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/master-bedroom-after.png",
+            beforeAlt: "Empty master bedroom before AI virtual staging in Okotoks",
+            afterAlt: "AI virtually staged master bedroom in Okotoks real estate listing",
+            beforeLabel: "Before",
+            afterLabel: "After"
+          }
+        ]
+      },
+      {
+        heading: "AI-Generated Transition Clips",
+        paragraphs: [
+          "Once the staged images were ready, we used AI to generate smooth transition clips that morph each room from empty to furnished right on screen. Instead of a simple before-and-after photo swap, viewers watch the transformation happen in motion."
+        ],
+        media: {
+          layout: "vertical-videos",
+          items: [
+            {
+              type: "video",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Dining-Room-Transition-Video.mp4",
+              alt: "AI-generated transition clip: empty to furnished dining room in Okotoks",
+              caption: "AI-generated transition clip showing the dining room transforming from empty to fully staged."
+            },
+            {
+              type: "video",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Living-room-transition-video.mp4",
+              alt: "AI-generated transition clip: empty to furnished living room in Okotoks",
+              caption: "AI-generated transition clip showing the living room transforming from empty to fully staged."
+            },
+            {
+              type: "video",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Master-bedroom-transition-video.mp4",
+              alt: "AI-generated transition clip: empty to furnished master bedroom in Okotoks",
+              caption: "AI-generated transition clip showing the master bedroom transforming from empty to fully staged."
+            }
+          ]
+        }
+      },
+      {
+        heading: "The Final Video",
+        paragraphs: [
+          "These AI-generated transition clips were then edited into the final listing video alongside our traditional videography footage, creating one cohesive walkthrough that shows the home's real potential from start to finish."
+        ],
+        media: {
+          layout: "vertical-videos",
+          items: [
+            {
+              type: "video",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/354096%2048%20St%20E%2C%20Okotoks.mp4",
+              alt: "354096 48 Street East, Okotoks — AI-Enhanced Real Estate Video by Photos 4 Real Estate",
+              caption: "The final listing video for 354096 48 Street East, Okotoks, featuring AI-generated transition clips alongside traditional videography."
+            }
+          ]
+        }
+      },
+      {
+        heading: "Why This Helps Realtors Sell Faster",
+        paragraphs: [
+          "Empty rooms can be hard for buyers to picture as livable, welcoming spaces. By blending AI virtual staging with real video footage, we help potential buyers instantly visualize a fully furnished home rather than trying to imagine it themselves. Furnished rooms consistently feel warmer, more livable, and more \"move-in ready\" — which builds emotional connection and helps listings sell faster."
+        ]
+      },
+      {
+        heading: "Example 2: AI-Powered Commercial Property Video — 170-11130 11th Street NE, Calgary",
+        paragraphs: [
+          "AI-enhanced video isn't just for residential listings — it's an equally powerful tool for commercial real estate, where buyers often need extra help envisioning how a space could work for their specific business.",
+          "This commercial property in northeast Calgary was previously used as a custom cake production space. It came fully equipped with commercial fridges and stoves in the back production area, plus a fully finished front area with a display fridge, tables, and chairs ready to welcome customers. The challenge was showing potential buyers just how flexible this space could be — whether they wanted to open a bakery, café, coffee shop, brunch spot, or full dining restaurant.",
+          "Instead of just showing the space as it was, we used AI to generate two different visual concepts of the exact same layout — one designed as a bakery, and one designed as a restaurant — so buyers in the food-prep industry could immediately picture their own concept coming to life in the space."
+        ],
+        media: {
+          items: [
+            {
+              type: "image",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Empty-Commercial-Space.jpg",
+              alt: "170-11130 11th Street NE Calgary commercial space for sale, former cake production facility",
+              caption: "The empty commercial space as photographed — previously used as a custom cake production facility."
+            },
+            {
+              type: "image",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Bakery-AI-Generated-Image.png",
+              alt: "AI-generated bakery concept for commercial property for sale in Calgary NE",
+              caption: "AI-generated bakery concept showing how the space could be configured for a bakery business."
+            },
+            {
+              type: "image",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Cafe-AI-Generated-Image.png",
+              alt: "AI-generated café concept for commercial property for sale in Calgary NE",
+              caption: "AI-generated café concept showing how the space could be configured for a coffee shop or café."
+            },
+            {
+              type: "image",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/Restaurant-AI-Generated-Image.png",
+              alt: "AI-generated restaurant concept for commercial property for sale in Calgary NE",
+              caption: "AI-generated restaurant concept showing how the space could be configured for a full dining restaurant."
+            }
+          ]
+        }
+      },
+      {
+        heading: "The Final Video With AI Transitions",
+        paragraphs: [
+          "Just like the Okotoks example, we generated AI transition clips between the empty space and each staged concept, then wove these into the final walkthrough video for the listing."
+        ],
+        media: {
+          layout: "vertical-videos",
+          items: [
+            {
+              type: "video",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/170-11130%2011th%20Street%20NE%2C%20Calgary.mp4",
+              alt: "170-11130 11th Street NE, Calgary — AI-Enhanced Commercial Real Estate Video by Photos 4 Real Estate",
+              caption: "The final commercial listing video featuring AI-generated transitions showing multiple business concepts."
+            }
+          ]
+        }
+      },
+      {
+        heading: "Why This Helps Commercial Listings Stand Out",
+        paragraphs: [
+          "Commercial buyers are often evaluating whether a space fits a very specific business vision. Showing multiple realistic possibilities within the same video — rather than one static, empty room — helps buyers see the flexibility of the space and move forward with confidence. It's a marketing advantage that sets a listing apart in a competitive commercial market."
+        ]
+      },
+      {
+        heading: "Realtor Intros & Voiceovers, Included at No Extra Cost",
+        paragraphs: [
+          "Every video package from Photos 4 Real Estate can include a realtor intro and voiceover at no additional cost. We encourage the listing realtor to appear on camera at the start of the video — and even throughout, if they'd like — to introduce the property and add a personal touch.",
+          "Videos featuring a realtor intro and voiceover tend to feel more engaging and personal to viewers. In our experience, they generate stronger engagement — more views, comments, and shares — which translates into more eyes on the listing and, ultimately, faster sales.",
+          "A great example of this is our video for 137 100 Auburn Shores Landing SE, Calgary, a luxury lakefront home on Auburn Bay. This listing sold in just a few days after receiving multiple offers, and the video's realtor voiceover and intro played a role in generating the buzz that helped make that happen."
+        ],
+        media: {
+          layout: "full-width-video",
+          items: [
+            {
+              type: "video",
+              src: "https://cdn.photos4realestate.ca/p4re-static-media/blog/2026-07-30/137%20100%20Auburn%20Shores%20Landing%20Se%2C%20Calgary%20(1).mp4",
+              alt: "137 100 Auburn Shores Landing SE, Calgary — Luxury Lakefront Home Video with Realtor Intro & Voiceover",
+              caption: "Example video featuring realtor intro and voiceover for a luxury lakefront home in Auburn Bay, Calgary."
+            }
+          ]
+        }
+      },
+      {
+        heading: "The Bigger Picture: AI + Video = Faster Sales",
+        paragraphs: [
+          "Whether it's a residential listing that needs help showing its full potential, or a commercial space that could serve multiple business types, AI-enhanced video gives Calgary-area realtors and sellers a genuine marketing edge. Combined with a personal realtor intro and voiceover, these videos don't just show a property — they tell its story in a way that resonates with buyers and keeps them watching, sharing, and reaching out.",
+          "As AI tools continue to evolve, we're continuing to refine how we use them to support our clients' listings — always with the goal of helping properties sell faster and for the best possible outcome."
+        ]
+      }
+    ],
+    faqHeading: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "Does Photos 4 Real Estate offer AI virtual staging for video, not just photos?",
+        answer: "Yes. We use AI virtual staging to furnish empty rooms in photos, and then generate AI transition clips that show the space transforming from empty to furnished, which we incorporate directly into the final listing video."
+      },
+      {
+        question: "Can AI-enhanced videos be used for commercial real estate listings?",
+        answer: "Absolutely. As shown in our example at 170-11130 11th Street NE, Calgary, we use AI to generate multiple business concepts within the same commercial space, helping buyers picture different possible uses for the property."
+      },
+      {
+        question: "Is a realtor intro or voiceover included in the price of the video?",
+        answer: "Yes, realtor intros and voiceovers are included at no additional cost with our video packages. We encourage realtors to appear on camera if they're comfortable doing so, as it tends to boost viewer engagement."
+      },
+      {
+        question: "How much does AI-enhanced video production cost?",
+        answer: "Pricing for AI-enhanced features varies depending on the scope of the project. Reach out to our team for a quote tailored to your specific listing."
+      },
+      {
+        question: "What areas do you serve?",
+        answer: "Photos 4 Real Estate provides real estate photography and videography services throughout Calgary and surrounding communities, including Okotoks, Airdrie, Chestermere, and Cochrane."
+      },
+      {
+        question: "How does video help a listing sell faster?",
+        answer: "Video allows buyers to experience the flow and feel of a property in a way photos alone can't. When paired with AI virtual staging and a personal realtor introduction, videos tend to generate more views, shares, and buyer inquiries — all of which can help move a listing toward a faster sale."
+      }
+    ]
+  },
+  {
     slug: "c21-bravo-realty-golf-event-recap",
     title: "Proud Sponsors: Recapping the C21 Bravo Realty Community Golf Event",
     excerpt: "Photos 4 Real Estate sponsored C21 Bravo Realty's golf simulator event at LaunchPad, raising $1,700 for Easter Seals. See highlights from Calgary's real estate community.",
