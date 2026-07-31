@@ -318,14 +318,14 @@ const twilightComparisons = [
     location: "Auburn Bay, Calgary",
   },
   {
-    beforeSrc: twilightImages.compareCanyonDay,
-    afterSrc: twilightImages.compareCanyonTwilight,
+    beforeSrc: "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Back-yard-exterior-photo-of-a-house-in-Okotoks.jpg",
+    afterSrc: "https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-photo-of-a-house-in-Okotoks.jpg",
     beforeAlt:
-      "Luxury Canyon Meadows Calgary home photographed during the day by Photos 4 Real Estate",
+      "Daytime backyard photo of a luxury home in Okotoks, AB photographed by Photos 4 Real Estate",
     afterAlt:
-      "Same luxury Canyon Meadows Calgary home photographed at twilight by Photos 4 Real Estate",
-    title: "Luxury exterior curb appeal",
-    location: "Canyon Meadows, Calgary",
+      "Same luxury home backyard in Okotoks, AB photographed at twilight by Photos 4 Real Estate",
+    title: "Luxury backyard exterior",
+    location: "Okotoks, AB",
   },
 ] as const;
 
@@ -513,8 +513,8 @@ function PageBody() {
                   The ultimate MLS hero shot
                 </div>
                 <Image
-                  src={twilightImages.calgaryHero}
-                  alt="Twilight photo of a Calgary home with warm interior glow captured during golden hour by Photos 4 Real Estate"
+                  src="https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-photo-of-a-house-in-Okotoks-Drone-Photo.jpg"
+                  alt="Twilight drone photo of a luxury home in Okotoks, AB with warm interior glow captured during golden hour by Photos 4 Real Estate"
                   width={1200}
                   height={900}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -524,8 +524,8 @@ function PageBody() {
               </div>
               <div className="photo-intro-img-secondary twilight-intro-img-secondary">
                 <Image
-                  src={twilightImages.frontGarage}
-                  alt="Real twilight photo of a front-garage house in Calgary with illuminated windows by Photos 4 Real Estate"
+                  src="https://cdn.photos4realestate.ca/p4re-static-media/twilight-photography-service-page/Twilight-drone-photo-of-a-house-in-Auburn-Bay-Photos-4-Real-Estate.jpg"
+                  alt="Twilight drone photo of a luxury home in Auburn Bay, Calgary with illuminated windows by Photos 4 Real Estate"
                   width={900}
                   height={675}
                   sizes="(max-width: 1024px) 55vw, 28vw"
