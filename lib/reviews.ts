@@ -13,6 +13,14 @@ export type Review = {
 
 export const reviews: Review[] = [
   {
+    name: "Nicole Jensen",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocKaOqgtZPXxwpdTuZiOKsZF-pMPp_OZX49IoqwQmOsHDgxhrA=s36-c-rp-mo-ba3-br100",
+    date: "August 2026",
+    rating: 5,
+    text: "Iryna was great. Very professional, friendly and skilled. She was quick to get us the photos (within 24 hours) and I appreciated her extra care and attention with touching up a few of the photos. Her virtual staging was exactly what we wanted. I highly recommend Photos4RealEstate!",
+  },
+  {
     name: "Leane EL Haddaoui",
     avatar:
       "https://lh3.googleusercontent.com/a-/ALV-UjUyrdRoN6stCqeP1i3vQSjC8w0cQl0PUxIzEYkAR2oISAma9qdd=s36-c-rp-mo-ba2-br100",
@@ -160,7 +168,7 @@ export const reviews: Review[] = [
 
 // Overall Google Business profile stats. Keep in sync with Google whenever
 // reviews are refreshed (the full count can exceed `reviews.length`).
-export const REVIEW_COUNT = 23;
+export const REVIEW_COUNT = 24;
 export const AVERAGE_RATING = 5.0;
 
 export const GOOGLE_REVIEW_URL = "https://g.page/r/CfdYTRLO_KYdEBM/review";
