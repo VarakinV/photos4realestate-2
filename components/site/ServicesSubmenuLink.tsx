@@ -16,7 +16,7 @@ export function ServicesSubmenuLink({ href, name, icon, onNavigate }: Props) {
     e.currentTarget.blur();
   };
   return (
-    <Link href={href} role="menuitem" onClick={onClick}>
+    <Link href={href} onClick={onClick}>
       {icon && <span className="nav-submenu-icon">{icon}</span>}
       <span className="nav-submenu-text">
         {name}

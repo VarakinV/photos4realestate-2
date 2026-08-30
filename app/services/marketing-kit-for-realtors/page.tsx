@@ -508,7 +508,7 @@ export default function MarketingKitPage() {
               aria-label="Marketing kit included assets"
             >
               <li className="services-page-hero-stat">
-                <span className="num">&gt;20</span>
+                <span className="num">20+</span>
                 <span className="lbl">Marketing assets</span>
               </li>
               <li className="services-page-hero-stat">

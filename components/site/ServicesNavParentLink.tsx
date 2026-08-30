@@ -15,7 +15,7 @@ export function ServicesNavParentLink({ href, children, onNavigate }: Props) {
     e.currentTarget.blur();
   };
   return (
-    <Link href={href} aria-haspopup="menu" onClick={onClick}>
+    <Link href={href} onClick={onClick}>
       {children}
     </Link>
   );

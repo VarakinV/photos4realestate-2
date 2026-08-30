@@ -203,7 +203,7 @@ export function Reviews({
                     </a>
                   </div>
 
-                  <div className="review-stars" aria-label={`${review.rating} out of 5 stars`}>
+                  <div className="review-stars" role="img" aria-label={`${review.rating} out of 5 stars`}>
                     <Stars rating={review.rating} />
                   </div>
 

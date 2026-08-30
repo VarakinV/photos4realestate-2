@@ -138,13 +138,13 @@ export function Header({ recaptchaSiteKey }: HeaderProps) {
                       </button>
                     </div>
 
-                    <ul id="services-submenu" className="nav-submenu nav-submenu--megamenu" role="menu">
+                    <ul id="services-submenu" className="nav-submenu nav-submenu--megamenu">
                       {servicesMegamenuGroups.map((group) => (
-                        <li key={group.title} className="nav-megamenu-group" role="none">
+                        <li key={group.title} className="nav-megamenu-group">
                           <span className="nav-megamenu-heading">{group.title}</span>
-                          <ul className="nav-megamenu-items" role="none">
+                          <ul className="nav-megamenu-items">
                             {group.items.map((item) => (
-                              <li key={item.slug} role="none">
+                              <li key={item.slug}>
                                 <ServicesSubmenuLink
                                   href={item.href ?? `/services/${item.slug}`}
                                   name={item.name}
