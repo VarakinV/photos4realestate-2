@@ -81,6 +81,9 @@ export function Header({ recaptchaSiteKey }: HeaderProps) {
   };
 
   const isHotelPhotographyPage = pathname === "/services/hotel-photography" || pathname === "/hotel-photography";
+  const isBrokeragePartnerPage = pathname === "/brokerage-partner-program";
+  const brokerageDiscoveryCallUrl =
+    "https://api.leadconnectorhq.com/widget/booking/mywq1CTW4NjUVh54n950";
 
   const dismissServicesMenu = () => {
     setIsServicesDismissed(true);
@@ -220,6 +223,19 @@ export function Header({ recaptchaSiteKey }: HeaderProps) {
             >
               Start Project
             </HotelProjectDialog>
+          ) : isBrokeragePartnerPage ? (
+            <a
+              href={brokerageDiscoveryCallUrl}
+              className="btn btn-primary nav-cta nav-cta-mobile"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenus}
+            >
+              Let&rsquo;s Chat
+              <span className="sr-only">
+                {" "}with Photos 4 Real Estate about the brokerage partner program — opens in a new tab
+              </span>
+            </a>
           ) : (
             <a href={siteConfig.bookingUrl} className="btn btn-primary nav-cta nav-cta-mobile" onClick={closeMenus}>
               Book Now
@@ -269,6 +285,18 @@ export function Header({ recaptchaSiteKey }: HeaderProps) {
           >
             Start Project
           </HotelProjectDialog>
+        ) : isBrokeragePartnerPage ? (
+          <a
+            href={brokerageDiscoveryCallUrl}
+            className="btn btn-primary nav-cta nav-cta-desktop"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Let&rsquo;s Chat
+            <span className="sr-only">
+              {" "}with Photos 4 Real Estate about the brokerage partner program — opens in a new tab
+            </span>
+          </a>
         ) : (
           <a href={siteConfig.bookingUrl} className="btn btn-primary nav-cta nav-cta-desktop">
             Book Now

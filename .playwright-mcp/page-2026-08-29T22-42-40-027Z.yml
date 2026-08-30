@@ -1,0 +1,992 @@
+- generic [active] [ref=e1]:
+  - region "Contact information" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Serving Calgary & Surrounding Areas" [ref=e5] [cursor=pointer]:
+          - /url: /service-areas
+        - link "(825) 449-5001" [ref=e9] [cursor=pointer]:
+          - /url: tel:+18254495001
+        - link "info@photos4realestate.ca" [ref=e12] [cursor=pointer]:
+          - /url: mailto:info@photos4realestate.ca
+      - generic "Social links" [ref=e16]:
+        - link "Follow Photos 4 Real Estate on Facebook" [ref=e17] [cursor=pointer]:
+          - /url: https://www.facebook.com/photos4re
+        - link "Follow Photos 4 Real Estate on Instagram" [ref=e20] [cursor=pointer]:
+          - /url: https://www.instagram.com/photos4re/
+  - banner [ref=e25]:
+    - generic [ref=e26]:
+      - link "Photos 4 Real Estate home" [ref=e27] [cursor=pointer]:
+        - /url: /
+        - img "Photos 4 Real Estate map-pin logo" [ref=e28]
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - text: Photos
+            - emphasis [ref=e31]: "4"
+            - text: Real Estate
+          - generic [ref=e32]: Elevate Your Real Estate Listings
+      - navigation "Primary" [ref=e33]:
+        - list [ref=e34]:
+          - listitem [ref=e35]:
+            - link "Prices" [ref=e36] [cursor=pointer]:
+              - /url: /prices
+          - listitem [ref=e37]:
+            - generic [ref=e38]:
+              - link "Services" [ref=e39] [cursor=pointer]:
+                - /url: /services
+              - button "Expand Services menu" [ref=e40]
+          - listitem [ref=e43]:
+            - generic [ref=e44]:
+              - link "Free Tools" [ref=e45] [cursor=pointer]:
+                - /url: /free-tools
+              - button "Expand Free Tools menu" [ref=e46]
+          - listitem [ref=e49]:
+            - link "Portfolio" [ref=e50] [cursor=pointer]:
+              - /url: /portfolio
+          - listitem [ref=e51]:
+            - link "Blog" [ref=e52] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=e53]:
+            - link "About" [ref=e54] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e55]:
+            - link "For Brokerages" [ref=e56] [cursor=pointer]:
+              - /url: /brokerage-partner-program
+      - link "Book Now for Calgary real estate photography and media services" [ref=e57] [cursor=pointer]:
+        - /url: https://app.photos4realestate.ca/book/cmfwsiyl30000jo04z3lcndl3
+        - text: Book Now
+        - generic [ref=e58]: for Calgary real estate photography and media services
+  - main [ref=e59]:
+    - navigation "Breadcrumb" [ref=e60]:
+      - list [ref=e62]:
+        - listitem [ref=e63]:
+          - link "Home" [ref=e64] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e67]:
+          - generic [ref=e68]: Real Estate Photography Comparison Calgary
+    - region [ref=e69]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: Calgary Real Estate Media Comparison · 2026
+          - heading [level=1] [ref=e74]:
+            - text: Real Estate Photography
+            - emphasis [ref=e75]: Comparison in Calgary
+          - paragraph [ref=e76]: Photos 4 Real Estate is designed for Calgary realtors who need more than basic listing photos. Compare photography companies by included services, iGUIDE tours, RMS measurements, marketing assets, free tools, and rewards so you can choose the best value for every listing.
+          - generic [ref=e77]:
+            - link "Book a Photoshoot with Photos 4 Real Estate in Calgary" [ref=e78] [cursor=pointer]:
+              - /url: https://app.photos4realestate.ca/book/cmfwsiyl30000jo04z3lcndl3
+              - text: Book a Photoshoot
+              - generic [ref=e79]: with Photos 4 Real Estate in Calgary
+            - link "View Pricing for Calgary real estate photography packages" [ref=e82] [cursor=pointer]:
+              - /url: /prices
+              - text: View Pricing
+              - generic [ref=e83]: for Calgary real estate photography packages
+        - list "Comparison page highlights" [ref=e84]:
+          - listitem [ref=e85]:
+            - generic [ref=e86]: "9"
+            - generic [ref=e87]: Reels included
+          - listitem [ref=e88]:
+            - generic [ref=e89]: "6"
+            - generic [ref=e90]: Property webpages
+          - listitem [ref=e91]:
+            - generic [ref=e92]: "2026"
+            - generic [ref=e93]: Calgary comparison
+    - region [ref=e94]:
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - text: Photos 4 Real Estate vs Others
+          - heading "Photos 4 Real Estate vs Other Calgary Real Estate Photography Companies" [level=2] [ref=e98]
+          - paragraph [ref=e99]: Choosing the right real estate media partner in Calgary can directly influence how quickly and effectively a property attracts attention. Most media companies provide basic photography and optional upgrades, while Photos 4 Real Estate delivers an all-in-one marketing package with listing media, marketing assets, free tools, and an exclusive rewards system.
+          - paragraph [ref=e100]: This comparison outlines how our services differ from other real estate photography companies in Calgary and surrounding areas, helping realtors make a confident and value-driven decision.
+        - generic [ref=e101]:
+          - heading "Exclusive value stack" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Photography, iGUIDE, RMS, floor plans, marketing assets, free tools, and rewards are designed to work together so agents do not need separate editors, designers, or software subscriptions.
+          - link "See Rewards Program for Calgary real estate photography clients" [ref=e108] [cursor=pointer]:
+            - /url: /points-rewards
+            - text: See Rewards Program
+            - generic [ref=e109]: for Calgary real estate photography clients
+    - region [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - text: Modern Listing Expectations
+          - heading "Why Realtors Need More Than Just Listing Photos" [level=2] [ref=e113]
+          - paragraph [ref=e114]: Modern buyers expect immersive virtual viewing, accurate measurements, professional presentation, mobile-friendly property pages, and social media content that helps listings get noticed faster.
+        - generic [ref=e115]:
+          - article [ref=e116]:
+            - heading "Immersive virtual tours" [level=3] [ref=e121]
+            - paragraph [ref=e122]: Give buyers confidence before they book a showing.
+          - article [ref=e123]:
+            - heading "Accurate RMS measurements" [level=3] [ref=e131]
+            - paragraph [ref=e132]: Support listing accuracy with Alberta RMS-compliant measurement workflows.
+          - article [ref=e133]:
+            - heading "Mobile property pages" [level=3] [ref=e140]
+            - paragraph [ref=e141]: Share listings on social, email, print, and messaging apps.
+          - article [ref=e142]:
+            - heading "Social media content" [level=3] [ref=e147]
+            - paragraph [ref=e148]: Promote listings with reels, slideshows, and short-form assets.
+    - region [ref=e149]:
+      - generic [ref=e151]:
+        - generic [ref=e152]:
+          - text: Included Value
+          - heading "What Comes Standard With Every Photo Package" [level=2] [ref=e153]
+          - paragraph [ref=e154]: Photos 4 Real Estate packages are designed to support the full listing workflow automatically — from accurate listing data to social media content and print-ready marketing assets.
+          - list [ref=e155]:
+            - listitem [ref=e156]: Professional interior and exterior photos
+            - listitem [ref=e160]: iGUIDE 3D virtual tour
+            - listitem [ref=e164]: Alberta RMS-compliant measurements
+            - listitem [ref=e168]: Standard 2D floor plan
+            - listitem [ref=e172]: iGUIDE report and analytics
+            - listitem [ref=e176]: Blue sky replacement
+            - listitem [ref=e180]: MLS, web, and print resolution files
+            - listitem [ref=e184]: Next-day delivery in most cases
+        - generic [ref=e188]:
+          - heading "Plus exclusive marketing deliverables" [level=3] [ref=e193]
+          - paragraph [ref=e194]: These assets are automatically generated and ready to publish, print, or share once property information is provided.
+          - list [ref=e195]:
+            - listitem [ref=e196]: 9 social media reels
+            - listitem [ref=e199]: 2 slideshows
+            - listitem [ref=e202]: 3 property flyers
+            - listitem [ref=e205]: 6 property webpages
+            - listitem [ref=e208]: 7 SmartSign QR lead-capture codes
+          - link "Explore the marketing kit included with Calgary real estate photography packages" [ref=e211] [cursor=pointer]:
+            - /url: /services/marketing-kit-for-realtors
+            - text: Explore the marketing kit
+            - generic [ref=e212]: included with Calgary real estate photography packages
+    - region [ref=e215]:
+      - generic [ref=e217]:
+        - generic [ref=e223]:
+          - text: Exclusive Feature
+          - heading "Points & Rewards Program" [level=2] [ref=e224]
+          - paragraph [ref=e225]: Photos 4 Real Estate is the only real estate media provider in Calgary offering a client rewards system designed to lower ongoing marketing costs for active realtors.
+          - paragraph [ref=e226]: Realtors can earn points for booking photo packages, leaving verified 5-star reviews, referring other agents, and continued loyalty through repeat listings.
+        - generic [ref=e227]:
+          - heading "Redeem points for value" [level=3] [ref=e228]
+          - list [ref=e229]:
+            - listitem [ref=e230]: discounts on future shoots
+            - listitem [ref=e233]: free upgrades
+            - listitem [ref=e236]: complimentary add-on services
+          - link "View Points & Rewards for Calgary real estate photography clients" [ref=e239] [cursor=pointer]:
+            - /url: /points-rewards
+            - text: View Points & Rewards
+            - generic [ref=e240]: for Calgary real estate photography clients
+    - region [ref=e241]:
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - text: Feature Comparison
+          - heading "Photos 4 Real Estate vs Top Calgary Competitors" [level=2] [ref=e244]
+          - paragraph [ref=e245]: "Competitors evaluated: Calgary Real Estate Photos, Sona Visual, List Simple, Calgary Photos, and CMC Photo."
+        - region "Calgary real estate photography company feature comparison" [ref=e246]:
+          - table [ref=e247]:
+            - caption [ref=e248]: Comparison table of included real estate photography services in Calgary
+            - rowgroup [ref=e249]:
+              - row [ref=e250]:
+                - columnheader "Feature / Service Included" [ref=e251]
+                - columnheader "Photos 4 Real Estate" [ref=e252]
+                - columnheader "Calgary Real Estate Photos" [ref=e253]
+                - columnheader "Sona Visual" [ref=e254]
+                - columnheader "List Simple" [ref=e255]
+                - columnheader "Calgary Photos" [ref=e256]
+                - columnheader "CMC Photo" [ref=e257]
+            - rowgroup [ref=e258]:
+              - row [ref=e259]:
+                - rowheader "Professional Interior & Exterior Photos MLS-ready, web-ready, and print-ready images for property marketing." [ref=e260]:
+                  - generic [ref=e261]: Professional Interior & Exterior Photos
+                  - generic [ref=e262]: MLS-ready, web-ready, and print-ready images for property marketing.
+                - cell "Included" [ref=e263]
+                - cell "Included" [ref=e267]
+                - cell "Included" [ref=e271]
+                - cell "Included" [ref=e275]
+                - cell "Included" [ref=e279]
+                - cell "Included" [ref=e283]
+              - row [ref=e287]:
+                - rowheader "Blue Sky Replacement Exterior photo enhancement to keep listings bright and marketable even when weather is not perfect." [ref=e288]:
+                  - generic [ref=e289]: Blue Sky Replacement
+                  - generic [ref=e290]: Exterior photo enhancement to keep listings bright and marketable even when weather is not perfect.
+                - cell "Included" [ref=e291]
+                - cell "Not included" [ref=e295]
+                - cell "Not included" [ref=e300]
+                - cell "Not included" [ref=e305]
+                - cell "Not included" [ref=e310]
+                - cell "Not included" [ref=e315]
+              - row [ref=e320]:
+                - rowheader "iGUIDE 3D Virtual Tour Room-to-room virtual viewing experience that helps buyers understand the property before showings." [ref=e321]:
+                  - generic [ref=e322]: iGUIDE 3D Virtual Tour
+                  - generic [ref=e323]: Room-to-room virtual viewing experience that helps buyers understand the property before showings.
+                - cell "Included" [ref=e324]
+                - cell "Included" [ref=e328]
+                - cell "Included" [ref=e332]
+                - cell "Not included" [ref=e336]
+                - cell "Not included" [ref=e341]
+                - cell "Included" [ref=e346]
+              - row [ref=e350]:
+                - rowheader "RMS Measurements Alberta RMS-compliant measurement workflow for reliable listing square footage." [ref=e351]:
+                  - generic [ref=e352]: RMS Measurements
+                  - generic [ref=e353]: Alberta RMS-compliant measurement workflow for reliable listing square footage.
+                - cell "Included" [ref=e354]
+                - cell "Included" [ref=e358]
+                - cell "Included" [ref=e362]
+                - cell "Included" [ref=e366]
+                - cell "Included" [ref=e370]
+                - cell "Included" [ref=e374]
+              - row [ref=e378]:
+                - rowheader "Standard 2D Floor Plan Clear floor plans included to help buyers understand layout and room relationships." [ref=e379]:
+                  - generic [ref=e380]: Standard 2D Floor Plan
+                  - generic [ref=e381]: Clear floor plans included to help buyers understand layout and room relationships.
+                - cell "Included" [ref=e382]
+                - cell "Included" [ref=e386]
+                - cell "Included" [ref=e390]
+                - cell "Included" [ref=e394]
+                - cell "Included" [ref=e398]
+                - cell "Included" [ref=e402]
+              - row [ref=e406]:
+                - rowheader "iGUIDE Report & Analytics Listing engagement data and tour reporting for client updates and marketing insight." [ref=e407]:
+                  - generic [ref=e408]: iGUIDE Report & Analytics
+                  - generic [ref=e409]: Listing engagement data and tour reporting for client updates and marketing insight.
+                - cell "Included" [ref=e410]
+                - cell "Included" [ref=e414]
+                - cell "Included" [ref=e418]
+                - cell "Not included" [ref=e422]
+                - cell "Not included" [ref=e427]
+                - cell "Included" [ref=e432]
+              - row [ref=e436]:
+                - rowheader "9 Social Media Reels Short teaser videos generated for social platforms such as Instagram, Facebook, and TikTok." [ref=e437]:
+                  - generic [ref=e438]: 9 Social Media Reels
+                  - generic [ref=e439]: Short teaser videos generated for social platforms such as Instagram, Facebook, and TikTok.
+                - cell "Included" [ref=e440]
+                - cell "Not included" [ref=e444]
+                - cell "Not included" [ref=e449]
+                - cell "Not included" [ref=e454]
+                - cell "Not included" [ref=e459]
+                - cell "Not included" [ref=e464]
+              - row [ref=e469]:
+                - rowheader "2 Slideshows Animated property photo videos suitable for email marketing, websites, and social sharing." [ref=e470]:
+                  - generic [ref=e471]: 2 Slideshows
+                  - generic [ref=e472]: Animated property photo videos suitable for email marketing, websites, and social sharing.
+                - cell "Included" [ref=e473]
+                - cell "Not included" [ref=e477]
+                - cell "Not included" [ref=e482]
+                - cell "Not included" [ref=e487]
+                - cell "Not included" [ref=e492]
+                - cell "Not included" [ref=e497]
+              - row [ref=e502]:
+                - rowheader "3 Property Flyers Print-ready flyer layouts for open houses, feature sheets, email attachments, and listing promotion." [ref=e503]:
+                  - generic [ref=e504]: 3 Property Flyers
+                  - generic [ref=e505]: Print-ready flyer layouts for open houses, feature sheets, email attachments, and listing promotion.
+                - cell "Included" [ref=e506]
+                - cell "Not included" [ref=e510]
+                - cell "Not included" [ref=e515]
+                - cell "Not included" [ref=e520]
+                - cell "Not included" [ref=e525]
+                - cell "Not included" [ref=e530]
+              - row [ref=e535]:
+                - rowheader "6 Property Webpages Shareable single-property webpages for modern listing promotion." [ref=e536]:
+                  - generic [ref=e537]: 6 Property Webpages
+                  - generic [ref=e538]: Shareable single-property webpages for modern listing promotion.
+                - cell "Included" [ref=e539]
+                - cell "Not included" [ref=e543]
+                - cell "Not included" [ref=e548]
+                - cell "Not included" [ref=e553]
+                - cell "Not included" [ref=e558]
+                - cell "Not included" [ref=e563]
+              - row [ref=e568]:
+                - rowheader "7 SmartSign QR Codes Reusable lead-capture QR codes for yard signs with instant lead alerts and weekly analytics." [ref=e569]:
+                  - generic [ref=e570]: 7 SmartSign QR Codes
+                  - generic [ref=e571]: Reusable lead-capture QR codes for yard signs with instant lead alerts and weekly analytics.
+                - cell "Included" [ref=e572]
+                - cell "Not included" [ref=e576]
+                - cell "Not included" [ref=e581]
+                - cell "Not included" [ref=e586]
+                - cell "Not included" [ref=e591]
+                - cell "Not included" [ref=e596]
+              - row [ref=e601]:
+                - rowheader "Free Realtor Marketing Tools Free reel, slideshow, flyer, and QR code generators available directly through the website." [ref=e602]:
+                  - generic [ref=e603]: Free Realtor Marketing Tools
+                  - generic [ref=e604]: Free reel, slideshow, flyer, and QR code generators available directly through the website.
+                - cell "Included" [ref=e605]
+                - cell "Not included" [ref=e609]
+                - cell "Not included" [ref=e614]
+                - cell "Not included" [ref=e619]
+                - cell "Not included" [ref=e624]
+                - cell "Not included" [ref=e629]
+              - row [ref=e634]:
+                - rowheader "Points & Rewards System Client rewards program that lets realtors earn points from orders, reviews, and referrals." [ref=e635]:
+                  - generic [ref=e636]: Points & Rewards System
+                  - generic [ref=e637]: Client rewards program that lets realtors earn points from orders, reviews, and referrals.
+                - cell "Included" [ref=e638]
+                - cell "Not included" [ref=e642]
+                - cell "Not included" [ref=e647]
+                - cell "Not included" [ref=e652]
+                - cell "Not included" [ref=e657]
+                - cell "Not included" [ref=e662]
+              - row [ref=e667]:
+                - rowheader "Next-Day Delivery Fast turnaround for photos, tours, floor plans, and included marketing assets in most cases." [ref=e668]:
+                  - generic [ref=e669]: Next-Day Delivery
+                  - generic [ref=e670]: Fast turnaround for photos, tours, floor plans, and included marketing assets in most cases.
+                - cell "Included" [ref=e671]
+                - cell "Included" [ref=e675]
+                - cell "Included" [ref=e679]
+                - cell "Included" [ref=e683]
+                - cell "Included" [ref=e687]
+                - cell "Included" [ref=e691]
+        - paragraph [ref=e695]: "*Based on publicly available service information as of 2026. Service offerings, inclusions, and delivery timelines may change."
+    - region [ref=e696]:
+      - generic [ref=e697]:
+        - generic [ref=e698]:
+          - generic [ref=e699]:
+            - text: For Brokerages
+            - heading "Are You a Brokerage Owner?" [level=2] [ref=e700]
+            - paragraph [ref=e701]: Your agents need more than listing photos. Photos 4 Real Estate can become a marketing resource for your entire brokerage.
+          - link "Explore Our Brokerage Partner Program" [ref=e702] [cursor=pointer]:
+            - /url: /brokerage-partner-program
+        - generic [ref=e705]:
+          - article [ref=e706]:
+            - heading "Recruit" [level=3] [ref=e711]
+            - paragraph [ref=e712]: Give prospective agents another tangible benefit.
+          - article [ref=e713]:
+            - heading "Support" [level=3] [ref=e717]
+            - paragraph [ref=e718]: Give existing agents professional marketing tools without adding internal staff.
+          - article [ref=e719]:
+            - heading "Grow" [level=3] [ref=e724]
+            - paragraph [ref=e725]: Help agents market listings more consistently and generate more opportunities.
+    - region [ref=e726]:
+      - generic [ref=e727]:
+        - generic [ref=e728]:
+          - generic [ref=e729]:
+            - text: Free Tools Only Available at Photos 4 Real Estate
+            - heading "Create Listing Marketing Assets Instantly" [level=2] [ref=e730]
+            - paragraph [ref=e731]: A critical component of modern real estate marketing is the ability to generate high-quality, engaging content quickly. Our free tools help Calgary realtors promote listings without additional software, design work, or subscription fees.
+          - link "See All Free Tools for Calgary real estate marketing" [ref=e732] [cursor=pointer]:
+            - /url: /free-tools
+            - text: See All Free Tools
+            - generic [ref=e733]: for Calgary real estate marketing
+        - generic [ref=e734]:
+          - link "Social Media Reel Generator Create three social media teaser videos for Instagram, Facebook, and TikTok from listing photos. Open details about Social Media Reel Generator" [ref=e735] [cursor=pointer]:
+            - /url: /free-tools/reel-generator
+            - heading "Social Media Reel Generator" [level=3] [ref=e740]
+            - paragraph [ref=e741]: Create three social media teaser videos for Instagram, Facebook, and TikTok from listing photos.
+            - generic [ref=e742]:
+              - text: Open details
+              - generic [ref=e743]: about Social Media Reel Generator
+          - link "Slideshow Generator Generate an animated property slideshow video for email marketing, property websites, and social posts. Open details about Slideshow Generator" [ref=e746] [cursor=pointer]:
+            - /url: /free-tools/slideshow-generator
+            - heading "Slideshow Generator" [level=3] [ref=e753]
+            - paragraph [ref=e754]: Generate an animated property slideshow video for email marketing, property websites, and social posts.
+            - generic [ref=e755]:
+              - text: Open details
+              - generic [ref=e756]: about Slideshow Generator
+          - link "Property Flyer Generator Create three professionally designed, print-ready property flyers with unique layouts. Open details about Property Flyer Generator" [ref=e759] [cursor=pointer]:
+            - /url: /free-tools/flyer-generator
+            - heading "Property Flyer Generator" [level=3] [ref=e764]
+            - paragraph [ref=e765]: Create three professionally designed, print-ready property flyers with unique layouts.
+            - generic [ref=e766]:
+              - text: Open details
+              - generic [ref=e767]: about Property Flyer Generator
+          - link "QR Code Generator Produce branded QR codes for flyers, feature sheets, sign riders, and printed marketing materials. Open details about QR Code Generator" [ref=e770] [cursor=pointer]:
+            - /url: /free-tools/qr-code-generator
+            - heading "QR Code Generator" [level=3] [ref=e778]
+            - paragraph [ref=e779]: Produce branded QR codes for flyers, feature sheets, sign riders, and printed marketing materials.
+            - generic [ref=e780]:
+              - text: Open details
+              - generic [ref=e781]: about QR Code Generator
+    - region [ref=e784]:
+      - generic [ref=e786]:
+        - generic [ref=e787]:
+          - text: Who Benefits Most
+          - heading "Who Gets the Most Value from Photos 4 Real Estate?" [level=2] [ref=e788]
+          - paragraph [ref=e789]: Our all-in-one package is especially valuable for agents and teams who need consistent listing media, social content, print assets, and repeat-order savings without coordinating multiple vendors.
+        - list [ref=e790]:
+          - listitem [ref=e791]: High-volume listing agents who need repeatable marketing support
+          - listitem [ref=e797]: New realtors who want professional listing assets without hiring extra vendors
+          - listitem [ref=e803]: Luxury and acreage specialists who need stronger presentation tools
+          - listitem [ref=e809]: Brokerages that want unified branding across listing campaigns
+          - listitem [ref=e815]: Real estate teams that want repeat-order savings through points and rewards
+    - region [ref=e821]:
+      - generic [ref=e823]:
+        - generic [ref=e824]:
+          - text: Service Area
+          - heading "Real Estate Photography in Calgary & Surrounding Areas" [level=2] [ref=e825]
+          - paragraph [ref=e826]: Photos 4 Real Estate covers all of Calgary plus the surrounding communities, towns and acreages within our standard service radius. Same all-inclusive pricing, same next-day delivery, and the same full marketing support on every shoot.
+          - list "Calgary comparison service areas" [ref=e827]:
+            - listitem [ref=e828]:
+              - link "Real estate photography comparison for Calgary" [ref=e829] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Calgary
+            - listitem [ref=e833]:
+              - link "Real estate photography comparison for Okotoks" [ref=e834] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Okotoks
+            - listitem [ref=e838]:
+              - link "Real estate photography comparison for Airdrie" [ref=e839] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Airdrie
+            - listitem [ref=e843]:
+              - link "Real estate photography comparison for Cochrane" [ref=e844] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Cochrane
+            - listitem [ref=e848]:
+              - link "Real estate photography comparison for Chestermere" [ref=e849] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Chestermere
+            - listitem [ref=e853]:
+              - link "Real estate photography comparison for High River" [ref=e854] [cursor=pointer]:
+                - /url: /service-areas
+                - text: High River
+            - listitem [ref=e858]:
+              - link "Real estate photography comparison for Springbank" [ref=e859] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Springbank
+            - listitem [ref=e863]:
+              - link "Real estate photography comparison for Bearspaw" [ref=e864] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Bearspaw
+            - listitem [ref=e868]:
+              - link "Real estate photography comparison for Rocky View County" [ref=e869] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Rocky View County
+            - listitem [ref=e873]:
+              - link "Real estate photography comparison for Banff" [ref=e874] [cursor=pointer]:
+                - /url: /service-areas
+                - text: Banff
+          - paragraph [ref=e878]:
+            - strong [ref=e879]: Outside our standard radius?
+            - text: We still travel for acreages, foothills and Banff-corridor listings — a small travel fee may apply. Call
+            - link "Call Photos 4 Real Estate at (825) 449-5001 to confirm Calgary photography travel fees" [ref=e880] [cursor=pointer]:
+              - /url: tel:+18254495001
+              - text: (825) 449-5001
+            - text: to confirm.
+        - generic [ref=e881]:
+          - img "Bedroom example photo in Calgary by Photos 4 Real Estate" [ref=e883]
+          - img "Drone photo of downtown Calgary by Photos 4 Real Estate" [ref=e885]
+          - img "Drone photo of Mahogany Lake in Calgary by Photos 4 Real Estate" [ref=e887]
+    - region [ref=e888]:
+      - generic [ref=e889]:
+        - generic [ref=e890]:
+          - generic [ref=e891]:
+            - text: Calgary Realtor Reviews
+            - heading [level=2] [ref=e892]:
+              - text: Calgary’s top agents trust
+              - emphasis [ref=e893]: Photos 4 Real Estate
+              - text: for every listing.
+          - complementary "Google rating summary" [ref=e894]:
+            - generic [ref=e895]: Excellent
+            - generic [ref=e907]:
+              - strong [ref=e908]: "5.0"
+              - text: based on 24 reviews
+            - link "Read Google reviews for Photos 4 Real Estate" [ref=e909] [cursor=pointer]:
+              - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic [ref=e915]: Google Reviews
+        - generic [ref=e916]:
+          - button "Show previous reviews" [disabled] [ref=e917]
+          - generic [ref=e920]:
+            - generic [ref=e921]:
+              - article [ref=e922]:
+                - generic [ref=e923]:
+                  - generic [ref=e924]:
+                    - img "Nicole Jensen Google review profile photo" [ref=e925]
+                    - generic [ref=e926]:
+                      - generic [ref=e927]: Nicole Jensen
+                      - generic [ref=e928]: August 2026
+                  - link "Read more Google reviews from Nicole Jensen" [ref=e929] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e935]
+                - paragraph [ref=e946]: Iryna was great. Very professional, friendly and skilled. She was quick to get us the photos (within 24 hours) and I appreciated her extra care and attention with touching up a few of the photos. Her virtual staging was exactly what we wanted. I highly recommend Photos4RealEstate!
+                - link "Read Nicole Jensen's full Google review for Photos 4 Real Estate" [ref=e947] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e948]: from Nicole Jensen on Google
+              - article [ref=e949]:
+                - generic [ref=e950]:
+                  - generic [ref=e951]:
+                    - img "Leane EL Haddaoui Google review profile photo" [ref=e952]
+                    - generic [ref=e953]:
+                      - generic [ref=e954]: Leane EL Haddaoui
+                      - generic [ref=e955]: August 2026
+                  - link "Read more Google reviews from Leane EL Haddaoui" [ref=e956] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e962]
+                - paragraph [ref=e973]: I recently used this company for real estate photography, measurements, and video on my newest listing in McKenzie Towne, and I couldn’t be happier with the results. They were absolutely fantastic from start to finish. The photos and video were incredibly professional, and the measurements were accurate and completed quickly.I would highly recommend them to any of my fellow Realtors looking for high-quality marketing services. Their pricing is very reasonable, the service is outstanding, and the final product exceeded my expectations. You will not be disappointed!
+                - link "Read Leane EL Haddaoui's full Google review for Photos 4 Real Estate" [ref=e974] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e975]: from Leane EL Haddaoui on Google
+              - article [ref=e976]:
+                - generic [ref=e977]:
+                  - generic [ref=e978]:
+                    - img "Alex Shemetov Google review profile photo" [ref=e979]
+                    - generic [ref=e980]:
+                      - generic [ref=e981]: Alex Shemetov
+                      - generic [ref=e982]: July 2026
+                  - link "Read more Google reviews from Alex Shemetov" [ref=e983] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e989]
+                - paragraph [ref=e1000]: Great experience with photos4real estate. I would recommend them without any hesitation!
+                - link "Read Alex Shemetov's full Google review for Photos 4 Real Estate" [ref=e1001] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1002]: from Alex Shemetov on Google
+              - article [ref=e1003]:
+                - generic [ref=e1004]:
+                  - generic [ref=e1005]:
+                    - img "Sheryl Johnston Google review profile photo" [ref=e1006]
+                    - generic [ref=e1007]:
+                      - generic [ref=e1008]: Sheryl Johnston
+                      - generic [ref=e1009]: July 2026
+                  - link "Read more Google reviews from Sheryl Johnston" [ref=e1010] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1016]
+                - paragraph [ref=e1027]: Iryna and team are always so prompt and efficient when it’s time to book photos/measurements/360 tour/and drone photos. They take the time to capture great photos of the properties and their turn around time is quick as well. I like it that they pre make up social media reels and webpages to feature listings as well. Very happy with their services.
+                - link "Read Sheryl Johnston's full Google review for Photos 4 Real Estate" [ref=e1028] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1029]: from Sheryl Johnston on Google
+              - article [ref=e1030]:
+                - generic [ref=e1031]:
+                  - generic [ref=e1032]:
+                    - img "Val Thoummarath Google review profile photo" [ref=e1033]
+                    - generic [ref=e1034]:
+                      - generic [ref=e1035]: Val Thoummarath
+                      - generic [ref=e1036]: July 2026
+                  - link "Read more Google reviews from Val Thoummarath" [ref=e1037] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1043]
+                - paragraph [ref=e1054]: Thank you Iryna for your consistent, hard work and professionalism. I loved the photos, reels, slideshows, 3D tours, flyers, floor plans, RMS measurements, drones, bonuses, and the different packages to make the marketing simple! Your Team is very skillful and knowledgeable for our real estate business. You are highly recommended!
+                - link "Read Val Thoummarath's full Google review for Photos 4 Real Estate" [ref=e1055] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1056]: from Val Thoummarath on Google
+              - article [ref=e1057]:
+                - generic [ref=e1058]:
+                  - generic [ref=e1059]:
+                    - img "Saphir Binti Google review profile photo" [ref=e1060]
+                    - generic [ref=e1061]:
+                      - generic [ref=e1062]: Saphir Binti
+                      - generic [ref=e1063]: June 2026
+                  - link "Read more Google reviews from Saphir Binti" [ref=e1064] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1070]
+                - paragraph [ref=e1081]: I had an amazing experience working with Iryna and her team for my listing. The service exceeded my expectations from start to finish. They provided professional photography, measurements, and a virtual tour, all delivered with great attention to detail and quality. What truly stood out was that Iryna went above and beyond by creating social media reels for my listing at no additional cost. This was an unexpected bonus that added tremendous value and helped showcase the property in a modern and engaging way. Her professionalism, responsiveness, and commitment to delivering exceptional results made the entire process smooth and stress-free. I highly recommend Iryna’s business to any realtor or homeowner looking for top-quality listing media and marketing services. Thank you, Iryna, for your outstanding work! 👏🏽🏡✨
+                - link "Read Saphir Binti's full Google review for Photos 4 Real Estate" [ref=e1082] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1083]: from Saphir Binti on Google
+              - article [ref=e1084]:
+                - generic [ref=e1085]:
+                  - generic [ref=e1086]:
+                    - img "VirtualDeskYYC Google review profile photo" [ref=e1087]
+                    - generic [ref=e1088]:
+                      - generic [ref=e1089]: VirtualDeskYYC
+                      - generic [ref=e1090]: June 2026
+                  - link "Read more Google reviews from VirtualDeskYYC" [ref=e1091] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1097]
+                - paragraph [ref=e1108]: I've worked with Irina multiple times, and she consistently delivers exceptional results. She is professional, reliable, and always provides a very quick turnaround time, which I really appreciate. Her photography beautifully showcases each property and helps every listing stand out. She’s a pleasure to work with, and I’ll definitely continue working with her in the future. Highly recommend! - On behalf of Gary Mr. Action Fayerman
+                - link "Read VirtualDeskYYC's full Google review for Photos 4 Real Estate" [ref=e1109] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1110]: from VirtualDeskYYC on Google
+              - article [ref=e1111]:
+                - generic [ref=e1112]:
+                  - generic [ref=e1113]:
+                    - img "Rui Torneiro Google review profile photo" [ref=e1114]
+                    - generic [ref=e1115]:
+                      - generic [ref=e1116]: Rui Torneiro
+                      - generic [ref=e1117]: June 2026
+                  - link "Read more Google reviews from Rui Torneiro" [ref=e1118] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1124]
+                - paragraph [ref=e1135]: I have used Photos 4 Real Estate for my last few listing and they were very proficient and reliable. Iryna was very professional and invested in made sure to get some great pictures of the home.I would highly recommend using Photos 4 Real Estate!!
+                - link "Read Rui Torneiro's full Google review for Photos 4 Real Estate" [ref=e1136] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1137]: from Rui Torneiro on Google
+              - article [ref=e1138]:
+                - generic [ref=e1139]:
+                  - generic [ref=e1140]:
+                    - img "Al Hamza Google review profile photo" [ref=e1141]
+                    - generic [ref=e1142]:
+                      - generic [ref=e1143]: Al Hamza
+                      - generic [ref=e1144]: May 2026
+                  - link "Read more Google reviews from Al Hamza" [ref=e1145] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1151]
+                - paragraph [ref=e1162]: amazing service, super affordable rates, and perfect quality of imagery, They go above and beyond.
+                - link "Read Al Hamza's full Google review for Photos 4 Real Estate" [ref=e1163] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1164]: from Al Hamza on Google
+              - article [ref=e1165]:
+                - generic [ref=e1166]:
+                  - generic [ref=e1167]:
+                    - img "Christopher Ramage Google review profile photo" [ref=e1168]
+                    - generic [ref=e1169]:
+                      - generic [ref=e1170]: Christopher Ramage
+                      - generic [ref=e1171]: May 2026
+                  - link "Read more Google reviews from Christopher Ramage" [ref=e1172] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1178]
+                - paragraph [ref=e1189]: Great photos and experience overall. Would highly recommend!
+                - link "Read Christopher Ramage's full Google review for Photos 4 Real Estate" [ref=e1190] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1191]: from Christopher Ramage on Google
+              - article [ref=e1192]:
+                - generic [ref=e1193]:
+                  - generic [ref=e1194]:
+                    - img "Denis Kirilenko Google review profile photo" [ref=e1195]
+                    - generic [ref=e1196]:
+                      - generic [ref=e1197]: Denis Kirilenko
+                      - generic [ref=e1198]: April 2026
+                  - link "Read more Google reviews from Denis Kirilenko" [ref=e1199] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1205]
+                - paragraph [ref=e1216]: Excellent quality photos. Iryna is highly reliable and takes pride in her job. Highly recommend.
+                - link "Read Denis Kirilenko's full Google review for Photos 4 Real Estate" [ref=e1217] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1218]: from Denis Kirilenko on Google
+              - article [ref=e1219]:
+                - generic [ref=e1220]:
+                  - generic [ref=e1221]:
+                    - img "Cliff Yee Google review profile photo" [ref=e1222]
+                    - generic [ref=e1223]:
+                      - generic [ref=e1224]: Cliff Yee
+                      - generic [ref=e1225]: March 2026
+                  - link "Read more Google reviews from Cliff Yee" [ref=e1226] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1232]
+                - paragraph [ref=e1243]: Iryna and team do amazing work. They were punctual, professional and efficient when they arrived to measure and take photos of my home. The turn around time was amazing too as we got photos and RMS plans back after just one day! Iryna also responded immediately via email whenever I had questions. Highly recommend this company and will be referring all my friends, family and colleagues needing real estate media including professional photos, iGuide virtual 3D tours, RMS measurements, website, reels or fliers. Everything they delivered was excellent!
+                - link "Read Cliff Yee's full Google review for Photos 4 Real Estate" [ref=e1244] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1245]: from Cliff Yee on Google
+              - article [ref=e1246]:
+                - generic [ref=e1247]:
+                  - generic [ref=e1248]:
+                    - img "Anh Ta Google review profile photo" [ref=e1249]
+                    - generic [ref=e1250]:
+                      - generic [ref=e1251]: Anh Ta
+                      - generic [ref=e1252]: March 2026
+                  - link "Read more Google reviews from Anh Ta" [ref=e1253] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1259]
+                - paragraph [ref=e1270]: It was a pleasure working with Iryna and Vladimir at Photos 4 Real Estate. They were professional, easy to coordinate with, and the photos turned out beautifully. There’s something about their photography that feels warm and inviting, which I really love. I look forward to working with them again.
+                - link "Read Anh Ta's full Google review for Photos 4 Real Estate" [ref=e1271] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1272]: from Anh Ta on Google
+              - article [ref=e1273]:
+                - generic [ref=e1274]:
+                  - generic [ref=e1275]:
+                    - img "Heather Cleveland Google review profile photo" [ref=e1276]
+                    - generic [ref=e1277]:
+                      - generic [ref=e1278]: Heather Cleveland
+                      - generic [ref=e1279]: November 2025
+                  - link "Read more Google reviews from Heather Cleveland" [ref=e1280] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1286]
+                - paragraph [ref=e1297]: I had the pleasure of working with Iryna at Photos 4 Real Estate. They were extremely helpful, great communication, and I appreciate the extra value they provide with reels and a property website.
+                - link "Read Heather Cleveland's full Google review for Photos 4 Real Estate" [ref=e1298] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1299]: from Heather Cleveland on Google
+              - article [ref=e1300]:
+                - generic [ref=e1301]:
+                  - generic [ref=e1302]:
+                    - img "Lucas Czarnecki Google review profile photo" [ref=e1303]
+                    - generic [ref=e1304]:
+                      - generic [ref=e1305]: Lucas Czarnecki
+                      - generic [ref=e1306]: November 2025
+                  - link "Read more Google reviews from Lucas Czarnecki" [ref=e1307] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1313]
+                - paragraph [ref=e1324]: Iryna and Vlad from Photos 4 Real Estate were exceptionally professional. We were delighted with their responsiveness, flexibility, and the quality of their work. The photos, RMS measurements, aerial photographs, floor plans, and the 3D virtual tour all exceeded our expectations. We would not hesitate to use their services again in the future.
+                - link "Read Lucas Czarnecki's full Google review for Photos 4 Real Estate" [ref=e1325] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1326]: from Lucas Czarnecki on Google
+              - article [ref=e1327]:
+                - generic [ref=e1328]:
+                  - generic [ref=e1329]:
+                    - img "A K Google review profile photo" [ref=e1330]
+                    - generic [ref=e1331]:
+                      - generic [ref=e1332]: A K
+                      - generic [ref=e1333]: September 2025
+                  - link "Read more Google reviews from A K" [ref=e1334] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1340]
+                - paragraph [ref=e1351]: I’ve worked with more than one real estate photographer in Calgary, and Photos 4 Real Estate has been the best by far. She took her time, captured beautiful shots, and really has an eye for showcasing a home. The photos turned out fantastic and made a huge difference. Highly recommend!
+                - link "Read A K's full Google review for Photos 4 Real Estate" [ref=e1352] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1353]: from A K on Google
+              - article [ref=e1354]:
+                - generic [ref=e1355]:
+                  - generic [ref=e1356]:
+                    - img "Gary Brand Google review profile photo" [ref=e1357]
+                    - generic [ref=e1358]:
+                      - generic [ref=e1359]: Gary Brand
+                      - generic [ref=e1360]: August 2025
+                  - link "Read more Google reviews from Gary Brand" [ref=e1361] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1367]
+                - paragraph [ref=e1378]: Iryna and Vlad did an outstanding job — Iryna’s attention to detail in setting up the photos was impressive, and Vlad’s drone shots truly showcased the property beautifully.
+                - link "Read Gary Brand's full Google review for Photos 4 Real Estate" [ref=e1379] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1380]: from Gary Brand on Google
+              - article [ref=e1381]:
+                - generic [ref=e1382]:
+                  - generic [ref=e1383]:
+                    - img "Kate T Google review profile photo" [ref=e1384]
+                    - generic [ref=e1385]:
+                      - generic [ref=e1386]: Kate T
+                      - generic [ref=e1387]: July 2025
+                  - link "Read more Google reviews from Kate T" [ref=e1388] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1394]
+                - paragraph [ref=e1405]: I had a fantastic experience working with Iryna as real estate photographer! She delivered high-quality house photos and stunning drone shots that really made our listing stand out. Everything was done on time and with great professionalism. Communication was quick, clear, and always positive. Highly recommend her services!
+                - link "Read Kate T's full Google review for Photos 4 Real Estate" [ref=e1406] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1407]: from Kate T on Google
+              - article [ref=e1408]:
+                - generic [ref=e1409]:
+                  - generic [ref=e1410]:
+                    - img "Antonio Guzman Google review profile photo" [ref=e1411]
+                    - generic [ref=e1412]:
+                      - generic [ref=e1413]: Antonio Guzman
+                      - generic [ref=e1414]: July 2025
+                  - link "Read more Google reviews from Antonio Guzman" [ref=e1415] [cursor=pointer]:
+                    - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - generic "5 out of 5 stars" [ref=e1421]
+                - paragraph [ref=e1432]: I want to give a big thank you to Vlad and Iryna for their outstanding work. The quality of the photos and videos they took of my home truly exceeded my expectations. Their attention to detail, creativity, and professionalism really stood out. They captured the space beautifully and brought out its best features in a way that feels both artistic and authentic. I couldn’t be happier with the results — highly recommended!
+                - link "Read Antonio Guzman's full Google review for Photos 4 Real Estate" [ref=e1433] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                  - text: Read more
+                  - generic [ref=e1434]: from Antonio Guzman on Google
+            - generic "Review carousel pagination" [ref=e1435]:
+              - button "Show review 1" [pressed] [ref=e1436] [cursor=pointer]
+              - button "Show review 2" [ref=e1437] [cursor=pointer]
+              - button "Show review 3" [ref=e1438] [cursor=pointer]
+              - button "Show review 4" [ref=e1439] [cursor=pointer]
+              - button "Show review 5" [ref=e1440] [cursor=pointer]
+              - button "Show review 6" [ref=e1441] [cursor=pointer]
+              - button "Show review 7" [ref=e1442] [cursor=pointer]
+              - button "Show review 8" [ref=e1443] [cursor=pointer]
+              - button "Show review 9" [ref=e1444] [cursor=pointer]
+              - button "Show review 10" [ref=e1445] [cursor=pointer]
+              - button "Show review 11" [ref=e1446] [cursor=pointer]
+              - button "Show review 12" [ref=e1447] [cursor=pointer]
+              - button "Show review 13" [ref=e1448] [cursor=pointer]
+              - button "Show review 14" [ref=e1449] [cursor=pointer]
+              - button "Show review 15" [ref=e1450] [cursor=pointer]
+              - button "Show review 16" [ref=e1451] [cursor=pointer]
+              - button "Show review 17" [ref=e1452] [cursor=pointer]
+              - button "Show review 18" [ref=e1453] [cursor=pointer]
+              - button "Show review 19" [ref=e1454] [cursor=pointer]
+          - button "Show next reviews" [ref=e1455] [cursor=pointer]
+    - region [ref=e1458]:
+      - generic [ref=e1460]:
+        - generic [ref=e1461]:
+          - text: FAQ
+          - heading "Calgary real estate photography comparison FAQ" [level=2] [ref=e1462]
+          - paragraph [ref=e1463]: Answers to common questions about comparing real estate photography companies, included marketing assets, iGUIDE tours, RMS measurements, rewards, and free tools.
+          - link "View all FAQs about Calgary real estate photography comparison and listing media services" [ref=e1464] [cursor=pointer]:
+            - /url: /faq
+            - text: All FAQs
+            - generic [ref=e1465]: about Calgary real estate photography comparison and listing media services
+        - generic [ref=e1466]:
+          - generic [ref=e1467]:
+            - button "What makes Photos 4 Real Estate different from other Calgary real estate photography companies?" [expanded] [ref=e1468] [cursor=pointer]
+            - region "What makes Photos 4 Real Estate different from other Calgary real estate photography companies?" [ref=e1473]:
+              - generic [ref=e1474]: Photos 4 Real Estate includes professional photos, iGUIDE 3D tours, RMS measurements, floor plans, blue sky replacement, next-day delivery, marketing assets, free tools, and a points rewards program. Most providers offer some of these services, but not the same all-in-one value package.
+          - generic [ref=e1475]:
+            - button "Are the comparison points based on public information?" [ref=e1476] [cursor=pointer]
+            - region "Are the comparison points based on public information?":
+              - generic: Yes. The comparison is based on publicly available service information and general package positioning as of 2026. Service offerings can change, so realtors should always confirm current package details with each provider.
+          - generic [ref=e1481]:
+            - button "Do all Photos 4 Real Estate packages include iGUIDE and RMS measurements?" [ref=e1482] [cursor=pointer]
+            - region "Do all Photos 4 Real Estate packages include iGUIDE and RMS measurements?":
+              - generic: Our real estate photography packages are designed around professional photography, iGUIDE 3D virtual tours, RMS measurements, and standard floor plans so Calgary agents can market listings with accurate property data and stronger online presentation.
+          - generic [ref=e1487]:
+            - button "What marketing assets are included with Photos 4 Real Estate packages?" [ref=e1488] [cursor=pointer]
+            - region "What marketing assets are included with Photos 4 Real Estate packages?":
+              - generic: When property information is provided, photo packages include 9 social media reels, 2 slideshows, 3 property flyers, and 6 property webpages, giving agents ready-to-use assets for social media, print, email, and online promotion.
+          - generic [ref=e1493]:
+            - button "Does Photos 4 Real Estate offer free marketing tools for realtors?" [ref=e1494] [cursor=pointer]
+            - region "Does Photos 4 Real Estate offer free marketing tools for realtors?":
+              - generic: Yes. Photos 4 Real Estate offers free tools including a reel generator, slideshow generator, property flyer generator, and QR code generator so realtors can create marketing materials quickly without extra design software.
+          - generic [ref=e1499]:
+            - button "Who benefits most from an all-in-one real estate media package?" [ref=e1500] [cursor=pointer]
+            - region "Who benefits most from an all-in-one real estate media package?":
+              - generic: High-volume listing agents, new realtors, luxury and acreage specialists, brokerages, and teams benefit most because they need consistent photography, measurements, virtual tours, social media content, print assets, and repeat-order value.
+    - region [ref=e1505]:
+      - generic [ref=e1506]:
+        - generic [ref=e1507]: Book a Photoshoot
+        - heading "Get More Value from Every Calgary Listing" [level=2] [ref=e1508]
+        - paragraph [ref=e1509]: Book real estate photography with Photos 4 Real Estate and receive professional listing media, accurate measurements, virtual tour assets, marketing deliverables, free tools, and rewards support.
+        - generic [ref=e1510]:
+          - link "Book Online for Calgary real estate photography and media services" [ref=e1511] [cursor=pointer]:
+            - /url: https://app.photos4realestate.ca/book/cmfwsiyl30000jo04z3lcndl3
+            - text: Book Online
+            - generic [ref=e1512]: for Calgary real estate photography and media services
+          - link "View Pricing for Calgary real estate photography packages" [ref=e1515] [cursor=pointer]:
+            - /url: /prices
+            - text: View Pricing
+            - generic [ref=e1516]: for Calgary real estate photography packages
+        - generic [ref=e1517]:
+          - generic [ref=e1518]:
+            - text: Call
+            - link "Call Photos 4 Real Estate at (825) 449-5001" [ref=e1519] [cursor=pointer]:
+              - /url: tel:+18254495001
+              - text: (825) 449-5001
+          - generic [ref=e1520]:
+            - text: Email
+            - link "Email Photos 4 Real Estate at info@photos4realestate.ca" [ref=e1521] [cursor=pointer]:
+              - /url: mailto:info@photos4realestate.ca
+              - text: info@photos4realestate.ca
+          - link "Serving Calgary & surrounding areas" [ref=e1523] [cursor=pointer]:
+            - /url: /service-areas
+  - contentinfo [ref=e1524]:
+    - generic [ref=e1525]:
+      - generic [ref=e1526]:
+        - generic [ref=e1527]:
+          - link "Photos 4 Real Estate home" [ref=e1528] [cursor=pointer]:
+            - /url: /
+            - img "Photos 4 Real Estate map-pin logo" [ref=e1529]
+            - generic [ref=e1530]:
+              - text: Photos
+              - emphasis [ref=e1531]: "4"
+              - text: Real Estate
+          - paragraph [ref=e1532]: Professional real estate photography, videography, drone, 3D tours and RMS floor plans in Calgary and surrounding areas.
+          - generic [ref=e1533]:
+            - generic [ref=e1534]:
+              - generic [ref=e1535]: Phone
+              - link "(825) 449-5001" [ref=e1536] [cursor=pointer]:
+                - /url: tel:+18254495001
+            - generic [ref=e1537]:
+              - generic [ref=e1538]: Email
+              - link "info@photos4realestate.ca" [ref=e1539] [cursor=pointer]:
+                - /url: mailto:info@photos4realestate.ca
+            - generic [ref=e1540]:
+              - generic [ref=e1541]: Follow Us
+              - generic "Follow us on social media" [ref=e1542]:
+                - link "Follow Photos 4 Real Estate on Facebook" [ref=e1543] [cursor=pointer]:
+                  - /url: https://www.facebook.com/photos4re
+                - link "Follow Photos 4 Real Estate on Instagram" [ref=e1546] [cursor=pointer]:
+                  - /url: https://www.instagram.com/photos4re/
+        - generic [ref=e1551]:
+          - heading "Services" [level=4] [ref=e1552]
+          - list [ref=e1553]:
+            - listitem [ref=e1554]:
+              - link "Real Estate Photography" [ref=e1555] [cursor=pointer]:
+                - /url: /services/real-estate-photography-in-calgary
+            - listitem [ref=e1556]:
+              - link "Real Estate Videography" [ref=e1557] [cursor=pointer]:
+                - /url: /services/real-estate-videos-in-calgary
+            - listitem [ref=e1558]:
+              - link "RMS Measurements & Floor Plans" [ref=e1559] [cursor=pointer]:
+                - /url: /services/rms-measurements-and-floor-plans-in-calgary
+            - listitem [ref=e1560]:
+              - link "iGUIDE 3D Virtual Tours" [ref=e1561] [cursor=pointer]:
+                - /url: /services/iguide-virtual-tours-in-calgary
+            - listitem [ref=e1562]:
+              - link "Drone Photography & Videography" [ref=e1563] [cursor=pointer]:
+                - /url: /services/real-estate-aerial-drone-photography-in-calgary
+            - listitem [ref=e1564]:
+              - link "Virtual Staging" [ref=e1565] [cursor=pointer]:
+                - /url: /services/virtual-staging
+            - listitem [ref=e1566]:
+              - link "Twilight Photography" [ref=e1567] [cursor=pointer]:
+                - /url: /services/twilight-photography-for-real-estate-in-calgary
+            - listitem [ref=e1568]:
+              - link "Style Shots" [ref=e1569] [cursor=pointer]:
+                - /url: /services/style-shots
+            - listitem [ref=e1570]:
+              - link "Marketing Kit for Realtors" [ref=e1571] [cursor=pointer]:
+                - /url: /services/marketing-kit-for-realtors
+            - listitem [ref=e1572]:
+              - link "Hotel Photography" [ref=e1573] [cursor=pointer]:
+                - /url: /services/hotel-photography
+        - generic [ref=e1574]:
+          - heading "Quick Links" [level=4] [ref=e1575]
+          - list [ref=e1576]:
+            - listitem [ref=e1577]:
+              - link "Prices & Packages" [ref=e1578] [cursor=pointer]:
+                - /url: /prices
+            - listitem [ref=e1579]:
+              - link "Portfolio" [ref=e1580] [cursor=pointer]:
+                - /url: /portfolio
+            - listitem [ref=e1581]:
+              - link "Free Realtor Tools" [ref=e1582] [cursor=pointer]:
+                - /url: /free-tools
+            - listitem [ref=e1583]:
+              - link "Blog" [ref=e1584] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e1585]:
+              - link "About Us" [ref=e1586] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e1587]:
+              - link "Why Choose Us" [ref=e1588] [cursor=pointer]:
+                - /url: /real-estate-photography-comparison-calgary
+            - listitem [ref=e1589]:
+              - link "Photoshoot Checklist" [ref=e1590] [cursor=pointer]:
+                - /url: /photoshoot-checklist
+            - listitem [ref=e1591]:
+              - link "Points & Rewards" [ref=e1592] [cursor=pointer]:
+                - /url: /points-rewards
+            - listitem [ref=e1593]:
+              - link "FAQ" [ref=e1594] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=e1595]:
+              - link "Contact" [ref=e1596] [cursor=pointer]:
+                - /url: /contact-us
+        - generic [ref=e1597]:
+          - heading "Service Areas" [level=4] [ref=e1598]
+          - list [ref=e1599]:
+            - listitem [ref=e1600]:
+              - link "Calgary" [ref=e1601] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e1602]:
+              - link "Okotoks" [ref=e1603] [cursor=pointer]:
+                - /url: /service-areas/okotoks
+            - listitem [ref=e1604]:
+              - link "Airdrie" [ref=e1605] [cursor=pointer]:
+                - /url: /service-areas/airdrie
+            - listitem [ref=e1606]:
+              - link "Cochrane" [ref=e1607] [cursor=pointer]:
+                - /url: /service-areas/cochrane
+            - listitem [ref=e1608]:
+              - link "Chestermere" [ref=e1609] [cursor=pointer]:
+                - /url: /service-areas/chestermere
+            - listitem [ref=e1610]:
+              - link "High River" [ref=e1611] [cursor=pointer]:
+                - /url: /service-areas/high-river
+            - listitem [ref=e1612]:
+              - link "Springbank" [ref=e1613] [cursor=pointer]:
+                - /url: /service-areas/springbank
+            - listitem [ref=e1614]:
+              - link "Bearspaw" [ref=e1615] [cursor=pointer]:
+                - /url: /service-areas/bearspaw
+            - listitem [ref=e1616]:
+              - link "Rocky View County" [ref=e1617] [cursor=pointer]:
+                - /url: /service-areas/rocky-view-county
+            - listitem [ref=e1618]:
+              - link "Banff" [ref=e1619] [cursor=pointer]:
+                - /url: /service-areas/banff
+            - listitem [ref=e1620]:
+              - link "All Areas" [ref=e1621] [cursor=pointer]:
+                - /url: /service-areas
+                - text: All Areas →
+      - separator [ref=e1622]
+      - generic [ref=e1623]:
+        - generic [ref=e1624]: © 2026 Photos 4 Real Estate. All rights reserved.
+        - generic [ref=e1625]:
+          - link "Privacy" [ref=e1626] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: ·
+          - link "Terms" [ref=e1627] [cursor=pointer]:
+            - /url: /terms-and-conditions
+          - text: ·
+          - link "Cookies" [ref=e1628] [cursor=pointer]:
+            - /url: /cookies-policy
+  - region "Notifications alt+T"

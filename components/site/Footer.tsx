@@ -38,6 +38,7 @@ export function Footer() {
     { href: "/photoshoot-checklist", label: "Photoshoot Checklist" },
     { href: "/points-rewards", label: "Points & Rewards" },
     { href: "/faq", label: "FAQ" },
+    { href: "/brokerage-partner-program", label: "For Brokerages" },
     { href: "/contact-us", label: "Contact" },
   ] as const;
 

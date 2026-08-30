@@ -1,0 +1,454 @@
+- generic [active] [ref=f15e1]:
+  - banner [ref=f15e2]:
+    - generic [ref=f15e3]:
+      - link "Photos 4 Real Estate home" [ref=f15e4] [cursor=pointer]:
+        - /url: /
+        - img "Photos 4 Real Estate map-pin logo" [ref=f15e5]
+        - generic [ref=f15e6]:
+          - generic [ref=f15e7]:
+            - text: Photos
+            - emphasis [ref=f15e8]: "4"
+            - text: Real Estate
+          - generic [ref=f15e9]: Elevate Your Real Estate Listings
+      - menu:
+        - generic: RMS Services
+        - menuitem "Real Estate Photography in Calgary":
+          - generic:
+            - text: Real Estate Photography
+            - generic: in Calgary
+        - menuitem "Real Estate Videography in Calgary":
+          - generic:
+            - text: Real Estate Videography
+            - generic: in Calgary
+        - menuitem "RMS Measurements & Floor Plans in Calgary":
+          - generic:
+            - text: RMS Measurements & Floor Plans
+            - generic: in Calgary
+        - menuitem "iGUIDE 3D Virtual Tours in Calgary":
+          - generic:
+            - text: iGUIDE 3D Virtual Tours
+            - generic: in Calgary
+        - menuitem "Drone Photography & Videography in Calgary":
+          - generic:
+            - text: Drone Photography & Videography
+            - generic: in Calgary
+        - generic: Additional Services
+        - menuitem "Virtual Staging in Calgary":
+          - generic:
+            - text: Virtual Staging
+            - generic: in Calgary
+        - menuitem "Twilight Photography in Calgary":
+          - generic:
+            - text: Twilight Photography
+            - generic: in Calgary
+        - menuitem "Style Shots in Calgary":
+          - generic:
+            - text: Style Shots
+            - generic: in Calgary
+        - menuitem "Marketing Kit for Realtors in Calgary":
+          - generic:
+            - text: Marketing Kit for Realtors
+            - generic: in Calgary
+        - menuitem "Property Websites in Calgary":
+          - generic:
+            - text: Property Websites
+            - generic: in Calgary
+        - menuitem "SmartSign QR Codes in Calgary":
+          - generic:
+            - text: SmartSign QR Codes
+            - generic: in Calgary
+        - generic: Commercial Services
+        - menuitem "Hotel Photography in Calgary":
+          - generic:
+            - text: Hotel Photography
+            - generic: in Calgary
+      - list:
+        - listitem:
+          - menuitem "Social Media Reel Generator in Calgary":
+            - generic:
+              - text: Social Media Reel Generator
+              - generic: in Calgary
+        - listitem:
+          - menuitem "Slideshow Generator in Calgary":
+            - generic:
+              - text: Slideshow Generator
+              - generic: in Calgary
+        - listitem:
+          - menuitem "Property Flyer Generator in Calgary":
+            - generic:
+              - text: Property Flyer Generator
+              - generic: in Calgary
+        - listitem:
+          - menuitem "QR Code Generator in Calgary":
+            - generic:
+              - text: QR Code Generator
+              - generic: in Calgary
+      - button "Open menu" [ref=f15e10]
+  - main [ref=f15e12]:
+    - navigation "Breadcrumb" [ref=f15e13]:
+      - list [ref=f15e15]:
+        - listitem [ref=f15e16]:
+          - link "Home" [ref=f15e17] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f15e20]:
+          - generic [ref=f15e21]: Photoshoot Checklist
+    - region [ref=f15e22]:
+      - generic [ref=f15e24]:
+        - generic [ref=f15e25]:
+          - generic [ref=f15e26]: Pre-Photography Checklist
+          - heading [level=1] [ref=f15e27]:
+            - text: Photoshoot Checklist for
+            - emphasis [ref=f15e28]: Calgary Real Estate Listings
+          - paragraph [ref=f15e29]: Prepare your property before professional real estate photography so the shoot runs smoothly and the listing looks its best online. This room-by-room checklist helps homeowners and realtors clean, declutter, light, and stage the property before Photos 4 Real Estate arrives.
+          - generic [ref=f15e30]:
+            - link "Download PDF Checklist for Calgary real estate photoshoot preparation" [ref=f15e31] [cursor=pointer]:
+              - /url: https://cdn.photos4realestate.ca/p4re-static-media/photoshoot-checklist-page/Photoshoot%20Checklist%20-%202.pdf
+              - text: Download PDF Checklist
+              - generic [ref=f15e32]: for Calgary real estate photoshoot preparation
+            - link "View Photography Services for Calgary real estate listings" [ref=f15e36] [cursor=pointer]:
+              - /url: /services/real-estate-photography-in-calgary
+              - text: View Photography Services
+              - generic [ref=f15e37]: for Calgary real estate listings
+        - list "Checklist highlights" [ref=f15e38]:
+          - listitem [ref=f15e39]:
+            - generic [ref=f15e40]: "3"
+            - generic [ref=f15e41]: Preparation areas
+          - listitem [ref=f15e42]:
+            - generic [ref=f15e43]: PDF
+            - generic [ref=f15e44]: Download included
+          - listitem [ref=f15e45]:
+            - generic [ref=f15e46]: MLS
+            - generic [ref=f15e47]: Photo-ready focus
+    - region [ref=f15e48]:
+      - generic [ref=f15e50]:
+        - generic [ref=f15e51]:
+          - text: Why Preparation Matters
+          - heading "Why Should You Prepare Before a Real Estate Photoshoot?" [level=2] [ref=f15e52]
+          - paragraph [ref=f15e53]: A prepared property photographs better, feels more spacious, and helps buyers focus on the home instead of distractions.
+          - paragraph [ref=f15e54]: Professional photography can make a listing stand out, but the property still needs to be clean, accessible, and photo-ready before the appointment. Small details like clear counters, working lights, tidy bedding, and moved vehicles can make a significant difference in the final images.
+          - paragraph [ref=f15e55]: Use this checklist before photography, video, drone, RMS measurements, iGUIDE virtual tours, and marketing-kit creation. The same preparation helps all listing media look more polished and consistent.
+        - generic [ref=f15e56]:
+          - heading "Download the printable checklist" [level=3] [ref=f15e61]
+          - paragraph [ref=f15e62]: Keep the PDF handy and share it with sellers, tenants, cleaners, or anyone helping prepare the property before photo day.
+          - link "Download Photoshoot Checklist PDF for real estate photo preparation" [ref=f15e63] [cursor=pointer]:
+            - /url: https://cdn.photos4realestate.ca/p4re-static-media/photoshoot-checklist-page/Photoshoot%20Checklist%20-%202.pdf
+            - text: Download Photoshoot Checklist
+            - generic [ref=f15e64]: PDF for real estate photo preparation
+    - region "Checklist sections" [ref=f15e68]:
+      - generic [ref=f15e70]:
+        - link "Interior Preparation" [ref=f15e71] [cursor=pointer]:
+          - /url: "#interior-preparation"
+        - link "Exterior Preparation" [ref=f15e78] [cursor=pointer]:
+          - /url: "#exterior-preparation"
+        - link "Final Touches" [ref=f15e85] [cursor=pointer]:
+          - /url: "#final-touches"
+    - region [ref=f15e92]:
+      - generic [ref=f15e93]:
+        - generic [ref=f15e94]:
+          - text: Interior Preparation
+          - heading "How Should You Prepare the Interior Before a Photoshoot?" [level=2] [ref=f15e95]
+          - paragraph [ref=f15e99]: Interior preparation helps rooms feel clean, bright, spacious, and easy for buyers to understand in photos.
+        - generic [ref=f15e100]:
+          - article [ref=f15e101]:
+            - heading "Declutter and clean" [level=3] [ref=f15e108]
+            - list [ref=f15e109]:
+              - listitem [ref=f15e110]: Remove personal items, family photos, paperwork, fridge magnets, and excess decor.
+              - listitem [ref=f15e114]: Clear countertops, tables, shelves, bathroom vanities, and nightstands.
+              - listitem [ref=f15e118]: Clean floors, mirrors, windows, appliances, fixtures, and visible surfaces.
+          - article [ref=f15e122]:
+            - heading "Lighting" [level=3] [ref=f15e127]
+            - list [ref=f15e128]:
+              - listitem [ref=f15e129]: Replace burnt-out bulbs and make sure every light fixture works.
+              - listitem [ref=f15e133]: Use consistent bulb colours where possible, especially in kitchens and bathrooms.
+              - listitem [ref=f15e137]: Open curtains and blinds to bring in natural light before the photographer arrives.
+          - article [ref=f15e141]:
+            - heading "Furniture and flow" [level=3] [ref=f15e147]
+            - list [ref=f15e148]:
+              - listitem [ref=f15e149]: Arrange furniture to create open walking paths and a welcoming layout.
+              - listitem [ref=f15e153]: Remove unnecessary chairs, side tables, storage bins, or bulky items that make rooms look smaller.
+              - listitem [ref=f15e157]: Straighten rugs, dining chairs, stools, curtains, and visible cords.
+          - article [ref=f15e161]:
+            - heading "Beds and decor" [level=3] [ref=f15e167]
+            - list [ref=f15e168]:
+              - listitem [ref=f15e169]: Make beds neatly, smooth linens, and fluff pillows.
+              - listitem [ref=f15e173]: Use simple, neutral decorations that enhance the room without distracting buyers.
+              - listitem [ref=f15e177]: Put away laundry baskets, garbage bins, toiletries, and personal bathroom items.
+    - region [ref=f15e181]:
+      - generic [ref=f15e182]:
+        - generic [ref=f15e183]:
+          - text: Exterior Preparation
+          - heading "How Should You Prepare the Exterior Before Real Estate Photos?" [level=2] [ref=f15e184]
+          - paragraph [ref=f15e188]: Exterior preparation is important because the front photo is often the first image buyers see online.
+        - generic [ref=f15e189]:
+          - article [ref=f15e190]:
+            - heading "Yard and garden" [level=3] [ref=f15e196]
+            - list [ref=f15e197]:
+              - listitem [ref=f15e198]: Mow the lawn, trim hedges, remove weeds, and clear branches or debris.
+              - listitem [ref=f15e202]: Put away hoses, tools, toys, sports equipment, garbage bins, and seasonal clutter.
+              - listitem [ref=f15e206]: Add simple planters or fresh exterior touches only if they look clean and intentional.
+          - article [ref=f15e210]:
+            - heading "Driveway and walkways" [level=3] [ref=f15e216]
+            - list [ref=f15e217]:
+              - listitem [ref=f15e218]: Sweep driveways, walkways, patios, decks, porches, and garage entrances.
+              - listitem [ref=f15e222]: Move vehicles away from the driveway and front of the property before the shoot.
+              - listitem [ref=f15e226]: Keep access clear for exterior, backyard, garage, and community-feature photos.
+          - article [ref=f15e230]:
+            - heading "Exterior fixtures" [level=3] [ref=f15e236]
+            - list [ref=f15e237]:
+              - listitem [ref=f15e238]: Check exterior lights and replace burnt-out bulbs.
+              - listitem [ref=f15e242]: Clean visible windows, glass doors, outdoor furniture, and entry areas.
+              - listitem [ref=f15e246]: Close garage doors, tidy patio furniture, and remove BBQ covers if appropriate.
+          - article [ref=f15e250]:
+            - heading "Seasonal details" [level=3] [ref=f15e266]
+            - list [ref=f15e267]:
+              - listitem [ref=f15e268]: In winter, shovel pathways, steps, driveways, decks, and patios; clear ice where possible.
+              - listitem [ref=f15e272]: In summer, water the lawn and garden early enough to avoid puddles during the shoot.
+              - listitem [ref=f15e276]: Remove seasonal decorations if they make the listing feel dated or distract from the property.
+    - region [ref=f15e280]:
+      - generic [ref=f15e281]:
+        - generic [ref=f15e282]:
+          - text: Final Touches
+          - heading "What Should You Do Right Before the Photographer Arrives?" [level=2] [ref=f15e283]
+          - paragraph [ref=f15e287]: A final walkthrough prevents small distractions from appearing in MLS photos, floor plans, tours, and marketing materials.
+        - generic [ref=f15e288]:
+          - article [ref=f15e289]:
+            - heading "Pets" [level=3] [ref=f15e297]
+            - list [ref=f15e298]:
+              - listitem [ref=f15e299]: Keep pets safely away from the photographed areas during the shoot.
+              - listitem [ref=f15e303]: Remove pet beds, bowls, litter boxes, toys, leashes, and scratching posts where possible.
+              - listitem [ref=f15e307]: Plan ahead if pets need to leave the property during photography, video, or iGUIDE scanning.
+          - article [ref=f15e311]:
+            - heading "Final sweep" [level=3] [ref=f15e317]
+            - list [ref=f15e318]:
+              - listitem [ref=f15e319]: Do one last walkthrough of every room before the appointment starts.
+              - listitem [ref=f15e323]: Turn on lights, open interior doors, and make sure important spaces are accessible.
+              - listitem [ref=f15e327]: Hide remotes, chargers, cleaning supplies, keys, shoes, jackets, and personal documents.
+          - article [ref=f15e331]:
+            - heading "Shoot readiness" [level=3] [ref=f15e340]
+            - list [ref=f15e341]:
+              - listitem [ref=f15e342]: Have the home photo-ready before the scheduled start time.
+              - listitem [ref=f15e346]: Let the photographer know about special features, views, renovations, or areas to avoid.
+              - listitem [ref=f15e350]: If the property is occupied, reduce movement through rooms while photos are being taken.
+    - region [ref=f15e354]:
+      - generic [ref=f15e356]:
+        - generic [ref=f15e357]:
+          - text: Need Assistance?
+          - heading "Have Questions Before Your Photoshoot?" [level=2] [ref=f15e358]
+          - paragraph [ref=f15e359]: If you are unsure how to prepare a room, exterior area, vacant property, tenant-occupied listing, or seasonal exterior, contact Photos 4 Real Estate before your appointment. We are here to help make the experience smooth and successful.
+        - generic [ref=f15e360]:
+          - link "Call Photos 4 Real Estate at (825) 449-5001" [ref=f15e361] [cursor=pointer]:
+            - /url: tel:+18254495001
+            - text: (825) 449-5001
+          - link "Email Photos 4 Real Estate at info@photos4realestate.ca" [ref=f15e364] [cursor=pointer]:
+            - /url: mailto:info@photos4realestate.ca
+            - text: info@photos4realestate.ca
+    - region [ref=f15e368]:
+      - generic [ref=f15e370]:
+        - generic [ref=f15e371]:
+          - text: FAQ
+          - heading "Photoshoot Checklist — Frequently Asked Questions" [level=2] [ref=f15e372]
+          - paragraph [ref=f15e373]: Common questions about preparing a Calgary property for professional real estate photography.
+          - link "View all FAQs about real estate photoshoot preparation in Calgary" [ref=f15e374] [cursor=pointer]:
+            - /url: /faq
+            - text: All FAQs
+            - generic [ref=f15e375]: about real estate photoshoot preparation in Calgary
+        - generic [ref=f15e376]:
+          - generic [ref=f15e377]:
+            - button "How clean should a property be before real estate photos?" [expanded] [ref=f15e378] [cursor=pointer]
+            - region "How clean should a property be before real estate photos?" [ref=f15e383]:
+              - generic [ref=f15e384]: The property should be as clean and decluttered as possible before the photographer arrives. Clear countertops, remove personal items, clean floors and windows, and make sure the home looks ready for buyers to view online.
+          - generic [ref=f15e385]:
+            - button "Should lights be on or off for a real estate photoshoot?" [ref=f15e386] [cursor=pointer]
+            - region "Should lights be on or off for a real estate photoshoot?":
+              - generic: Make sure all lights are working and replace burnt-out bulbs before the shoot. The photographer may decide which lights to use based on the room, natural light, and photo style, but working lights give them the best options.
+          - generic [ref=f15e391]:
+            - button "Should vehicles be moved before exterior photos?" [ref=f15e392] [cursor=pointer]
+            - region "Should vehicles be moved before exterior photos?":
+              - generic: Yes. Move vehicles out of the driveway and away from the front of the property before the appointment. This keeps the exterior photos clean and helps buyers focus on the home.
+          - generic [ref=f15e397]:
+            - button "What should I do with pets during the photoshoot?" [ref=f15e398] [cursor=pointer]
+            - region "What should I do with pets during the photoshoot?":
+              - generic: Pets should be kept safely away from the areas being photographed. Remove pet beds, bowls, toys, litter boxes, and other pet items wherever possible.
+          - generic [ref=f15e403]:
+            - button "When should the checklist be completed?" [ref=f15e404] [cursor=pointer]
+            - region "When should the checklist be completed?":
+              - generic: Ideally, complete the checklist before the photographer arrives. Real estate photography appointments are scheduled for capturing the property, not staging or cleaning, so preparation should happen ahead of time.
+          - generic [ref=f15e409]:
+            - button "Can Photos 4 Real Estate help if I have questions before the shoot?" [ref=f15e410] [cursor=pointer]
+            - region "Can Photos 4 Real Estate help if I have questions before the shoot?":
+              - generic: Yes. If you are unsure how to prepare a room or exterior area, call (825) 449-5001 or email info@photos4realestate.ca. We are happy to help you prepare for a smooth real estate photoshoot in Calgary.
+    - region [ref=f15e415]:
+      - generic [ref=f15e416]:
+        - generic [ref=f15e417]: Ready for Photo Day?
+        - heading "Download the Checklist and Prepare With Confidence" [level=2] [ref=f15e418]
+        - paragraph [ref=f15e419]: Use the PDF checklist to prepare the property before your real estate photoshoot. When you are ready to schedule photography, video, floor plans, or a full media package, book online with Photos 4 Real Estate.
+        - generic [ref=f15e420]:
+          - link "Download PDF Checklist for Calgary real estate photoshoot preparation" [ref=f15e421] [cursor=pointer]:
+            - /url: https://cdn.photos4realestate.ca/p4re-static-media/photoshoot-checklist-page/Photoshoot%20Checklist%20-%202.pdf
+            - text: Download PDF Checklist
+            - generic [ref=f15e422]: for Calgary real estate photoshoot preparation
+          - link "View Pricing for Calgary real estate photography packages" [ref=f15e425] [cursor=pointer]:
+            - /url: /prices
+            - text: View Pricing
+            - generic [ref=f15e426]: for Calgary real estate photography packages
+        - generic [ref=f15e427]:
+          - generic [ref=f15e428]:
+            - text: Call
+            - link "Call Photos 4 Real Estate at (825) 449-5001" [ref=f15e429] [cursor=pointer]:
+              - /url: tel:+18254495001
+              - text: (825) 449-5001
+          - generic [ref=f15e430]:
+            - text: Email
+            - link "Email Photos 4 Real Estate at info@photos4realestate.ca" [ref=f15e431] [cursor=pointer]:
+              - /url: mailto:info@photos4realestate.ca
+              - text: info@photos4realestate.ca
+          - link "Serving Calgary & surrounding areas" [ref=f15e433] [cursor=pointer]:
+            - /url: /service-areas
+  - contentinfo [ref=f15e434]:
+    - generic [ref=f15e435]:
+      - generic [ref=f15e436]:
+        - generic [ref=f15e437]:
+          - link "Photos 4 Real Estate home" [ref=f15e438] [cursor=pointer]:
+            - /url: /
+            - img "Photos 4 Real Estate map-pin logo" [ref=f15e439]
+            - generic [ref=f15e440]:
+              - text: Photos
+              - emphasis [ref=f15e441]: "4"
+              - text: Real Estate
+          - paragraph [ref=f15e442]: Professional real estate photography, videography, drone, 3D tours and RMS floor plans in Calgary and surrounding areas.
+          - generic [ref=f15e443]:
+            - generic [ref=f15e444]:
+              - generic [ref=f15e445]: Phone
+              - link "(825) 449-5001" [ref=f15e446] [cursor=pointer]:
+                - /url: tel:+18254495001
+            - generic [ref=f15e447]:
+              - generic [ref=f15e448]: Email
+              - link "info@photos4realestate.ca" [ref=f15e449] [cursor=pointer]:
+                - /url: mailto:info@photos4realestate.ca
+            - generic [ref=f15e450]:
+              - generic [ref=f15e451]: Follow Us
+              - generic "Follow us on social media" [ref=f15e452]:
+                - link "Follow Photos 4 Real Estate on Facebook" [ref=f15e453] [cursor=pointer]:
+                  - /url: https://www.facebook.com/photos4re
+                - link "Follow Photos 4 Real Estate on Instagram" [ref=f15e456] [cursor=pointer]:
+                  - /url: https://www.instagram.com/photos4re/
+        - generic [ref=f15e461]:
+          - heading "Services" [level=4] [ref=f15e462]
+          - list [ref=f15e463]:
+            - listitem [ref=f15e464]:
+              - link "Real Estate Photography" [ref=f15e465] [cursor=pointer]:
+                - /url: /services/real-estate-photography-in-calgary
+            - listitem [ref=f15e466]:
+              - link "Real Estate Videography" [ref=f15e467] [cursor=pointer]:
+                - /url: /services/real-estate-videos-in-calgary
+            - listitem [ref=f15e468]:
+              - link "RMS Measurements & Floor Plans" [ref=f15e469] [cursor=pointer]:
+                - /url: /services/rms-measurements-and-floor-plans-in-calgary
+            - listitem [ref=f15e470]:
+              - link "iGUIDE 3D Virtual Tours" [ref=f15e471] [cursor=pointer]:
+                - /url: /services/iguide-virtual-tours-in-calgary
+            - listitem [ref=f15e472]:
+              - link "Drone Photography & Videography" [ref=f15e473] [cursor=pointer]:
+                - /url: /services/real-estate-aerial-drone-photography-in-calgary
+            - listitem [ref=f15e474]:
+              - link "Virtual Staging" [ref=f15e475] [cursor=pointer]:
+                - /url: /services/virtual-staging
+            - listitem [ref=f15e476]:
+              - link "Twilight Photography" [ref=f15e477] [cursor=pointer]:
+                - /url: /services/twilight-photography-for-real-estate-in-calgary
+            - listitem [ref=f15e478]:
+              - link "Style Shots" [ref=f15e479] [cursor=pointer]:
+                - /url: /services/style-shots
+            - listitem [ref=f15e480]:
+              - link "Marketing Kit for Realtors" [ref=f15e481] [cursor=pointer]:
+                - /url: /services/marketing-kit-for-realtors
+            - listitem [ref=f15e482]:
+              - link "Hotel Photography" [ref=f15e483] [cursor=pointer]:
+                - /url: /services/hotel-photography
+        - generic [ref=f15e484]:
+          - heading "Quick Links" [level=4] [ref=f15e485]
+          - list [ref=f15e486]:
+            - listitem [ref=f15e487]:
+              - link "Prices & Packages" [ref=f15e488] [cursor=pointer]:
+                - /url: /prices
+            - listitem [ref=f15e489]:
+              - link "Portfolio" [ref=f15e490] [cursor=pointer]:
+                - /url: /portfolio
+            - listitem [ref=f15e491]:
+              - link "Free Realtor Tools" [ref=f15e492] [cursor=pointer]:
+                - /url: /free-tools
+            - listitem [ref=f15e493]:
+              - link "Blog" [ref=f15e494] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=f15e495]:
+              - link "About Us" [ref=f15e496] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f15e497]:
+              - link "Why Choose Us" [ref=f15e498] [cursor=pointer]:
+                - /url: /real-estate-photography-comparison-calgary
+            - listitem [ref=f15e499]:
+              - link "Photoshoot Checklist" [ref=f15e500] [cursor=pointer]:
+                - /url: /photoshoot-checklist
+            - listitem [ref=f15e501]:
+              - link "Points & Rewards" [ref=f15e502] [cursor=pointer]:
+                - /url: /points-rewards
+            - listitem [ref=f15e503]:
+              - link "FAQ" [ref=f15e504] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=f15e505]:
+              - link "For Brokerages" [ref=f15e506] [cursor=pointer]:
+                - /url: /brokerage-partner-program
+            - listitem [ref=f15e507]:
+              - link "Contact" [ref=f15e508] [cursor=pointer]:
+                - /url: /contact-us
+        - generic [ref=f15e509]:
+          - heading "Service Areas" [level=4] [ref=f15e510]
+          - list [ref=f15e511]:
+            - listitem [ref=f15e512]:
+              - link "Calgary" [ref=f15e513] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f15e514]:
+              - link "Okotoks" [ref=f15e515] [cursor=pointer]:
+                - /url: /service-areas/okotoks
+            - listitem [ref=f15e516]:
+              - link "Airdrie" [ref=f15e517] [cursor=pointer]:
+                - /url: /service-areas/airdrie
+            - listitem [ref=f15e518]:
+              - link "Cochrane" [ref=f15e519] [cursor=pointer]:
+                - /url: /service-areas/cochrane
+            - listitem [ref=f15e520]:
+              - link "Chestermere" [ref=f15e521] [cursor=pointer]:
+                - /url: /service-areas/chestermere
+            - listitem [ref=f15e522]:
+              - link "High River" [ref=f15e523] [cursor=pointer]:
+                - /url: /service-areas/high-river
+            - listitem [ref=f15e524]:
+              - link "Springbank" [ref=f15e525] [cursor=pointer]:
+                - /url: /service-areas/springbank
+            - listitem [ref=f15e526]:
+              - link "Bearspaw" [ref=f15e527] [cursor=pointer]:
+                - /url: /service-areas/bearspaw
+            - listitem [ref=f15e528]:
+              - link "Rocky View County" [ref=f15e529] [cursor=pointer]:
+                - /url: /service-areas/rocky-view-county
+            - listitem [ref=f15e530]:
+              - link "Banff" [ref=f15e531] [cursor=pointer]:
+                - /url: /service-areas/banff
+            - listitem [ref=f15e532]:
+              - link "All Areas" [ref=f15e533] [cursor=pointer]:
+                - /url: /service-areas
+                - text: All Areas →
+      - separator [ref=f15e534]
+      - generic [ref=f15e535]:
+        - generic [ref=f15e536]: © 2026 Photos 4 Real Estate. All rights reserved.
+        - generic [ref=f15e537]:
+          - link "Privacy" [ref=f15e538] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: ·
+          - link "Terms" [ref=f15e539] [cursor=pointer]:
+            - /url: /terms-and-conditions
+          - text: ·
+          - link "Cookies" [ref=f15e540] [cursor=pointer]:
+            - /url: /cookies-policy
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f15e546] [cursor=pointer]

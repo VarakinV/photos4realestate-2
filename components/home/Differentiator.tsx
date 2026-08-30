@@ -37,10 +37,27 @@ export function Differentiator() {
             <span className="section-label">What Sets Us Apart</span>
             <h2 id="diff-heading">More Than Photography — A Complete Marketing System</h2>
             <p className="lead">
-              At Photos 4 Real Estate, every package includes far more than just photos. We
-              give Calgary realtors a complete set of marketing tools at no extra cost —
-              because your listing deserves to stand out everywhere, not just on MLS.
+              We help individual Realtors&mdash;and entire brokerages&mdash;turn
+              professional listing media into complete marketing campaigns.
             </p>
+
+            <div className="diff-audiences">
+              <Link href="/services/marketing-kit-for-realtors" className="diff-audience">
+                <span className="diff-audience-label">For Realtors</span>
+                <span className="diff-audience-link">
+                  Market your listings faster with our marketing kit{" "}
+                  <span aria-hidden="true">&rarr;</span>
+                </span>
+              </Link>
+              <Link href="/brokerage-partner-program" className="diff-audience">
+                <span className="diff-audience-label">For Brokerages</span>
+                <span className="diff-audience-link">
+                  Give your agents more marketing tools without building your
+                  own marketing department.{" "}
+                  <span aria-hidden="true">&rarr;</span>
+                </span>
+              </Link>
+            </div>
 
             <div className="diff-includes-label">Every package includes:</div>
             <ul className="diff-includes">

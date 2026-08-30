@@ -10,6 +10,7 @@ import {
   FileText,
   Gift,
   Globe2,
+  HeartHandshake,
   Images,
   MapPin,
   QrCode,
@@ -17,6 +18,7 @@ import {
   Share2,
   Sparkles,
   TrendingUp,
+  UserPlus,
   Users,
   Video,
   X,
@@ -185,6 +187,24 @@ const whoBenefits = [
   "Luxury and acreage specialists who need stronger presentation tools",
   "Brokerages that want unified branding across listing campaigns",
   "Real estate teams that want repeat-order savings through points and rewards",
+] as const;
+
+const brokerageCards = [
+  {
+    icon: <UserPlus size={22} aria-hidden="true" />,
+    title: "Recruit",
+    desc: "Give prospective agents another tangible benefit.",
+  },
+  {
+    icon: <HeartHandshake size={22} aria-hidden="true" />,
+    title: "Support",
+    desc: "Give existing agents professional marketing tools without adding internal staff.",
+  },
+  {
+    icon: <TrendingUp size={22} aria-hidden="true" />,
+    title: "Grow",
+    desc: "Help agents market listings more consistently and generate more opportunities.",
+  },
 ] as const;
 
 const faqs: FaqItem[] = [
@@ -538,6 +558,36 @@ export default function RealEstatePhotographyComparisonCalgaryPage() {
             </table>
           </div>
           <p className="comparison-table-note">*Based on publicly available service information as of 2026. Service offerings, inclusions, and delivery timelines may change.</p>
+        </div>
+      </section>
+
+      <section className="comparison-broker-section" aria-labelledby="comparison-broker-heading">
+        <div className="container">
+          <div className="comparison-broker-header">
+            <div>
+              <span className="section-label">For Brokerages</span>
+              <h2 id="comparison-broker-heading">Are You a Brokerage Owner?</h2>
+              <p>
+                Your agents need more than listing photos. Photos 4 Real Estate
+                can become a marketing resource for your entire brokerage.
+              </p>
+            </div>
+            <Link href="/brokerage-partner-program" className="btn btn-primary">
+              Brokerage Partner Program
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="comparison-broker-grid">
+            {brokerageCards.map((card) => (
+              <article className="comparison-broker-card" key={card.title}>
+                <div className="comparison-card-icon" aria-hidden="true">
+                  {card.icon}
+                </div>
+                <h3>{card.title}</h3>
+                <p>{card.desc}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

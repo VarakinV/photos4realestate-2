@@ -36,6 +36,14 @@ export const homeFaqs: Faq[] = [
     q: "Can I use the photos on social media and print materials?",
     a: "Yes — you receive a full marketing license to use the images on MLS, your website, social media, brochures and print materials for the duration of the listing.",
   },
+  {
+    q: "Do you have a program for brokerages and team leaders?",
+    a: 'Yes. Our <a href="/brokerage-partner-program">Brokerage Partner Program</a> gives brokerages and team leaders a way to offer every agent professional listing media and marketing tools — at no cost to the office. Agents book and pay individually, while the brokerage gets a discount code, onboarding materials, and an optional office session.',
+  },
+  {
+    q: "What does the Brokerage Partner Program include?",
+    a: "Partner brokerages receive a discount code their agents can use, onboarding materials, and an optional office session with our team. Each agent then gets the full marketing kit with every shoot — 9 social media reels, 6 property websites, 3 flyers, 2 slideshows, and SmartSign QR lead-capture codes — so one listing shoot becomes a complete marketing campaign.",
+  },
 ];
 
 export const servicesFaqs: Faq[] = [

@@ -4,7 +4,7 @@ import { homeImages } from "@/lib/images";
 
 const cards = [
   {
-    href: "/contact-us",
+    href: "/services",
     img: homeImages.industryAgents,
     alt: "Modern kitchen photographed for a Calgary real estate listing by Photos 4 Real Estate",
     title: "Real Estate Agents",

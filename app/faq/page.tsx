@@ -80,6 +80,22 @@ const faqCategories: FaqCategory[] = [
         q: "Do you photograph both residential and commercial properties?",
         a: "Yes. We photograph residential listings, acreages, condos, rentals, new builds, show homes, offices, retail spaces, and other commercial properties.",
       },
+      {
+        q: "Does Photos 4 Real Estate offer a program for brokerages?",
+        a: 'Yes. Our <a href="/brokerage-partner-program">Brokerage Partner Program</a> is built for brokerages and team leaders who want to give every agent professional listing media and marketing tools. Agents book and pay individually, so the brokerage gains a recruiting and retention advantage without adding a marketing budget line or a new vendor to manage.',
+      },
+      {
+        q: "What does the Brokerage Partner Program include?",
+        a: "Partner brokerages receive a discount code agents can use, onboarding materials that help new and existing agents book their first shoot, and an optional office session with our team. Every agent shoot also includes the full marketing kit — 9 social media reels, 6 property websites, 3 property flyers, 2 slideshows, and SmartSign QR lead-capture codes.",
+      },
+      {
+        q: "What does the Brokerage Partner Program cost the brokerage?",
+        a: "Nothing. There is no cost, no line item to budget for, and no vendor to manage. Each agent books and pays for their own shoots the same way they would with any photographer, and the brokerage-level benefits are included as part of the partnership.",
+      },
+      {
+        q: "How does a brokerage get started with the program?",
+        a: 'Brokers and team leaders can book a free discovery call to tailor the program for their office. We will cover the discount code, onboarding materials, and how agents can start using professional listing media and marketing tools right away. <a href="/brokerage-partner-program">Learn more about the Brokerage Partner Program &rarr;</a>',
+      },
     ],
   },
   {

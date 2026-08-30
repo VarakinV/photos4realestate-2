@@ -1,0 +1,909 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - link "Photos 4 Real Estate home" [ref=f6e4] [cursor=pointer]:
+        - /url: /
+        - img "Photos 4 Real Estate map-pin logo" [ref=f6e5]
+        - generic [ref=f6e6]:
+          - generic [ref=f6e7]:
+            - text: Photos
+            - emphasis [ref=f6e8]: "4"
+            - text: Real Estate
+          - generic [ref=f6e9]: Elevate Your Real Estate Listings
+      - menu:
+        - generic: RMS Services
+        - menuitem "Real Estate Photography in Calgary":
+          - generic:
+            - text: Real Estate Photography
+            - generic: in Calgary
+        - menuitem "Real Estate Videography in Calgary":
+          - generic:
+            - text: Real Estate Videography
+            - generic: in Calgary
+        - menuitem "RMS Measurements & Floor Plans in Calgary":
+          - generic:
+            - text: RMS Measurements & Floor Plans
+            - generic: in Calgary
+        - menuitem "iGUIDE 3D Virtual Tours in Calgary":
+          - generic:
+            - text: iGUIDE 3D Virtual Tours
+            - generic: in Calgary
+        - menuitem "Drone Photography & Videography in Calgary":
+          - generic:
+            - text: Drone Photography & Videography
+            - generic: in Calgary
+        - generic: Additional Services
+        - menuitem "Virtual Staging in Calgary":
+          - generic:
+            - text: Virtual Staging
+            - generic: in Calgary
+        - menuitem "Twilight Photography in Calgary":
+          - generic:
+            - text: Twilight Photography
+            - generic: in Calgary
+        - menuitem "Style Shots in Calgary":
+          - generic:
+            - text: Style Shots
+            - generic: in Calgary
+        - menuitem "Marketing Kit for Realtors in Calgary":
+          - generic:
+            - text: Marketing Kit for Realtors
+            - generic: in Calgary
+        - menuitem "Property Websites in Calgary":
+          - generic:
+            - text: Property Websites
+            - generic: in Calgary
+        - menuitem "SmartSign QR Codes in Calgary":
+          - generic:
+            - text: SmartSign QR Codes
+            - generic: in Calgary
+        - generic: Commercial Services
+        - menuitem "Hotel Photography in Calgary":
+          - generic:
+            - text: Hotel Photography
+            - generic: in Calgary
+      - list:
+        - listitem:
+          - menuitem "Social Media Reel Generator in Calgary":
+            - generic:
+              - text: Social Media Reel Generator
+              - generic: in Calgary
+        - listitem:
+          - menuitem "Slideshow Generator in Calgary":
+            - generic:
+              - text: Slideshow Generator
+              - generic: in Calgary
+        - listitem:
+          - menuitem "Property Flyer Generator in Calgary":
+            - generic:
+              - text: Property Flyer Generator
+              - generic: in Calgary
+        - listitem:
+          - menuitem "QR Code Generator in Calgary":
+            - generic:
+              - text: QR Code Generator
+              - generic: in Calgary
+      - button "Open menu" [ref=f6e10]
+  - main [ref=f6e12]:
+    - navigation "Breadcrumb" [ref=f6e13]:
+      - list [ref=f6e15]:
+        - listitem [ref=f6e16]:
+          - link "Home" [ref=f6e17] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f6e20]:
+          - generic [ref=f6e21]: For Brokerages
+    - region [ref=f6e22]:
+      - generic [ref=f6e24]:
+        - generic [ref=f6e25]:
+          - generic [ref=f6e26]: For Calgary Brokerage & Team Owners
+          - heading [level=1] [ref=f6e27]:
+            - text: A Marketing Partner That Helps You
+            - emphasis [ref=f6e28]: Recruit and Keep
+            - text: Better Agents
+          - paragraph [ref=f6e29]: We help you give your agents more marketing capability without increasing your internal workload.
+          - generic [ref=f6e30]:
+            - link "Book A Discovery Call with Photos 4 Real Estate — opens in a new tab" [ref=f6e31] [cursor=pointer]:
+              - /url: https://api.leadconnectorhq.com/widget/booking/mywq1CTW4NjUVh54n950
+              - text: Book A Discovery Call
+              - generic [ref=f6e32]: with Photos 4 Real Estate — opens in a new tab
+            - link "See What Your Agents Get — visit the marketing kit for Calgary realtors" [ref=f6e35] [cursor=pointer]:
+              - /url: /services/marketing-kit-for-realtors
+              - text: See What Your Agents Get
+              - generic [ref=f6e36]: — visit the marketing kit for Calgary realtors
+        - list "Brokerage partner program highlights" [ref=f6e37]:
+          - listitem [ref=f6e38]:
+            - generic [ref=f6e39]: 8,600+
+            - generic [ref=f6e40]: Calgary REALTORS® competing for agents
+          - listitem [ref=f6e41]:
+            - generic [ref=f6e42]: $15K–$50K
+            - generic [ref=f6e43]: Cost of losing one agent
+          - listitem [ref=f6e44]:
+            - generic [ref=f6e45]: $0
+            - generic [ref=f6e46]: Cost to your brokerage
+    - region [ref=f6e47]:
+      - generic [ref=f6e49]:
+        - generic [ref=f6e50]:
+          - text: The Brokerage Challenge
+          - heading "Your agents need marketing support. Your brokerage doesn’t need another department." [level=2] [ref=f6e51]: Your agents need marketing support.Your brokerage doesn’t need another department.
+          - paragraph [ref=f6e52]: Agents are expected to market listings across MLS, social media, websites, email and print. But many agents don’t have the time, skills or tools to produce everything themselves.
+          - paragraph [ref=f6e53]: The brokerages winning in 2026 aren’t winning with a bigger commission split. They’re winning by removing friction and giving agents tools they actually use — starting with marketing. And with Calgary’s market shifting toward more balanced conditions this year, a listing’s presentation matters more directly to how fast — and for how much — a property sells.
+          - paragraph [ref=f6e54]:
+            - strong [ref=f6e55]: We help solve the marketing-production problem without asking your brokerage to build the solution itself.
+          - list "Why brokerage support matters" [ref=f6e56]:
+            - listitem [ref=f6e57]:
+              - generic [ref=f6e58]: 25%
+              - generic [ref=f6e59]: Rise in external agent moves, Q1 2026
+            - listitem [ref=f6e60]:
+              - generic [ref=f6e61]: 92%
+              - generic [ref=f6e62]: Retention for agents in active support programs
+            - listitem [ref=f6e63]:
+              - generic [ref=f6e64]: 55%
+              - generic [ref=f6e65]: Calgary’s sales-to-new-listings ratio in 2026
+        - generic [ref=f6e66]:
+          - article [ref=f6e67]:
+            - generic [ref=f6e68]: "01"
+            - heading "Too Much DIY Marketing" [level=3] [ref=f6e69]
+            - paragraph [ref=f6e70]: Agents often spend evenings resizing photos, making flyers, editing videos and building listing pages instead of working with clients.
+          - article [ref=f6e71]:
+            - generic [ref=f6e72]: "02"
+            - heading "Too Many Separate Vendors" [level=3] [ref=f6e73]
+            - paragraph [ref=f6e74]: Photography, measurements, tours, video, design and web tools can become a collection of disconnected services to coordinate.
+          - article [ref=f6e75]:
+            - generic [ref=f6e76]: "03"
+            - heading "Inconsistent Listing Presentation" [level=3] [ref=f6e77]
+            - paragraph [ref=f6e78]: When every agent uses different tools and templates, the quality of listing marketing can vary dramatically from one listing to the next.
+    - region [ref=f6e79]:
+      - generic [ref=f6e80]:
+        - generic [ref=f6e81]:
+          - text: What’s Included
+          - heading "What Every Agent At Your Brokerage Gets" [level=2] [ref=f6e82]
+          - paragraph [ref=f6e83]: Every shoot includes professional photography, video, drone, RMS measurements and iGUIDE 3D tours — plus a complete marketing kit at no extra cost to the agent or your office.
+        - generic [ref=f6e85]:
+          - article [ref=f6e86]:
+            - heading "Photography, Video & Drone" [level=3] [ref=f6e91]
+            - paragraph [ref=f6e92]: HDR interior/exterior photos, cinematic walkthroughs and licensed aerial coverage on every listing.
+            - generic [ref=f6e93]: Core Service
+          - article [ref=f6e94]:
+            - heading "RMS Floor Plans & iGUIDE Tours" [level=3] [ref=f6e102]
+            - paragraph [ref=f6e103]: RECA-compliant measurements and interactive 3D walkthroughs for accurate, buyer-ready listings.
+            - generic [ref=f6e104]: RECA-Compliant
+          - article [ref=f6e105]:
+            - heading "9 Social Media Reels" [level=3] [ref=f6e109]
+            - paragraph [ref=f6e110]: Ready-to-post 9:16 clips for Instagram, Facebook and TikTok — a week of content from one shoot.
+            - generic [ref=f6e111]: Included Free
+          - article [ref=f6e112]:
+            - heading "6 Branded Property Websites" [level=3] [ref=f6e117]
+            - paragraph [ref=f6e118]: Mobile-responsive single-property sites with a clean, shareable link — no setup required.
+            - generic [ref=f6e119]: Included Free
+          - article [ref=f6e120]:
+            - heading "3 Flyers + 2 Slideshows" [level=3] [ref=f6e125]
+            - paragraph [ref=f6e126]: Print-ready PDF flyers and animated slideshows for open houses, email and social sharing.
+            - generic [ref=f6e127]: Included Free
+          - article [ref=f6e128]:
+            - heading "7 SmartSign QR Codes" [level=3] [ref=f6e136]
+            - paragraph [ref=f6e137]: Reusable lead-capture yard sign codes with instant lead alerts and weekly scan analytics.
+            - generic [ref=f6e138]: Lead Alerts
+    - region [ref=f6e139]:
+      - generic [ref=f6e140]:
+        - generic [ref=f6e141]:
+          - text: The Data
+          - heading "Why Agents Actually Leave — And What Keeps Them" [level=2] [ref=f6e142]
+          - paragraph [ref=f6e143]: "Exit interviews usually blame commission splits. The research points somewhere else: operational friction, and whether an agent feels supported day to day."
+        - generic [ref=f6e144]:
+          - article [ref=f6e145]:
+            - generic [ref=f6e149]: $15K–$50K
+            - paragraph [ref=f6e150]: Cost of losing one agent, once recruiting, training and lost production are counted.
+          - article [ref=f6e151]:
+            - generic [ref=f6e155]: Marketing support
+            - paragraph [ref=f6e156]: Ranked above brokerage branding as the top reason agents say they stay, when asked directly.
+          - article [ref=f6e157]:
+            - generic [ref=f6e162]: +25%
+            - paragraph [ref=f6e163]: Rise in external agent moves quarter-over-quarter in early 2026 — mobility is accelerating.
+          - article [ref=f6e164]:
+            - generic [ref=f6e169]: 92% retention
+            - paragraph [ref=f6e170]: For agents who engage with active training and support programs, versus none.
+    - region [ref=f6e171]:
+      - generic [ref=f6e172]:
+        - generic [ref=f6e173]:
+          - text: Why It Matters to the Brokerage
+          - heading "Turn listing marketing into an agent-support advantage." [level=2] [ref=f6e174]
+          - paragraph [ref=f6e175]: The value isn’t only what the photographer delivers. It’s what your brokerage can offer agents as part of a stronger, more practical support system.
+        - generic [ref=f6e176]:
+          - article [ref=f6e177]:
+            - generic [ref=f6e178]: "01"
+            - heading "Strengthen Your Recruiting Story" [level=3] [ref=f6e179]
+            - paragraph [ref=f6e180]: "Give prospective agents another tangible benefit to consider when comparing brokerages: access to professional listing media and marketing tools."
+          - article [ref=f6e181]:
+            - generic [ref=f6e182]: "02"
+            - heading "Support Agents Without More Staff" [level=3] [ref=f6e183]
+            - paragraph [ref=f6e184]: Your team doesn't have to become a photography studio, design department, video agency and web-development shop.
+          - article [ref=f6e185]:
+            - generic [ref=f6e186]: "03"
+            - heading "Help New Agents Get Started" [level=3] [ref=f6e187]
+            - paragraph [ref=f6e188]: New agents can follow a straightforward listing-marketing workflow instead of learning a dozen separate platforms from scratch.
+          - article [ref=f6e189]:
+            - generic [ref=f6e190]: "04"
+            - heading "Promote a Higher Marketing Standard" [level=3] [ref=f6e191]
+            - paragraph [ref=f6e192]: Professional media and ready-made assets make it easier for agents to present listings consistently and professionally.
+          - article [ref=f6e193]:
+            - generic [ref=f6e194]: "05"
+            - heading "Add Technology Without Another Subscription" [level=3] [ref=f6e195]
+            - paragraph [ref=f6e196]: Property websites, free marketing generators and SmartSign QR add useful capabilities without asking agents to assemble their own stack.
+          - article [ref=f6e197]:
+            - generic [ref=f6e198]: "06"
+            - heading "Create a Better Agent Experience" [level=3] [ref=f6e199]
+            - paragraph [ref=f6e200]: When agents spend less time producing basic marketing materials, they can spend more time prospecting, communicating and serving clients.
+    - region [ref=f6e201]:
+      - generic [ref=f6e202]:
+        - generic [ref=f6e203]:
+          - text: The Value Stack
+          - heading "One listing shoot can become an entire marketing campaign." [level=2] [ref=f6e204]
+          - paragraph [ref=f6e205]: Instead of stopping when the photos are delivered, the workflow continues into social content, property pages, print materials and lead capture.
+        - generic [ref=f6e207]:
+          - article [ref=f6e208]:
+            - generic [ref=f6e209]:
+              - generic [ref=f6e210]: "01"
+              - generic [ref=f6e211]: ·
+              - generic [ref=f6e212]: Capture
+            - heading "Professional Media" [level=3] [ref=f6e213]
+            - paragraph [ref=f6e214]: Photos, iGUIDE, RMS, floor plans, drone and video options.
+            - generic: →
+          - article [ref=f6e215]:
+            - generic [ref=f6e216]:
+              - generic [ref=f6e217]: "02"
+              - generic [ref=f6e218]: ·
+              - generic [ref=f6e219]: Create
+            - heading "Marketing Assets" [level=3] [ref=f6e220]
+            - paragraph [ref=f6e221]: Reels, websites, flyers and slideshows generated from the listing.
+            - generic: →
+          - article [ref=f6e222]:
+            - generic [ref=f6e223]:
+              - generic [ref=f6e224]: "03"
+              - generic [ref=f6e225]: ·
+              - generic [ref=f6e226]: Promote
+            - heading "Share Everywhere" [level=3] [ref=f6e227]
+            - paragraph [ref=f6e228]: Social media, email, open houses, websites, print and direct messages.
+            - generic: →
+          - article [ref=f6e229]:
+            - generic [ref=f6e230]:
+              - generic [ref=f6e231]: "04"
+              - generic [ref=f6e232]: ·
+              - generic [ref=f6e233]: Capture
+            - heading "Buyer Interest" [level=3] [ref=f6e234]
+            - paragraph [ref=f6e235]: SmartSign QR and property-page forms help turn attention into measurable inquiries.
+    - region [ref=f6e236]:
+      - generic [ref=f6e237]:
+        - generic [ref=f6e238]:
+          - text: The Offer
+          - heading "The Brokerage Partner Program" [level=2] [ref=f6e239]
+          - paragraph [ref=f6e240]: A simple partnership for brokerages and teams that want to offer this to their whole office — without adding a vendor to manage or a line item to budget for.
+        - generic [ref=f6e241]:
+          - article [ref=f6e242]:
+            - heading "Brokerage Discount Code" [level=3] [ref=f6e247]
+            - paragraph [ref=f6e248]: A code branded to your office that every agent can use — stacking with our rewards program.
+          - article [ref=f6e249]:
+            - heading "A Free Session For Your Office" [level=3] [ref=f6e256]
+            - paragraph [ref=f6e257]: A short, no-cost walkthrough for your agents showing them how to use the free marketing kit.
+          - article [ref=f6e258]:
+            - heading "New-Agent Onboarding Kit" [level=3] [ref=f6e263]
+            - paragraph [ref=f6e264]: A simple one-pager for your onboarding package, so new agents know about this from day one.
+          - article [ref=f6e265]:
+            - heading "Consistent, RECA-Compliant Standards" [level=3] [ref=f6e270]
+            - paragraph [ref=f6e271]: Every listing under your brokerage meets the same professional standard — every agent, not just your top producers.
+    - region [ref=f6e272]:
+      - generic [ref=f6e274]:
+        - generic [ref=f6e275]:
+          - text: The Fine Print
+          - heading [level=2] [ref=f6e276]:
+            - text: What This Costs Your Brokerage.
+            - emphasis [ref=f6e277]: Nothing.
+          - paragraph [ref=f6e278]: Each agent books and pays for their own shoot, the same way they would with any photographer. The brokerage-level benefits — the discount code, onboarding materials, and office session — don’t add a cost or a bill.
+          - generic "Brokerage partner program fine print" [ref=f6e279]:
+            - generic [ref=f6e280]: No contract
+            - generic [ref=f6e281]: No exclusivity required
+            - generic [ref=f6e282]: Agent-paid, not brokerage-billed
+            - generic [ref=f6e283]: Cancel anytime
+        - generic [ref=f6e284]:
+          - generic [ref=f6e285]: Cost to your brokerage
+          - generic [ref=f6e286]:
+            - superscript: $
+            - text: "0"
+          - generic [ref=f6e287]: Agents book & pay individually — always
+          - generic [ref=f6e288]:
+            - link "Book a Consultation for the Photos 4 Real Estate brokerage partner program" [ref=f6e289] [cursor=pointer]:
+              - /url: https://app.photos4realestate.ca/book/cmfwsiyl30000jo04z3lcndl3
+              - text: Book a Consultation
+              - generic [ref=f6e290]: for the Photos 4 Real Estate brokerage partner program
+            - link "Download the One-Pager for the Photos 4 Real Estate brokerage partner program" [ref=f6e291] [cursor=pointer]:
+              - /url: /contact-us
+              - text: Download the One-Pager
+              - generic [ref=f6e292]: for the Photos 4 Real Estate brokerage partner program
+    - region [ref=f6e293]:
+      - generic [ref=f6e295]:
+        - generic [ref=f6e296]:
+          - text: Is This You?
+          - heading "Who This Is For" [level=2] [ref=f6e297]
+          - paragraph [ref=f6e298]: Our Brokerage Partner Program is built for offices that want a genuine recruiting and retention advantage — without adding a marketing budget line.
+          - list "Who the brokerage partner program is for" [ref=f6e299]:
+            - listitem [ref=f6e300]:
+              - generic [ref=f6e303]: Independent brokerages competing without a big-franchise budget
+            - listitem [ref=f6e304]:
+              - generic [ref=f6e307]: Boutique offices that need a stronger recruiting story
+            - listitem [ref=f6e308]:
+              - generic [ref=f6e311]: Growing teams onboarding new agents every quarter
+            - listitem [ref=f6e312]:
+              - generic [ref=f6e315]: Franchise offices wanting a genuine no-cost member benefit
+            - listitem [ref=f6e316]:
+              - generic [ref=f6e319]: Brokerages that want every listing to look consistent
+            - listitem [ref=f6e320]:
+              - generic [ref=f6e323]: Owners tired of inconsistent photos hurting their brand
+          - generic [ref=f6e330]:
+            - heading "Get the Brokerage One-Pager" [level=3] [ref=f6e331]
+            - paragraph [ref=f6e332]:
+              - text: A short PDF summary you can forward to your leadership team.
+              - link "Download it here" [ref=f6e333] [cursor=pointer]:
+                - /url: /contact-us
+                - text: Download it here →
+        - generic [ref=f6e334]:
+          - img "Broker or owner portrait, or an office team photo" [ref=f6e335]:
+            - generic [ref=f6e337]: → broker-owner-office-portrait.jpg
+          - img "Onboarding folder or welcome kit" [ref=f6e338]:
+            - generic [ref=f6e340]: → new-agent-onboarding-folder.jpg
+    - region [ref=f6e341]:
+      - generic [ref=f6e342]:
+        - generic [ref=f6e343]:
+          - text: How It Works
+          - heading "From First Call to a Live Partnership" [level=2] [ref=f6e344]
+          - paragraph [ref=f6e345]: No setup, no extra tools to learn — just a short conversation and a tailored program.
+        - generic [ref=f6e346]:
+          - generic [ref=f6e347]:
+            - generic [ref=f6e348]: "01"
+            - heading "Book a 15-Minute Call" [level=3] [ref=f6e349]
+            - paragraph [ref=f6e350]: Tell us about your office and what would actually help your agents.
+          - generic [ref=f6e354]:
+            - generic [ref=f6e355]: "02"
+            - heading "We Tailor the Partnership" [level=3] [ref=f6e356]
+            - paragraph [ref=f6e357]: A discount code, onboarding kit, and/or a short session for your agents.
+          - generic [ref=f6e361]:
+            - generic [ref=f6e362]: "03"
+            - heading "We Present to Your Office" [level=3] [ref=f6e363]
+            - paragraph [ref=f6e364]: A quick, practical walkthrough at your next meeting — optional, and no sales pitch.
+          - generic [ref=f6e368]:
+            - generic [ref=f6e369]: "04"
+            - heading "Your Agents Start Booking" [level=3] [ref=f6e370]
+            - paragraph [ref=f6e371]: With your brokerage's discount and perks already built in.
+    - region [ref=f6e372]:
+      - generic [ref=f6e373]:
+        - generic [ref=f6e374]:
+          - generic [ref=f6e375]:
+            - text: Calgary Reviews
+            - heading [level=2] [ref=f6e376]:
+              - text: What Calgary agents say about
+              - emphasis [ref=f6e377]: Photos 4 Real Estate
+          - complementary "Google rating summary" [ref=f6e378]:
+            - generic [ref=f6e379]: Excellent
+            - generic [ref=f6e391]:
+              - strong [ref=f6e392]: "5.0"
+              - text: based on 24 reviews
+            - link "Read Google reviews for Photos 4 Real Estate" [ref=f6e393] [cursor=pointer]:
+              - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic [ref=f6e399]: Google Reviews
+        - generic [ref=f6e401]:
+          - generic [ref=f6e402]:
+            - article [ref=f6e403]:
+              - generic [ref=f6e404]:
+                - generic [ref=f6e405]:
+                  - img "Nicole Jensen Google review profile photo" [ref=f6e406]
+                  - generic [ref=f6e407]:
+                    - generic [ref=f6e408]: Nicole Jensen
+                    - generic [ref=f6e409]: August 2026
+                - link "Read more Google reviews from Nicole Jensen" [ref=f6e410] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e416]
+              - paragraph [ref=f6e427]: Iryna was great. Very professional, friendly and skilled. She was quick to get us the photos (within 24 hours) and I appreciated her extra care and attention with touching up a few of the photos. Her virtual staging was exactly what we wanted. I highly recommend Photos4RealEstate!
+              - link "Read Nicole Jensen's full Google review for Photos 4 Real Estate" [ref=f6e428] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e429]: from Nicole Jensen on Google
+            - article [ref=f6e430]:
+              - generic [ref=f6e431]:
+                - generic [ref=f6e432]:
+                  - img "Leane EL Haddaoui Google review profile photo" [ref=f6e433]
+                  - generic [ref=f6e434]:
+                    - generic [ref=f6e435]: Leane EL Haddaoui
+                    - generic [ref=f6e436]: August 2026
+                - link "Read more Google reviews from Leane EL Haddaoui" [ref=f6e437] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e443]
+              - paragraph [ref=f6e454]: I recently used this company for real estate photography, measurements, and video on my newest listing in McKenzie Towne, and I couldn’t be happier with the results. They were absolutely fantastic from start to finish. The photos and video were incredibly professional, and the measurements were accurate and completed quickly.I would highly recommend them to any of my fellow Realtors looking for high-quality marketing services. Their pricing is very reasonable, the service is outstanding, and the final product exceeded my expectations. You will not be disappointed!
+              - link "Read Leane EL Haddaoui's full Google review for Photos 4 Real Estate" [ref=f6e455] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e456]: from Leane EL Haddaoui on Google
+            - article [ref=f6e457]:
+              - generic [ref=f6e458]:
+                - generic [ref=f6e459]:
+                  - img "Alex Shemetov Google review profile photo" [ref=f6e460]
+                  - generic [ref=f6e461]:
+                    - generic [ref=f6e462]: Alex Shemetov
+                    - generic [ref=f6e463]: July 2026
+                - link "Read more Google reviews from Alex Shemetov" [ref=f6e464] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e470]
+              - paragraph [ref=f6e481]: Great experience with photos4real estate. I would recommend them without any hesitation!
+              - link "Read Alex Shemetov's full Google review for Photos 4 Real Estate" [ref=f6e482] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e483]: from Alex Shemetov on Google
+            - article [ref=f6e484]:
+              - generic [ref=f6e485]:
+                - generic [ref=f6e486]:
+                  - img "Sheryl Johnston Google review profile photo" [ref=f6e487]
+                  - generic [ref=f6e488]:
+                    - generic [ref=f6e489]: Sheryl Johnston
+                    - generic [ref=f6e490]: July 2026
+                - link "Read more Google reviews from Sheryl Johnston" [ref=f6e491] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e497]
+              - paragraph [ref=f6e508]: Iryna and team are always so prompt and efficient when it’s time to book photos/measurements/360 tour/and drone photos. They take the time to capture great photos of the properties and their turn around time is quick as well. I like it that they pre make up social media reels and webpages to feature listings as well. Very happy with their services.
+              - link "Read Sheryl Johnston's full Google review for Photos 4 Real Estate" [ref=f6e509] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e510]: from Sheryl Johnston on Google
+            - article [ref=f6e511]:
+              - generic [ref=f6e512]:
+                - generic [ref=f6e513]:
+                  - img "Val Thoummarath Google review profile photo" [ref=f6e514]
+                  - generic [ref=f6e515]:
+                    - generic [ref=f6e516]: Val Thoummarath
+                    - generic [ref=f6e517]: July 2026
+                - link "Read more Google reviews from Val Thoummarath" [ref=f6e518] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e524]
+              - paragraph [ref=f6e535]: Thank you Iryna for your consistent, hard work and professionalism. I loved the photos, reels, slideshows, 3D tours, flyers, floor plans, RMS measurements, drones, bonuses, and the different packages to make the marketing simple! Your Team is very skillful and knowledgeable for our real estate business. You are highly recommended!
+              - link "Read Val Thoummarath's full Google review for Photos 4 Real Estate" [ref=f6e536] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e537]: from Val Thoummarath on Google
+            - article [ref=f6e538]:
+              - generic [ref=f6e539]:
+                - generic [ref=f6e540]:
+                  - img "Saphir Binti Google review profile photo" [ref=f6e541]
+                  - generic [ref=f6e542]:
+                    - generic [ref=f6e543]: Saphir Binti
+                    - generic [ref=f6e544]: June 2026
+                - link "Read more Google reviews from Saphir Binti" [ref=f6e545] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e551]
+              - paragraph [ref=f6e562]: I had an amazing experience working with Iryna and her team for my listing. The service exceeded my expectations from start to finish. They provided professional photography, measurements, and a virtual tour, all delivered with great attention to detail and quality. What truly stood out was that Iryna went above and beyond by creating social media reels for my listing at no additional cost. This was an unexpected bonus that added tremendous value and helped showcase the property in a modern and engaging way. Her professionalism, responsiveness, and commitment to delivering exceptional results made the entire process smooth and stress-free. I highly recommend Iryna’s business to any realtor or homeowner looking for top-quality listing media and marketing services. Thank you, Iryna, for your outstanding work! 👏🏽🏡✨
+              - link "Read Saphir Binti's full Google review for Photos 4 Real Estate" [ref=f6e563] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e564]: from Saphir Binti on Google
+            - article [ref=f6e565]:
+              - generic [ref=f6e566]:
+                - generic [ref=f6e567]:
+                  - img "VirtualDeskYYC Google review profile photo" [ref=f6e568]
+                  - generic [ref=f6e569]:
+                    - generic [ref=f6e570]: VirtualDeskYYC
+                    - generic [ref=f6e571]: June 2026
+                - link "Read more Google reviews from VirtualDeskYYC" [ref=f6e572] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e578]
+              - paragraph [ref=f6e589]: I've worked with Irina multiple times, and she consistently delivers exceptional results. She is professional, reliable, and always provides a very quick turnaround time, which I really appreciate. Her photography beautifully showcases each property and helps every listing stand out. She’s a pleasure to work with, and I’ll definitely continue working with her in the future. Highly recommend! - On behalf of Gary Mr. Action Fayerman
+              - link "Read VirtualDeskYYC's full Google review for Photos 4 Real Estate" [ref=f6e590] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e591]: from VirtualDeskYYC on Google
+            - article [ref=f6e592]:
+              - generic [ref=f6e593]:
+                - generic [ref=f6e594]:
+                  - img "Rui Torneiro Google review profile photo" [ref=f6e595]
+                  - generic [ref=f6e596]:
+                    - generic [ref=f6e597]: Rui Torneiro
+                    - generic [ref=f6e598]: June 2026
+                - link "Read more Google reviews from Rui Torneiro" [ref=f6e599] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e605]
+              - paragraph [ref=f6e616]: I have used Photos 4 Real Estate for my last few listing and they were very proficient and reliable. Iryna was very professional and invested in made sure to get some great pictures of the home.I would highly recommend using Photos 4 Real Estate!!
+              - link "Read Rui Torneiro's full Google review for Photos 4 Real Estate" [ref=f6e617] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e618]: from Rui Torneiro on Google
+            - article [ref=f6e619]:
+              - generic [ref=f6e620]:
+                - generic [ref=f6e621]:
+                  - img "Al Hamza Google review profile photo" [ref=f6e622]
+                  - generic [ref=f6e623]:
+                    - generic [ref=f6e624]: Al Hamza
+                    - generic [ref=f6e625]: May 2026
+                - link "Read more Google reviews from Al Hamza" [ref=f6e626] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e632]
+              - paragraph [ref=f6e643]: amazing service, super affordable rates, and perfect quality of imagery, They go above and beyond.
+              - link "Read Al Hamza's full Google review for Photos 4 Real Estate" [ref=f6e644] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e645]: from Al Hamza on Google
+            - article [ref=f6e646]:
+              - generic [ref=f6e647]:
+                - generic [ref=f6e648]:
+                  - img "Christopher Ramage Google review profile photo" [ref=f6e649]
+                  - generic [ref=f6e650]:
+                    - generic [ref=f6e651]: Christopher Ramage
+                    - generic [ref=f6e652]: May 2026
+                - link "Read more Google reviews from Christopher Ramage" [ref=f6e653] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e659]
+              - paragraph [ref=f6e670]: Great photos and experience overall. Would highly recommend!
+              - link "Read Christopher Ramage's full Google review for Photos 4 Real Estate" [ref=f6e671] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e672]: from Christopher Ramage on Google
+            - article [ref=f6e673]:
+              - generic [ref=f6e674]:
+                - generic [ref=f6e675]:
+                  - img "Denis Kirilenko Google review profile photo" [ref=f6e676]
+                  - generic [ref=f6e677]:
+                    - generic [ref=f6e678]: Denis Kirilenko
+                    - generic [ref=f6e679]: April 2026
+                - link "Read more Google reviews from Denis Kirilenko" [ref=f6e680] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e686]
+              - paragraph [ref=f6e697]: Excellent quality photos. Iryna is highly reliable and takes pride in her job. Highly recommend.
+              - link "Read Denis Kirilenko's full Google review for Photos 4 Real Estate" [ref=f6e698] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e699]: from Denis Kirilenko on Google
+            - article [ref=f6e700]:
+              - generic [ref=f6e701]:
+                - generic [ref=f6e702]:
+                  - img "Cliff Yee Google review profile photo" [ref=f6e703]
+                  - generic [ref=f6e704]:
+                    - generic [ref=f6e705]: Cliff Yee
+                    - generic [ref=f6e706]: March 2026
+                - link "Read more Google reviews from Cliff Yee" [ref=f6e707] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e713]
+              - paragraph [ref=f6e724]: Iryna and team do amazing work. They were punctual, professional and efficient when they arrived to measure and take photos of my home. The turn around time was amazing too as we got photos and RMS plans back after just one day! Iryna also responded immediately via email whenever I had questions. Highly recommend this company and will be referring all my friends, family and colleagues needing real estate media including professional photos, iGuide virtual 3D tours, RMS measurements, website, reels or fliers. Everything they delivered was excellent!
+              - link "Read Cliff Yee's full Google review for Photos 4 Real Estate" [ref=f6e725] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e726]: from Cliff Yee on Google
+            - article [ref=f6e727]:
+              - generic [ref=f6e728]:
+                - generic [ref=f6e729]:
+                  - img "Anh Ta Google review profile photo" [ref=f6e730]
+                  - generic [ref=f6e731]:
+                    - generic [ref=f6e732]: Anh Ta
+                    - generic [ref=f6e733]: March 2026
+                - link "Read more Google reviews from Anh Ta" [ref=f6e734] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e740]
+              - paragraph [ref=f6e751]: It was a pleasure working with Iryna and Vladimir at Photos 4 Real Estate. They were professional, easy to coordinate with, and the photos turned out beautifully. There’s something about their photography that feels warm and inviting, which I really love. I look forward to working with them again.
+              - link "Read Anh Ta's full Google review for Photos 4 Real Estate" [ref=f6e752] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e753]: from Anh Ta on Google
+            - article [ref=f6e754]:
+              - generic [ref=f6e755]:
+                - generic [ref=f6e756]:
+                  - img "Heather Cleveland Google review profile photo" [ref=f6e757]
+                  - generic [ref=f6e758]:
+                    - generic [ref=f6e759]: Heather Cleveland
+                    - generic [ref=f6e760]: November 2025
+                - link "Read more Google reviews from Heather Cleveland" [ref=f6e761] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e767]
+              - paragraph [ref=f6e778]: I had the pleasure of working with Iryna at Photos 4 Real Estate. They were extremely helpful, great communication, and I appreciate the extra value they provide with reels and a property website.
+              - link "Read Heather Cleveland's full Google review for Photos 4 Real Estate" [ref=f6e779] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e780]: from Heather Cleveland on Google
+            - article [ref=f6e781]:
+              - generic [ref=f6e782]:
+                - generic [ref=f6e783]:
+                  - img "Lucas Czarnecki Google review profile photo" [ref=f6e784]
+                  - generic [ref=f6e785]:
+                    - generic [ref=f6e786]: Lucas Czarnecki
+                    - generic [ref=f6e787]: November 2025
+                - link "Read more Google reviews from Lucas Czarnecki" [ref=f6e788] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e794]
+              - paragraph [ref=f6e805]: Iryna and Vlad from Photos 4 Real Estate were exceptionally professional. We were delighted with their responsiveness, flexibility, and the quality of their work. The photos, RMS measurements, aerial photographs, floor plans, and the 3D virtual tour all exceeded our expectations. We would not hesitate to use their services again in the future.
+              - link "Read Lucas Czarnecki's full Google review for Photos 4 Real Estate" [ref=f6e806] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e807]: from Lucas Czarnecki on Google
+            - article [ref=f6e808]:
+              - generic [ref=f6e809]:
+                - generic [ref=f6e810]:
+                  - img "A K Google review profile photo" [ref=f6e811]
+                  - generic [ref=f6e812]:
+                    - generic [ref=f6e813]: A K
+                    - generic [ref=f6e814]: September 2025
+                - link "Read more Google reviews from A K" [ref=f6e815] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e821]
+              - paragraph [ref=f6e832]: I’ve worked with more than one real estate photographer in Calgary, and Photos 4 Real Estate has been the best by far. She took her time, captured beautiful shots, and really has an eye for showcasing a home. The photos turned out fantastic and made a huge difference. Highly recommend!
+              - link "Read A K's full Google review for Photos 4 Real Estate" [ref=f6e833] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e834]: from A K on Google
+            - article [ref=f6e835]:
+              - generic [ref=f6e836]:
+                - generic [ref=f6e837]:
+                  - img "Gary Brand Google review profile photo" [ref=f6e838]
+                  - generic [ref=f6e839]:
+                    - generic [ref=f6e840]: Gary Brand
+                    - generic [ref=f6e841]: August 2025
+                - link "Read more Google reviews from Gary Brand" [ref=f6e842] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e848]
+              - paragraph [ref=f6e859]: Iryna and Vlad did an outstanding job — Iryna’s attention to detail in setting up the photos was impressive, and Vlad’s drone shots truly showcased the property beautifully.
+              - link "Read Gary Brand's full Google review for Photos 4 Real Estate" [ref=f6e860] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e861]: from Gary Brand on Google
+            - article [ref=f6e862]:
+              - generic [ref=f6e863]:
+                - generic [ref=f6e864]:
+                  - img "Kate T Google review profile photo" [ref=f6e865]
+                  - generic [ref=f6e866]:
+                    - generic [ref=f6e867]: Kate T
+                    - generic [ref=f6e868]: July 2025
+                - link "Read more Google reviews from Kate T" [ref=f6e869] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e875]
+              - paragraph [ref=f6e886]: I had a fantastic experience working with Iryna as real estate photographer! She delivered high-quality house photos and stunning drone shots that really made our listing stand out. Everything was done on time and with great professionalism. Communication was quick, clear, and always positive. Highly recommend her services!
+              - link "Read Kate T's full Google review for Photos 4 Real Estate" [ref=f6e887] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e888]: from Kate T on Google
+            - article [ref=f6e889]:
+              - generic [ref=f6e890]:
+                - generic [ref=f6e891]:
+                  - img "Antonio Guzman Google review profile photo" [ref=f6e892]
+                  - generic [ref=f6e893]:
+                    - generic [ref=f6e894]: Antonio Guzman
+                    - generic [ref=f6e895]: July 2025
+                - link "Read more Google reviews from Antonio Guzman" [ref=f6e896] [cursor=pointer]:
+                  - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+              - generic "5 out of 5 stars" [ref=f6e902]
+              - paragraph [ref=f6e913]: I want to give a big thank you to Vlad and Iryna for their outstanding work. The quality of the photos and videos they took of my home truly exceeded my expectations. Their attention to detail, creativity, and professionalism really stood out. They captured the space beautifully and brought out its best features in a way that feels both artistic and authentic. I couldn’t be happier with the results — highly recommended!
+              - link "Read Antonio Guzman's full Google review for Photos 4 Real Estate" [ref=f6e914] [cursor=pointer]:
+                - /url: https://g.page/r/CfdYTRLO_KYdEBM/review
+                - text: Read more
+                - generic [ref=f6e915]: from Antonio Guzman on Google
+          - generic "Review carousel pagination" [ref=f6e916]:
+            - button "Show review 1" [pressed] [ref=f6e917] [cursor=pointer]
+            - button "Show review 2" [ref=f6e918] [cursor=pointer]
+            - button "Show review 3" [ref=f6e919] [cursor=pointer]
+            - button "Show review 4" [ref=f6e920] [cursor=pointer]
+            - button "Show review 5" [ref=f6e921] [cursor=pointer]
+            - button "Show review 6" [ref=f6e922] [cursor=pointer]
+            - button "Show review 7" [ref=f6e923] [cursor=pointer]
+            - button "Show review 8" [ref=f6e924] [cursor=pointer]
+            - button "Show review 9" [ref=f6e925] [cursor=pointer]
+            - button "Show review 10" [ref=f6e926] [cursor=pointer]
+            - button "Show review 11" [ref=f6e927] [cursor=pointer]
+            - button "Show review 12" [ref=f6e928] [cursor=pointer]
+            - button "Show review 13" [ref=f6e929] [cursor=pointer]
+            - button "Show review 14" [ref=f6e930] [cursor=pointer]
+            - button "Show review 15" [ref=f6e931] [cursor=pointer]
+            - button "Show review 16" [ref=f6e932] [cursor=pointer]
+            - button "Show review 17" [ref=f6e933] [cursor=pointer]
+            - button "Show review 18" [ref=f6e934] [cursor=pointer]
+            - button "Show review 19" [ref=f6e935] [cursor=pointer]
+    - region [ref=f6e936]:
+      - generic [ref=f6e938]:
+        - generic [ref=f6e939]:
+          - text: FAQ
+          - heading "Brokerage Partnership FAQ" [level=2] [ref=f6e940]
+          - paragraph [ref=f6e941]:
+            - text: Everything owners ask before rolling this out to their office. Have a question not covered here? Call or text us at
+            - link "Call or text Photos 4 Real Estate at (825) 449-5001" [ref=f6e942] [cursor=pointer]:
+              - /url: tel:+18254495001
+              - text: (825) 449-5001
+            - text: .
+          - link "View all FAQs about the Photos 4 Real Estate brokerage partner program for Calgary" [ref=f6e943] [cursor=pointer]:
+            - /url: /faq
+            - text: All FAQs
+            - generic [ref=f6e944]: about the Photos 4 Real Estate brokerage partner program for Calgary
+        - generic [ref=f6e945]:
+          - generic [ref=f6e946]:
+            - button "Does this cost our brokerage anything?" [expanded] [ref=f6e947] [cursor=pointer]
+            - region "Does this cost our brokerage anything?" [ref=f6e952]:
+              - generic [ref=f6e953]: No. Agents pay individually per shoot, the same way they would with any photographer — the brokerage-level perks are free to offer and never billed to the office.
+          - generic [ref=f6e954]:
+            - button "Do you require exclusivity?" [ref=f6e955] [cursor=pointer]
+            - region "Do you require exclusivity?":
+              - generic: No. We're happy to be an option your agents can choose — there's no mandate and no exclusivity requirement.
+          - generic [ref=f6e960]:
+            - button "Can agents who already use another photographer switch?" [ref=f6e961] [cursor=pointer]
+            - region "Can agents who already use another photographer switch?":
+              - generic: Yes, anytime — there's no contract or lock-in for individual agents.
+          - generic [ref=f6e966]:
+            - button "Do you work with teams as well as full brokerages?" [ref=f6e967] [cursor=pointer]
+            - region "Do you work with teams as well as full brokerages?":
+              - generic: Yes — the same partnership works for a 5-agent team or a 150-agent brokerage.
+          - generic [ref=f6e972]:
+            - button "Can we customize the discount or onboarding materials?" [ref=f6e973] [cursor=pointer]
+            - region "Can we customize the discount or onboarding materials?":
+              - generic: Yes — we'll tailor the code, materials and presentation to your office and your agents.
+          - generic [ref=f6e978]:
+            - button "How is this different from just recommending a photographer?" [ref=f6e979] [cursor=pointer]
+            - region "How is this different from just recommending a photographer?":
+              - generic: "It's formalized: a branded code, tracked bookings, onboarding materials, and — if useful — a recurring session for new agents. A real program, not a one-off referral."
+    - region [ref=f6e984]:
+      - generic [ref=f6e985]:
+        - generic [ref=f6e986]: Ready to Talk?
+        - heading "Give Your Agents a Reason to Stay — and New Agents a Reason to Join" [level=2] [ref=f6e987]
+        - paragraph [ref=f6e988]: Book a short, no-obligation conversation and we’ll tailor a Brokerage Partner Program for your office.
+        - generic [ref=f6e989]:
+          - link "Book a Brokerage Consultation to discuss the Photos 4 Real Estate brokerage partner program" [ref=f6e990] [cursor=pointer]:
+            - /url: https://app.photos4realestate.ca/book/cmfwsiyl30000jo04z3lcndl3
+            - text: Book a Brokerage Consultation
+            - generic [ref=f6e991]: to discuss the Photos 4 Real Estate brokerage partner program
+          - link "Download the One-Pager for the Photos 4 Real Estate brokerage partner program" [ref=f6e994] [cursor=pointer]:
+            - /url: /contact-us
+            - text: Download the One-Pager
+            - generic [ref=f6e995]: for the Photos 4 Real Estate brokerage partner program
+        - generic [ref=f6e996]:
+          - generic [ref=f6e997]:
+            - text: Call
+            - link "Call Photos 4 Real Estate at (825) 449-5001" [ref=f6e998] [cursor=pointer]:
+              - /url: tel:+18254495001
+              - text: (825) 449-5001
+          - generic [ref=f6e999]:
+            - text: Email
+            - link "Email Photos 4 Real Estate at info@photos4realestate.ca" [ref=f6e1000] [cursor=pointer]:
+              - /url: mailto:info@photos4realestate.ca
+              - text: info@photos4realestate.ca
+          - link "Serving Calgary & surrounding areas" [ref=f6e1002] [cursor=pointer]:
+            - /url: /service-areas
+  - contentinfo [ref=f6e1003]:
+    - generic [ref=f6e1004]:
+      - generic [ref=f6e1005]:
+        - generic [ref=f6e1006]:
+          - link "Photos 4 Real Estate home" [ref=f6e1007] [cursor=pointer]:
+            - /url: /
+            - img "Photos 4 Real Estate map-pin logo" [ref=f6e1008]
+            - generic [ref=f6e1009]:
+              - text: Photos
+              - emphasis [ref=f6e1010]: "4"
+              - text: Real Estate
+          - paragraph [ref=f6e1011]: Professional real estate photography, videography, drone, 3D tours and RMS floor plans in Calgary and surrounding areas.
+          - generic [ref=f6e1012]:
+            - generic [ref=f6e1013]:
+              - generic [ref=f6e1014]: Phone
+              - link "(825) 449-5001" [ref=f6e1015] [cursor=pointer]:
+                - /url: tel:+18254495001
+            - generic [ref=f6e1016]:
+              - generic [ref=f6e1017]: Email
+              - link "info@photos4realestate.ca" [ref=f6e1018] [cursor=pointer]:
+                - /url: mailto:info@photos4realestate.ca
+            - generic [ref=f6e1019]:
+              - generic [ref=f6e1020]: Follow Us
+              - generic "Follow us on social media" [ref=f6e1021]:
+                - link "Follow Photos 4 Real Estate on Facebook" [ref=f6e1022] [cursor=pointer]:
+                  - /url: https://www.facebook.com/photos4re
+                - link "Follow Photos 4 Real Estate on Instagram" [ref=f6e1025] [cursor=pointer]:
+                  - /url: https://www.instagram.com/photos4re/
+        - generic [ref=f6e1030]:
+          - heading "Services" [level=4] [ref=f6e1031]
+          - list [ref=f6e1032]:
+            - listitem [ref=f6e1033]:
+              - link "Real Estate Photography" [ref=f6e1034] [cursor=pointer]:
+                - /url: /services/real-estate-photography-in-calgary
+            - listitem [ref=f6e1035]:
+              - link "Real Estate Videography" [ref=f6e1036] [cursor=pointer]:
+                - /url: /services/real-estate-videos-in-calgary
+            - listitem [ref=f6e1037]:
+              - link "RMS Measurements & Floor Plans" [ref=f6e1038] [cursor=pointer]:
+                - /url: /services/rms-measurements-and-floor-plans-in-calgary
+            - listitem [ref=f6e1039]:
+              - link "iGUIDE 3D Virtual Tours" [ref=f6e1040] [cursor=pointer]:
+                - /url: /services/iguide-virtual-tours-in-calgary
+            - listitem [ref=f6e1041]:
+              - link "Drone Photography & Videography" [ref=f6e1042] [cursor=pointer]:
+                - /url: /services/real-estate-aerial-drone-photography-in-calgary
+            - listitem [ref=f6e1043]:
+              - link "Virtual Staging" [ref=f6e1044] [cursor=pointer]:
+                - /url: /services/virtual-staging
+            - listitem [ref=f6e1045]:
+              - link "Twilight Photography" [ref=f6e1046] [cursor=pointer]:
+                - /url: /services/twilight-photography-for-real-estate-in-calgary
+            - listitem [ref=f6e1047]:
+              - link "Style Shots" [ref=f6e1048] [cursor=pointer]:
+                - /url: /services/style-shots
+            - listitem [ref=f6e1049]:
+              - link "Marketing Kit for Realtors" [ref=f6e1050] [cursor=pointer]:
+                - /url: /services/marketing-kit-for-realtors
+            - listitem [ref=f6e1051]:
+              - link "Hotel Photography" [ref=f6e1052] [cursor=pointer]:
+                - /url: /services/hotel-photography
+        - generic [ref=f6e1053]:
+          - heading "Quick Links" [level=4] [ref=f6e1054]
+          - list [ref=f6e1055]:
+            - listitem [ref=f6e1056]:
+              - link "Prices & Packages" [ref=f6e1057] [cursor=pointer]:
+                - /url: /prices
+            - listitem [ref=f6e1058]:
+              - link "Portfolio" [ref=f6e1059] [cursor=pointer]:
+                - /url: /portfolio
+            - listitem [ref=f6e1060]:
+              - link "Free Realtor Tools" [ref=f6e1061] [cursor=pointer]:
+                - /url: /free-tools
+            - listitem [ref=f6e1062]:
+              - link "Blog" [ref=f6e1063] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=f6e1064]:
+              - link "About Us" [ref=f6e1065] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f6e1066]:
+              - link "Why Choose Us" [ref=f6e1067] [cursor=pointer]:
+                - /url: /real-estate-photography-comparison-calgary
+            - listitem [ref=f6e1068]:
+              - link "Photoshoot Checklist" [ref=f6e1069] [cursor=pointer]:
+                - /url: /photoshoot-checklist
+            - listitem [ref=f6e1070]:
+              - link "Points & Rewards" [ref=f6e1071] [cursor=pointer]:
+                - /url: /points-rewards
+            - listitem [ref=f6e1072]:
+              - link "FAQ" [ref=f6e1073] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=f6e1074]:
+              - link "Contact" [ref=f6e1075] [cursor=pointer]:
+                - /url: /contact-us
+        - generic [ref=f6e1076]:
+          - heading "Service Areas" [level=4] [ref=f6e1077]
+          - list [ref=f6e1078]:
+            - listitem [ref=f6e1079]:
+              - link "Calgary" [ref=f6e1080] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f6e1081]:
+              - link "Okotoks" [ref=f6e1082] [cursor=pointer]:
+                - /url: /service-areas/okotoks
+            - listitem [ref=f6e1083]:
+              - link "Airdrie" [ref=f6e1084] [cursor=pointer]:
+                - /url: /service-areas/airdrie
+            - listitem [ref=f6e1085]:
+              - link "Cochrane" [ref=f6e1086] [cursor=pointer]:
+                - /url: /service-areas/cochrane
+            - listitem [ref=f6e1087]:
+              - link "Chestermere" [ref=f6e1088] [cursor=pointer]:
+                - /url: /service-areas/chestermere
+            - listitem [ref=f6e1089]:
+              - link "High River" [ref=f6e1090] [cursor=pointer]:
+                - /url: /service-areas/high-river
+            - listitem [ref=f6e1091]:
+              - link "Springbank" [ref=f6e1092] [cursor=pointer]:
+                - /url: /service-areas/springbank
+            - listitem [ref=f6e1093]:
+              - link "Bearspaw" [ref=f6e1094] [cursor=pointer]:
+                - /url: /service-areas/bearspaw
+            - listitem [ref=f6e1095]:
+              - link "Rocky View County" [ref=f6e1096] [cursor=pointer]:
+                - /url: /service-areas/rocky-view-county
+            - listitem [ref=f6e1097]:
+              - link "Banff" [ref=f6e1098] [cursor=pointer]:
+                - /url: /service-areas/banff
+            - listitem [ref=f6e1099]:
+              - link "All Areas" [ref=f6e1100] [cursor=pointer]:
+                - /url: /service-areas
+                - text: All Areas →
+      - separator [ref=f6e1101]
+      - generic [ref=f6e1102]:
+        - generic [ref=f6e1103]: © 2026 Photos 4 Real Estate. All rights reserved.
+        - generic [ref=f6e1104]:
+          - link "Privacy" [ref=f6e1105] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: ·
+          - link "Terms" [ref=f6e1106] [cursor=pointer]:
+            - /url: /terms-and-conditions
+          - text: ·
+          - link "Cookies" [ref=f6e1107] [cursor=pointer]:
+            - /url: /cookies-policy
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f6e1113] [cursor=pointer]

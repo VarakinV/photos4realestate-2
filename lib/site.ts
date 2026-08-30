@@ -30,7 +30,7 @@ export const primaryNav = [
   { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
-  { href: "/contact-us", label: "Contact" },
+  { href: "/brokerage-partner-program", label: "For Brokerages" },
 ] as const;
 
 export const freeTools = [
