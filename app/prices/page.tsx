@@ -434,7 +434,7 @@ export default function PricesPage() {
             <aside className="hero-promo" aria-label="First-time realtor promo">
               <div className="promo-tag">First-Time Realtors</div>
               <div className="promo-pct">25%</div>
-              <div className="promo-off">off your first booking</div>
+              <div className="promo-off">off your first package order</div>
               <PromoCode />
             </aside>
           </div>
