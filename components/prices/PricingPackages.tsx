@@ -52,9 +52,10 @@ const socialAddons = [
   "Signature Detail Shots — $35/photo",
 ];
 
-const marketingKitNote = "9 social media reels, 6 websites, 3 flyers, 2 slideshows";
+const marketingKitNote = "9 social media reels, 20 social media posts, 6 websites, 3 flyers, 2 slideshows";
 const essentialKit = [
   "9 social media reels (teaser videos)",
+  "20 social media posts",
   "6 property websites",
   "3 property flyers & 2 slideshows",
 ];

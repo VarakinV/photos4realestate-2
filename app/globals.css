@@ -2648,6 +2648,12 @@ h4 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 12px;
 }
+.promo-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
 .promo-code {
   background: rgba(255, 255, 255, 0.1);
   border: 1px dashed rgba(255, 255, 255, 0.3);
@@ -3178,6 +3184,21 @@ h4 {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.48);
   line-height: 1.5;
+}
+.ai-item-wide {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.ai-item-wide .ai-item-icon {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+.ai-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .compare-section {

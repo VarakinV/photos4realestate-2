@@ -16,6 +16,7 @@ import {
   Megaphone,
   Drone,
   QrCode,
+  Share2,
   Sofa,
   Sparkles,
   Sunset,
@@ -27,7 +28,6 @@ import { Cta } from "@/components/home/Cta";
 import { Reviews } from "@/components/home/Reviews";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PricingPackages } from "@/components/prices/PricingPackages";
-import { PromoCode } from "@/components/prices/PromoCode";
 import { faqItemsToSchemaMainEntity } from "@/lib/faq-utils";
 import {
   AVERAGE_RATING,
@@ -183,9 +183,9 @@ const marketingKitItems = [
     desc: "Lead-capture QR codes for your yard sign — reassignable to new listings, with instant lead alerts",
   },
   {
-    icon: Award,
-    name: "Rewards Points",
-    desc: "Earn points on every order and redeem for discounts on future bookings",
+    icon: Share2,
+    name: "20 Social Media Posts",
+    desc: "Coming Soon, Just Listed, For Sale and Sold posts for your social media",
   },
 ];
 
@@ -225,6 +225,7 @@ const compareRows: CompareRow[] = [
   { kind: "feature", label: "6 property websites", values: ["yes", "yes", "yes"], labelHref: "/single-property-websites" },
   { kind: "feature", label: "3 property flyers", values: ["yes", "yes", "yes"] },
   { kind: "feature", label: "2 slideshows", values: ["yes", "yes", "yes"] },
+  { kind: "feature", label: "20 social media posts", values: ["yes", "yes", "yes"] },
   { kind: "feature", label: "7 SmartSign QR Codes", values: ["yes", "yes", "yes"], labelHref: "/smartsign-qr" },
   { kind: "feature", label: "Rewards points", values: ["yes", "yes", "yes"] },
   { kind: "section", label: "Delivery" },
@@ -421,7 +422,7 @@ export default function PricesPage() {
               </p>
               <ul className="hero-trust">
                 <li className="hero-trust-item">
-                  <span className="hero-trust-dot" aria-hidden="true" /> Next-day delivery
+                  <span className="hero-trust-dot" aria-hidden="true" /> Marketing Kit
                 </li>
                 <li className="hero-trust-item">
                   <span className="hero-trust-dot" aria-hidden="true" /> MLS-ready files
@@ -431,11 +432,14 @@ export default function PricesPage() {
                 </li>
               </ul>
             </div>
-            <aside className="hero-promo" aria-label="First-time realtor promo">
-              <div className="promo-tag">First-Time Realtors</div>
-              <div className="promo-pct">25%</div>
-              <div className="promo-off">off your first package order</div>
-              <PromoCode />
+            <aside className="hero-promo" aria-label="Marketing kit included with qualifying orders">
+              <div className="promo-tag">Marketing Kit</div>
+              <div className="promo-pct">40+</div>
+              <div className="promo-off">marketing assets</div>
+              <p className="promo-desc">
+                Reels, flyers, slideshows &amp; more.
+              </p>
+              <div className="promo-note">Included with Qualifying Orders.</div>
             </aside>
           </div>
         </div>
@@ -606,6 +610,17 @@ export default function PricesPage() {
                   <div className="ai-item-desc">{desc}</div>
                 </div>
               ))}
+              <div className="ai-item ai-item-wide" key="Rewards Points">
+                <div className="ai-item-icon" aria-hidden="true">
+                  <Award size={20} />
+                </div>
+                <div className="ai-item-body">
+                  <div className="ai-item-name">Rewards Points</div>
+                  <div className="ai-item-desc">
+                    Earn points on every order and redeem for discounts on future bookings
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

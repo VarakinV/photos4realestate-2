@@ -1,7 +1,7 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { siteConfig } from "@/lib/site";
 
 export function PromoStrip() {
   const pathname = usePathname();
@@ -13,10 +13,9 @@ export function PromoStrip() {
   return (
     <div className="promo-strip" role="region" aria-label="Current promotion">
       <div className="container">
-        🎉 New Client Special: <strong>25% off your first package order</strong> — use code{" "}
-        <span className="code">25%OFF</span> ·{" "}
-        <a href={siteConfig.bookingUrl}>Book Now </a>
-          <em>·  Realtors only. Limited time.</em>
+        <strong>Marketing Kit Included</strong> — Everything you need to promote your
+        listing.{" "}
+        <Link href="/services/marketing-kit-for-realtors">Learn More</Link>
       </div>
     </div>
   );

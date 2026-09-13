@@ -14,7 +14,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "What's included in a standard photography package?",
-    a: "Every package includes professional interior and exterior photos, blue-sky replacement, MLS-ready exports, RMS measurements, iGUIDE 3D virtual tour, floor plans, 9 social media reels, 2 slideshows, 3 property flyers, and 6 branded property websites — all at no extra cost.",
+    a: "Every package includes professional interior and exterior photos, blue-sky replacement, MLS-ready exports, RMS measurements, iGUIDE 3D virtual tour, floor plans, 9 social media reels, 20 social media posts, 2 slideshows, 3 property flyers, and 6 branded property websites — all at no extra cost.",
   },
   {
     q: "How long does a typical real estate photo shoot take?",
@@ -143,7 +143,7 @@ export const pricingFaqs: Faq[] = [
   },
   {
     q: "What is included in every package?",
-    a: "Every pricing package includes professional real estate photography, an iGUIDE 3D virtual tour, RMS floor plans, blue-sky replacement when needed, and a free marketing kit. The marketing kit includes 6 property websites, 3 property flyers, 9 teaser social media reels, 2 slideshows, and rewards points.",
+    a: "Every pricing package includes professional real estate photography, an iGUIDE 3D virtual tour, RMS floor plans, blue-sky replacement when needed, and a free marketing kit. The marketing kit includes 6 property websites, 3 property flyers, 9 teaser social media reels, 20 social media posts, 2 slideshows, and rewards points.",
   },
   {
     q: "How fast will I receive my photos and media?",

@@ -15,6 +15,7 @@ const includes = [
 const extras = [
   { label: "9 social media reels (teaser videos)" },
   { label: "2 listing slideshows" },
+  { label: "20 social media posts" },
   { label: "3 branded property flyers" },
   { label: "6 branded property websites", href: "/single-property-websites" },
   { label: "7 SmartSign QR lead-capture codes", href: "/smartsign-qr" },
@@ -108,8 +109,8 @@ export function Differentiator() {
               />
             </div>
             <div className="diff-img-badge">
-              <div className="num">24h</div>
-              <div className="lbl">Next-day delivery</div>
+              <div className="num">40+</div>
+              <div className="lbl">Marketing Assets</div>
             </div>
           </div>
         </div>

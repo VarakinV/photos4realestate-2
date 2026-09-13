@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Clock, FileOutput, Info, Ruler, Star } from "lucide-react";
+import { ArrowRight, FileOutput, Info, Megaphone, Ruler, Star } from "lucide-react";
 import LiquidEther from "@/components/bits/LiquidEther";
 import { homeImages } from "@/lib/images";
 import { siteConfig } from "@/lib/site";
@@ -53,8 +53,8 @@ export function Hero() {
           </div>
           <div className="hero-badges">
             <span className="hero-badge">
-              <Clock size={14} aria-hidden="true" strokeWidth={2} />
-              Next-Day Delivery
+              <Megaphone size={14} aria-hidden="true" strokeWidth={2} />
+              Marketing Kit
             </span>
             <span className="hero-badge">
               <FileOutput size={14} aria-hidden="true" strokeWidth={2} />

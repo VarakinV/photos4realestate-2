@@ -1,7 +1,7 @@
-import { Clock, FileOutput, Ruler, ShieldCheck, Star } from "lucide-react";
+import { FileOutput, Megaphone, Ruler, ShieldCheck, Star } from "lucide-react";
 
 const items = [
-  { label: "Next day delivery", Icon: Clock },
+  { label: "Marketing Kit", Icon: Megaphone },
   { label: "RECA-Compliant RMS", Icon: Ruler },
   { label: "MLS-Ready Deliverables", Icon: FileOutput },
   { label: "Top-Rated in Calgary", Icon: Star },

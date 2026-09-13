@@ -272,6 +272,7 @@ export function ServiceBlocks() {
         features={[
           "9 social media reels",
           "2 slideshow videos",
+          "20 social media posts",
           "3 property flyers",
           "6 branded websites",
           "Single-property websites",
