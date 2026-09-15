@@ -58,7 +58,6 @@ export function BlogSidebar() {
           <a href={siteConfig.bookingUrl} className="btn btn-primary">Book Online<span className="sr-only"> for Calgary real estate photography and listing media</span><ArrowRight size={15} aria-hidden="true" /></a>
           <Link href="/prices" className="btn btn-outline">View Pricing<span className="sr-only"> for Calgary real estate photography packages</span></Link>
         </div>
-        <small>First booking? Use code <strong>25%OFF</strong></small>
       </section>
     </aside>
   );
