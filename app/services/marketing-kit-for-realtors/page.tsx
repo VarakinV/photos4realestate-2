@@ -8,6 +8,7 @@ import {
   Check,
   FileText,
   MapPin,
+  Megaphone,
   MonitorPlay,
   QrCode,
   Sparkles,
@@ -140,13 +141,14 @@ const speakableSchema = {
 
 const whyIncluded = [
   "9 social media video reels — generated from your listing photos and listing information",
+  "20 social media posts — Coming Soon, Just Listed, For Sale and Sold posts for your social media",
   "6 branded property websites — shareable links, no setup required",
   "3 print-ready PDF flyers — professionally designed with your photos",
   "2 animated slideshows — ready for email campaigns and social media",
   "7 SmartSign QR codes — lead-capture QR codes for your yard sign, reassignable to new listings",
 ] as const;
 
-type ToolVisualKind = "reels" | "websites" | "flyers" | "slideshows" | "qrcodes";
+type ToolVisualKind = "reels" | "posts" | "websites" | "flyers" | "slideshows" | "qrcodes";
 
 type ToolSection = {
   id: ToolVisualKind;
@@ -155,7 +157,10 @@ type ToolSection = {
   title: string;
   icon: ReactNode;
   paragraphs: readonly string[];
+  bulletsHeading?: string;
   bullets: readonly string[];
+  outroHeading?: string;
+  outro?: readonly string[];
   note?: ReactNode;
 };
 
@@ -190,8 +195,31 @@ const toolSections: readonly ToolSection[] = [
     ),
   },
   {
-    id: "websites",
+    id: "posts",
     num: "02",
+    label: "Social Media Posts",
+    title: "20 Social Media Posts for Your Listings",
+    icon: <Megaphone size={22} aria-hidden="true" />,
+    paragraphs: [
+      "Make it easy to promote your properties at every stage of the selling process. Your Photos 4 Real Estate Marketing Kit includes 20 professionally designed social media posts — giving you ready-to-use content for your listing announcements, ongoing promotion, and successful sales.",
+      "From generating early interest to celebrating a sold property, you'll have the right post for every milestone.",
+    ],
+    bulletsHeading: "What's Included?",
+    bullets: [
+      "4 Coming Soon posts — Build anticipation and generate interest before your listing officially hits the market.",
+      "4 Just Listed posts — Announce your new listing and let your audience know a property is now available.",
+      "4 New Listing posts — Showcase your latest property and attract attention from potential buyers.",
+      "4 For Sale posts — Keep your listing visible and remind your audience that the property is available.",
+      "4 Sold posts — Celebrate your successful sale and showcase your results with your network.",
+    ],
+    outroHeading: "Ready to Share. Easy to Use.",
+    outro: [
+      "Your social media posts are designed to help you maintain a consistent, professional presence online without spending hours creating graphics from scratch. Simply share them on your social channels, and keep your audience engaged throughout the entire listing journey.",
+    ],
+  },
+  {
+    id: "websites",
+    num: "03",
     label: "Property Websites",
     title: "6 Branded Property Websites — Share a Link, Impress Every Buyer",
     icon: <Box size={22} aria-hidden="true" />,
@@ -220,7 +248,7 @@ const toolSections: readonly ToolSection[] = [
   },
   {
     id: "flyers",
-    num: "03",
+    num: "04",
     label: "Property Flyers",
     title: "3 Print-Ready PDF Property Flyers — For Open Houses & Email",
     icon: <FileText size={22} aria-hidden="true" />,
@@ -246,7 +274,7 @@ const toolSections: readonly ToolSection[] = [
   },
   {
     id: "slideshows",
-    num: "04",
+    num: "05",
     label: "Photo Slideshows",
     title: "2 Animated Photo Slideshows — Perfect for Email & Social",
     icon: <MonitorPlay size={22} aria-hidden="true" />,
@@ -272,7 +300,7 @@ const toolSections: readonly ToolSection[] = [
   },
   {
     id: "qrcodes",
-    num: "05",
+    num: "06",
     label: "SmartSign QR Codes",
     title: "7 SmartSign QR Codes — Lead Capture for Your Yard Sign",
     icon: <QrCode size={22} aria-hidden="true" />,
@@ -306,6 +334,11 @@ const kitTotals = [
     desc: "9:16 vertical clips for Instagram, Facebook, and TikTok",
   },
   {
+    num: "20",
+    name: "Social Media Posts",
+    desc: "Coming Soon, Just Listed, For Sale and Sold posts for your social media",
+  },
+  {
     num: "6",
     name: "Property Websites",
     desc: "Branded listing sites with a shareable URL",
@@ -327,11 +360,20 @@ const kitTotals = [
   },
 ] as const;
 
+const marketingKitAssets = [
+  "9 social media reels",
+  "20 social media posts",
+  "2 property slideshows",
+  "3 property flyers and spec sheets",
+  "6 single-property websites",
+  "7 SmartSign QR codes",
+] as const;
+
 const loyaltyPoints = [
   "Earn points on every photography package",
   "Redeem points for discounts on future orders",
   "Points accumulate — the more listings, the more you save",
-  "Points are earned on your 25%-off first order too",
+  "Build rewards as you grow your listing business",
 ] as const;
 
 const processSteps = [
@@ -396,6 +438,19 @@ function renderToolVisual(kind: ToolVisualKind) {
             </div>
             <div className="marketing-reel-tag">Reel 2 of 9</div>
           </div>
+        </div>
+      );
+    case "posts":
+      return (
+        <div className="marketing-flyer-single">
+          <Image
+            src="https://cdn.photos4realestate.ca/p4re-static-media/marketing-kit-service-page/20-social-media-posts-examples.webp"
+            alt="Examples of the 20 social media posts included in the Photos 4 Real Estate marketing kit for Calgary realtors"
+            width={1400}
+            height={1050}
+            sizes="(max-width: 1024px) 100vw, 42vw"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
       );
     case "websites":
@@ -498,7 +553,7 @@ export default function MarketingKitPage() {
               <p className="services-page-hero-sub speakable-intro">
                 <strong>Every Photos 4 Real Estate package includes a complete
                 marketing kit</strong> at no extra cost — 9 social media reels,
-                6 property websites, 3 property flyers, 2 slideshows, and 7 SmartSign QR codes,
+                20 social media posts, 6 property websites, 3 property flyers, 2 slideshows, and 7 SmartSign QR codes,
                 generated once your listing information is ready.
               </p>
             </div>
@@ -508,7 +563,7 @@ export default function MarketingKitPage() {
               aria-label="Marketing kit included assets"
             >
               <li className="services-page-hero-stat">
-                <span className="num">20+</span>
+                <span className="num">40+</span>
                 <span className="lbl">Marketing assets</span>
               </li>
               <li className="services-page-hero-stat">
@@ -643,6 +698,11 @@ function PageBody() {
                   {section.paragraphs.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
+                  {section.bulletsHeading ? (
+                    <h3 className="marketing-tool-subheading">
+                      {section.bulletsHeading}
+                    </h3>
+                  ) : null}
                   <ul className="marketing-tool-bullets">
                     {section.bullets.map((bullet) => (
                       <li key={bullet}>
@@ -651,6 +711,14 @@ function PageBody() {
                       </li>
                     ))}
                   </ul>
+                  {section.outroHeading ? (
+                    <h3 className="marketing-tool-subheading">
+                      {section.outroHeading}
+                    </h3>
+                  ) : null}
+                  {section.outro?.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
                   {section.note}
                 </div>
                 <div
@@ -692,28 +760,36 @@ function PageBody() {
       <section className="marketing-promo-section" aria-labelledby="marketing-promo-heading">
         <div className="container">
           <h2 id="marketing-promo-heading">
-            First-Time Discount &amp; Loyalty Rewards
+            Your Benefits, Beyond the Booking
           </h2>
           <div className="marketing-promo-grid">
             <article className="marketing-promo-card is-dark">
-              <span className="marketing-promo-tag">New Realtor Offer</span>
+              <span className="marketing-promo-tag">More Than Photos</span>
               <div className="marketing-promo-icon" aria-hidden="true">
                 <Sparkles size={22} />
               </div>
-              <div className="marketing-promo-pct">25%</div>
-              <div className="marketing-promo-off">off your first booking</div>
-              <div className="marketing-promo-code-box">
-                <span className="marketing-promo-code-label">Use code at checkout</span>
-                <span className="marketing-promo-code-val">25%OFF</span>
-              </div>
-              <p className="marketing-promo-note">
-                First-time realtor clients receive 25% off their first
-                photography package — including the full marketing kit. Applies
-                to all packages.
+              <h3>Your Listing Marketing, Ready to Go</h3>
+              <p className="marketing-promo-lede">
+                Every qualifying order includes a Marketing Kit with
+                ready-to-use assets to help you promote your listing across
+                social media and online.
               </p>
+              <ul className="marketing-loyalty-points">
+                {marketingKitAssets.map((asset) => (
+                  <li key={asset}>
+                    <span className="marketing-loyalty-check" aria-hidden="true">
+                      <Check size={12} strokeWidth={3} />
+                    </span>
+                    <span>{asset}</span>
+                  </li>
+                ))}
+              </ul>
               <a href={siteConfig.bookingUrl} className="btn btn-primary">
-                Claim 25% Discount
-                <span className="sr-only"> for Calgary real estate media booking</span>
+                Book Your Next Listing
+                <span className="sr-only">
+                  {" "}
+                  &mdash; book your next Calgary real estate listing
+                </span>
               </a>
             </article>
 

@@ -96,7 +96,7 @@ export const freeToolsFaqs: Faq[] = [
   },
   {
     q: "What is the difference between the free tools and the marketing kit included with photography packages?",
-    a: 'The free tools let any realtor generate marketing assets from their own photos at any time. The marketing kit — 9 reels, 6 property websites, 3 flyers, and 2 slideshows — is automatically generated from your professional listing photos and delivered the next day with every Photos 4 Real Estate photography package once property information is provided, with zero extra steps required from you. <a href="/services/marketing-kit-for-realtors">Learn more about the marketing kit &rarr;</a>',
+    a: 'The free tools let any realtor generate marketing assets from their own photos at any time. The marketing kit — 9 reels, 20 social media posts, 6 property websites, 3 flyers, and 2 slideshows — is automatically generated from your professional listing photos and delivered the next day with every Photos 4 Real Estate photography package once property information is provided, with zero extra steps required from you. <a href="/services/marketing-kit-for-realtors">Learn more about the marketing kit &rarr;</a>',
   },
   {
     q: "Can I use the generated content for paid social media ads?",

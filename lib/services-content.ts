@@ -622,7 +622,7 @@ export const servicesContent: Record<ServiceSlug, ServiceContent> = {
     faqs: [
       {
         q: "What is included in the Photos 4 Real Estate marketing kit?",
-        a: "Every Photos 4 Real Estate package includes a free marketing kit consisting of 9 social media video reels, 6 branded property websites, 3 print-ready PDF property flyers, and 2 professional slideshows. The kit is generated once we have the required listing information for the property, and in most cases it is delivered the next day.",
+        a: "Every Photos 4 Real Estate package includes a free marketing kit consisting of 9 social media video reels, 20 social media posts, 6 branded property websites, 3 print-ready PDF property flyers, and 2 professional slideshows. The kit is generated once we have the required listing information for the property, and in most cases it is delivered the next day.",
       },
       {
         q: "Is the marketing kit really free with every package?",

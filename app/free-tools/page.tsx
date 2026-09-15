@@ -248,7 +248,8 @@ export default function FreeToolsPage() {
                 >
                   complete marketing kit
                 </Link>{" "}
-                (9 reels, 6 websites, 3 flyers, 2 slideshows) is generated
+                (9 reels, 20 social media posts, 6 websites, 3 flyers, 2
+                slideshows) is generated
                 automatically and delivered with your photos the next day once
                 property information is provided — no tool use required.
               </p>
@@ -262,8 +263,8 @@ export default function FreeToolsPage() {
                     When you book any photography package, your marketing kit
                     is generated automatically from your professional listing
                     photos and delivered the next day alongside your photos once
-                    property information is provided — 9 reels, 6 property
-                    websites, 3 flyers, and 2 slideshows.{" "}
+                    property information is provided — 9 reels, 20 social media
+                    posts, 6 property websites, 3 flyers, and 2 slideshows.{" "}
                     <Link href="/services/marketing-kit-for-realtors">
                       Learn about the full marketing kit →
                     </Link>
@@ -901,6 +902,13 @@ export default function FreeToolsPage() {
                   <div className="ft-ci-check">
                     <Check size={12} strokeWidth={3} />
                   </div>
+                  <strong>20 social media posts</strong> — Coming Soon,
+                  Just Listed, For Sale and Sold
+                </li>
+                <li className="ft-compare-item">
+                  <div className="ft-ci-check">
+                    <Check size={12} strokeWidth={3} />
+                  </div>
                   <Link href="/single-property-websites"><strong>6 branded property websites</strong><span className="sr-only"> — free single property website designs for Calgary realtors</span></Link> — shareable
                   URLs
                 </li>
@@ -1107,7 +1115,8 @@ export default function FreeToolsPage() {
               <p>
                 Use the free tools now with any photos you have. Or book a
                 photography package and receive your complete marketing kit — 9
-                reels, 3 websites, 3 flyers, and 2 slideshows — delivered next
+                reels, 20 social media posts, 6 websites, 3 flyers, and 2
+                slideshows — delivered next
                 day with your listing photos once property information is
                 provided, automatically and at no extra cost.
               </p>

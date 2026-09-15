@@ -11,6 +11,7 @@ import {
   FileText,
   Globe,
   HeartHandshake,
+  Megaphone,
   QrCode,
   Ruler,
   ShieldCheck,
@@ -51,40 +52,53 @@ const heroStats = [
 
 const includes = [
   {
+    wide: false,
     icon: <Camera size={22} aria-hidden="true" />,
     title: "Photography, Video & Drone",
     desc: "HDR interior/exterior photos, cinematic walkthroughs and licensed aerial coverage on every listing.",
     tag: "Core Service",
   },
   {
+    wide: false,
     icon: <Ruler size={22} aria-hidden="true" />,
     title: "RMS Floor Plans & iGUIDE Tours",
     desc: "RECA-compliant measurements and interactive 3D walkthroughs for accurate, buyer-ready listings.",
     tag: "RECA-Compliant",
   },
   {
+    wide: false,
     icon: <Smartphone size={22} aria-hidden="true" />,
     title: "9 Social Media Reels",
     desc: "Ready-to-post 9:16 clips for Instagram, Facebook and TikTok — a week of content from one shoot.",
     tag: "Included Free",
   },
   {
+    wide: false,
     icon: <Globe size={22} aria-hidden="true" />,
     title: "6 Branded Property Websites",
     desc: "Mobile-responsive single-property sites with a clean, shareable link — no setup required.",
     tag: "Included Free",
   },
   {
+    wide: false,
     icon: <FileText size={22} aria-hidden="true" />,
     title: "3 Flyers + 2 Slideshows",
     desc: "Print-ready PDF flyers and animated slideshows for open houses, email and social sharing.",
     tag: "Included Free",
   },
   {
+    wide: false,
     icon: <QrCode size={22} aria-hidden="true" />,
     title: "7 SmartSign QR Codes",
     desc: "Reusable lead-capture yard sign codes with instant lead alerts and weekly scan analytics.",
     tag: "Lead Alerts",
+  },
+  {
+    wide: true,
+    icon: <Megaphone size={22} aria-hidden="true" />,
+    title: "20 Social Media Posts",
+    desc: "Coming Soon, Just Listed, For Sale and Sold posts — ready-to-share graphics that keep your listing visible at every stage of the sale.",
+    tag: "Included Free",
   },
 ] as const;
 
@@ -482,7 +496,10 @@ export default function BrokeragePartnerProgramPage() {
           <div className="broker-feature-block">
             <div className="broker-feature-grid">
               {includes.map((feature) => (
-                <article className="broker-feature-item" key={feature.title}>
+                <article
+                  className={`broker-feature-item${feature.wide ? " is-wide" : ""}`}
+                  key={feature.title}
+                >
                   <div className="broker-feature-icon" aria-hidden="true">
                     {feature.icon}
                   </div>
